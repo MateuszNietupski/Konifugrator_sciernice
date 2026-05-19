@@ -5,6 +5,10 @@ export interface AbrasiveRow {
     productLink: string;
     description: string;
     outerDiameter: number;
+    thickness: number;
     boreSize: number;
     gritSize: number;
+    material: string;
+    type: string;
+
 }

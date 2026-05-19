@@ -17,28 +17,36 @@ interface HomeProps {
 export default function Home({ abrasives }: HomeProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    
-    // Inicjalizacja Twojego zaktualizowanego hooka pod ściernice
+
     const { state, results, handlers } = useFilters(abrasives);
 
-    // Dynamicznie przypisujemy właściwości do panelu filtrów bezpośrednio z hooka
     const filterProps = {
-        wheelTypes: results.wheelTypes,
+        abrasiveMaterials: results.abrasiveMaterials,
         gritOptions: results.gritOptions,
-        lengthSteps: state.lengthSteps,
-        facetCounts: results.facetCounts,
-        
+        wheelTypes: results.wheelTypes,
+        facetCounts: {
+            Type: results.facetCounts.Type,
+            Grit: results.facetCounts.Grid,
+            Material: results.facetCounts.Material
+        },
+
+
         selectedTypes: state.selectedTypes,
         selectedGrits: state.selectedGrits,
         lengthRange: state.lengthRange,
-        
+        lengthSteps: state.lengthSteps,
+        abrasiveSearch: state.abrasiveSearch,
+        selectedMaterials: state.selectedMaterials,
+
         onTypesChange: handlers.setSelectedTypes,
         onGritsChange: handlers.setSelectedGrits,
         onLengthChange: handlers.setLengthRange,
-        onClearFilters: handlers.handleClearFilters
+        onMaterialsChange: handlers.setSelectedMaterials,
+        onClearFilters: handlers.handleClearFilters,
+        onSearchChange: handlers.setAbrasiveSearch,
+        onAbrasiveSearchChange: handlers.setAbrasiveSearch
     };
 
-    // Dynamiczne liczniki przekazywane do nagłówków aplikacji
     const counts = {
         filtered: results.filteredWheels.length,
         total: abrasives.length
@@ -52,7 +60,6 @@ export default function Home({ abrasives }: HomeProps) {
                 flexDirection: isMobile ? 'column' : 'row',
                 overflow: 'hidden'
             }}>
-                {/* Na desktopie panel filtrów jest z boku */}
                 {!isMobile && <FilterPanel {...filterProps} />}
 
                 <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -61,9 +68,8 @@ export default function Home({ abrasives }: HomeProps) {
                             <MobileHeader
                                 filteredCount={counts.filtered}
                                 totalCount={counts.total}
-                                viewMode="wheels" 
+                                viewMode="wheels"
                             />
-                            {/* Na mobile panel filtrów ląduje pod nagłówkiem */}
                             <FilterPanel {...filterProps} />
                         </>
                     ) : (

@@ -1,17 +1,32 @@
 import rawAbrasives from '../data/sciernice.json';
 
+const abrasives = rawAbrasives.map((m) => {
+    const getAttributeValue = (attrName: string) => {
+        const attribute = m.attributes?.find(attr => attr.name === attrName);
+        return attribute ? attribute.value : null;
+    };
 
-const abrasives = rawAbrasives.map((m, index) => ({
-    id: `row-${index}`,
-    sku: m.sku,
-    name: m.name,
-    imageUrl: m.image,
-    productLink: m.plik_x.link,
-    description: m.plik_x.description,
-    outerDiameter: 0,
-    boreSize: 0,
-    gritSize: 0,
-}));
+    const parseDimension = (value: string | null) => {
+        if (!value) return 0;
+        const parsed = parseFloat(value.replace(/[^\d.,]/g, '').replace(',', '.'));
+        return isNaN(parsed) ? 0 : parsed;
+    };
+
+    return {
+        id: m.sku,
+        sku: m.sku,
+        name: m.title,
+        imageUrl: m.image,
+        productLink: m.link,
+        description: m.description,
+        outerDiameter: m.srednica_dlugosc? parseDimension(m.srednica_dlugosc) : parseDimension(getAttributeValue("Średnica zewnętrzna")),
+        boreSize: m.boreSize? parseDimension(m.boreSize) : parseDimension(getAttributeValue("Średnica otworu")),
+        thickness: m.grubosc_szerokosc,
+        gritSize: m.gritSize,
+        material: m.material,
+        type: m.typ,
+    };
+});
 
 export default function useAbrasives() {
     return { abrasives };

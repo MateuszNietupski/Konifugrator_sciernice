@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import FilterAltOffIcon from '@mui/icons-material/FilterAltOff';
+import SearchFilter from '../filters/searchFilter';
+import MaterialFilter from '../filters/materialFilter';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -40,41 +42,69 @@ const SectionTitle = ({ children, extra }: SectionTitleProps) => (
 );
 
 interface FilterPanelProps {
-    wheelTypes: string[];                  
-    gritOptions: number[];              
-    lengthSteps: number[];              
-    facetCounts: {   
+    wheelTypes: string[];
+    abrasiveMaterials: string[];
+    gritOptions: number[];
+    lengthSteps: number[];
+    facetCounts: {
         Type: Record<string, number>;
         Grit: Record<number, number>;
+        Material: Record<string, number>;
     };
 
-    selectedTypes: string[];          
-    selectedGrits: number[];             
-    lengthRange: [number, number];         
+    selectedTypes: string[];
+    selectedGrits: number[];
+    selectedMaterials: string[];
+    lengthRange: [number, number];
 
     onTypesChange: (types: string[]) => void;
     onGritsChange: (grits: number[]) => void;
     onLengthChange: (range: [number, number]) => void;
+    onMaterialsChange: (materials: string[]) => void;
     onClearFilters: () => void;
+    abrasiveSearch: string;
+    onAbrasiveSearchChange: (newValue: string) => void;
 }
 
 export default function FilterPanel({
     wheelTypes,
+    abrasiveMaterials,
     gritOptions,
     lengthSteps,
     facetCounts,
     selectedTypes,
     selectedGrits,
+    selectedMaterials,
     lengthRange,
+    abrasiveSearch,
     onTypesChange,
     onGritsChange,
     onLengthChange,
-    onClearFilters
+    onMaterialsChange,
+    onClearFilters,
+    onAbrasiveSearchChange,
 }: FilterPanelProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-    // Wspólny komponent LOGO Darmet
+    const renderSearchFilter = (size: 'small' | 'medium' = 'medium') => (
+        <SearchFilter
+            value={abrasiveSearch}
+            onChange={onAbrasiveSearchChange}
+            size={size}
+        />
+    );
+
+    const renderMaterialFilter = (size: 'small' | 'medium' = 'medium') => (
+        <MaterialFilter
+            value={selectedMaterials}
+            options={abrasiveMaterials}
+            onChange={onMaterialsChange}
+            size={size}
+            facetCounts={facetCounts.Material}
+        />
+    );
+
     const BrandLogo = () => (
         <Link
             href="https://www.e-darmet.pl"
@@ -103,7 +133,6 @@ export default function FilterPanel({
             <Box sx={{ borderBottom: '1px solid', borderColor: 'divider', bgcolor: 'background.paper' }}>
                 <Box sx={{ px: 2, py: 1.5, display: 'flex', gap: 1, alignItems: 'center' }}>
                     <Box sx={{ flex: 1, minWidth: 0 }}>
-                        {/* MIEJSCE NA ROZWIJANE FILTRY MOBILNE (np. pozioma lista chipów lub akordeony) */}
                         <Typography variant="body2" color="text.secondary">Filtry mobilne ściernic (w budowie)</Typography>
                     </Box>
                     <ClearButton onClick={onClearFilters} />
@@ -115,14 +144,17 @@ export default function FilterPanel({
     return (
         <Box sx={{ width: 280, borderRight: '1px solid', borderColor: 'divider', bgcolor: 'background.paper', display: 'flex', flexDirection: 'column', height: '100%' }}>
             <BrandLogo />
-            
-            <Box sx={{ p: 2, flex: 1, overflowY: 'auto' }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                    <Typography variant="subtitle2" fontWeight={700}>Filtrowanie ściernic</Typography>
-                    <ClearButton onClick={onClearFilters} />
-                </Box>
+            <Box sx={{ p: 2.5, flex: 1, overflowY: 'auto' }}>
+                <SectionTitle extra={<ClearButton onClick={onClearFilters} />}>
+                    FILTROWANIE ŚCIERNIC
+                </SectionTitle>
 
-                
+                <Box sx={{ mb: 2 }}>
+                    {renderSearchFilter()}
+                </Box>
+                <Box sx={{ mb: 2 }}>
+                    {renderMaterialFilter()}
+                </Box>
             </Box>
         </Box>
     );
