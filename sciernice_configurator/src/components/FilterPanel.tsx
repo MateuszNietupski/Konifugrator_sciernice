@@ -8,6 +8,8 @@ import Link from '@mui/material/Link';
 import FilterAltOffIcon from '@mui/icons-material/FilterAltOff';
 import SearchFilter from '../filters/searchFilter';
 import MaterialFilter from '../filters/materialFilter';
+import GritsFilter from '../filters/gritsFilter';
+import ShapeTypeFilter from '../filters/shapeTypeFilter';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -69,11 +71,11 @@ interface FilterPanelProps {
 export default function FilterPanel({
     wheelTypes,
     abrasiveMaterials,
-    gritOptions,
     lengthSteps,
     facetCounts,
     selectedTypes,
     selectedGrits,
+    gritOptions,
     selectedMaterials,
     lengthRange,
     abrasiveSearch,
@@ -83,6 +85,7 @@ export default function FilterPanel({
     onMaterialsChange,
     onClearFilters,
     onAbrasiveSearchChange,
+
 }: FilterPanelProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -104,6 +107,25 @@ export default function FilterPanel({
             facetCounts={facetCounts.Material}
         />
     );
+
+    const renderTypeFilter = (size: 'small' | 'medium' = 'medium') => (
+        <ShapeTypeFilter
+            selectedTypes={selectedTypes}
+            onTypesChange={onTypesChange}
+            facetCounts={facetCounts.Type}
+        />
+    );
+
+    const renderGritsFilter = (size: 'small' | 'medium' = 'medium') => (
+        <GritsFilter
+            value={selectedGrits}
+            options={gritOptions}
+            onChange={onGritsChange}
+            size={size}
+            facetCounts={facetCounts.Grit}
+        />
+    );
+
 
     const BrandLogo = () => (
         <Link
@@ -154,6 +176,12 @@ export default function FilterPanel({
                 </Box>
                 <Box sx={{ mb: 2 }}>
                     {renderMaterialFilter()}
+                </Box>
+                <Box sx={{ mb: 2 }}>
+                    {renderTypeFilter()}
+                </Box>
+                <Box sx={{ mb: 2 }}>
+                    {renderGritsFilter()}
                 </Box>
             </Box>
         </Box>

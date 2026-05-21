@@ -105,7 +105,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
 
         return {
             Type: countWheels('type'),
-            Grid: countWheels('gritSize'),
+            Grit: countWheels('gritSize'),
             Material: countWheels('material') 
         };
     }, [abrasives, selectedTypes, selectedGrits, selectedMaterials, abrasiveSearch]);

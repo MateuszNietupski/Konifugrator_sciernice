@@ -22,17 +22,17 @@ export default function Home({ abrasives }: HomeProps) {
 
     const filterProps = {
         abrasiveMaterials: results.abrasiveMaterials,
-        gritOptions: results.gritOptions,
         wheelTypes: results.wheelTypes,
         facetCounts: {
             Type: results.facetCounts.Type,
-            Grit: results.facetCounts.Grid,
+            Grit: results.facetCounts.Grit,
             Material: results.facetCounts.Material
         },
 
 
         selectedTypes: state.selectedTypes,
         selectedGrits: state.selectedGrits,
+        gritOptions: results.gritOptions,
         lengthRange: state.lengthRange,
         lengthSteps: state.lengthSteps,
         abrasiveSearch: state.abrasiveSearch,
