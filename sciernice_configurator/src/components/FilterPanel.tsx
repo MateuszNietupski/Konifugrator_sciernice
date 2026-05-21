@@ -175,11 +175,12 @@ export default function FilterPanel({
                     {renderSearchFilter()}
                 </Box>
                 <Box sx={{ mb: 2 }}>
-                    {renderMaterialFilter()}
-                </Box>
-                <Box sx={{ mb: 2 }}>
                     {renderTypeFilter()}
                 </Box>
+                <Box sx={{ mb: 2 }}>
+                    {renderMaterialFilter()}
+                </Box>
+                
                 <Box sx={{ mb: 2 }}>
                     {renderGritsFilter()}
                 </Box>

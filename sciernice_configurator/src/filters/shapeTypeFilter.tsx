@@ -1,3 +1,4 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Accordion from '@mui/material/Accordion';
@@ -8,7 +9,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Tooltip from '@mui/material/Tooltip';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { ABRASIVE_FILTER_GROUPS, type FilterGroup, type Subtype } from '../utils/filterGroups';
+import { ABRASIVE_FILTER_GROUPS } from '../utils/filterGroups';
+import type { FilterGroup, Subtype } from '../utils/filterGroups';
 import { wheelTypesData } from '../utils/abrasivesConsts';
 
 interface ShapeTypeFilterProps {
@@ -23,21 +25,24 @@ export default function ShapeTypeFilter({
   facetCounts
 }: ShapeTypeFilterProps) {
 
-  const getSubtypeCount = (subtype: Subtype) => {
-    return subtype.values.reduce((sum, val) => sum + (facetCounts[val] || 0), 0);
+  // Licznik produktów dla podtypu
+  const getSubtypeCount = (subtype: Subtype): number => {
+    return subtype.values.reduce((sum: number, val: string) => sum + (facetCounts[val] || 0), 0);
   };
 
-  const getGroupCount = (group: FilterGroup) => {
-    return group.subtypes.reduce((sum, sub) => sum + getSubtypeCount(sub), 0);
+  // Licznik produktów dla całej grupy
+  const getGroupCount = (group: FilterGroup): number => {
+    return group.subtypes.reduce((sum: number, sub: Subtype) => sum + getSubtypeCount(sub), 0);
   };
 
-  const isSubtypeChecked = (subtype: Subtype) => {
-    return subtype.values.every(val => selectedTypes.includes(val));
+  // --- LOGIKA DLA PODTYPÓW ---
+  const isSubtypeChecked = (subtype: Subtype): boolean => {
+    return subtype.values.every((val: string) => selectedTypes.includes(val));
   };
 
-  const isSubtypeIndeterminate = (subtype: Subtype) => {
-    const hasSome = subtype.values.some(val => selectedTypes.includes(val));
-    const hasAll = subtype.values.every(val => selectedTypes.includes(val));
+  const isSubtypeIndeterminate = (subtype: Subtype): boolean => {
+    const hasSome = subtype.values.some((val: string) => selectedTypes.includes(val));
+    const hasAll = subtype.values.every((val: string) => selectedTypes.includes(val));
     return hasSome && !hasAll;
   };
 
@@ -46,18 +51,57 @@ export default function ShapeTypeFilter({
     let newSelected: string[];
 
     if (isChecked) {
-      newSelected = selectedTypes.filter(val => !subtype.values.includes(val));
+      newSelected = selectedTypes.filter((val: string) => !subtype.values.includes(val));
     } else {
-      const missingValues = subtype.values.filter(val => !selectedTypes.includes(val));
+      const missingValues = subtype.values.filter((val: string) => !selectedTypes.includes(val));
       newSelected = [...selectedTypes, ...missingValues];
     }
+    onTypesChange(newSelected);
+  };
+
+  // --- LOGIKA DLA GRUP GŁÓWNYCH (X-KOM STYLE) ---
+  
+  // Zbiera wszystkie płaskie wartości string ze wszystkich podtypów danej grupy
+  const getAllGroupValues = (group: FilterGroup): string[] => {
+    return group.subtypes.reduce((acc: string[], sub: Subtype) => [...acc, ...sub.values], []);
+  };
+
+  // Grupa jest zaznaczona, jeśli CHOĆ JEDEN kod z tej grupy jest wybrany (zasada x-kom)
+  const isGroupChecked = (group: FilterGroup): boolean => {
+    const allValues = getAllGroupValues(group);
+    return allValues.some((val: string) => selectedTypes.includes(val));
+  };
+
+  // Stan indeterminate dla grupy głównej (kiedy wybrane są niektóre elementy, ale nie wszystkie)
+  const isGroupIndeterminate = (group: FilterGroup): boolean => {
+    const allValues = getAllGroupValues(group);
+    const hasSome = allValues.some((val: string) => selectedTypes.includes(val));
+    const hasAll = allValues.every((val: string) => selectedTypes.includes(val));
+    return hasSome && !hasAll;
+  };
+
+  // Kliknięcie w checkbox w nagłówku akordeonu
+  const handleGroupToggle = (e: React.MouseEvent, group: FilterGroup) => {
+    e.stopPropagation(); // Kluczowe! Zapobiega otwieraniu/zamykaniu akordeonu przy kliku w checkbox
     
+    const allValues = getAllGroupValues(group);
+    const isAnyChecked = isGroupChecked(group);
+    let newSelected: string[];
+
+    if (isAnyChecked) {
+      // Jeśli cokolwiek z grupy było zaznaczone -> czyścimy całą grupę
+      newSelected = selectedTypes.filter((val: string) => !allValues.includes(val));
+    } else {
+      // Jeśli nic nie było zaznaczone -> zaznaczamy absolutnie wszystko w tej grupie
+      const missingValues = allValues.filter((val: string) => !selectedTypes.includes(val));
+      newSelected = [...selectedTypes, ...missingValues];
+    }
     onTypesChange(newSelected);
   };
 
   const getSubtypeTooltipText = (subtype: Subtype): string => {
     return subtype.values
-      .map(val => {
+      .map((val: string) => {
         const info = wheelTypesData[val];
         return info ? `${info.name}: ${info.desc}` : `Typ ${val}`;
       })
@@ -72,7 +116,6 @@ export default function ShapeTypeFilter({
 
       {ABRASIVE_FILTER_GROUPS.map((group) => {
         const totalGroupCount = getGroupCount(group);
-        
         if (totalGroupCount === 0) return null; 
 
         return (
@@ -91,21 +134,39 @@ export default function ShapeTypeFilter({
               sx={{ 
                 px: 0.5, 
                 minHeight: 40, 
-                '& .MuiAccordionSummary-content': { my: 1, display: 'flex', justifyContent: 'space-between', alignItems: 'center' } 
+                '& .MuiAccordionSummary-content': { 
+                  my: 0.5, 
+                  display: 'flex', 
+                  justifyContent: 'space-between', 
+                  alignItems: 'center' 
+                } 
               }}
             >
-              <Typography variant="body2" fontWeight={500}>
-                {group.label}
-              </Typography>
-              <Typography variant="caption" color="text.secondary" sx={{ mr: 1 }}>
+              {/* Checkbox główny grupy (x-kom) */}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    size="small"
+                    checked={isGroupChecked(group)}
+                    indeterminate={isGroupIndeterminate(group)}
+                    onClick={(e) => handleGroupToggle(e, group)}
+                  />
+                }
+                label={
+                  <Typography variant="body2" fontWeight={500}>
+                    {group.label}
+                  </Typography>
+                }
+                sx={{ my: -0.5, flexGrow: 1 }}
+              />
+              <Typography variant="caption" color="text.secondary" sx={{ mr: 1, ml: 1 }}>
                 ({totalGroupCount})
               </Typography>
             </AccordionSummary>
 
-            <AccordionDetails sx={{ p: 0, pl: 1, pb: 1 }}>
+            <AccordionDetails sx={{ p: 0, pl: 4, pb: 1 }}>
               {group.subtypes.map((subtype, index) => {
                 const count = getSubtypeCount(subtype);
-                
                 if (count === 0 && !isSubtypeChecked(subtype)) return null; 
 
                 const tooltipContent = getSubtypeTooltipText(subtype);
@@ -139,11 +200,7 @@ export default function ShapeTypeFilter({
                     />
                     
                     <Tooltip 
-                      title={
-                        <div style={{ whiteSpace: 'pre-line', padding: '4px' }}>
-                          {tooltipContent}
-                        </div>
-                      }
+                      title={<div style={{ whiteSpace: 'pre-line', padding: '4px' }}>{tooltipContent}</div>}
                       arrow
                       placement="left"
                     >
