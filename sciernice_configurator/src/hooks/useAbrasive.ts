@@ -25,6 +25,7 @@ const abrasives = rawAbrasives.map((m) => {
         gritSize: m.gritSize,
         material: m.material,
         type: m.typ,
+        bond: m.bond,
     };
 });
 

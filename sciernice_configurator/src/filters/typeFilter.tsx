@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import { theme } from '../utils/theme';
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -27,6 +28,20 @@ const TypeFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
             onChange={(event, newValue) => {
                 onChange(newValue);
             }}
+            slotProps={{
+                listbox: {
+                    sx: {
+                        padding: '8px 0',
+                        '& li[role="option"]': {
+                            paddingTop: '14px',
+                            paddingBottom: '14px',
+                            borderBottom: '1px solid',
+                            borderColor: 'divider',
+                            '&:last-of-type': { borderBottom: 'none' },
+                        },
+                    },
+                },
+            }}
             renderTags={(tagValue, getTagProps) =>
                 tagValue.map((option, index) => (
                     <Chip
@@ -43,19 +58,39 @@ const TypeFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
 
                 return (
                     <li {...props} style={{
-                        opacity: isDisabled ? 0.5 : 1,
-                        pointerEvents: isDisabled ? 'none' : 'auto'
+                        opacity: isDisabled ? 0.4 : 1,
+                        pointerEvents: isDisabled ? 'none' : 'auto',
+                        padding: '10px 12px',
+                        backgroundColor: selected ? theme.palette.action.selected : undefined,
                     }}>
                         <Checkbox
                             icon={icon}
                             checkedIcon={checkedIcon}
-                            style={{ marginRight: 8 }}
                             checked={selected}
+                            size="small"
+                            sx={{ mr: 1, p: 0.5 }}
                         />
-                        <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                            <Typography variant="body2">{option}</Typography>
-                            <Typography variant="caption" color="text.secondary">
-                                ({count})
+                        <Box sx={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            width: '100%',
+                            gap: 1,
+                        }}>
+                            <Typography variant="body2" sx={{ lineHeight: 1.4 }}>
+                                {option}
+                            </Typography>
+                            <Typography
+                                variant="caption"
+                                sx={{
+                                    color: count > 0 ? 'text.secondary' : 'text.disabled',
+                                    fontVariantNumeric: 'tabular-nums',
+                                    minWidth: 24,
+                                    textAlign: 'right',
+                                    flexShrink: 0,
+                                }}
+                            >
+                                {count}
                             </Typography>
                         </Box>
                     </li>
@@ -76,7 +111,7 @@ const TypeFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
                     const countA = facetCounts[a] || 0;
                     const countB = facetCounts[b] || 0;
                     if (countB !== countA) return countB - countA;
-                    
+
                     return a.toLowerCase().localeCompare(b.toLowerCase());
                 });
             }}

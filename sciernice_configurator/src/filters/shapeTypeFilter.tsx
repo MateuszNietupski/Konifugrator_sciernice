@@ -25,17 +25,14 @@ export default function ShapeTypeFilter({
   facetCounts
 }: ShapeTypeFilterProps) {
 
-  // Licznik produktów dla podtypu
   const getSubtypeCount = (subtype: Subtype): number => {
     return subtype.values.reduce((sum: number, val: string) => sum + (facetCounts[val] || 0), 0);
   };
 
-  // Licznik produktów dla całej grupy
   const getGroupCount = (group: FilterGroup): number => {
     return group.subtypes.reduce((sum: number, sub: Subtype) => sum + getSubtypeCount(sub), 0);
   };
 
-  // --- LOGIKA DLA PODTYPÓW ---
   const isSubtypeChecked = (subtype: Subtype): boolean => {
     return subtype.values.every((val: string) => selectedTypes.includes(val));
   };
@@ -59,20 +56,15 @@ export default function ShapeTypeFilter({
     onTypesChange(newSelected);
   };
 
-  // --- LOGIKA DLA GRUP GŁÓWNYCH (X-KOM STYLE) ---
-  
-  // Zbiera wszystkie płaskie wartości string ze wszystkich podtypów danej grupy
   const getAllGroupValues = (group: FilterGroup): string[] => {
     return group.subtypes.reduce((acc: string[], sub: Subtype) => [...acc, ...sub.values], []);
   };
 
-  // Grupa jest zaznaczona, jeśli CHOĆ JEDEN kod z tej grupy jest wybrany (zasada x-kom)
   const isGroupChecked = (group: FilterGroup): boolean => {
     const allValues = getAllGroupValues(group);
     return allValues.some((val: string) => selectedTypes.includes(val));
   };
 
-  // Stan indeterminate dla grupy głównej (kiedy wybrane są niektóre elementy, ale nie wszystkie)
   const isGroupIndeterminate = (group: FilterGroup): boolean => {
     const allValues = getAllGroupValues(group);
     const hasSome = allValues.some((val: string) => selectedTypes.includes(val));
@@ -80,19 +72,16 @@ export default function ShapeTypeFilter({
     return hasSome && !hasAll;
   };
 
-  // Kliknięcie w checkbox w nagłówku akordeonu
   const handleGroupToggle = (e: React.MouseEvent, group: FilterGroup) => {
-    e.stopPropagation(); // Kluczowe! Zapobiega otwieraniu/zamykaniu akordeonu przy kliku w checkbox
+    e.stopPropagation();
     
     const allValues = getAllGroupValues(group);
     const isAnyChecked = isGroupChecked(group);
     let newSelected: string[];
 
     if (isAnyChecked) {
-      // Jeśli cokolwiek z grupy było zaznaczone -> czyścimy całą grupę
       newSelected = selectedTypes.filter((val: string) => !allValues.includes(val));
     } else {
-      // Jeśli nic nie było zaznaczone -> zaznaczamy absolutnie wszystko w tej grupie
       const missingValues = allValues.filter((val: string) => !selectedTypes.includes(val));
       newSelected = [...selectedTypes, ...missingValues];
     }
@@ -142,7 +131,6 @@ export default function ShapeTypeFilter({
                 } 
               }}
             >
-              {/* Checkbox główny grupy (x-kom) */}
               <FormControlLabel
                 control={
                   <Checkbox

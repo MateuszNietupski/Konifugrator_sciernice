@@ -17,7 +17,7 @@ interface GetColumnsProps {
 export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsProps): GridColDef<AbrasiveRow>[] => [
   {
     field: "Image",
-    headerName: "Ściernica",
+    headerName: '',
     flex: 1,
     sortable: false,
     width: isMobile ? 58 : 116,
@@ -55,10 +55,10 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   {
     field: 'name',
     headerName: 'Nazwa',
-    flex: 1.5,
+    flex: 1,
     headerAlign: 'center',
     align: 'center',
-    minWidth: isMobile ? 140 : 160,
+    minWidth: isMobile ? 140 : 140,
     renderCell: (params) => (
       <Box sx={{
         fontSize: isMobile ? 11 : 14,
@@ -81,7 +81,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     flex: 1,
     headerAlign: 'center' as const,
     align: 'center' as const,
-    minWidth: isMobile ? 110 : 150,
+    minWidth: isMobile ? 110 : 120,
     renderCell: (params: GridRenderCellParams<AbrasiveRow>) => {
       const typ = params.value;
       return (
@@ -118,27 +118,55 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
       );
     },
   },
+
   {
-    field: "Dimensions",
-    headerName: "Wymiary (D x T x d)",
-    description: "D - Średnica zewnętrzna x T - Grubość x d - Średnica otworu",
-    flex: 1.5,
+    field: "outerDimension",
+    headerName: "Śr/Dł(D/L)",
+    description: "D - Średnica zewnętrzna (dla ściernic okrągłych) lub L - Długość (dla segmentów i osełek) w mm",
+    flex: 0.8,
+    minWidth: 120,
     headerAlign: 'center',
     align: 'center',
-    minWidth: 160,
-    renderCell: (params) => {
-      const dOuter = params.row.outerDiameter || 0;
-      const thickness = params.row.thickness || 0;
-      const dBore = params.row.boreSize || 0;
-
-      return `${dOuter} x ${thickness} x ${dBore} mm`;
-    }
+    type: 'number',
+    valueGetter: (value, row) => {
+      return row.outerDiameter ?? row.outerDiameter ?? null;
+    },
+    renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
   },
+  {
+    field: "thickness",
+    headerName: "Gr./Szer.(T/B)",
+    description: "T - Grubość (dla ściernic okrągłych) lub B - Szerokość (dla segmentów i osełek) w mm",
+    flex: 1,
+    minWidth: 120,
+    headerAlign: 'center',
+    align: 'center',
+    type: 'number',
+    valueGetter: (value, row) => {
+      return row.thickness ?? row.boreSize ?? null;
+    },
+    renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
+  },
+  {
+    field: "boreSize",
+    headerName: "Otwór (d)",
+    description: "d - Średnica otworu wewnętrznego w mm (nie dotyczy segmentów i osełek)",
+    flex: 1,
+    minWidth: 80,
+    headerAlign: 'center',
+    align: 'center',
+    type: 'number',
+    valueGetter: (value, row) => {
+      return row.boreSize ?? null;
+    },
+    renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
+  },
+  
   { field: "gritSize", flex: 1, headerAlign: 'center', align: 'center', headerName: "Gradacja", minWidth: 100, type: "number", renderCell: (params) => `${params.value}` },
   {
     field: "material",
     headerName: "Materiał",
-    flex: 1.1,
+    flex: 1,
     headerAlign: 'center',
     align: 'center',
     minWidth: isMobile ? 100 : 130,

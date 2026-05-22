@@ -9,6 +9,8 @@ import type { AbrasiveRow } from '../types/types';
 import MobileHeader from "../components/MobileHeader";
 import DesktopHeader from "../components/DesktopHeader";
 import ProductGridDesktop from "../components/AbrasivesDataGrid";
+import ActiveFilters from "../components/ActiveFilters";
+
 
 interface HomeProps {
     abrasives: AbrasiveRow[];
@@ -26,7 +28,8 @@ export default function Home({ abrasives }: HomeProps) {
         facetCounts: {
             Type: results.facetCounts.Type,
             Grit: results.facetCounts.Grit,
-            Material: results.facetCounts.Material
+            Material: results.facetCounts.Material,
+            Bond: results.facetCounts.Bond
         },
 
 
@@ -37,6 +40,8 @@ export default function Home({ abrasives }: HomeProps) {
         lengthSteps: state.lengthSteps,
         abrasiveSearch: state.abrasiveSearch,
         selectedMaterials: state.selectedMaterials,
+        selectedBonds: state.selectedBonds,
+        bondOptions: results.bondOptions,
 
         onTypesChange: handlers.setSelectedTypes,
         onGritsChange: handlers.setSelectedGrits,
@@ -44,7 +49,8 @@ export default function Home({ abrasives }: HomeProps) {
         onMaterialsChange: handlers.setSelectedMaterials,
         onClearFilters: handlers.handleClearFilters,
         onSearchChange: handlers.setAbrasiveSearch,
-        onAbrasiveSearchChange: handlers.setAbrasiveSearch
+        onAbrasiveSearchChange: handlers.setAbrasiveSearch,
+        onBondsChange: handlers.setSelectedBonds,
     };
 
     const counts = {
@@ -81,6 +87,19 @@ export default function Home({ abrasives }: HomeProps) {
                     )}
 
                     <Box sx={{ flex: 1, p: isMobile ? 1 : 2 }}>
+                        <ActiveFilters
+                            selectedTypes={state.selectedTypes}
+                            selectedGrits={state.selectedGrits}
+                            selectedBonds={state.selectedBonds}
+                            selectedMaterials={state.selectedMaterials}
+                            abrasiveSearch={state.abrasiveSearch}
+                            onRemoveType={handlers.removeSelectedType}
+                            onRemoveGrit={handlers.removeSelectedGrit}
+                            onRemoveMaterial={handlers.removeSelectedMaterial}
+                            onRemoveBond={handlers.removeSelectedBond}
+                            onClearSearch={handlers.clearAbrasiveSearch}
+                            onClearAll={handlers.handleClearFilters}
+                        />
                         <ProductGridDesktop
                             rows={results.filteredWheels}
                         />

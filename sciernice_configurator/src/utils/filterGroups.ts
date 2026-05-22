@@ -1,4 +1,4 @@
-// src/config/filterGroups.ts
+import { wheelTypesData } from "./abrasivesConsts";
 
 export interface Subtype {
   label: string;
@@ -11,12 +11,21 @@ export interface FilterGroup {
   subtypes: Subtype[];
 }
 
+export interface BondFilterGroup {
+  id: string;
+  label: string;
+  description: string;
+  values: string[];
+}
+
+
 export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
   {
     id: 'flat_wheels',
     label: 'Ściernice płaskie i tarczowe',
     subtypes: [
-      { label: 'Płaskie i profilowe (Typ 1, 1A1, 1C, 1YC)', values: ['1', '1A1', '1C', '1YC'] },
+      { label: 'Płaskie (Typ 1, 1A1)', values: ['1', '1A1'] },
+      { label: 'Profilowe (Typ 1C, 1YC)', values: ['1C', '1YC'] },
       { label: 'Z wybraniem walcowym (Typ 5)', values: ['5'] },
       { label: 'Do szlifowania / obniżony środek (Typ 27)', values: ['27'] },
       { label: 'Tarczowe z wkładkami gwintowymi (Typ 36)', values: ['36'] }
@@ -58,3 +67,61 @@ export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
     ]
   }
 ];
+
+
+export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
+  {
+    id: 'ceramic',
+    label: 'Ceramiczne (V)',
+    description: 'Sztywne, precyzyjne, do szlifierek stołowych',
+    values: ['V']
+  },
+  {
+    id: 'shellac',
+    label: 'Szelakowe (E)',
+    description: 'Wykończeniowe, polerskie, nadające połysk',
+    values: ['E']
+  },
+  {
+    id: 'resin',
+    label: 'Żywiczne (B, BF, TE, HE)',
+    description: 'Elastyczne, odporne na drgania i wysokie obroty',
+    values: ['B', 'BF', 'TE', 'HE']
+  },
+  {
+    id: 'rubber',
+    label: 'Gumowe i regulacyjne (C, TC)',
+    description: 'Popychające do bezkłowych, wysokie tarcie',
+    values: ['C', 'TC']
+  },
+  {
+    id: 'other',
+    label: 'Inne specjalistyczne',
+    description: 'Magnezytowe, metalowe, silikatowe i rzadkie',
+    values: ['M', 'K', 'F', 'N', 'L', 'J', 'EO', 'CO']
+  }
+];
+
+export const getBondGroupId = (rawBond: string): string => {
+    const cleanBond = (rawBond || '').trim().toUpperCase();
+    const found = BOND_FILTER_OPTIONS.find(g => g.values.includes(cleanBond));
+    return found ? found.id : 'other';
+};
+
+export const getBondDescription = (bondId: string): string => {
+    const found = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
+    return found ? found.description : bondId;
+};
+
+export const getBondLabel = (bondId: string): string => {
+    const found = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
+    return found ? found.label : bondId;
+};
+
+export const getWheelTypeLabel = (type: string): string => {
+    return wheelTypesData[type]?.name ?? `Typ ${type}`;
+};
+
+export const getWheelTypeDescription = (type: string): string => {
+    return wheelTypesData[type]?.desc ?? '';
+};

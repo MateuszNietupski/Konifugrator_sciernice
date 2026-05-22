@@ -10,5 +10,5 @@ export interface AbrasiveRow {
     gritSize: number;
     material: string;
     type: string;
-
+    bond: string;
 }

@@ -10,6 +10,7 @@ import SearchFilter from '../filters/searchFilter';
 import MaterialFilter from '../filters/materialFilter';
 import GritsFilter from '../filters/gritsFilter';
 import ShapeTypeFilter from '../filters/shapeTypeFilter';
+import BondFilter from '../filters/bondFilter';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -48,15 +49,18 @@ interface FilterPanelProps {
     abrasiveMaterials: string[];
     gritOptions: number[];
     lengthSteps: number[];
+    bondOptions: string[];
     facetCounts: {
         Type: Record<string, number>;
         Grit: Record<number, number>;
         Material: Record<string, number>;
+        Bond: Record<string, number>;
     };
 
     selectedTypes: string[];
     selectedGrits: number[];
     selectedMaterials: string[];
+    selectedBonds: string[];
     lengthRange: [number, number];
 
     onTypesChange: (types: string[]) => void;
@@ -66,6 +70,7 @@ interface FilterPanelProps {
     onClearFilters: () => void;
     abrasiveSearch: string;
     onAbrasiveSearchChange: (newValue: string) => void;
+    onBondsChange: (bonds: string[]) => void;
 }
 
 export default function FilterPanel({
@@ -77,6 +82,8 @@ export default function FilterPanel({
     selectedGrits,
     gritOptions,
     selectedMaterials,
+    selectedBonds,
+    bondOptions,
     lengthRange,
     abrasiveSearch,
     onTypesChange,
@@ -85,7 +92,7 @@ export default function FilterPanel({
     onMaterialsChange,
     onClearFilters,
     onAbrasiveSearchChange,
-
+    onBondsChange,
 }: FilterPanelProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -126,6 +133,15 @@ export default function FilterPanel({
         />
     );
 
+    const renderBondFilter = (size: 'small' | 'medium' = 'medium') => (
+        <BondFilter
+            value={selectedBonds}
+            options={bondOptions}
+            onChange={onBondsChange}
+            size={size}
+            facetCounts={facetCounts.Bond}
+        />
+    );
 
     const BrandLogo = () => (
         <Link
@@ -180,9 +196,12 @@ export default function FilterPanel({
                 <Box sx={{ mb: 2 }}>
                     {renderMaterialFilter()}
                 </Box>
-                
+
                 <Box sx={{ mb: 2 }}>
                     {renderGritsFilter()}
+                </Box>
+                <Box sx={{ mb: 2 }}>
+                    {renderBondFilter()}
                 </Box>
             </Box>
         </Box>

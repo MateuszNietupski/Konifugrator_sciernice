@@ -40,10 +40,10 @@ export const getGritHint = (gritValue: string | number, isMobile = false) => {
 
 export const wheelTypesData: Record<string, { name: string; desc: string }> = {
     // === ŚCIERNICE PŁASKIE I TARCZOWE ===
-    '1': { name: 'Ściernica płaska (Typ 1)', desc: 'Klasyczna tarcza do szlifowania obwodowego wałków, płaszczyzn i ostrzenia.' },
+    '1': { name: 'Płaska (Typ 1)', desc: 'Klasyczna tarcza do szlifowania obwodowego wałków, płaszczyzn i ostrzenia.' },
     '1A1': { name: 'Diamentowa płaska (1A1)', desc: 'Ściernica supertwarda z nasypem diamentowym/CBN na obwodzie.' },
-    '1C': { name: 'Diamentowa profilowa (1C)', desc: 'Ściernica z promieniowym profilem nasypu, np. do ostrzenia pił.' },
-    '1YC': { name: 'Diamentowa profilowa wąska (1YC)', desc: 'Specjalistyczna ściernica profilowa o jednostronnym ścięciu nasypu.' },
+    '1C': { name: 'Profilowa (1C)', desc: 'Ściernica z promieniowym profilem nasypu, np. do ostrzenia pił.' },
+    '1YC': { name: 'Profilowa wąska (1YC)', desc: 'Specjalistyczna ściernica profilowa o jednostronnym ścięciu nasypu.' },
     '5': { name: 'Z wybraniem walcowym (Typ 5)', desc: 'Tarcza płaska z jednostronnym wgłębieniem pod flanszę mocującą.' },
     '27': { name: 'Wypukła do szlifowania (Typ 27)', desc: 'Tarcza z obniżonym środkiem do szlifowania zgrubnego szlifierką kątową.' },
     '36': { name: 'Tarczowa z gwintami (Typ 36)', desc: 'Ściernica tarczowa z zatopionymi wkładkami gwintowymi do mocowania.' },
