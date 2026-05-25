@@ -38,18 +38,17 @@ export default function Home({ abrasives }: HomeProps) {
         gritOptions: results.gritOptions,
         lengthRange: state.lengthRange,
         lengthSteps: state.lengthSteps,
-        abrasiveSearch: state.abrasiveSearch,
         selectedMaterials: state.selectedMaterials,
         selectedBonds: state.selectedBonds,
         bondOptions: results.bondOptions,
+        searchModel: state.searchModel,
 
+        onSearchModelChange: handlers.setSearchModel,
         onTypesChange: handlers.setSelectedTypes,
         onGritsChange: handlers.setSelectedGrits,
         onLengthChange: handlers.setLengthRange,
         onMaterialsChange: handlers.setSelectedMaterials,
         onClearFilters: handlers.handleClearFilters,
-        onSearchChange: handlers.setAbrasiveSearch,
-        onAbrasiveSearchChange: handlers.setAbrasiveSearch,
         onBondsChange: handlers.setSelectedBonds,
     };
 
@@ -92,12 +91,12 @@ export default function Home({ abrasives }: HomeProps) {
                             selectedGrits={state.selectedGrits}
                             selectedBonds={state.selectedBonds}
                             selectedMaterials={state.selectedMaterials}
-                            abrasiveSearch={state.abrasiveSearch}
+                            searchModel={state.searchModel}
+                            onRemoveSearchItem={handlers.removeSearchItem}
                             onRemoveType={handlers.removeSelectedType}
                             onRemoveGrit={handlers.removeSelectedGrit}
                             onRemoveMaterial={handlers.removeSelectedMaterial}
                             onRemoveBond={handlers.removeSelectedBond}
-                            onClearSearch={handlers.clearAbrasiveSearch}
                             onClearAll={handlers.handleClearFilters}
                         />
                         <ProductGridDesktop
