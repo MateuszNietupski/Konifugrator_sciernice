@@ -98,6 +98,7 @@ const ActiveFilters = ({
             borderLeftColor: 'secondary.main',
             borderRadius: 1,
         }}>
+            Aktywne filtry:
             {chips.map((c) => (
                 <Tooltip
                     key={c.key}

@@ -1,4 +1,5 @@
-import { Box, Typography, Link } from "@mui/material";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import ContactData from "./ContactData";
 
 export default function Footer() {
@@ -14,11 +15,11 @@ export default function Footer() {
             })}
         >
             <Typography variant="body1" sx={{ fontWeight: "bold", mb: 1 }}>
-                Nie znalazłeś odpowiedniej piły taśmowej?
+                Nie znalazłeś odpowiedniej ściernicy?
             </Typography>
 
             <Typography variant="body2" sx={{ mb: 1 }}>
-                Skontaktuj się z nami — dostarczamy piły zgrzewane pod wymiar na indywidualne zapytanie – skontaktuj się z nami!
+                Skontaktuj się z nami — dostarczamy ściernice pod wymiar na indywidualne zapytanie – skontaktuj się z nami!
             </Typography>
 
             <ContactData/>

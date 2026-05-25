@@ -42,13 +42,18 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
     return (
         <Box sx={{ width: '100%' }}>
             <DataGrid
-                disableColumnMenu
+
                 rows={rows}
                 columns={displayColumns}
                 rowHeight={80}
                 initialState={{
                     pagination: { paginationModel: { pageSize: 10 } },
                     sorting: { sortModel: [{ field: 'Length', sort: 'asc' }] },
+                    columns: {
+                        columnVisibilityModel: {
+                            bond: false,
+                        }
+                    }
                 }}
                 pageSizeOptions={[5, 10, 20, 50]}
                 disableRowSelectionOnClick

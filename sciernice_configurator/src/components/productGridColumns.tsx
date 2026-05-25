@@ -7,8 +7,9 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import { materialDescriptions, materialColors, getGritHint, getWheelTypeName, wheelTypesData } from '../utils/abrasivesConsts';
-
+import { getBondGroupId, getBondLabel, getBondDescription } from '../utils/filterGroups';
 import type { AbrasiveRow } from '../types/types';
+
 interface GetColumnsProps {
   isMobile: boolean;
   handleOpenImage: (row: AbrasiveRow) => void;
@@ -149,8 +150,8 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   },
   {
     field: "boreSize",
-    headerName: "Otwór (d)",
-    description: "d - Średnica otworu wewnętrznego w mm (nie dotyczy segmentów i osełek)",
+    headerName: "Otwór",
+    description: "d - Średnica otworu wewnętrznego w mm (nie dotyczy segmentów, osełek i ściernic trzpieniowych)",
     flex: 1,
     minWidth: 80,
     headerAlign: 'center',
@@ -161,7 +162,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     },
     renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
   },
-  
+
   { field: "gritSize", flex: 1, headerAlign: 'center', align: 'center', headerName: "Gradacja", minWidth: 100, type: "number", renderCell: (params) => `${params.value}` },
   {
     field: "material",
@@ -235,6 +236,69 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
         </Box>
       );
     },
+  },
+  {
+    field: "bond",
+    headerName: "Spoiwo",
+    description: "Rodzaj spoiwa zastosowanego w ściernicy",
+    flex: 1,
+    headerAlign: 'center',
+    align: 'center',
+    minWidth: 130,
+    valueGetter: (value, row) => {
+      return getBondGroupId(row.bond || '');
+    },
+    renderCell: (params) => {
+      const bondId = params.value;
+      if (!bondId) return '—';
+
+      const label = getBondLabel(bondId);
+      const description = getBondDescription(bondId);
+
+      return (
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+          <Tooltip
+            title={description}
+            arrow
+            placement="top"
+            slotProps={{
+              tooltip: {
+                sx: {
+                  bgcolor: 'rgba(14, 33, 53, 0.9)',
+                  color: '#ffffff',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  maxWidth: 250,
+                  textAlign: 'center',
+                  '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.9)' }
+                }
+              }
+            }}
+          >
+            <Chip
+              size="small"
+              label={label}
+              sx={{
+                cursor: 'help',
+                bgcolor: '#E3F2FD',
+                color: '#0D47A1',
+                border: '1px solid #BBDEFB',
+                fontWeight: 600,
+                borderRadius: '6px',
+                fontSize: isMobile ? 11 : 12,
+                height: 'auto',
+                py: 0.4,
+                '& .MuiChip-label': {
+                  whiteSpace: 'normal',
+                  textAlign: 'center',
+                  lineHeight: 1.1,
+                }
+              }}
+            />
+          </Tooltip>
+        </Box>
+      );
+    }
   },
   {
     field: 'Title_URL',
