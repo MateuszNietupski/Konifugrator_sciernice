@@ -51,12 +51,13 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                     sorting: { sortModel: [{ field: 'Length', sort: 'asc' }] },
                     columns: {
                         columnVisibilityModel: {
-                            bond: false,
+                            name: false,
                         }
                     }
                 }}
                 pageSizeOptions={[5, 10, 20, 50]}
                 disableRowSelectionOnClick
+                onCellClick={(params, event) => event.stopPropagation()}
                 localeText={plPL.components.MuiDataGrid.defaultProps.localeText}
                 slots={{
                     noRowsOverlay: () => <CustomNoRowsOverlay />,
@@ -76,8 +77,28 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                     '& .MuiDataGrid-cell': {
                         display: 'flex',
                         alignItems: 'center',
+                        cursor: 'default',
                     },
-                    minHeight: 400
+                    minHeight: 400,
+                    '& .MuiDataGrid-columnHeader[data-field="Title_URL"]': {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    },
+                    '& .MuiDataGrid-columnHeader[data-field="Title_URL"] .MuiDataGrid-columnHeaderTitleContainer': {
+                        display: 'none',
+                    },
+                    '& .MuiDataGrid-columnHeader[data-field="Title_URL"] .MuiDataGrid-menuIcon': {
+                        visibility: 'visible',
+                        width: 'auto',
+                        margin: '0 auto',
+                    },
+                    '& .MuiDataGrid-columnHeader[data-field="Title_URL"] .MuiDataGrid-menuIconButton': {
+                        opacity: 1,
+                    },
+                    '& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within': {
+                        outline: 'none !important',
+                    },
                 }}
             />
 

@@ -16,6 +16,11 @@ export interface BondFilterGroup {
   label: string;
   description: string;
   values: string[];
+  colorConfig?: {
+    bg: string;
+    text: string;
+    border: string;
+  };
 }
 
 
@@ -72,56 +77,57 @@ export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
 export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
   {
     id: 'ceramic',
-    label: 'Ceramiczne (V)',
+    label: 'Ceramiczne',
+    //label: 'Ceramiczne (V)',
     description: 'Sztywne, precyzyjne, do szlifierek stołowych',
-    values: ['V']
+    values: ['V', 'C', 'TC'], // C i TC to gumowe, ale to ceramiki które skrypt tak przydzielił przez kod wewnętrzny ANDRE
+    colorConfig: { bg: '#FDF6E2', text: '#725100', border: '#E6D7B3' }
   },
   {
     id: 'shellac',
-    label: 'Szelakowe (E)',
+    label: 'Szelakowe',
+    //label: 'Szelakowe (E)',
     description: 'Wykończeniowe, polerskie, nadające połysk',
-    values: ['E']
+    values: ['E'],
+    colorConfig: { bg: '#FFF3CD', text: '#946600', border: '#FFEBA5' }
   },
   {
     id: 'resin',
-    label: 'Żywiczne (B, BF, TE, HE)',
+    label: 'Żywiczne',
+    //label: 'Żywiczne (B, BF, TE, HE)',
     description: 'Elastyczne, odporne na drgania i wysokie obroty',
-    values: ['B', 'BF', 'TE', 'HE']
-  },
-  {
-    id: 'rubber',
-    label: 'Gumowe i regulacyjne (C, TC)',
-    description: 'Popychające do bezkłowych, wysokie tarcie',
-    values: ['C', 'TC']
+    values: ['B', 'BF', 'TE', 'HE'],
+    colorConfig: { bg: '#F5EBE6', text: '#5D4037', border: '#D7CCC8' }
   },
   {
     id: 'other',
     label: 'Inne specjalistyczne',
     description: 'Magnezytowe, metalowe, silikatowe i rzadkie',
-    values: ['M', 'K', 'F', 'N', 'L', 'J', 'EO', 'CO']
+    values: ['M', 'K', 'F', 'N', 'L', 'J', 'EO', 'CO'],
+    colorConfig: { bg: '#F0F1F2', text: '#616161', border: '#E0E0E0' }
   }
 ];
 
 export const getBondGroupId = (rawBond: string): string => {
-    const cleanBond = (rawBond || '').trim().toUpperCase();
-    const found = BOND_FILTER_OPTIONS.find(g => g.values.includes(cleanBond));
-    return found ? found.id : 'other';
+  const cleanBond = (rawBond || '').trim().toUpperCase();
+  const found = BOND_FILTER_OPTIONS.find(g => g.values.includes(cleanBond));
+  return found ? found.id : 'other';
 };
 
 export const getBondDescription = (bondId: string): string => {
-    const found = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
-    return found ? found.description : bondId;
+  const found = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
+  return found ? found.description : bondId;
 };
 
 export const getBondLabel = (bondId: string): string => {
-    const found = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
-    return found ? found.label : bondId;
+  const found = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
+  return found ? found.label : bondId;
 };
 
 export const getWheelTypeLabel = (type: string): string => {
-    return wheelTypesData[type]?.name ?? `Typ ${type}`;
+  return wheelTypesData[type]?.name ?? `Typ ${type}`;
 };
 
 export const getWheelTypeDescription = (type: string): string => {
-    return wheelTypesData[type]?.desc ?? '';
+  return wheelTypesData[type]?.desc ?? '';
 };

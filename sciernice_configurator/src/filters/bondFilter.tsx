@@ -20,7 +20,7 @@ interface BondFilterProps {
 }
 
 const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {} }: BondFilterProps) => {
-    
+
     const getLabel = (id: string) => {
         return BOND_FILTER_OPTIONS.find(g => g.id === id)?.label || id;
     };
@@ -80,7 +80,7 @@ const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
                     }}
                 />
             )}
-            
+
         />
     );
 };

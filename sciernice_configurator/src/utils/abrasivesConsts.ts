@@ -40,7 +40,7 @@ export const getGritHint = (gritValue: string | number, isMobile = false) => {
 
 export const wheelTypesData: Record<string, { name: string; desc: string }> = {
     // === ŚCIERNICE PŁASKIE I TARCZOWE ===
-    '1': { name: 'Płaska (Typ 1)', desc: 'Klasyczna tarcza do szlifowania obwodowego wałków, płaszczyzn i ostrzenia.' },
+    '1': { name: 'Płaska (Typ 1)', desc: 'Klasyczny kamień do szlifowania obwodowego wałków, płaszczyzn i ostrzenia.' },
     '1A1': { name: 'Diamentowa płaska (1A1)', desc: 'Ściernica supertwarda z nasypem diamentowym/CBN na obwodzie.' },
     '1C': { name: 'Profilowa (1C)', desc: 'Ściernica z promieniowym profilem nasypu, np. do ostrzenia pił.' },
     '1YC': { name: 'Profilowa wąska (1YC)', desc: 'Specjalistyczna ściernica profilowa o jednostronnym ścięciu nasypu.' },

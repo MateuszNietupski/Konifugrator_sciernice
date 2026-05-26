@@ -11,6 +11,13 @@ import MaterialFilter from '../filters/materialFilter';
 import GritsFilter from '../filters/gritsFilter';
 import ShapeTypeFilter from '../filters/shapeTypeFilter';
 import BondFilter from '../filters/bondFilter';
+import LengthFilter from '../filters/lengthFilter';
+import { type GridFilterModel } from '@mui/x-data-grid';
+import Divider from '@mui/material/Divider';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -62,19 +69,18 @@ interface FilterPanelProps {
     selectedMaterials: string[];
     selectedBonds: string[];
     lengthRange: [number, number];
+    searchModel: GridFilterModel;
 
+    onSearchModelChange: (newValue: GridFilterModel) => void;
     onTypesChange: (types: string[]) => void;
     onGritsChange: (grits: number[]) => void;
     onLengthChange: (range: [number, number]) => void;
     onMaterialsChange: (materials: string[]) => void;
     onClearFilters: () => void;
-    abrasiveSearch: string;
-    onAbrasiveSearchChange: (newValue: string) => void;
     onBondsChange: (bonds: string[]) => void;
 }
 
 export default function FilterPanel({
-    wheelTypes,
     abrasiveMaterials,
     lengthSteps,
     facetCounts,
@@ -85,13 +91,13 @@ export default function FilterPanel({
     selectedBonds,
     bondOptions,
     lengthRange,
-    abrasiveSearch,
+    searchModel,
     onTypesChange,
     onGritsChange,
     onLengthChange,
     onMaterialsChange,
     onClearFilters,
-    onAbrasiveSearchChange,
+    onSearchModelChange,
     onBondsChange,
 }: FilterPanelProps) {
     const theme = useTheme();
@@ -99,8 +105,8 @@ export default function FilterPanel({
 
     const renderSearchFilter = (size: 'small' | 'medium' = 'medium') => (
         <SearchFilter
-            value={abrasiveSearch}
-            onChange={onAbrasiveSearchChange}
+            searchModel={searchModel}
+            onSearchModelChange={onSearchModelChange}
             size={size}
         />
     );
@@ -143,6 +149,14 @@ export default function FilterPanel({
         />
     );
 
+    const renderLengthFilter = (size: 'small' | 'medium' = 'medium') => (
+        <LengthFilter
+            lengthSteps={lengthSteps}
+            lengthRange={lengthRange}
+            onChange={onLengthChange}
+        />
+    );
+
     const BrandLogo = () => (
         <Link
             href="https://www.e-darmet.pl"
@@ -180,30 +194,64 @@ export default function FilterPanel({
     }
 
     return (
-        <Box sx={{ width: 280, borderRight: '1px solid', borderColor: 'divider', bgcolor: 'background.paper', display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <Box sx={{
+            width: 280,
+            borderRight: '1px solid',
+            borderColor: 'divider',
+            bgcolor: 'background.paper',
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'sticky',
+            top: 0,
+            flexShrink: 0,
+        }}>
             <BrandLogo />
             <Box sx={{ p: 2.5, flex: 1, overflowY: 'auto' }}>
                 <SectionTitle extra={<ClearButton onClick={onClearFilters} />}>
                     FILTROWANIE ŚCIERNIC
                 </SectionTitle>
-
+                <Divider sx={{ my: 2 }} />
                 <Box sx={{ mb: 2 }}>
                     {renderSearchFilter()}
                 </Box>
+                <Divider sx={{ my: 2 }} />
                 <Box sx={{ mb: 2 }}>
                     {renderTypeFilter()}
                 </Box>
-                <Box sx={{ mb: 2 }}>
-                    {renderMaterialFilter()}
-                </Box>
-
-                <Box sx={{ mb: 2 }}>
-                    {renderGritsFilter()}
-                </Box>
-                <Box sx={{ mb: 2 }}>
-                    {renderBondFilter()}
+                <Divider sx={{ my: 2 }} />
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        sx={{
+                            px: 0.5,
+                            minHeight: 0,
+                            '& .MuiAccordionSummary-content': { my: 1 }
+                        }}
+                    >
+                        <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ mb: 1.5, px: 0.5 }}>
+                            FILTRY MATERIAŁU
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
+                        <Box sx={{ mb: 3 , mt: 2}}>
+                            {renderMaterialFilter()}
+                        </Box>
+                        <Box sx={{ mb: 3 }}>
+                            {renderGritsFilter()}
+                        </Box>
+                        <Box sx={{ mt: 3 }}>
+                            {renderBondFilter()}
+                        </Box>
+                    </AccordionDetails>
+                </Accordion>
+                <Divider sx={{ my: 2 }} />
+                <SectionTitle>
+                    FItry wymiarów
+                </SectionTitle>
+                <Box sx={{ mb: 3 }}>
+                    {renderLengthFilter()}
                 </Box>
             </Box>
-        </Box>
+        </Box >
     );
 }

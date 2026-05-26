@@ -16,7 +16,7 @@ import { wheelTypesData } from '../utils/abrasivesConsts';
 interface ShapeTypeFilterProps {
   selectedTypes: string[];
   onTypesChange: (types: string[]) => void;
-  facetCounts: Record<string, number>; 
+  facetCounts: Record<string, number>;
 }
 
 export default function ShapeTypeFilter({
@@ -74,7 +74,7 @@ export default function ShapeTypeFilter({
 
   const handleGroupToggle = (e: React.MouseEvent, group: FilterGroup) => {
     e.stopPropagation();
-    
+
     const allValues = getAllGroupValues(group);
     const isAnyChecked = isGroupChecked(group);
     let newSelected: string[];
@@ -98,116 +98,138 @@ export default function ShapeTypeFilter({
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ mb: 1.5, px: 0.5 }}>
-        TYP / KSZTAŁT ŚCIERNICY
-      </Typography>
+    <Accordion
+      defaultExpanded
+      disableGutters
+      elevation={0}
+      sx={{
+        bgcolor: 'transparent',
+        '&:before': { display: 'none' },
+        borderBottom: '1px solid',
+        borderColor: 'divider',
+        borderRadius: 0,
+        width: '100%'
+      }}
+    >
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        sx={{
+          px: 0.5,
+          minHeight: 0,
+          '& .MuiAccordionSummary-content': { my: 1 }
+        }}
+      >
+        <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ mb: 1.5, px: 0.5 }}>
+          TYP / KSZTAŁT ŚCIERNICY
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
+        {ABRASIVE_FILTER_GROUPS.map((group) => {
+          const totalGroupCount = getGroupCount(group);
+          if (totalGroupCount === 0) return null;
 
-      {ABRASIVE_FILTER_GROUPS.map((group) => {
-        const totalGroupCount = getGroupCount(group);
-        if (totalGroupCount === 0) return null; 
-
-        return (
-          <Accordion 
-            key={group.id} 
-            disableGutters 
-            elevation={0} 
-            sx={{ 
-              border: 'none',
-              '&:before': { display: 'none' }, 
-              bgcolor: 'transparent'
-            }}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon fontSize="small" />}
-              sx={{ 
-                px: 0.5, 
-                minHeight: 40, 
-                '& .MuiAccordionSummary-content': { 
-                  my: 0.5, 
-                  display: 'flex', 
-                  justifyContent: 'space-between', 
-                  alignItems: 'center' 
-                } 
+          return (
+            <Accordion
+              key={group.id}
+              disableGutters
+              elevation={0}
+              sx={{
+                border: 'none',
+                '&:before': { display: 'none' },
+                bgcolor: 'transparent'
               }}
             >
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    size="small"
-                    checked={isGroupChecked(group)}
-                    indeterminate={isGroupIndeterminate(group)}
-                    onClick={(e) => handleGroupToggle(e, group)}
-                  />
-                }
-                label={
-                  <Typography variant="body2" fontWeight={500}>
-                    {group.label}
-                  </Typography>
-                }
-                sx={{ my: -0.5, flexGrow: 1 }}
-              />
-              <Typography variant="caption" color="text.secondary" sx={{ mr: 1, ml: 1 }}>
-                ({totalGroupCount})
-              </Typography>
-            </AccordionSummary>
-
-            <AccordionDetails sx={{ p: 0, pl: 4, pb: 1 }}>
-              {group.subtypes.map((subtype, index) => {
-                const count = getSubtypeCount(subtype);
-                if (count === 0 && !isSubtypeChecked(subtype)) return null; 
-
-                const tooltipContent = getSubtypeTooltipText(subtype);
-
-                return (
-                  <Box 
-                    key={index} 
-                    sx={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      width: '100%',
-                      justifyContent: 'space-between',
-                      pr: 1
-                    }}
-                  >
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          size="small"
-                          checked={isSubtypeChecked(subtype)}
-                          indeterminate={isSubtypeIndeterminate(subtype)}
-                          onChange={() => handleSubtypeToggle(subtype)}
-                        />
-                      }
-                      label={
-                        <Typography variant="body2" color="text.primary">
-                          {subtype.label} <span style={{ color: '#888', fontSize: '0.75rem' }}>({count})</span>
-                        </Typography>
-                      }
-                      sx={{ my: -0.25, flexGrow: 1 }}
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon fontSize="small" />}
+                sx={{
+                  px: 0.5,
+                  minHeight: 40,
+                  '& .MuiAccordionSummary-content': {
+                    my: 0.5,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
+                  }
+                }}
+              >
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      size="small"
+                      checked={isGroupChecked(group)}
+                      indeterminate={isGroupIndeterminate(group)}
+                      onClick={(e) => handleGroupToggle(e, group)}
                     />
-                    
-                    <Tooltip 
-                      title={<div style={{ whiteSpace: 'pre-line', padding: '4px' }}>{tooltipContent}</div>}
-                      arrow
-                      placement="left"
+                  }
+                  label={
+                    <Typography variant="body2" fontWeight={500}>
+                      {group.label}
+                    </Typography>
+                  }
+                  sx={{ my: -0.5, flexGrow: 1 }}
+                />
+                <Typography variant="caption" color="text.secondary" sx={{ mr: 1, ml: 1 }}>
+                  ({totalGroupCount})
+                </Typography>
+              </AccordionSummary>
+
+              <AccordionDetails sx={{ p: 0, pl: 4, pb: 1 }}>
+                {group.subtypes.map((subtype, index) => {
+                  const count = getSubtypeCount(subtype);
+                  if (count === 0 && !isSubtypeChecked(subtype)) return null;
+
+                  const tooltipContent = getSubtypeTooltipText(subtype);
+
+                  return (
+                    <Box
+                      key={index}
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        width: '100%',
+                        justifyContent: 'space-between',
+                        pr: 1
+                      }}
                     >
-                      <HelpOutlineIcon 
-                        sx={{ 
-                          fontSize: 16, 
-                          color: 'action.disabled', 
-                          cursor: 'help',
-                          '&:hover': { color: 'action.active' }
-                        }} 
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            size="small"
+                            checked={isSubtypeChecked(subtype)}
+                            indeterminate={isSubtypeIndeterminate(subtype)}
+                            onChange={() => handleSubtypeToggle(subtype)}
+                          />
+                        }
+                        label={
+                          <Typography variant="body2" color="text.primary">
+                            {subtype.label} <span style={{ color: '#888', fontSize: '0.75rem' }}>({count})</span>
+                          </Typography>
+                        }
+                        sx={{ my: -0.25, flexGrow: 1 }}
                       />
-                    </Tooltip>
-                  </Box>
-                );
-              })}
-            </AccordionDetails>
-          </Accordion>
-        );
-      })}
-    </Box>
+
+                      <Tooltip
+                        title={<div style={{ whiteSpace: 'pre-line', padding: '4px' }}>{tooltipContent}</div>}
+                        arrow
+                        placement="left"
+                      >
+                        <HelpOutlineIcon
+                          sx={{
+                            fontSize: 16,
+                            color: 'action.disabled',
+                            cursor: 'help',
+                            '&:hover': { color: 'action.active' }
+                          }}
+                        />
+                      </Tooltip>
+                    </Box>
+                  );
+                })}
+              </AccordionDetails>
+            </Accordion>
+          );
+        })}
+      </AccordionDetails>
+    </Accordion>
   );
 }

@@ -136,6 +136,25 @@ export const theme = createTheme({
         indicator: { backgroundColor: ANDRE_RED, height: 3 },
       },
     },
+    MuiTooltip: {
+      defaultProps: {
+        arrow: true,
+      },
+      styleOverrides: {
+        tooltip: {
+          backgroundColor: 'rgba(14, 33, 53, 0.9)',
+          color: '#ffffff',
+          fontSize: '0.75rem',
+          fontWeight: 500,
+          maxWidth: 260,
+          textAlign: 'center',
+          boxShadow: '0px 4px 12px rgba(0,0,0,0.2)',
+        },
+        arrow: {
+          color: 'rgba(14, 33, 53, 0.9)',
+        },
+      },
+    },
   },
 });
 

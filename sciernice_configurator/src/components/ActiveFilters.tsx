@@ -5,6 +5,8 @@ import GrainIcon from '@mui/icons-material/Grain';
 import TextureIcon from '@mui/icons-material/Texture';
 import SearchIcon from '@mui/icons-material/Search';
 import CancelIcon from '@mui/icons-material/Cancel';
+import { type GridFilterModel } from '@mui/x-data-grid';
+import StraightenIcon from '@mui/icons-material/Straighten';
 
 import { getBondLabel, getBondDescription, getWheelTypeLabel, getWheelTypeDescription } from '../utils/filterGroups';
 
@@ -16,71 +18,140 @@ interface ChipItem {
     onDelete: () => void;
 }
 
+interface FilterGroup {
+    title: string;
+    chips: ChipItem[];
+}
+
 interface ActiveFiltersProps {
     selectedTypes: string[];
     selectedGrits: number[];
     selectedMaterials: string[];
     selectedBonds: string[];
-    abrasiveSearch: string;
+    searchModel: GridFilterModel;
+    lengthRange: [number, number];
+    lengthSteps: number[];
     onRemoveType: (type: string) => void;
     onRemoveGrit: (grit: number) => void;
     onRemoveMaterial: (material: string) => void;
     onRemoveBond: (bond: string) => void;
-    onClearSearch: () => void;
+    onRemoveSearchItem: (id: string) => void;
+    removeLengthFilter: () => void;
     onClearAll: () => void;
 }
+
+const columnLabels: Record<string, string> = {
+    name: 'Nazwa',
+    type: 'Typ',
+    material: 'Materiał',
+    bond: 'Spoiwo',
+    grit: 'Gradacja',
+    outerDiameter: 'Średnica/Długość',
+    boreSize: 'Otwór',
+    thickness: 'Grubość',
+};
+
+const operatorLabels: Record<string, string> = {
+    contains: 'zawiera',
+    startsWith: 'zaczyna się od',
+    endsWith: 'kończy się na',
+    equals: 'równa się',
+    onOrAfter: '≥',
+    onOrBefore: '≤',
+};
 
 const ActiveFilters = ({
     selectedTypes,
     selectedGrits,
     selectedMaterials,
     selectedBonds,
-    abrasiveSearch,
+    searchModel,
+    lengthRange,
+    lengthSteps,
     onRemoveType,
     onRemoveGrit,
     onRemoveMaterial,
     onRemoveBond,
-    onClearSearch,
+    onRemoveSearchItem,
+    removeLengthFilter,
     onClearAll,
 }: ActiveFiltersProps) => {
-    const chips: ChipItem[] = [
-        ...selectedTypes.map((t) => ({
-            key: `type-${t}`,
-            icon: <CategoryIcon />,
-            label: getWheelTypeLabel(t),
-            tooltip: getWheelTypeDescription(t),
-            onDelete: () => onRemoveType(t),
-        })),
-        ...selectedGrits.map((g) => ({
-            key: `grit-${g}`,
-            icon: <GrainIcon />,
-            label: `Ziarno ${g}`,
-            tooltip: `Ziarno ${g}`,
-            onDelete: () => onRemoveGrit(g),
-        })),
-        ...selectedMaterials.map((m) => ({
-            key: `mat-${m}`,
-            icon: <TextureIcon />,
-            label: m,
-            tooltip: `Materiał ${m}`,
-            onDelete: () => onRemoveMaterial(m),
-        })),
-        ...(selectedBonds || []).map((b) => ({
-            key: `bond-${b}`,
-            icon: <TextureIcon />,
-            label: getBondLabel(b),
-            tooltip: getBondDescription(b),
-            onDelete: () => onRemoveBond(b),
-        })),
-        ...(abrasiveSearch ? [{
-            key: 'search',
-            icon: <SearchIcon />,
-            label: `„${abrasiveSearch}"`,
-            onDelete: onClearSearch,
-        }] : []),
+
+    const activeSearchItems = searchModel?.items?.filter(
+        item => item.value !== undefined && item.value !== null && String(item.value).trim() !== '' && item.id !== 'search'
+    ) || [];
+
+    const isLengthFilterActive = lengthSteps.length > 0 && 
+        (lengthRange[0] !== 0 || lengthRange[1] !== lengthSteps.length - 1);
+
+    const filterGroups: FilterGroup[] = [
+        {
+            title: 'Frazy',
+            chips: activeSearchItems.map((item) => {
+                const fieldLabel = columnLabels[item.field] || item.field;
+                const opLabel = operatorLabels[item.operator] || item.operator;
+                return {
+                    key: `search-chip-${item.id}`,
+                    icon: <SearchIcon />,
+                    label: `${fieldLabel} ${opLabel} „${item.value}”`,
+                    tooltip: `Szukasz frazy, gdzie pole ${fieldLabel} ${opLabel} „${item.value}”`,
+                    onDelete: () => onRemoveSearchItem(String(item.id)),
+                };
+            })
+        },
+        {
+            title: 'Typ',
+            chips: selectedTypes.map((t) => ({
+                key: `type-${t}`,
+                icon: <CategoryIcon />,
+                label: getWheelTypeLabel(t),
+                tooltip: getWheelTypeDescription(t),
+                onDelete: () => onRemoveType(t),
+            }))
+        },
+        {
+            title: 'Właściwości',
+            chips: [
+                ...selectedMaterials.map((m) => ({
+                    key: `mat-${m}`,
+                    icon: <TextureIcon />,
+                    label: m,
+                    tooltip: `Materiał ${m}`,
+                    onDelete: () => onRemoveMaterial(m),
+                })),
+                ...selectedGrits.map((g) => ({
+                    key: `grit-${g}`,
+                    icon: <GrainIcon />,
+                    label: `Ziarno ${g}`,
+                    tooltip: `Ziarno ${g}`,
+                    onDelete: () => onRemoveGrit(g),
+                })),
+                ...(selectedBonds || []).map((b) => ({
+                    key: `bond-${b}`,
+                    icon: <TextureIcon />,
+                    label: getBondLabel(b),
+                    tooltip: getBondDescription(b),
+                    onDelete: () => onRemoveBond(b),
+                }))
+            ]
+        },
+        {
+            title: 'Wymiary',
+            chips: isLengthFilterActive && lengthSteps[lengthRange[0]] !== undefined && lengthSteps[lengthRange[1]] !== undefined
+                ? [{
+                    key: 'dim-length',
+                    icon: <StraightenIcon />,
+                    label: `Średnica: ${lengthSteps[lengthRange[0]]} - ${lengthSteps[lengthRange[1]]} mm`,
+                    tooltip: `Średnica zewnętrzna w przedziale od ${lengthSteps[lengthRange[0]]} do ${lengthSteps[lengthRange[1]]} mm`,
+                    onDelete: removeLengthFilter,
+                }]
+                : []
+        }
     ];
 
-    if (chips.length === 0) return null;
+    const chips = filterGroups.flatMap((group) => group.chips);
+    const totalChipsCount = chips.length;
+    if (totalChipsCount === 0) return null;
 
     return (
         <Box sx={{

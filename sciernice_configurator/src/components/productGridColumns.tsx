@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import { materialDescriptions, materialColors, getGritHint, getWheelTypeName, wheelTypesData } from '../utils/abrasivesConsts';
-import { getBondGroupId, getBondLabel, getBondDescription } from '../utils/filterGroups';
+import { BOND_FILTER_OPTIONS, getBondGroupId, getBondLabel, getBondDescription } from '../utils/filterGroups';
 import type { AbrasiveRow } from '../types/types';
 
 interface GetColumnsProps {
@@ -15,11 +15,14 @@ interface GetColumnsProps {
   handleOpenImage: (row: AbrasiveRow) => void;
 }
 
+
+
 export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsProps): GridColDef<AbrasiveRow>[] => [
   {
     field: "Image",
+    disableColumnMenu: true,
     headerName: '',
-    flex: 1,
+    flex: 1.4,
     sortable: false,
     width: isMobile ? 58 : 116,
     headerAlign: 'center',
@@ -55,6 +58,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   },
   {
     field: 'name',
+    disableColumnMenu: true,
     headerName: 'Nazwa',
     flex: 1,
     headerAlign: 'center',
@@ -78,6 +82,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   },
   {
     field: 'type',
+    disableColumnMenu: true,
     headerName: 'Typ ściernicy',
     flex: 1,
     headerAlign: 'center' as const,
@@ -122,6 +127,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
 
   {
     field: "outerDimension",
+    disableColumnMenu: true,
     headerName: "Śr/Dł(D/L)",
     description: "D - Średnica zewnętrzna (dla ściernic okrągłych) lub L - Długość (dla segmentów i osełek) w mm",
     flex: 0.8,
@@ -136,6 +142,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   },
   {
     field: "thickness",
+    disableColumnMenu: true,
     headerName: "Gr./Szer.(T/B)",
     description: "T - Grubość (dla ściernic okrągłych) lub B - Szerokość (dla segmentów i osełek) w mm",
     flex: 1,
@@ -150,6 +157,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   },
   {
     field: "boreSize",
+    disableColumnMenu: true,
     headerName: "Otwór",
     description: "d - Średnica otworu wewnętrznego w mm (nie dotyczy segmentów, osełek i ściernic trzpieniowych)",
     flex: 1,
@@ -163,9 +171,129 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
   },
 
-  { field: "gritSize", flex: 1, headerAlign: 'center', align: 'center', headerName: "Gradacja", minWidth: 100, type: "number", renderCell: (params) => `${params.value}` },
+  {
+    field: "gritSize",
+    disableColumnMenu: true,
+    flex: 1,
+    headerAlign: 'center',
+    align: 'center',
+    headerName: "Gradacja",
+    minWidth: 100,
+    type: "number",
+    renderCell: (params) => {
+      const gritValue = params.value;
+      const hint = getGritHint(gritValue, isMobile);
+
+      // Jeśli nie ma opisu dla danej gradacji, renderujemy sam tekst bez dymka
+      if (!hint) {
+        return (
+          <Box sx={{ fontSize: isMobile ? 11 : 13, fontWeight: 500 }}>
+            {gritValue}
+          </Box>
+        );
+      }
+
+      return (
+        <Tooltip
+          title={hint}
+          arrow
+          placement="top"
+          slotProps={{
+            tooltip: {
+              sx: {
+                bgcolor: 'rgba(14, 33, 53, 0.9)',
+                color: '#ffffff',
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                maxWidth: 250,
+                textAlign: 'center',
+                '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.9)' }
+              }
+            }
+          }}
+        >
+          <Typography sx={{
+            fontSize: isMobile ? 11 : 13,
+            fontWeight: 500,
+            cursor: 'help',
+            textAlign: 'center',
+          }}>
+            {gritValue}
+          </Typography>
+        </Tooltip>
+      );
+    }
+  },
+  {
+    field: "bond",
+    disableColumnMenu: true,
+    headerName: "Spoiwo",
+    description: "Rodzaj spoiwa zastosowanego w ściernicy",
+    flex: 1,
+    headerAlign: 'center',
+    align: 'center',
+    minWidth: 130,
+    valueGetter: (value, row) => {
+      return getBondGroupId(row.bond || '');
+    },
+    renderCell: (params) => {
+      const bondId = params.value;
+      if (!bondId) return '—';
+
+      const label = getBondLabel(bondId);
+      const description = getBondDescription(bondId);
+
+      const group = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
+      const colors = group?.colorConfig || { bg: '#F0F1F2', text: '#616161', border: '#E0E0E0' };
+
+      return (
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+          <Tooltip
+            title={description}
+            arrow
+            placement="top"
+            slotProps={{
+              tooltip: {
+                sx: {
+                  bgcolor: 'rgba(14, 33, 53, 0.9)',
+                  color: '#ffffff',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  maxWidth: 250,
+                  textAlign: 'center',
+                  '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.9)' }
+                }
+              }
+            }}
+          >
+            <Chip
+              size="small"
+              label={label}
+              sx={{
+                cursor: 'help',
+                bgcolor: colors.bg,
+                color: colors.text,
+                border: `1px solid ${colors.border}`,
+                fontWeight: 600,
+                borderRadius: '6px',
+                fontSize: isMobile ? 11 : 12,
+                height: 'auto',
+                py: 0.4,
+                '& .MuiChip-label': {
+                  whiteSpace: 'normal',
+                  textAlign: 'center',
+                  lineHeight: 1.1,
+                }
+              }}
+            />
+          </Tooltip>
+        </Box>
+      );
+    }
+  },
   {
     field: "material",
+    disableColumnMenu: true,
     headerName: "Materiał",
     flex: 1,
     headerAlign: 'center',
@@ -236,69 +364,6 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
         </Box>
       );
     },
-  },
-  {
-    field: "bond",
-    headerName: "Spoiwo",
-    description: "Rodzaj spoiwa zastosowanego w ściernicy",
-    flex: 1,
-    headerAlign: 'center',
-    align: 'center',
-    minWidth: 130,
-    valueGetter: (value, row) => {
-      return getBondGroupId(row.bond || '');
-    },
-    renderCell: (params) => {
-      const bondId = params.value;
-      if (!bondId) return '—';
-
-      const label = getBondLabel(bondId);
-      const description = getBondDescription(bondId);
-
-      return (
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-          <Tooltip
-            title={description}
-            arrow
-            placement="top"
-            slotProps={{
-              tooltip: {
-                sx: {
-                  bgcolor: 'rgba(14, 33, 53, 0.9)',
-                  color: '#ffffff',
-                  fontSize: '0.75rem',
-                  fontWeight: 500,
-                  maxWidth: 250,
-                  textAlign: 'center',
-                  '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.9)' }
-                }
-              }
-            }}
-          >
-            <Chip
-              size="small"
-              label={label}
-              sx={{
-                cursor: 'help',
-                bgcolor: '#E3F2FD',
-                color: '#0D47A1',
-                border: '1px solid #BBDEFB',
-                fontWeight: 600,
-                borderRadius: '6px',
-                fontSize: isMobile ? 11 : 12,
-                height: 'auto',
-                py: 0.4,
-                '& .MuiChip-label': {
-                  whiteSpace: 'normal',
-                  textAlign: 'center',
-                  lineHeight: 1.1,
-                }
-              }}
-            />
-          </Tooltip>
-        </Box>
-      );
-    }
   },
   {
     field: 'Title_URL',

@@ -1,7 +1,6 @@
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
-
 import Footer from "../components/Footer";
 import FilterPanel from "../components/FilterPanel";
 import { useFilters } from '../hooks/useFilters';
@@ -25,6 +24,8 @@ export default function Home({ abrasives }: HomeProps) {
     const filterProps = {
         abrasiveMaterials: results.abrasiveMaterials,
         wheelTypes: results.wheelTypes,
+        gritOptions: results.gritOptions,
+        bondOptions: results.bondOptions,
         facetCounts: {
             Type: results.facetCounts.Type,
             Grit: results.facetCounts.Grit,
@@ -32,15 +33,12 @@ export default function Home({ abrasives }: HomeProps) {
             Bond: results.facetCounts.Bond
         },
 
-
         selectedTypes: state.selectedTypes,
         selectedGrits: state.selectedGrits,
-        gritOptions: results.gritOptions,
         lengthRange: state.lengthRange,
         lengthSteps: state.lengthSteps,
         selectedMaterials: state.selectedMaterials,
         selectedBonds: state.selectedBonds,
-        bondOptions: results.bondOptions,
         searchModel: state.searchModel,
 
         onSearchModelChange: handlers.setSearchModel,
@@ -92,11 +90,14 @@ export default function Home({ abrasives }: HomeProps) {
                             selectedBonds={state.selectedBonds}
                             selectedMaterials={state.selectedMaterials}
                             searchModel={state.searchModel}
+                            lengthRange={state.lengthRange}
+                            lengthSteps={state.lengthSteps}
                             onRemoveSearchItem={handlers.removeSearchItem}
                             onRemoveType={handlers.removeSelectedType}
                             onRemoveGrit={handlers.removeSelectedGrit}
                             onRemoveMaterial={handlers.removeSelectedMaterial}
                             onRemoveBond={handlers.removeSelectedBond}
+                            removeLengthFilter={handlers.removeLengthFilter}
                             onClearAll={handlers.handleClearFilters}
                         />
                         <ProductGridDesktop
