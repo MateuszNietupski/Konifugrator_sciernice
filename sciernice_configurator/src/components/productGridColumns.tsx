@@ -21,10 +21,12 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   {
     field: "Image",
     disableColumnMenu: true,
-    headerName: '',
+    headerName: "Zdjęcie",
+    renderHeader: () => null,
     flex: 1.4,
     sortable: false,
     width: isMobile ? 58 : 116,
+    minWidth: isMobile ? 40 : 60,
     headerAlign: 'center',
     align: 'center',
     cellClassName: 'no-focus-cell',
@@ -46,8 +48,8 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
               },
             }}
             sx={{
-              width: isMobile ? 48 : 100,
-              height: isMobile ? 48 : 100,
+              width: isMobile ? 48 : 90,
+              height: isMobile ? 48 : 90,
               cursor: imgUrl ? 'zoom-in' : 'default',
               '& img': { objectFit: 'contain', p: 0 }
             }}
@@ -159,7 +161,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     field: "boreSize",
     disableColumnMenu: true,
     headerName: "Otwór",
-    description: "d - Średnica otworu wewnętrznego w mm (nie dotyczy segmentów, osełek i ściernic trzpieniowych)",
+    description: "d – Średnica otworu wewnętrznego (dla ściernic tarczowych) lub średnica trzpienia (d dla ściernic trzpieniowych). Nie dotyczy osełek i segmentów.",
     flex: 1,
     minWidth: 80,
     headerAlign: 'center',
@@ -184,7 +186,6 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
       const gritValue = params.value;
       const hint = getGritHint(gritValue, isMobile);
 
-      // Jeśli nie ma opisu dla danej gradacji, renderujemy sam tekst bez dymka
       if (!hint) {
         return (
           <Box sx={{ fontSize: isMobile ? 11 : 13, fontWeight: 500 }}>
@@ -282,7 +283,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
                 '& .MuiChip-label': {
                   whiteSpace: 'normal',
                   textAlign: 'center',
-                  lineHeight: 1.1,
+                  lineHeight: isMobile ? 1.2 : 1.4,
                 }
               }}
             />
@@ -367,7 +368,8 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
   },
   {
     field: 'Title_URL',
-    headerName: '',
+    headerName: 'Link do produktu',
+    renderHeader: () => null,
     minWidth: isMobile ? 100 : 200,
     flex: 1,
     headerAlign: 'center',

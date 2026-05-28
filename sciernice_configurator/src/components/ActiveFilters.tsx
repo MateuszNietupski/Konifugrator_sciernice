@@ -9,6 +9,7 @@ import { type GridFilterModel } from '@mui/x-data-grid';
 import StraightenIcon from '@mui/icons-material/Straighten';
 
 import { getBondLabel, getBondDescription, getWheelTypeLabel, getWheelTypeDescription } from '../utils/filterGroups';
+import type { NumericDimension, DimensionConfigItem } from '../hooks/useFilters';
 
 interface ChipItem {
     key: string;
@@ -29,14 +30,13 @@ interface ActiveFiltersProps {
     selectedMaterials: string[];
     selectedBonds: string[];
     searchModel: GridFilterModel;
-    lengthRange: [number, number];
-    lengthSteps: number[];
+    dimensions: Record<NumericDimension, DimensionConfigItem>;
+    onRemoveDimensionFilter: (field: NumericDimension) => void;
     onRemoveType: (type: string) => void;
     onRemoveGrit: (grit: number) => void;
     onRemoveMaterial: (material: string) => void;
     onRemoveBond: (bond: string) => void;
     onRemoveSearchItem: (id: string) => void;
-    removeLengthFilter: () => void;
     onClearAll: () => void;
 }
 
@@ -66,14 +66,13 @@ const ActiveFilters = ({
     selectedMaterials,
     selectedBonds,
     searchModel,
-    lengthRange,
-    lengthSteps,
+    dimensions,
     onRemoveType,
     onRemoveGrit,
     onRemoveMaterial,
     onRemoveBond,
     onRemoveSearchItem,
-    removeLengthFilter,
+    onRemoveDimensionFilter,
     onClearAll,
 }: ActiveFiltersProps) => {
 
@@ -81,8 +80,41 @@ const ActiveFilters = ({
         item => item.value !== undefined && item.value !== null && String(item.value).trim() !== '' && item.id !== 'search'
     ) || [];
 
-    const isLengthFilterActive = lengthSteps.length > 0 && 
-        (lengthRange[0] !== 0 || lengthRange[1] !== lengthSteps.length - 1);
+    const isOuterActive = dimensions?.outerDiameter?.isActive || false;
+    const isThicknessActive = dimensions?.thickness?.isActive || false;
+    const isBoreActive = dimensions?.boreSize?.isActive || false;
+
+    const dimensionChips: ChipItem[] = [];
+
+    if (isOuterActive && dimensions?.outerDiameter) {
+        dimensionChips.push({
+            key: 'dim-outerDiameter',
+            icon: <StraightenIcon />,
+            label: `Średnica: ${dimensions.outerDiameter.currentValues[0]} - ${dimensions.outerDiameter.currentValues[1]} mm`,
+            tooltip: `Średnica zewnętrzna w przedziale od ${dimensions.outerDiameter.currentValues[0]} do ${dimensions.outerDiameter.currentValues[1]} mm`,
+            onDelete: () => onRemoveDimensionFilter('outerDiameter'),
+        });
+    }
+
+    if (isThicknessActive && dimensions?.thickness) {
+        dimensionChips.push({
+            key: 'dim-thickness',
+            icon: <StraightenIcon />,
+            label: `Grubość: ${dimensions.thickness.currentValues[0]} - ${dimensions.thickness.currentValues[1]} mm`,
+            tooltip: `Grubość/Szerokość w przedziale od ${dimensions.thickness.currentValues[0]} do ${dimensions.thickness.currentValues[1]} mm`,
+            onDelete: () => onRemoveDimensionFilter('thickness'),
+        });
+    }
+
+    if (isBoreActive && dimensions?.boreSize) {
+        dimensionChips.push({
+            key: 'dim-boreSize',
+            icon: <StraightenIcon />,
+            label: `Otwór: ${dimensions.boreSize.currentValues[0]} - ${dimensions.boreSize.currentValues[1]} mm`,
+            tooltip: `Otwór wewnętrzny w przedziale od ${dimensions.boreSize.currentValues[0]} do ${dimensions.boreSize.currentValues[1]} mm`,
+            onDelete: () => onRemoveDimensionFilter('boreSize'),
+        });
+    }
 
     const filterGroups: FilterGroup[] = [
         {
@@ -137,15 +169,7 @@ const ActiveFilters = ({
         },
         {
             title: 'Wymiary',
-            chips: isLengthFilterActive && lengthSteps[lengthRange[0]] !== undefined && lengthSteps[lengthRange[1]] !== undefined
-                ? [{
-                    key: 'dim-length',
-                    icon: <StraightenIcon />,
-                    label: `Średnica: ${lengthSteps[lengthRange[0]]} - ${lengthSteps[lengthRange[1]]} mm`,
-                    tooltip: `Średnica zewnętrzna w przedziale od ${lengthSteps[lengthRange[0]]} do ${lengthSteps[lengthRange[1]]} mm`,
-                    onDelete: removeLengthFilter,
-                }]
-                : []
+            chips: dimensionChips
         }
     ];
 

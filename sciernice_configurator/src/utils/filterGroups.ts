@@ -82,7 +82,7 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     description: 'Sztywne, precyzyjne, do szlifierek stołowych',
     values: ['V', 'C', 'TC'], // C i TC to gumowe, ale to ceramiki które skrypt tak przydzielił przez kod wewnętrzny ANDRE
     colorConfig: { bg: '#FDF6E2', text: '#725100', border: '#E6D7B3' }
-  },
+  },/*
   {
     id: 'shellac',
     label: 'Szelakowe',
@@ -91,13 +91,14 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     values: ['E'],
     colorConfig: { bg: '#FFF3CD', text: '#946600', border: '#FFEBA5' }
   },
+  */
   {
     id: 'resin',
     label: 'Żywiczne',
     //label: 'Żywiczne (B, BF, TE, HE)',
     description: 'Elastyczne, odporne na drgania i wysokie obroty',
     values: ['B', 'BF', 'TE', 'HE'],
-    colorConfig: { bg: '#F5EBE6', text: '#5D4037', border: '#D7CCC8' }
+    colorConfig: { bg: '#F5EBE6', text: '#D85A1B', border: '#D7CCC8' }
   },
   {
     id: 'other',

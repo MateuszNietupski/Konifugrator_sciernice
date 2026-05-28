@@ -508,8 +508,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-350-x-40-x-127-mm--sciernica-plaska--typ-1--95a24p6b51f1-andre-110404-id-16880",
     "description": "Kamień do szlifierki stołowej | Średnica 350 mm | Materiał ścierny: elektrokorund zwykły 95A | Ziarno materiału ściernego: 24 | Stopień twardości: twarde",
     "gtin": "5900461087303",
-    "bond": "F",
-    "bond_name": "nieznane (F)",
+    "bond": "B",
+    "bond_name": "żywiczne (bakielitowe)",
     "bond_source": "title"
   },
   {
@@ -545,8 +545,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-350-x-50-x-127-mm--sciernica-plaska--typ-1--95a24p6b51f1-andre-110420-id-16883",
     "description": "Kamień do szlifierki stołowej | Średnica 350 mm | Materiał ścierny: elektrokorund zwykły 95A | Ziarno materiału ściernego: 24 | Stopień twardości: twarde",
     "gtin": "5900461087501",
-    "bond": "F",
-    "bond_name": "nieznane (F)",
+    "bond": "B",
+    "bond_name": "żywiczne (bakielitowe)",
     "bond_source": "title"
   },
   {
@@ -582,8 +582,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-400-x-50-x-127-mm--sciernica-plaska--typ-1--95a24q5b51f1-andre-210057-id-16885",
     "description": "Kamień do szlifierki stołowej | Średnica 400 mm | Materiał ścierny: elektrokorund zwykły 95A | Ziarno materiału ściernego: 24 | Stopień twardości: twarde",
     "gtin": "5900461087709",
-    "bond": "F",
-    "bond_name": "nieznane (F)",
+    "bond": "B",
+    "bond_name": "żywiczne (bakielitowe)",
     "bond_source": "title"
   },
   {
@@ -618,8 +618,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-400-x-50-x-127-mm--sciernica-plaska--typ-1--98c24r5b374f1-andre-215914-id-16887",
     "description": "Tarcza ścierna 400 mm | Materiał ścierny: węglik krzemu czarny 98C | Ziarno materiału ściernego: 24 | Stopień twardości: twarde",
     "gtin": "5900461127818",
-    "bond": "F",
-    "bond_name": "nieznane (F)",
+    "bond": "B",
+    "bond_name": "żywiczne (bakielitowe)",
     "bond_source": "title"
   },
   {
@@ -1107,9 +1107,9 @@
     "attributes": [],
     "material": "elektrokorund szlachetny",
     "gritSize": "24",
-    "srednica_dlugosc": "100",
+    "srednica_dlugosc": "150",
     "grubosc_szerokosc": "35",
-    "boreSize": "150",
+    "boreSize": "",
     "title": "Segment trapezowy 100/85 x 35 x 150 mm | typ 3109 | 99A24J5B - ANDRE 140200",
     "link": "https://www.e-darmet.pl/segment-trapezowy-10085-x-35-x-150-mm--typ-3109--99a24j5b-andre-140200-id-16918",
     "description": "Typ 3109; Wymiary: 100/85 x 35 x 150 mm; Materiał ścierny: elektrokorund szlachetny 99A | Ziarno materiału ściernego: 24",
@@ -1130,9 +1130,9 @@
     "attributes": [],
     "material": "elektrokorund szlachetny",
     "gritSize": "60",
-    "srednica_dlugosc": "100",
+    "srednica_dlugosc": "150",
     "grubosc_szerokosc": "35",
-    "boreSize": "150",
+    "boreSize": "",
     "title": "Segment trapezowy 100/85 x 35 x 150 mm | typ 3109 | 99A60K6B - ANDRE 140106",
     "link": "https://www.e-darmet.pl/segment-trapezowy-10085-x-35-x-150-mm--typ-3109--99a60k6b-andre-140106-id-16919",
     "description": "Typ 3109; Wymiary: 100/85 x 35 x 150 mm; Materiał ścierny: elektrokorund szlachetny 99A | Ziarno materiału ściernego: 60",
@@ -1153,9 +1153,9 @@
     "attributes": [],
     "material": "węglik krzemu czarny",
     "gritSize": "36",
-    "srednica_dlugosc": "55",
+    "srednica_dlugosc": "150",
     "grubosc_szerokosc": "75",
-    "boreSize": "150",
+    "boreSize": "0",
     "title": "Segment nerkowy 55 x 75 x 150 mm | typ 3110 | 98C36N5B \"1\" - ANDRE 140130",
     "link": "https://www.e-darmet.pl/segment-nerkowy-55-x-75-x-150-mm--typ-3110--98c36n5b-1-andre-140130-id-16923",
     "description": "Typ 3110; Wymiary: 55 x 75 x 150 mm; Materiał ścierny: węglik krzemu czarny; Ziarno materiału ściernego: 36",
@@ -1176,9 +1176,9 @@
     "attributes": [],
     "material": "węglik krzemu czarny",
     "gritSize": "20",
-    "srednica_dlugosc": "80",
+    "srednica_dlugosc": "95",
     "grubosc_szerokosc": "40",
-    "boreSize": "95",
+    "boreSize": "",
     "title": "Segment prostokątny z dwoma wkładkami gwintowymi 80 x 40 x 95 mm | typ 3121 | 98C20M6B - ANDRE 140171",
     "link": "https://www.e-darmet.pl/segment-prostokatny-z-dwoma-wkladkami-gwintowymi-80-x-40-x-95-mm--typ-3121--98c20m6b-andre-140171-id-16926",
     "description": "Typ 3121; Wymiary: 80 x 40 x 95 mm; Materiał ścierny: węglik krzemu czarny 98C | Ziarno materiału ściernego: 20",
@@ -1199,9 +1199,9 @@
     "attributes": [],
     "material": "węglik krzemu czarny",
     "gritSize": "16",
-    "srednica_dlugosc": "50",
-    "grubosc_szerokosc": "20",
-    "boreSize": "200",
+    "srednica_dlugosc": "200",
+    "grubosc_szerokosc": "50",
+    "boreSize": "0",
     "title": "Osełka prostokątna 50 x 20 x 200 mm | typ 9010 | 98C16V5B469 - ANDRE 140008",
     "link": "https://www.e-darmet.pl/oselka-prostokatna-50-x-20-x-200-mm--typ-9010--98c16v5b469-andre-140008-id-16927",
     "description": "Typ 9010; Wymiary: 50 x 20 x 200 mm; Materiał ścierny: węglik krzemu czarny 98C | Ziarno materiału ściernego: 16",
@@ -1280,7 +1280,7 @@
     "description": "Typ 27; Wymiary: 125 x 4 x 22,2 mm; Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 30",
     "gtin": "5900461002603",
     "bond": "BF",
-    "bond_name": "żywiczne zbrojone",
+    "bond_name": "żywiczne wzmacniane tkaniną (zbrojone)",
     "bond_source": "title"
   },
   {
@@ -1316,7 +1316,7 @@
     "description": "Typ 27; Wymiary: 125 x 6 x 22,2 mm; Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 30",
     "gtin": "5900461003600",
     "bond": "BF",
-    "bond_name": "żywiczne zbrojone",
+    "bond_name": "żywiczne wzmacniane tkaniną (zbrojone)",
     "bond_source": "title"
   },
   {
@@ -2291,8 +2291,8 @@
     "description": "Typ 1; Wymiary: 100 x 20 x 20 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461069002",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2331,8 +2331,8 @@
     "description": "Typ 1; Wymiary: 125 x 16 x 12,7 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461026302",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2371,8 +2371,8 @@
     "description": "Typ 1; Wymiary: 125 x 16 x 20 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461055203",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2411,8 +2411,8 @@
     "description": "Typ 1; Wymiary: 125 x 20 x 20 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461055302",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2451,8 +2451,8 @@
     "description": "Typ 1; Wymiary: 150 x 16 x 12,7 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461054909",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2491,8 +2491,8 @@
     "description": "Typ 1; Wymiary: 150 x 16 x 20 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461037407",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2531,8 +2531,8 @@
     "description": "Typ 1; Wymiary: 150 mm x 20 mm x 12,7 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461064106",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2571,8 +2571,8 @@
     "description": "Typ 1; Wymiary: 150 x 20 x 20 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461026104",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2611,8 +2611,8 @@
     "description": "Typ 1; Wymiary: 150 x 20 x 20 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 80 | 95A80K6VTE10",
     "gtin": "5900461038206",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2651,8 +2651,8 @@
     "description": "Typ 1; Wymiary: 150 mm x 20 mm x 32 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461064205",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2691,8 +2691,8 @@
     "description": "Typ 1; Wymiary: 175 x 20 x 32 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461127832",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2731,8 +2731,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 20 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461037001",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2771,8 +2771,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 36 | 95A36P5VTE10",
     "gtin": "5900461054602",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2811,8 +2811,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 46 | 95A46K5VTE10",
     "gtin": "5900461055708",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2851,8 +2851,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461038503",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2891,8 +2891,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund zwykły 95A | Ziarno materiału ściernego: 80 | 95A80K6VTE10",
     "gtin": "5900461026005",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2931,8 +2931,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 36 | 95A36P5VTE10",
     "gtin": "5900461054404",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -2971,8 +2971,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46 | 95A46K5VTE10",
     "gtin": "5900461069200",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3011,8 +3011,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25  mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461054305",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3051,8 +3051,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 80 | 95A80K6VTE10",
     "gtin": "5900461064502",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3091,8 +3091,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 32 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461069309",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3131,8 +3131,8 @@
     "description": "Typ 1; Wymiary: 250 x 20 x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461038800",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3171,8 +3171,8 @@
     "description": "Typ 1; Wymiary: 250 mm x 25 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 36 | 95A36P5VTE10",
     "gtin": "5900461036608",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3211,8 +3211,8 @@
     "description": "Typ 1; Wymiary: 250 mm x 25 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46 | 95A46K5VTE10",
     "gtin": "5900461038909",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3251,8 +3251,8 @@
     "description": "Typ 1; Wymiary: 250 mm x 25 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461054008",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3291,8 +3291,8 @@
     "description": "Typ 1; Wymiary: 250 mm x 32 mm x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461036400",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3331,8 +3331,8 @@
     "description": "Typ 1; Wymiary: 250 mm x 40 mm x 51 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60 | 95A60K5VTE10",
     "gtin": "5900461039203",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3367,8 +3367,8 @@
     "description": "Typ 1 | Wymiary: 300 x 32 x 32 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A36P5VTE10",
     "gtin": "5900461053803",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3403,8 +3403,8 @@
     "description": "Typ 1 | Wymiary: 300 x 32 x 32 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A46K5VTE10",
     "gtin": "5900461036301",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3439,8 +3439,8 @@
     "description": "Typ 1 | Wymiary: 300 x 32 x 32 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A60K5VTE10",
     "gtin": "5900461063505",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3475,8 +3475,8 @@
     "description": "Typ 1 | Wymiary: 300 x 40 x 51 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A60K5VTE10",
     "gtin": "5900461064700",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3511,8 +3511,8 @@
     "description": "Typ 1 | Wymiary: 300 x 40 x 127 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A60K5VTE10",
     "gtin": "5900461056309",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3547,8 +3547,8 @@
     "description": "Typ 1 | Wymiary: 350 x 40 x 51 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A36P5VTE10",
     "gtin": "5900461063406",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3583,8 +3583,8 @@
     "description": "Typ 1 | Wymiary: 350 x 40 x 51 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A60K5VTE10",
     "gtin": "5900461056408",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3619,8 +3619,8 @@
     "description": "Typ 1 | Wymiary: 350 x 40 x 127 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A36P5VTE10",
     "gtin": "5900461053308",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3655,8 +3655,8 @@
     "description": "Typ 1 | Wymiary: 350 x 40 x 127 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A46K5VTE10",
     "gtin": "5900461035908",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3691,8 +3691,8 @@
     "description": "Typ 1 | Wymiary: 350 x 40 x 127 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A60K5VTE10",
     "gtin": "5900461053209",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3727,8 +3727,8 @@
     "description": "Typ 1 | Wymiary: 350 x 50 x 127 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A60K5VTE10",
     "gtin": "5900461053001",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3763,8 +3763,8 @@
     "description": "Typ 1 | Wymiary: 400 x 50 x 127 mm | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie | 95A60K5VTE10",
     "gtin": "5900461056705",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3803,8 +3803,8 @@
     "description": "Typ 1; Wymiary: 50 x 50 x 16 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461127825",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3843,8 +3843,8 @@
     "description": "Typ 1; Wymiary: 60 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461019809",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3883,8 +3883,8 @@
     "description": "Typ 1; Wymiary: 80 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461020607",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3923,8 +3923,8 @@
     "description": "Typ 1; Wymiary: 100 x 10 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461022007",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -3963,8 +3963,8 @@
     "description": "Typ 1; Wymiary: 100 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461066100",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4003,8 +4003,8 @@
     "description": "Typ 1; Wymiary: 125 x 10 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461059508",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4043,8 +4043,8 @@
     "description": "Typ 1; Wymiary: 125 mm x 13 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461068401",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4083,8 +4083,8 @@
     "description": "Typ 1; Wymiary: 125 x 16 x 12,7 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461066308",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4123,8 +4123,8 @@
     "description": "Typ 1; Wymiary: 125 x 16 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461059607",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4163,8 +4163,8 @@
     "description": "Typ 1; Wymiary: 125 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46 | 99A46K7VE01",
     "gtin": "5900461066803",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4203,8 +4203,8 @@
     "description": "Typ 1; Wymiary: 125 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461059102",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4243,8 +4243,8 @@
     "description": "Typ 1; Wymiary: 125 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01B",
     "gtin": "5900461066506",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4283,8 +4283,8 @@
     "description": "Typ 1; Wymiary: 150 x 6 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461048205",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4323,8 +4323,8 @@
     "description": "Typ 1; Wymiary: 150 x 8 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461022908",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4359,8 +4359,8 @@
     "description": "Typ 1; Wymiary: 150 x 10 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: średnie | 99A46K7VE01",
     "gtin": "5900461048304",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4399,8 +4399,8 @@
     "description": "Typ 1; Wymiary: 150 x 10 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461047604",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4439,8 +4439,8 @@
     "description": "Typ 1; Wymiary: 150 x 10 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80 | 99A80K7VE01",
     "gtin": "5900461066902",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4479,8 +4479,8 @@
     "description": "Typ 1; Wymiary: 150 x 13 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461047505",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4519,8 +4519,8 @@
     "description": "Typ 1; Wymiary: 150 x 16 x 12,7 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VEO1",
     "gtin": "5900461022205",
     "typ": "1",
-    "bond": "EO",
-    "bond_name": "nieznane (EO)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4559,8 +4559,8 @@
     "description": "Typ 1; Wymiary: 150 x 16 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46 | 99A46K7VE01",
     "gtin": "5900461047406",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4599,8 +4599,8 @@
     "description": "Typ 1; Wymiary: 150 x 16 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461051809",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4639,8 +4639,8 @@
     "description": "Typ 1; Wymiary: 150 x 20 x 12,7 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461048403",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4679,8 +4679,8 @@
     "description": "Typ 1; Wymiary: 150 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46 | 99A46K7VE01",
     "gtin": "5900461059805",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4719,8 +4719,8 @@
     "description": "Typ 1; Wymiary: 150 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461071104",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4759,8 +4759,8 @@
     "description": "Typ 1; Wymiary: 150 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01B",
     "gtin": "5900461047208",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4799,8 +4799,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-32-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-510870-id-17244",
     "description": "Kamień 150 mm do szlifierki stołowej | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461059904",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4839,8 +4839,8 @@
     "description": "Typ 1; Wymiary: 175 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461048502",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4879,8 +4879,8 @@
     "description": "Typ 1; Wymiary: 200 x 10 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461071302",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4919,8 +4919,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461051502",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4959,8 +4959,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46 | 99A46J7VE01",
     "gtin": "5900461127849",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -4999,8 +4999,8 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46 | 99A46K7VE01",
     "gtin": "5900461046904",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5039,8 +5039,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60J7VE01",
     "gtin": "5900461023400",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5079,8 +5079,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461046706",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5119,8 +5119,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01B",
     "gtin": "5900461048700",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5159,8 +5159,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60M7VE01",
     "gtin": "5900461052103",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5199,8 +5199,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80 | 99A80J7VE01",
     "gtin": "5900461127856",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5239,8 +5239,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80 | 99A80K7VE01",
     "gtin": "5900461067206",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5279,8 +5279,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 100 | 99A100K7VE01",
     "gtin": "5900461071609",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5319,8 +5319,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-51-mm--sciernica-plaska--typ-1--99a46k7ve01-andre-511368-id-17265",
     "description": "Tarcza ścierna | Średnica 200 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46 | 99A46K7VE01",
     "gtin": "5900461046805",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5359,8 +5359,8 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 51 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461072507",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5399,8 +5399,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46 | 99A46K7VE01",
     "gtin": "5900461072002",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5439,8 +5439,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461046607",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5479,8 +5479,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461021703",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5519,8 +5519,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80",
     "gtin": "5900461040100",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5559,8 +5559,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 51 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461072101",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5599,8 +5599,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 25 mm x 51 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461067602",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5639,8 +5639,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 32 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461049004",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5679,8 +5679,8 @@
     "description": "Typ 1; Wymiary: 200 mm x 32 mm x 51 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461049202",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5719,8 +5719,8 @@
     "description": "Typ 1; Wymiary: 250 x 10 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461051304",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5760,7 +5760,7 @@
     "gtin": "5900461072200",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -5800,8 +5800,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-20-x-32-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-511787-id-17286",
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461052509",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5841,7 +5841,7 @@
     "gtin": "5900461023301",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -5882,7 +5882,7 @@
     "description": "Kamień do ostrzenia noży tokarskich HSS | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461022403",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -5921,8 +5921,8 @@
     "description": "Typ 1; Wymiary: 250 x 25 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461046201",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -5963,7 +5963,7 @@
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461049301",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6004,7 +6004,7 @@
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01B",
     "gtin": "5900461052608",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6045,7 +6045,7 @@
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80 | 99A80K7VE01",
     "gtin": "5900461067800",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6085,7 +6085,7 @@
     "gtin": "5900461023509",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6126,7 +6126,7 @@
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461046003",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6166,7 +6166,7 @@
     "gtin": "5900461072309",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6206,7 +6206,7 @@
     "gtin": "5900461052707",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6246,7 +6246,7 @@
     "gtin": "5900461068906",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6287,7 +6287,7 @@
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461051205",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6328,7 +6328,7 @@
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80 | 99A80K7VE01",
     "gtin": "5900461045907",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6367,8 +6367,8 @@
     "description": "Typ 1; Wymiary: 250 mm x 32 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461049509",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6408,8 +6408,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-32-x-32-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-511996-id-17311",
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461067909",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6448,8 +6448,8 @@
     "description": "Typ 1; Wymiary: 250 mm x 32 mm x 76 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461049608",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6489,8 +6489,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-32-x-76-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-512033-id-17314",
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461068807",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6531,7 +6531,7 @@
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80 | 99A80K7VE01",
     "gtin": "5900461049707",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6571,8 +6571,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-40-x-51-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-512074-id-17319",
     "description": "Kamień do ostrzenia noży tokarskich | Tarcza 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60 | 99A60K7VE01",
     "gtin": "5900461068609",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6612,7 +6612,7 @@
     "gtin": "5900461072705",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6653,7 +6653,7 @@
     "gtin": "5900461045709",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6689,7 +6689,7 @@
     "gtin": "5900461128198",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6725,7 +6725,7 @@
     "gtin": "5900461040001",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6760,8 +6760,8 @@
     "description": "Typ 1 | Wymiary: 300 x 32 x 32 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461045600",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6796,8 +6796,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-32-x-76-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-610187-id-17333",
     "description": "Tarcza ścierna 300 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461041206",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6833,7 +6833,7 @@
     "gtin": "5900461068005",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6869,7 +6869,7 @@
     "gtin": "5900461050901",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6905,7 +6905,7 @@
     "gtin": "5900461040704",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -6940,8 +6940,8 @@
     "description": "Typ 1 | Wymiary: 300 x 40 x 76 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461023608",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -6977,7 +6977,7 @@
     "gtin": "5900461022809",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7012,8 +7012,8 @@
     "description": "Typ 1 | Wymiary: 300 x 40 x 127 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461020805",
     "typ": "1",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -7049,7 +7049,7 @@
     "gtin": "5900461045105",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7085,7 +7085,7 @@
     "gtin": "5900461128228",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7121,7 +7121,7 @@
     "gtin": "5900461065806",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7157,7 +7157,7 @@
     "gtin": "5900461050109",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7193,7 +7193,7 @@
     "gtin": "5900461065301",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7229,7 +7229,7 @@
     "gtin": "5900461065509",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7265,7 +7265,7 @@
     "gtin": "5900461050802",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7301,8 +7301,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-350-x-40-x-127-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-610650-id-17355",
     "description": "Kamień do szlifierki 350 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461044405",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -7338,7 +7338,7 @@
     "gtin": "5900461022700",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7373,9 +7373,9 @@
     "description": "Typ 1; Wymiary | 350 x 50 x 51 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461021505",
     "typ": "1",
-    "bond": "K",
-    "bond_name": "nieznane (K)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641432",
@@ -7410,7 +7410,7 @@
     "gtin": "5900461041107",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7446,7 +7446,7 @@
     "gtin": "5900461044504",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7482,7 +7482,7 @@
     "description": "Tarcza ścierna 350 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461065202",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7519,7 +7519,7 @@
     "description": "Kamień do szlifierki stołowej 350 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: drobne",
     "gtin": "5900461045006",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7555,7 +7555,7 @@
     "gtin": "5900461041008",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7591,7 +7591,7 @@
     "description": "Tarcza ścierna 350 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461021406",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7627,7 +7627,7 @@
     "description": "Tarcza ścierna 350 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461020508",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7663,7 +7663,7 @@
     "description": "Tarcza ścierna 400 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461044603",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7698,8 +7698,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-400-x-40-x-127-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-620116-id-17374",
     "description": "Tarcza ścierna 400 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461068104",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -7735,7 +7735,7 @@
     "description": "Tarcza ścierna 400 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: drobne",
     "gtin": "5900461065608",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7771,7 +7771,7 @@
     "description": "Tarcza ścierna 400 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461068708",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7807,7 +7807,7 @@
     "description": "Tarcza ścierna 400 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461050505",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7842,8 +7842,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-400-x-50-x-203-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-620259-id-17380",
     "description": "Tarcza ścierna 400 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461044702",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -7879,7 +7879,7 @@
     "description": "Tarcza ścierna 450 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461128945",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7915,7 +7915,7 @@
     "description": "Tarcza ścierna 450 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461020300",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7951,7 +7951,7 @@
     "description": "Tarcza ścierna 450 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461021604",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -7987,7 +7987,7 @@
     "description": "Tarcza ścierna 450 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461128952",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8023,7 +8023,7 @@
     "description": "Tarcza ścierna 500 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461044900",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8059,7 +8059,7 @@
     "description": "Tarcza ścierna 500 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461020706",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8095,7 +8095,7 @@
     "description": "Tarcza ścierna 500 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461020102",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8130,8 +8130,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-600-x-63-x-305-mm--sciernica-plaska--typ-1--99a60k7ve01-andre-620548-id-17394",
     "description": "Tarcza ścierna 600 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461128976",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8171,7 +8171,7 @@
     "description": "Tarcza ścierna 125 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461035304",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8210,8 +8210,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-125-x-20-x-20-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-510437-id-17399",
     "description": "Tarcza szlifierska 125 mm | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461069507",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8251,7 +8251,7 @@
     "description": "Typ 1; Wymiary: 150 x 16 x 20 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461029006",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8290,8 +8290,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-127-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-510774-id-17406",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461029907",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8330,8 +8330,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-20-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-510842-id-17408",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461035502",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8370,8 +8370,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-32-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-510884-id-17411",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461069606",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8411,7 +8411,7 @@
     "description": "Typ 1; Wymiary: 200 x 20 x 32 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 46",
     "gtin": "5900461062300",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8450,8 +8450,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-511344-id-17414",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461069705",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8490,8 +8490,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--cra80k7ve01-andre-511346-id-17415",
     "description": "Tarcza śćierna 200 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 80",
     "gtin": "5900461062805",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8531,7 +8531,7 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461026906",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8571,7 +8571,7 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 80",
     "gtin": "5900461034406",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8611,7 +8611,7 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461035403",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8650,8 +8650,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-32-x-32-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-511583-id-17420",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461029501",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8691,7 +8691,7 @@
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461034505",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8731,7 +8731,7 @@
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461029808",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8771,7 +8771,7 @@
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461062706",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8810,8 +8810,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-32-x-32-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-512008-id-17426",
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461029204",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8850,8 +8850,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-32-x-76-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-514077-id-17427",
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461027002",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8886,8 +8886,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-32-x-32-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-610170-id-17430",
     "description": "Tarcza ścierna 300 mm do szlifowani pił | Materiał: elektrokorund chromowy | Ziarno materiału ściernego: średnie",
     "gtin": "5900461034703",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8922,8 +8922,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-40-x-51-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-610274-id-17432",
     "description": "Tarcza ścierna 300 mm do szlifierki stołowej | Materiał: elektrokorund chromowy | Ziarno materiału ściernego: średnie",
     "gtin": "5900461029600",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -8959,7 +8959,7 @@
     "description": "Tarcza ścierna 300 mm do szlifierki stołowej | Materiał: elektrokorund chromowy | Ziarno materiału ściernego: średnie",
     "gtin": "5900461128211",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -8995,7 +8995,7 @@
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: elektrokorund chromowy | Ziarno materiału ściernego: średnie",
     "gtin": "5900461035106",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -9031,7 +9031,7 @@
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: elektrokorund chromowy | Ziarno materiału ściernego: średnie",
     "gtin": "5900461062508",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -9066,8 +9066,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-350-x-50-x-127-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-610794-id-17442",
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: elektrokorund chromowy | Ziarno materiału ściernego: średnie",
     "gtin": "5900461034802",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9107,8 +9107,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-100-x-20-x-20-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510157-id-17444",
     "description": "Tarcza ścierna 100 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461024100",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9147,8 +9147,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-125-x-16-x-127-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510339-id-17450",
     "description": "Tarcz ścierna 125 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461032006",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9188,8 +9188,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-125-x-16-x-20-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510365-id-17451",
     "description": "Tarcza ścierna 125 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60 | 98C60K7VC01",
     "gtin": "5900461024209",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9229,8 +9229,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-125-x-20-x-20-mm--sciernica-plaska--typ-1--98c60k7vco1-andre-510411-id-17453",
     "description": "Tarcza ścierna 125 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60 | 98C60K7VCO1",
     "gtin": "5900461060603",
-    "bond": "CO",
-    "bond_name": "nieznane (CO)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9270,8 +9270,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-16-x-127-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510714-id-17455",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60 | 98C60K7VC01",
     "gtin": "5900461043200",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9311,8 +9311,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-16-x-20-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510733-id-17457",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60 | 98C60K7VC01",
     "gtin": "5900461031801",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9351,8 +9351,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-127-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510771-id-17460",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461028306",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9392,8 +9392,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-20-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510809-id-17463",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: 60",
     "gtin": "5900461058600",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9433,8 +9433,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-20-mm--sciernica-plaska--typ-1--98c80k6vc01-andre-510810-id-17464",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 80",
     "gtin": "5900461043002",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9474,8 +9474,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-20-mm--sciernica-plaska--typ-1--98c120k6vc01-andre-510812-id-17466",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 120",
     "gtin": "5900461024803",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9515,8 +9515,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-32-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-510859-id-17467",
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60 | 98C60K7VC01",
     "gtin": "5900461043507",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9556,8 +9556,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-20-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-511213-id-17469",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461031504",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9597,8 +9597,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--98c46k7vc01-andre-511263-id-17470",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Kamień do ostrzenia noży tokarskich węglikowych | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 46",
     "gtin": "5900461042906",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9637,8 +9637,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--98c60j7vc01-andre-511271-id-17472",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461044207",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9677,8 +9677,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-511274-id-17473",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461058501",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9717,8 +9717,8 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 80",
     "gtin": "5900461060504",
     "typ": "1",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9757,8 +9757,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--98c120k6vc01-andre-511289-id-17477",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 120",
     "gtin": "5900461042807",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9797,8 +9797,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-25-x-32-mm--sciernica-plaska--typ-1--98c46k7vc01-andre-511434-id-17479",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 46",
     "gtin": "5900461058402",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9837,8 +9837,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-25-x-32-mm--sciernica-plaska--typ-1--98c60j7vc01-andre-511438-id-17481",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461042708",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9877,8 +9877,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-25-x-32-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-511440-id-17482",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461031405",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9917,8 +9917,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-25-x-32-mm--sciernica-plaska--typ-1--98c80k6vc01-andre-511446-id-17485",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 80",
     "gtin": "5900461024308",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9957,8 +9957,8 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461042500",
     "typ": "1",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -9998,7 +9998,7 @@
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461032402",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10037,8 +10037,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-25-x-32-mm--sciernica-plaska--typ-1--98c46k7vc01-andre-511846-id-17490",
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 46",
     "gtin": "5900461070404",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10078,7 +10078,7 @@
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461070602",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10118,7 +10118,7 @@
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461042302",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10158,7 +10158,7 @@
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 80",
     "gtin": "5900461024407",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10197,8 +10197,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-25-x-76-mm--sciernica-plaska--typ-1--98c60k6vc01-andre-511925-id-17496",
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461127894",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10237,8 +10237,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-32-x-32-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-511983-id-17497",
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461042104",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10277,8 +10277,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-40-x-51-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-512070-id-17501",
     "description": "Tarcza ścierna 250 mm do szlifierki stołowej | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461060900",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10313,8 +10313,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-32-x-32-mm--sciernica-plaska--typ-1--98c46k7vc01-andre-610127-id-17502",
     "description": "Tarcza ścierna 300 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461044306",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10349,8 +10349,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-32-x-32-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-610134-id-17503",
     "description": "Tarcza ścierna 300 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461070701",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10385,8 +10385,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-32-x-32-mm--sciernica-plaska--typ-1--98c80k6vc01-andre-610141-id-17505",
     "description": "Tarcza ścierna 300 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: drobne",
     "gtin": "5900461042203",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10421,8 +10421,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-40-x-51-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-610250-id-17507",
     "description": "Tarcza ścierna 300 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461024506",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10457,8 +10457,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-300-x-40-x-127-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-610323-id-17508",
     "description": "Tarcza ścierna 300 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461030903",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10494,7 +10494,7 @@
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461041800",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10530,7 +10530,7 @@
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461041701",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10566,7 +10566,7 @@
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461058204",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10602,7 +10602,7 @@
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461058303",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10637,8 +10637,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-350-x-40-x-127-mm--sciernica-plaska--typ-1--98c60k7vc01-andre-610624-id-17515",
     "description": "Tarcza ścierna 350 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461061204",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10674,7 +10674,7 @@
     "gtin": "5900461043903",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10710,7 +10710,7 @@
     "description": "Tarcza ścierna 400 mm do szlifierki stołowej | Materiał: węglik krzemu czarny | Ziarno materiału ściernego: średnie",
     "gtin": "5900461027903",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10749,8 +10749,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-125-x-16-x-20-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-510381-id-17526",
     "description": "Tarcza ścierna 125 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461028405",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10789,8 +10789,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-125-x-20-20-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-510434-id-17528",
     "description": "Tarcza ścierna 125 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461033706",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10830,7 +10830,7 @@
     "description": "Tarcza ścierna 150 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461061808",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10870,7 +10870,7 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 46",
     "gtin": "5900461033805",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10910,7 +10910,7 @@
     "description": "Tarcz ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461033300",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -10949,8 +10949,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-511331-id-17549",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461028603",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -10989,8 +10989,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--99c80k6vc01-andre-511335-id-17550",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 80",
     "gtin": "5900461033201",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11029,8 +11029,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--99c120k6vc01-andre-511338-id-17551",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 120",
     "gtin": "5900461061709",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11069,8 +11069,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-51-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-511379-id-17552",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461062003",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11110,7 +11110,7 @@
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461057603",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11149,8 +11149,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-25-x-32-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-511483-id-17554",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461057207",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11189,8 +11189,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-25-x-32-mm--sciernica-plaska--typ-1--99c80k6vc01-andre-511487-id-17555",
     "description": "Tarcza ścierna 200 mm do szlifierki stołowej | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 80",
     "gtin": "5900461061600",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11230,8 +11230,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-32-x-32-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-511581-id-17557",
     "description": "Kamień do szlifierki 200 mm | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461033508",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11271,8 +11271,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-25-x-32-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-511889-id-17558",
     "description": "Kamień do szlifierki 250 mm | Materiał: węglik krzemu zielony; Ziarno materiału ściernego: 60",
     "gtin": "5900461057306",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11312,8 +11312,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-32-x-32-mm--sciernica-plaska--typ-1--99c60k7vc01-andre-512003-id-17559",
     "description": "Kamień do szlifierki 250 mm | Materiał: węglik krzemu zielony | Ziarno materiału ściernego: 60",
     "gtin": "5900461057504",
-    "bond": "C",
-    "bond_name": "nieznane (C)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11350,7 +11350,7 @@
     "description": "Kamień do szlifierki 300 mm | Materiał: węglik krzemu zielony | Ziarno materiału ściernego: średnie",
     "gtin": "5900461061402",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11387,7 +11387,7 @@
     "description": "Kamień do szlifierki 350 mm | Materiał: węglik krzemu zielony | Ziarno materiału ściernego: średnie",
     "gtin": "5900461033904",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11424,7 +11424,7 @@
     "description": "Kamień do szlifierki 350 mm | Materiał: węglik krzemu zielony | Ziarno materiału ściernego: średnie",
     "gtin": "5900461032907",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11464,7 +11464,7 @@
     "description": "Typ 1C; Wymiary: 125 x 8 x 20 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461027606",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11504,7 +11504,7 @@
     "description": "Typ 1C; Wymiary: 150 x 8 x 20 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461030309",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11544,7 +11544,7 @@
     "description": "Typ 1C; Wymiary: 200 x 8 x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461030200",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11584,7 +11584,7 @@
     "description": "Kamień 200 mm do szlifowania pił | Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461041404",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11624,7 +11624,7 @@
     "description": "Typ 1C; Wymiary: 200 x 10 x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461061303",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11664,7 +11664,7 @@
     "description": "Typ 1C; Wymiary: 250 x 10 x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461027705",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11703,8 +11703,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-10-x-32-do-ostrzenia-pil-sciernica-plaska-profilowana--typ-1c--95a60n7vte10-andre-511681-id-17583",
     "description": "Typ 1C; Wymiary: 250 x 10 x 32 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461027507",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11744,7 +11744,7 @@
     "description": "Typ 1C; Wymiary: 125 x 8 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461015702",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11784,7 +11784,7 @@
     "description": "Typ 1C; Wymiary: 150 x 8 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461015900",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11823,8 +11823,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-8-x-32-mm-do-ostrzenia-pil--sciernica-plaska-profilowana--typ-1c--99a60k7ve01-andre-510593-id-17590",
     "description": "Typ 1C; Wymiary: 150 x 8 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461016006",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11863,8 +11863,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-8-x-32-mm-do-ostrzenia-pil--sciernica-plaska-profilowana--typ-1c--99a60k7ve01-andre-511111-id-17594",
     "description": "Typ 1C; Wymiary: 200 x 8 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461016204",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11904,7 +11904,7 @@
     "description": "Typ 1C; Wymiary: 200 x 10 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461016303",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -11943,8 +11943,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-8-x-32-mm-do-ostrzenia-pil--sciernica-plaska-profilowana--typ-1c--99a60k7ve01-andre-511659-id-17598",
     "description": "Typ 1C; Wymiary: 250 x 8 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461016501",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -11984,7 +11984,7 @@
     "description": "Typ 1C; Wymiary: 250 mm x 10 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461127870",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12024,7 +12024,7 @@
     "description": "Typ 1C; Wymiary: 250 x 10 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461016808",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12064,7 +12064,7 @@
     "description": "Typ 1C; Wymiary: 250 x 10 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461127887",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12104,7 +12104,7 @@
     "description": "Typ 1C; Wymiary: 200 x 8 x 32 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461023905",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12143,8 +12143,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-10-x-32-mm-do-ostrzenia-pil--sciernica-plaska-profilowana--typ-1c--cra60k7ve01-andre-511711-id-17607",
     "description": "Typ 1C; Wymiary: 250 mm x 10 mm x 32 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461024902",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12184,7 +12184,7 @@
     "description": "Ściernica płaska 125 mm | Typ 1C | Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461027101",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12224,7 +12224,7 @@
     "description": "Typ 1C; Wymiary: 150 x 8 x 20 mm; Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461030002",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12264,7 +12264,7 @@
     "description": "Typ 1C; Wymiary: 200 x 8 x 32 mm; Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461030507",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12304,7 +12304,7 @@
     "gtin": "5900461027309",
     "typ": "1C",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12344,7 +12344,7 @@
     "description": "Typ 1C; Wymiary: 250 x 10 x 32 mm; Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 60",
     "gtin": "5900461023806",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12384,7 +12384,7 @@
     "gtin": "5900461127924",
     "typ": "1YC",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12424,7 +12424,7 @@
     "gtin": "5900461127931",
     "typ": "1YC",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12463,8 +12463,8 @@
     "description": "Typ 5; Wymiary: 50 mm x 50 mm x 16 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461127948",
     "typ": "5",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12499,8 +12499,8 @@
     "description": "Typ 6; Wymiary: 80 x 40 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461089901",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12535,8 +12535,8 @@
     "link": "https://www.e-darmet.pl/sciernica-garnkowa-walcowa-100-x-40-x-20-mm--typ-6--99a60k7ve01-andre-520587-id-17636",
     "description": "Średnica: 100 mm | Głębokość: 40 mm | Otwór mocowania: 20 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: 60",
     "gtin": "5900461094301",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12572,7 +12572,7 @@
     "description": "Typ 6; Wymiary: 100 x 40 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80",
     "gtin": "5900461104406",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -12607,8 +12607,8 @@
     "description": "Typ 6; Wymiary: 100 mm x 50 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461090501",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12647,8 +12647,8 @@
     "description": "Typ 6; Wymiary: 100 mm x 50 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80",
     "gtin": "5900461127979",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12683,8 +12683,8 @@
     "description": "Typ 6; Wymiary: 125 x 50 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461107704",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12719,8 +12719,8 @@
     "description": "Typ 6; Wymiary: 125 x 50 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461109203",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12755,8 +12755,8 @@
     "description": "Typ 6; Wymiary: 125 x 50 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461109302",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12791,8 +12791,8 @@
     "description": "Typ 6; Wymiary: 125 x 63 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461104604",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12827,8 +12827,8 @@
     "description": "Typ 6; Wymiary: 125 mm x 63  mm x 32 mm; Materiał: elektrokorund szlachetny 99A | Ziarno materiału ściernego: 60",
     "gtin": "5900461091003",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12863,8 +12863,8 @@
     "description": "Typ 6; Wymiary: 150 x 50 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461107407",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12899,8 +12899,8 @@
     "description": "Typ 6; Wymiary: 150 x 63 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461090907",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12935,8 +12935,8 @@
     "description": "Typ 6; Wymiary: 150 x 63 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461107308",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -12971,8 +12971,8 @@
     "description": "Typ 6; Wymiary: 150 x 80 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461107001",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13007,8 +13007,8 @@
     "description": "Typ 6; Wymiary: 150 x 80 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461107209",
     "typ": "6",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13047,8 +13047,8 @@
     "description": "Typ 11; Wymiary: 100 mm x 40 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461079100",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13087,8 +13087,8 @@
     "description": "Typ 11; Wymiary: 100 mm x 40 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461080205",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13127,8 +13127,8 @@
     "description": "Typ 11; Wymiary: 100 mm x 40 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461081301",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13167,8 +13167,8 @@
     "description": "Typ 11; Wymiary: 100 mm x 40 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461083008",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13207,8 +13207,8 @@
     "description": "Typ 11; Wymiary: 125 mm x 40 mm x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461080809",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13244,7 +13244,7 @@
     "gtin": "5900461079803",
     "typ": "11",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -13283,8 +13283,8 @@
     "description": "Typ 11; Wymiary: 125 mm x 40 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461081400",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13323,8 +13323,8 @@
     "description": "Typ 11; Wymiary: 125 mm x 40 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461082407",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13363,8 +13363,8 @@
     "description": "Typ 11; Wymiary: 150 mm x 50 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461082100",
     "typ": "11",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13403,9 +13403,9 @@
     "description": "Typ 11; Wymiary: 150 mm x 50 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461081707",
     "typ": "11",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641729",
@@ -13439,8 +13439,8 @@
     "description": "Typ 12; Wymiary: 100 x 13 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461082704",
     "typ": "12",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13475,9 +13475,9 @@
     "description": "Typ 12; Wymiary: 125 x 13 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461082001",
     "typ": "12",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641731",
@@ -13511,8 +13511,8 @@
     "description": "Typ 12; Wymiary: 150 x 16 x 32 mm; Materiał: elektrokorund szlachetny 99A | Ziarno materiału ściernego: 46",
     "gtin": "5900461081905",
     "typ": "12",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13547,8 +13547,8 @@
     "description": "Typ 12; Wymiary: 150 x 16 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461083503",
     "typ": "12",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13587,8 +13587,8 @@
     "description": "Typ 12; Wymiary: 150 mm x 16 mm x 32 mm; Materiał: elektrokorund szlachetny 99A | Ziarno materiału ściernego: 60",
     "gtin": "5900461080502",
     "typ": "12",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13627,8 +13627,8 @@
     "description": "Typ 12; Wymiary: 150 mm x 16 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461082209",
     "typ": "12",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13663,8 +13663,8 @@
     "description": "Typ 12; Wymiary: 150 x 16 x 32 mm; Materiał: elektrokorund szlachetny 99A | Ziarno materiału ściernego: 80",
     "gtin": "5900461083602",
     "typ": "12",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13704,7 +13704,7 @@
     "gtin": "5900461088003",
     "typ": "12",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -13743,9 +13743,9 @@
     "description": "Typ 12; Wymiary: 200 mm x 20 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461088102",
     "typ": "12",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641743",
@@ -13779,8 +13779,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-talerzowa--typ-12--99a60k5vte10-andre-520194-id-17692",
     "description": "Typ 12; Wymiary: 200 mm x 20 mm x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461084500",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13815,8 +13815,8 @@
     "description": "Typ 12; Wymiary: 250 x 25 x 32 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461084401",
     "typ": "12",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13830,16 +13830,16 @@
     "attributes": [],
     "material": "elektrokorund szlachetny",
     "gritSize": "36",
-    "srednica_dlugosc": "80",
+    "srednica_dlugosc": "150",
     "grubosc_szerokosc": "25",
-    "boreSize": "150",
+    "boreSize": "",
     "title": "Segment prostokątny 80 x 25 x 150 mm | typ 3101 | 99A36K7VE01 - ANDRE 540093",
     "link": "https://www.e-darmet.pl/segment-prostokatny-80-x-25-x-150-mm--typ-3101--99a36k7ve01-andre-540093-id-17701",
     "description": "Typ 3101; Wymiary: 80 x 25 x 150 mm; Materiał: elektrokorund szlachetny 99A | Ziarno materiału ściernego: 36",
     "gtin": "5900461127993",
     "typ": "3101",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13853,17 +13853,17 @@
     "attributes": [],
     "material": "elektrokorund szlachetny",
     "gritSize": "46",
-    "srednica_dlugosc": "80",
+    "srednica_dlugosc": "150",
     "grubosc_szerokosc": "25",
-    "boreSize": "150",
+    "boreSize": "",
     "title": "Segment prostokątny, typ 3101 - 80MM x 25MM x 150MM 99A 46J - ANDRE (540113)",
     "link": "https://www.e-darmet.pl/segment-prostokatny-typ-3101-80mm-x-25mm-x-150mm-99a-46j-andre-540113-id-17703",
     "description": "Typ 3101; Wymiary: 80 x 25 x 150 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "5900461079001",
     "typ": "3101",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641754",
@@ -13876,17 +13876,17 @@
     "attributes": [],
     "material": "elektrokorund szlachetny",
     "gritSize": "36",
-    "srednica_dlugosc": "90",
+    "srednica_dlugosc": "150",
     "grubosc_szerokosc": "35",
-    "boreSize": "150",
+    "boreSize": "",
     "title": "Segment prostokątny, typ 3101 - 90MM x 35MM x 150MM 99A 36H - ANDRE (540597)",
     "link": "https://www.e-darmet.pl/segment-prostokatny-typ-3101-90mm-x-35mm-x-150mm-99a-36h-andre-540597-id-17705",
     "description": "Typ 3101; Wymiary: 90 x 35 x 150 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 36",
     "gtin": "5900461128006",
     "typ": "3101",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641756",
@@ -13899,17 +13899,17 @@
     "attributes": [],
     "material": "elektrokorund szlachetny",
     "gritSize": "36",
-    "srednica_dlugosc": "100",
+    "srednica_dlugosc": "150",
     "grubosc_szerokosc": "35",
-    "boreSize": "150",
+    "boreSize": "",
     "title": "Segment trapezowy, typ 3109 - 100/85MM x 35MM x 150MM 99A 36J - ANDRE (540252)",
     "link": "https://www.e-darmet.pl/segment-trapezowy-typ-3109-10085mm-x-35mm-x-150mm-99a-36j-andre-540252-id-17707",
     "description": "Typ 3109; Wymiary: 100/85 x 35 x 150 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 36",
     "gtin": "5900461078707",
     "typ": "3109",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641757",
@@ -13923,15 +13923,15 @@
     "material": "węglik krzemu czarny",
     "gritSize": "46",
     "typ": "3113",
-    "srednica_dlugosc": "66",
+    "srednica_dlugosc": "63",
     "grubosc_szerokosc": "22",
-    "boreSize": "63",
+    "boreSize": "",
     "title": "Segment pierścieniowy profilowany do głowic silnikowych | typ 3113 | 66 x 22 x 63 mm | 98C46J8VTC10 - ANDRE 540314",
     "link": "https://www.e-darmet.pl/segment-pierscieniowy-profilowany-do-glowic-silnikowych--typ-3113--66-x-22-x-63-mm--98c46j8vtc10-andre-540314-id-17708",
     "description": "Typ 3113; Wymiary: 66 x 22 x 63 mm; Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 46",
     "gtin": "5900461077403",
-    "bond": "TC",
-    "bond_name": "nieznane (TC)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -13966,8 +13966,8 @@
     "description": "Typ 5210 | Średnica: 20 mm | Długość: 20 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 36",
     "gtin": "5900461116904",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14002,8 +14002,8 @@
     "description": "Typ 5210; Wymiary: 20 x 25 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 36",
     "gtin": "5900461114801",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14038,8 +14038,8 @@
     "description": "Typ 5210; Wymiary: 20 x 30 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461114405",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14074,8 +14074,8 @@
     "description": "Typ 5210; Wymiary: 20 x 30 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461116805",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14110,8 +14110,8 @@
     "description": "Typ 5210; Wymiary: 20 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 24",
     "gtin": "5900461116300",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14146,8 +14146,8 @@
     "description": "Typ 5210; Wymiary: 20 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 36",
     "gtin": "5900461106806",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14182,8 +14182,8 @@
     "description": "Typ 5210; Wymiary: 20 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461115303",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14218,8 +14218,8 @@
     "description": "Typ 5210; Wymiary: 20 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461112302",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14254,8 +14254,8 @@
     "description": "Typ 5210; Wymiary: 25 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 24",
     "gtin": "5900461115204",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14290,8 +14290,8 @@
     "description": "Typ 5210; Wymiary: 25 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 36",
     "gtin": "5900461114207",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14326,8 +14326,8 @@
     "description": "Typ 5210; Wymiary: 25 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461115006",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14362,8 +14362,8 @@
     "description": "Typ 5210; Wymiary: 25 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461112609",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14398,8 +14398,8 @@
     "description": "Typ 5210; Wymiary: 25 x 45 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 24",
     "gtin": "5900461128112",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14434,8 +14434,8 @@
     "description": "Typ 5210; Wymiary: 25 x 45 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 36",
     "gtin": "5900461128099",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14470,8 +14470,8 @@
     "description": "Typ 5210; Wymiary: 30 x 30 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461113101",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14506,8 +14506,8 @@
     "description": "Typ 5210; Wymiary: 30 x 30 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461106608",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14542,8 +14542,8 @@
     "description": "Typ 5210; Wymiary: 30 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461106301",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14578,8 +14578,8 @@
     "description": "Typ 5210; Wymiary: 40 x 20 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461115709",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14614,8 +14614,8 @@
     "description": "Typ 5210; Wymiary: 40 x 25 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461106004",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14650,8 +14650,8 @@
     "description": "Typ 5210; Wymiary: 40 mm x 40 mm x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461105700",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14686,8 +14686,8 @@
     "description": "Typ 5210; Wymiary: 50 x 25 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 24",
     "gtin": "5900461128051",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14722,8 +14722,8 @@
     "description": "Typ 5210; Wymiary: 50 x 25 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: średnie",
     "gtin": "5900461127146",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14758,8 +14758,8 @@
     "description": "Typ 5210; Wymiary: 50 x 30 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 24",
     "gtin": "5900461112708",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14794,8 +14794,8 @@
     "description": "Typ 5210; Wymiary: 16 x 30 x 6 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461127092",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14830,8 +14830,8 @@
     "description": "Typ 5210 | Średnica: 20 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461127030",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14866,8 +14866,8 @@
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461128044",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14902,8 +14902,8 @@
     "description": "Typ 5210 | Średnica: 10 mm | Długość: 20 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461110001",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14938,8 +14938,8 @@
     "description": "Typ 5210 | Średnica: 10 mm | Długość: 20 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461127023",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -14974,8 +14974,8 @@
     "description": "Typ 5210 | Średnica: 13 mm | Długość: 20 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461105403",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15010,8 +15010,8 @@
     "description": "Typ 5210 | Średnica: 13 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461127139",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15046,8 +15046,8 @@
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 20 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461116102",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15082,8 +15082,8 @@
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461116607",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15118,8 +15118,8 @@
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461116003",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15154,8 +15154,8 @@
     "description": "Typ 5210; Wymiary: 20 x 20 x 6 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 46",
     "gtin": "5900461113507",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15190,8 +15190,8 @@
     "description": "Typ 5210; Wymiary: 20 x 25 x 6 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 46",
     "gtin": "5900461116706",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15226,8 +15226,8 @@
     "description": "Typ 5210; Wymiary: 20 x 30 x 6 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461112906",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15262,8 +15262,8 @@
     "description": "Typ 5210; Wymiary: 20 x 40 x 6 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 46",
     "gtin": "5900461113408",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15298,8 +15298,8 @@
     "description": "Typ 5210 | Średnica: 20 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461112401",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15334,8 +15334,8 @@
     "description": "Typ 5210 | Średnica: 20 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461114900",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15370,8 +15370,8 @@
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461113309",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15406,8 +15406,8 @@
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461112500",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15442,8 +15442,8 @@
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 36",
     "gtin": "5900461115907",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15478,8 +15478,8 @@
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461112807",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15514,8 +15514,8 @@
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461116409",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15554,8 +15554,8 @@
     "description": "Typ 5210 | Średnica: 30 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461106202",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15590,8 +15590,8 @@
     "description": "Typ 5210 | Średnica: 30 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461115402",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15626,8 +15626,8 @@
     "description": "Typ 5210 | Średnica: 30 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461115600",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15662,8 +15662,8 @@
     "description": "Typ 5210 | Średnica: 40 mm | Długość: 13 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461105908",
     "typ": "5210",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15698,8 +15698,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-40-x-25-x-6-mm--typ-5210--cra60m5ve01-andre-550331-id-17807",
     "description": "Typ 5210 | Średnica 40 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461106103",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15734,8 +15734,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-40-x-40-x-6-mm--typ-5210--cra46m5ve01-andre-550355-id-17808",
     "description": "Typ 5210 | Średnica: 40 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461117000",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15770,8 +15770,8 @@
     "description": "Typ 5211; Wymiary: 16 x 30 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 46",
     "gtin": "5900461127054",
     "typ": "5211",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15806,8 +15806,8 @@
     "description": "Typ 5211; Wymiary: 20 x 35 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461127061",
     "typ": "5211",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15842,8 +15842,8 @@
     "description": "Typ 5211; Wymiary: 25 x 40 x 6 mm; Materiał: elektrokorund zwykły; Ziarno materiału ściernego: 60",
     "gtin": "5900461127078",
     "typ": "5211",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15878,8 +15878,8 @@
     "description": "Typ 5220; Wymiary: 25 x 40 x 6 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 60",
     "gtin": "5900461128129",
     "typ": "5220",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15903,14 +15903,15 @@
     "material": "elektrokorund zwykły",
     "gritSize": "60",
     "srednica_dlugosc": "30",
-    "grubosc_szerokosc": "6",
+    "grubosc_szerokosc": "",
+    "boreSize": "6",
     "title": "Ściernica trzpieniowa kulista 30 x 6 mm | typ 5230 | 95A60K5VTE10 - ANDRE 550762",
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-kulista-30-x-6-mm--typ-5230--95a60k5vte10-andre-550762-id-17821",
     "description": "Typ 5230 | Średnica: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461128082",
     "typ": "5230",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15934,14 +15935,15 @@
     "material": "elektrokorund chromowy",
     "gritSize": "60",
     "srednica_dlugosc": "30",
-    "grubosc_szerokosc": "6",
+    "grubosc_szerokosc": "0",
+    "boreSize": "6",
     "title": "Ściernica trzpieniowa kulista 30 x 6 mm | typ 5230 | CRA60K7VE01 - ANDRE 559503",
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-kulista-30-x-6-mm--typ-5230--cra60k7ve01-andre-559503-id-17823",
     "description": "Typ 5230 | Średnica: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461128143",
     "typ": "5230",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -15955,17 +15957,17 @@
     "attributes": [],
     "material": "węglik krzemu czarny / zielony",
     "gritSize": "120/150",
-    "srednica_dlugosc": "35",
-    "grubosc_szerokosc": "20",
-    "boreSize": "150",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "35",
+    "boreSize": "0",
     "title": "Osełka ścierna, typ 9010Y - 35MM x 20/10MM x 150MM 98C/99C 120J/150J- ANDRE (540032)",
     "link": "https://www.e-darmet.pl/oselka-scierna-typ-9010y-35mm-x-2010mm-x-150mm-98c99c-120j150j-andre-540032-id-17828",
     "description": "Typ 9010Y; Wymiary: 35 x 20/10 x 150 mm; Materiał: węglik krzemu czarny / zielony; Ziarno materiału ściernego: 120/150",
     "gtin": "5900461078509",
     "typ": "9010Y",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641849",
@@ -15978,17 +15980,17 @@
     "attributes": [],
     "material": "węglik krzemu czarny",
     "gritSize": "120",
-    "srednica_dlugosc": "36",
+    "srednica_dlugosc": "230",
     "grubosc_szerokosc": "13",
-    "boreSize": "230",
+    "boreSize": "",
     "title": "Osełka ścierna, typ 9050 - 36MM x 13MM x 230MM 98C 120J - ANDRE (540053)",
     "link": "https://www.e-darmet.pl/oselka-scierna-typ-9050-36mm-x-13mm-x-230mm-98c-120j-andre-540053-id-17830",
     "description": "Typ 9050; Wymiary: 36 x 13 x 230 mm; Materiał: węglik krzemu czarny; Ziarno materiału ściernego: 120",
     "gtin": "5900461076604",
     "typ": "9050",
-    "bond": "M",
-    "bond_name": "nieznane (M)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212641850",
@@ -17525,8 +17527,8 @@
     "attributes": [],
     "material": "węglik krzemu czarny",
     "gritSize": "grube",
-    "srednica_dlugosc": "25",
-    "grubosc_szerokosc": "150",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "25",
     "title": "Osełka kwadratowa, typ 9011 - 25 x 150 mm | 98C16V5B469 - ANDRE 140591",
     "link": "https://www.e-darmet.pl/oselka-kwadratowa-typ-9011-25-x-150-mm--98c16v5b469-andre-140591-id-18016",
     "description": "Typ 9011; Wymiary: 25 x 150 mm; Materiał ścierny: węglik krzemu czarny; Ziarno materiału ściernego: grube",
@@ -17568,8 +17570,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-16-x-30-x-6-mm--typ-5210--95a60k5vte10-andre-550080-id-60737",
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461114504",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17604,8 +17606,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-16-x-30-x-6-mm--typ-5210--95a46p5vte10-andre-550071-id-60738",
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461128020",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17640,8 +17642,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-16-x-30-x-6-mm--typ-5210--95a46m5vte10-andre-550077-id-60739",
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461116508",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17676,8 +17678,8 @@
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 36",
     "gtin": "5900461113705",
     "typ": "5210",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17712,8 +17714,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-16-x-30-x-6-mm--typ-5210--95a24q5vte10-andre-550072-id-60741",
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 30 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 24",
     "gtin": "5900461116201",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17748,8 +17750,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-16-x-25-x-6-mm--typ-5210--95a60k5vte10-andre-550416-id-60742",
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461113804",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17784,8 +17786,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-16-x-20-x-6-mm--typ-5210--95a60k5vte10-andre-550057-id-60743",
     "description": "Typ 5210 | Średnica: 16 mm | Długość: 20 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461114603",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17820,8 +17822,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-13-x-25-x-6-mm--typ-5210--95a46p5vte10-andre-550065-id-60744",
     "description": "Typ 5210 | Średnica: 13 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461127160",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17856,8 +17858,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-10-x-25-x-6-mm--typ-5210--95a60o7vte10-andre-559670-id-60745",
     "description": "Typ 5210 | Średnica: 10 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "5900461128167",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17892,8 +17894,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-10-x-20-x-6-mm--typ-5210--95a46m5vte10-andre-550738-id-60746",
     "description": "Typ 5210 | Średnica: 10 mm | Długość: 20 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461105304",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -17960,6 +17962,9 @@
     ],
     "material": "węglik krzemu",
     "gritSize": "60",
+    "srednica_dlugosc": "110",
+    "grubosc_szerokosc": "90",
+    "boreSize": "22.2",
     "title": "Ściernica garnkowa stożkowa 110 x 90 x 55 x 22,2 mm | typ 11 | 98C60N6B97 - ANDRE 131160",
     "link": "https://www.e-darmet.pl/sciernica-garnkowa-stozkowa-110-x-90-x-55-x-222-mm--typ-11--98c60n6b97-andre-131160-id-62785",
     "description": "Typ 11 | Wymiary: 110 x 90 x 50 x 22,2 mm | Materiał ścierny: węglik krzemu | Ziarno materiału ściernego: 60",
@@ -17994,9 +17999,9 @@
     "description": "Kamień do szlifierki 250 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60J",
     "gtin": "",
     "typ": "1",
-    "bond": "J",
-    "bond_name": "nieznane (J)",
-    "bond_source": "title"
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
+    "bond_source": "category"
   },
   {
     "product_id": "1212684015",
@@ -18014,16 +18019,16 @@
     ],
     "material": "elektrokorund szlachetny",
     "gritSize": "46",
-    "srednica_dlugosc": "90",
-    "grubosc_szerokosc": "55",
-    "boreSize": "38",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "38",
+    "boreSize": "",
     "title": "Segment trapezowo-pierścieniowy 90 x 55 x 38 mm | typ 3103 | 99C46J8VTC10 - ANDRE 541175",
     "link": "https://www.e-darmet.pl/segment-trapezowo-pierscieniowy-90-x-55-x-38-mm--typ-3103--99c46j8vtc10-andre-541175-id-62802",
     "description": "Typ 3103; Wymiary: 90 x 55 x 38 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 46",
     "gtin": "",
     "typ": "3103",
-    "bond": "TC",
-    "bond_name": "nieznane (TC)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18062,8 +18067,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-20-x-20-mm--sciernica-plaska--typ-1--99a80k7ve01-andre-510828-id-62814",
     "description": "Tarcza do szlifierki | Średnica 150 mm | Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 80",
     "gtin": "5900461023004",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18102,8 +18107,8 @@
     "description": "Tarcza do szlifierki | Średnica 200 mm | Materiał: Elektrokorund szlachetny | Ziarno materiału ściernego: 60",
     "gtin": "5900461160761",
     "typ": "1",
-    "bond": "HE",
-    "bond_name": "nieznane (HE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18143,7 +18148,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18182,8 +18187,8 @@
     "description": "Tarcza do szlifierki| Średnica 200 mm | Materiał: Elektrokorund szlachetny | Ziarno materiału ściernego: 60",
     "gtin": "",
     "typ": "1",
-    "bond": "HE",
-    "bond_name": "nieznane (HE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18223,7 +18228,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18262,8 +18267,8 @@
     "description": "Tarcza do szlifierki | Średnica 250 mm | Materiał: Elektrokorund szlachetny | Ziarno materiału ściernego: 60",
     "gtin": "5900461160495",
     "typ": "1",
-    "bond": "HE",
-    "bond_name": "nieznane (HE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18304,7 +18309,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18343,8 +18348,8 @@
     "description": "Tarcza do szlifierki | Średnica 300 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: 60",
     "gtin": "",
     "typ": "1",
-    "bond": "HE",
-    "bond_name": "nieznane (HE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18384,7 +18389,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18424,7 +18429,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18465,7 +18470,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18505,7 +18510,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18545,7 +18550,7 @@
     "gtin": "",
     "typ": "1",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18584,8 +18589,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-20-x-32-mm--sciernica-plaska--typ-1--99a120k7ve01-andre-511324-id-67565",
     "description": "Kamień 200 mm do szlifierki stołowej | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: 120",
     "gtin": "",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18625,7 +18630,7 @@
     "gtin": "",
     "typ": "11",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18664,8 +18669,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-25-x-25-x-6-mm--typ-5210--95a46m5vte10-andre-550847-id-67568",
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 25 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 46",
     "gtin": "5900461127047",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18704,8 +18709,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-20-x-40-x-6-mm--typ-5210--99a60m7ve01-andre-550166-id-67570",
     "description": "Typ 5210 | Średnica: 20 mm | Długość: 40 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18744,8 +18749,8 @@
     "link": "https://www.e-darmet.pl/sciernica-trzpieniowa-walcowa-25-x-50-x-6-mm--typ-5210--cra60k7ve01-andre-550279-id-67571",
     "description": "Typ 5210 | Średnica: 25 mm | Długość: 50 mm | Trzpień: 6 mm | Ziarno materiału ściernego: 60",
     "gtin": "",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -18784,7 +18789,7 @@
     "gtin": "",
     "typ": "9020",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18828,7 +18833,7 @@
     "description": "Kamień 300 mm do szlifierki stołowej | Materiał: elektrokorund zwykły | Ziarno materiału ściernego: średnie",
     "gtin": "5900461053605",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18864,7 +18869,7 @@
     "description": "Tarcza do szlifierki | Średnica 450 mm | Materiał: elektrokorund szlachetny | Ziarno materiału ściernego: średnie",
     "gtin": "",
     "bond": "V",
-    "bond_name": "witryfikowane (ceramiczne)",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "category"
   },
   {
@@ -18899,9 +18904,9 @@
     "description": "Tarcza do szlifowania pił taśmowych | Ściernica 150 mm | Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 60N",
     "gtin": "",
     "typ": "1C",
-    "bond": "N",
-    "bond_name": "nieznane (N)",
-    "bond_source": "title"
+    "bond": null,
+    "bond_name": null,
+    "bond_source": null
   },
   {
     "product_id": "1212689094",
@@ -18928,8 +18933,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "1A1",
-    "srednica_dlugosc": "20",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "20",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 20 x 4 x 32 mm | typ 1A1 | D126 C75 MBF81 - ANDRE 750177",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-20-x-4-x-32-mm--typ-1a1--d126-c75-mbf81-andre-750177-id-67691",
@@ -18971,9 +18976,9 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-150-x-8-x-20-mm-do-ostrzenia-pil-tasmowych--sciernica-plaska--typ-1c--95a60no8b643-andre-120140-id-67692",
     "description": "Tarcza do szlifowania pił taśmowych | Średnica 150 mm | Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 60N",
     "gtin": "",
-    "bond": "N",
-    "bond_name": "nieznane (N)",
-    "bond_source": "title"
+    "bond": null,
+    "bond_name": null,
+    "bond_source": null
   },
   {
     "product_id": "1212689096",
@@ -18995,9 +19000,9 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-200-x-10-x-32-mm--sciernica-plaska--typ-1--95a60no8b643-andre-120144-id-67693",
     "description": "Kamień do szlifierki stołowej | Średnica 200 mm | Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 60N",
     "gtin": "",
-    "bond": "N",
-    "bond_name": "nieznane (N)",
-    "bond_source": "title"
+    "bond": null,
+    "bond_name": null,
+    "bond_source": null
   },
   {
     "product_id": "1212689097",
@@ -19023,8 +19028,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "14",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 14 x 6 x 2 x 20 mm | typ 12A2-20 | D126 C50 LBL2 - ANDRE 750185",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-14-x-6-x-2-x-20-mm--typ-12a2-20--d126-c50-lbl2-andre-750185-id-67694",
@@ -19059,8 +19064,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "14",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 14 x 6 x 2 x 20 mm | typ 12A2-20 | D126 C75 LBL2 - ANDRE 750186",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-14-x-6-x-2-x-20-mm--typ-12a2-20--d126-c75-lbl2-andre-750186-id-67695",
@@ -19091,9 +19096,9 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-250-x-10-x-32-mm--sciernica-plaska--typ-1c--95a60no8b643-andre-120145-id-67696",
     "description": "Kamień do szlifierki stołowej | Średnica 250 mm | Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 24",
     "gtin": "",
-    "bond": "N",
-    "bond_name": "nieznane (N)",
-    "bond_source": "title"
+    "bond": null,
+    "bond_name": null,
+    "bond_source": null
   },
   {
     "product_id": "1212689100",
@@ -19106,6 +19111,9 @@
     "attributes": [],
     "material": "elektrokorund zwykły",
     "gritSize": "24",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "50",
+    "boreSize": "14",
     "title": "Kamień szlifierski | ściernica garnkowa stożkowa z wkładką gwintową typ 1112 - 125 x 50 x M14 | 95A 16O - ANDRE 130127",
     "link": "https://www.e-darmet.pl/kamien-szlifierski--sciernica-garnkowa-stozkowa-z-wkladka-gwintowa-typ-1112-125-x-50-x-m14--95a-16o-andre-130127-id-67697",
     "description": "Typ 1112; Wymiary: 115 x 50 x M14 Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 24",
@@ -19139,8 +19147,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "14",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 14 x 10 x 2 x 20 mm | typ 12A2-20 | D126 C50 LBL2 - ANDRE 750187",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-14-x-10-x-2-x-20-mm--typ-12a2-20--d126-c50-lbl2-andre-750187-id-67699",
@@ -19162,6 +19170,9 @@
     "attributes": [],
     "material": "elektrokorund zwykły",
     "gritSize": "24",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "50",
+    "boreSize": "14",
     "title": "Kamień szlifierski | ściernica garnkowa stożkowa z wkładką gwintową typ 1112 - 125 x 50 x M14 | 95A 16Q - ANDRE 130128",
     "link": "https://www.e-darmet.pl/kamien-szlifierski--sciernica-garnkowa-stozkowa-z-wkladka-gwintowa-typ-1112-125-x-50-x-m14--95a-16q-andre-130128-id-67700",
     "description": "Typ 1112; Wymiary: 125 x 50 x M14 Materiał ścierny: elektrokorund zwykły; Ziarno materiału ściernego: 24",
@@ -19195,8 +19206,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "14",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 14 x 10 x 2 x 20 mm | typ 12A2-20 | D126 C75 LBL2 - ANDRE 750188",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-14-x-10-x-2-x-20-mm--typ-12a2-20--d126-c75-lbl2-andre-750188-id-67701",
@@ -19231,8 +19242,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "14",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 14 x 10 x 4 x 20 mm | typ 12A2-20 | D126 C50 LBL2 - ANDRE 750323",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-14-x-10-x-4-x-20-mm--typ-12a2-20--d126-c50-lbl2-andre-750323-id-67702",
@@ -19267,8 +19278,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 6 x 2 x 32 mm | typ 12A2-20 | D126 C50 LBL2 - ANDRE 750189",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-6-x-2-x-32-mm--typ-12a2-20--d126-c50-lbl2-andre-750189-id-67703",
@@ -19303,8 +19314,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 6 x 2 x 32 mm | typ 12A2-20 | D126 C75 LBL2 - ANDRE 750190",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-6-x-2-x-32-mm--typ-12a2-20--d126-c75-lbl2-andre-750190-id-67704",
@@ -19339,8 +19350,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 6 x 4 x 32 mm | typ 12A2-20 | D126 C50 LBL2 - ANDRE 750191",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-6-x-4-x-32-mm--typ-12a2-20--d126-c50-lbl2-andre-750191-id-67706",
@@ -19375,8 +19386,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 6 x 4 x 32 mm | typ 12A2-20 | D126 C75 LBL2 - ANDRE 750192",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-6-x-4-x-32-mm--typ-12a2-20--d126-c75-lbl2-andre-750192-id-67707",
@@ -19406,8 +19417,8 @@
     "description": "Typ 1113 Wymiary: 125 x 50 x 15,8 mm; Materiał ścierny: elektrokorund zwykły;",
     "gtin": "",
     "typ": "1113",
-    "bond": "K",
-    "bond_name": "nieznane (K)",
+    "bond": "B",
+    "bond_name": "żywiczne (bakielitowe)",
     "bond_source": "title"
   },
   {
@@ -19429,8 +19440,8 @@
     "description": "Typ 1113 Wymiary: 125 x 50 x 15,8 mm; Materiał ścierny: elektrokorund zwykły;",
     "gtin": "",
     "typ": "1113",
-    "bond": "K",
-    "bond_name": "nieznane (K)",
+    "bond": "B",
+    "bond_name": "żywiczne (bakielitowe)",
     "bond_source": "title"
   },
   {
@@ -19457,8 +19468,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 10 x 2 x 32 mm | typ 12A2-20 | D126 C50 LBL2 - ANDRE 750193",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-10-x-2-x-32-mm--typ-12a2-20--d126-c50-lbl2-andre-750193-id-67710",
@@ -19493,8 +19504,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 10 x 2 x 32 mm | typ 12A2-20 | D126 C75 LBL2 - ANDRE 750194",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-10-x-2-x-32-mm--typ-12a2-20--d126-c75-lbl2-andre-750194-id-67711",
@@ -19529,8 +19540,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 10 x 4 x 32 mm | typ 12A2-20 | D126 C50 LBL2 - ANDRE 750195",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-10-x-4-x-32-mm--typ-12a2-20--d126-c50-lbl2-andre-750195-id-67712",
@@ -19565,8 +19576,8 @@
     ],
     "material": "ziarna diamentowe",
     "gritSize": "126",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "16",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 16 x 10 x 4 x 32 mm | typ 12A2-20 | D126 C75 LBL2 - ANDRE 750196",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-16-x-10-x-4-x-32-mm--typ-12a2-20--d126-c75-lbl2-andre-750196-id-67713",
@@ -19602,8 +19613,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "4A2",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "7",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 7 x 6 x 2 x 20 mm | typ 4A2 | D126 C75 LBL2 - ANDRE 750471",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-7-x-6-x-2-x-20-mm--typ-4a2--d126-c75-lbl2-andre-750471-id-67714",
@@ -19638,8 +19649,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "4A2",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "7",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 7 x 10 x 2 x 20 mm | typ 4A2 | D126 C75 LBL2 - ANDRE 750472",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-7-x-10-x-2-x-20-mm--typ-4a2--d126-c75-lbl2-andre-750472-id-67715",
@@ -19674,8 +19685,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "4A2",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "9",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 9 x 6 x 2 x 32 mm | typ 4A2 | D126 C75 LBL2 - ANDRE 750473",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-9-x-6-x-2-x-32-mm--typ-4a2--d126-c75-lbl2-andre-750473-id-67717",
@@ -19695,13 +19706,17 @@
     "image": "https://www.e-darmet.pl/dane/full/f/f67a5b35306b43c99048bb047bbee6bf.jpg",
     "attributes": [],
     "material": "węglik krzemu czarny",
+    "srednica_dlugosc": "100",
+    "grubosc_szerokosc": "50",
+    "gritSize": "46",
+    "boreSize": "14",
     "title": "Ściernica garnkowa stożkowa z wkładką gwintowaną  typ 1114 - 100/80 mm × 50 mm × M14 - W20E20K45 - 98C46Q5B630 - ANDRE 130063",
     "link": "https://www.e-darmet.pl/sciernica-garnkowa-stozkowa-z-wkladka-gwintowana-typ-1114-10080-mm--50-mm--m14-w20e20k45-98c46q5b630-andre-130063-id-67718",
     "description": "Typ 1114 Wymiary: 100/80 x 50 x M14 mm; Materiał ścierny: węglik krzemu czarny",
     "gtin": "",
     "typ": "1114",
-    "bond": "K",
-    "bond_name": "nieznane (K)",
+    "bond": "B",
+    "bond_name": "żywiczne (bakielitowe)",
     "bond_source": "title"
   },
   {
@@ -19729,8 +19744,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "4A2",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "9",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 9 x 10 x 2 x 32 mm | typ 4A2 | D126 C50 LBL2 - ANDRE 750402",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-9-x-10-x-2-x-32-mm--typ-4a2--d126-c50-lbl2-andre-750402-id-67719",
@@ -19765,8 +19780,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "4A2",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "2",
+    "srednica_dlugosc": "150",
+    "grubosc_szerokosc": "9",
     "boreSize": "32",
     "title": "Ściernica diamentowa 150 x 9 x 10 x 2 x 32 mm | typ 4A2 | D126 C75 LBL2 - ANDRE 750406",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-150-x-9-x-10-x-2-x-32-mm--typ-4a2--d126-c75-lbl2-andre-750406-id-67720",
@@ -19824,8 +19839,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "11A2",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "100",
+    "grubosc_szerokosc": "23",
     "boreSize": "20",
     "title": "Ściernica diamentowa 100 x 23 x 6 x 4 x 20 mm | typ 11A2 | D126 C50 LBL2 - ANDRE 750329",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-100-x-23-x-6-x-4-x-20-mm--typ-11a2--d126-c50-lbl2-andre-750329-id-67722",
@@ -19860,8 +19875,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "11A2",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "100",
+    "grubosc_szerokosc": "23",
     "boreSize": "20",
     "title": "Ściernica diamentowa 100 x 23 x 6 x 4 x 20 mm | typ 11A2 | D126 C75 LBL2 - ANDRE 750200",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-100-x-23-x-6-x-4-x-20-mm--typ-11a2--d126-c75-lbl2-andre-750200-id-67723",
@@ -19896,8 +19911,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "6A2",
-    "srednica_dlugosc": "6",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "100",
+    "grubosc_szerokosc": "23",
     "boreSize": "20",
     "title": "Ściernica diamentowa 100 x 23 x 6 x 4 x 20 mm | typ 6A2 | D126 C75 LBL2 - ANDRE 750470",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-100-x-23-x-6-x-4-x-20-mm--typ-6a2--d126-c75-lbl2-andre-750470-id-67724",
@@ -19932,8 +19947,8 @@
     "material": "ziarna diamentowe",
     "gritSize": "126",
     "typ": "6A2",
-    "srednica_dlugosc": "10",
-    "grubosc_szerokosc": "4",
+    "srednica_dlugosc": "125",
+    "grubosc_szerokosc": "23",
     "boreSize": "20",
     "title": "Ściernica diamentowa 125 x 23 x 10 x 4 x 20 mm | typ 6A2 | D126 C75 LBL2 - ANDRE 750455",
     "link": "https://www.e-darmet.pl/sciernica-diamentowa-125-x-23-x-10-x-4-x-20-mm--typ-6a2--d126-c75-lbl2-andre-750455-id-67725",
@@ -19968,6 +19983,7 @@
     "material": "borazon (CBN)",
     "gritSize": "126",
     "srednica_dlugosc": "127",
+    "boreSize": "12,7",
     "grubosc_szerokosc": "22.23",
     "title": "Ściernica profilowa borazonowa CBN do ostrzenia pił taśmowych | 127 x 22,23 mm | E9,5 | H12,7 | B126 | profil 9/29 - ANDRE 863015",
     "link": "https://www.e-darmet.pl/sciernica-profilowa-borazonowa-cbn-do-ostrzenia-pil-tasmowych--127-x-2223-mm--e95--h127--b126--profil-929-andre-863015-id-67726",
@@ -20002,6 +20018,7 @@
     "material": "borazon (CBN)",
     "gritSize": "126",
     "srednica_dlugosc": "127",
+    "boreSize": "20",
     "grubosc_szerokosc": "22.23",
     "title": "Ściernica profilowa borazonowa CBN do ostrzenia pił taśmowych | 127 x 22,23 mm | E9,5 | H20 | B126 - ANDRE 863025",
     "link": "https://www.e-darmet.pl/sciernica-profilowa-borazonowa-cbn-do-ostrzenia-pil-tasmowych--127-x-2223-mm--e95--h20--b126-andre-863025-id-67727",
@@ -20036,6 +20053,7 @@
     "material": "borazon (CBN)",
     "gritSize": "151",
     "srednica_dlugosc": "150",
+    "boreSize": "20",
     "grubosc_szerokosc": "22.23",
     "title": "Ściernica profilowa borazonowa CBN do ostrzenia pił taśmowych | 150 x 22,23 mm | H20 | B151 | profil 10/30 - ANDRE 863027",
     "link": "https://www.e-darmet.pl/sciernica-profilowa-borazonowa-cbn-do-ostrzenia-pil-tasmowych--150-x-2223-mm--h20--b151--profil-1030-andre-863027-id-67728",
@@ -20070,6 +20088,7 @@
     "material": "borazon (CBN)",
     "gritSize": "126",
     "srednica_dlugosc": "203.2",
+    "boreSize": "25,4",
     "grubosc_szerokosc": "22.2",
     "title": "Ściernica profilowa borazonowa CBN do ostrzenia pił taśmowych | 203,2 x 22,2 mm | E25 | H25,4 | B126 | profil 10/30 - ANDRE 863009",
     "link": "https://www.e-darmet.pl/sciernica-profilowa-borazonowa-cbn-do-ostrzenia-pil-tasmowych--2032-x-222-mm--e25--h254--b126--profil-1030-andre-863009-id-67729",
@@ -20104,6 +20123,7 @@
     "material": "borazon (CBN)",
     "gritSize": "126",
     "srednica_dlugosc": "203.2",
+    "boreSize": "32",
     "grubosc_szerokosc": "22.2",
     "title": "Ściernica profilowa borazonowa CBN do ostrzenia pił taśmowych | 203,2 x 22,2 mm | E25 | H32 | B126 | profil 10/30 - ANDRE 863022",
     "link": "https://www.e-darmet.pl/sciernica-profilowa-borazonowa-cbn-do-ostrzenia-pil-tasmowych--2032-x-222-mm--e25--h32--b126--profil-1030-andre-863022-id-67730",
@@ -20171,6 +20191,7 @@
     ],
     "material": "borazon (CBN)",
     "gritSize": "126",
+    "boreSize": "32",
     "srednica_dlugosc": "203.2",
     "grubosc_szerokosc": "22.23",
     "title": "Ściernica profilowa borazonowa CBN do ostrzenia pił taśmowych | 203,2 x 22,23 mm | E25,5 | H32 | B126 | profil 9/29 - ANDRE 863016",
@@ -20488,7 +20509,7 @@
     "gtin": "5900461176298",
     "typ": "27",
     "bond": "BF",
-    "bond_name": "żywiczne zbrojone",
+    "bond_name": "żywiczne wzmacniane tkaniną (zbrojone)",
     "bond_source": "title"
   },
   {
@@ -20593,8 +20614,8 @@
     "description": "Kamień 400 mm do szlifierki stołowej | Materiał: Elektrokorund szlachetny | Ziarno materiału ściernego: 120 M9VTE10",
     "gtin": "5900000012575",
     "typ": "1",
-    "bond": "TE",
-    "bond_name": "nieznane (TE)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -20638,8 +20659,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-do-ostrzenia-lancuchow--145-x-47-x-2223-mm--sciernica-plaska--typ-1--cra60k7ve01-andre-519203-id-70774",
     "description": "Tarcza ścierna 145 mm do szlifierki stołowej | Kamień do ostrzenia łańcuchów w pilarkach spalinowych | Ziarno materiału ściernego: 60 | CRA60K7VE01",
     "gtin": "5900461223800",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -20683,8 +20704,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-do-ostrzenia-lancuchow--145-x-32-x-2223-mm--sciernica-plaska--typ-1--cra60k7ve01-35--andre-519204-id-70775",
     "description": "Tarcza ścierna 145 mm do szlifierki stołowej | Kamień do ostrzenia łańcuchów w pilarkach spalinowych, elektrycznych | Ziarno materiału ściernego: 60 | CRA60K7VE01 - 35",
     "gtin": "5900461230877",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -20728,8 +20749,8 @@
     "link": "https://www.e-darmet.pl/kamien-szlifierski-do-ostrzenia-lancuchow--145-x-8-x-2223-mm--sciernica-plaska--typ-1--cra60k7ve01-35--andre-5111792-id-70776",
     "description": "Tarcza ścierna 145 mm do szlifierki stołowej | Kamień do ostrzenia łańcuchów w pilarkach spalinowych, elektrycznych | Ziarno materiału ściernego: 60 | CRA60K7VE01 - 35",
     "gtin": "",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -20792,8 +20813,8 @@
     "link": "https://www.e-darmet.pl/sciernica-garnkowa-walcowa-75-x-40-x-20-mm--typ-6--99a60k7ve01-andre-520280-id-70792",
     "description": "Typ 6; Wymiary: 75 x 40 x 20 mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 60",
     "gtin": "5900461215829",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -20807,16 +20828,16 @@
     "attributes": [],
     "material": "elektrokorund szlachetny",
     "gritSize": "100",
-    "srednica_dlugosc": "40",
+    "srednica_dlugosc": "200",
     "grubosc_szerokosc": "20",
-    "boreSize": "200",
+    "boreSize": "",
     "title": "Osełka ścierna, typ 9010Y, elektrokorund szlachetny - 40mm x 20/10mm x 200mm 99A100L7/220J8VTE10- ANDRE (540742)",
     "link": "https://www.e-darmet.pl/oselka-scierna-typ-9010y-elektrokorund-szlachetny-40mm-x-2010mm-x-200mm-99a100l7220j8vte10-andre-540742-id-70794",
     "description": "Typ 9010Y; Wymiary: 40mm x 20/10mm x 200mm; Materiał: elektrokorund szlachetny; Ziarno materiału ściernego: 100",
     "gtin": "5900461218851",
     "typ": "9010Y",
-    "bond": "L",
-    "bond_name": "nieznane (L)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -20830,16 +20851,16 @@
     "attributes": [],
     "material": "mieszaniny elektrokorundów",
     "gritSize": "46",
-    "srednica_dlugosc": "60",
+    "srednica_dlugosc": "110",
     "grubosc_szerokosc": "22",
-    "boreSize": "110",
+    "boreSize": "",
     "title": "Segment trapezowy, typ 3109 - 60/54mm x 22mm x 110mm, 53A46E12VTE10PK - ANDRE (542269)",
     "link": "https://www.e-darmet.pl/segment-trapezowy-typ-3109-6054mm-x-22mm-x-110mm-53a46e12vte10pk-andre-542269-id-70796",
     "description": "Typ 3109; Wymiary: 60/54mm x 22mm x 110mm; Materiał: mieszaniny elektrokorundów; Ziarno materiału ściernego: 46",
     "gtin": "5900461192380",
     "typ": "3109",
-    "bond": "K",
-    "bond_name": "nieznane (K)",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {
@@ -20853,16 +20874,16 @@
     "attributes": [],
     "material": "elektrokorund chromowy",
     "gritSize": "100",
-    "srednica_dlugosc": "40",
+    "srednica_dlugosc": "200",
     "grubosc_szerokosc": "20",
-    "boreSize": "200",
+    "boreSize": "",
     "title": "Osełka ścierna, typ 9010 - 40mm x 20/10mm x 200mm CRA100K7VE01 - ANDRE (542379)",
     "link": "https://www.e-darmet.pl/oselka-scierna-typ-9010-40mm-x-2010mm-x-200mm-cra100k7ve01-andre-542379-id-70799",
     "description": "Typ 9010Y; Wymiary: 40 x 20/10 x 200 mm; Materiał: elektrokorund chromowy; Ziarno materiału ściernego: 100",
     "gtin": "5900461155118",
     "typ": "9010",
-    "bond": "E",
-    "bond_name": "szelakowe",
+    "bond": "V",
+    "bond_name": "ceramiczne (witryfikowane)",
     "bond_source": "title"
   },
   {

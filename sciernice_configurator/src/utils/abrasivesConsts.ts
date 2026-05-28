@@ -12,7 +12,7 @@ export const materialColors: Record<string, { bg: string; border: string; text: 
     'elektrokorund chromowy': { bg: '#FFF0F6', border: '#FFADD2', text: '#C41D7F' },
     'elektrokorund szlachetny': { bg: '#FFF0F6', border: '#d4c7bf', text: '#8093aa' },
     'elektrokorund zwykły': { bg: '#cfbeaf', border: '#5e3d27', text: '#434343' },
-    'węglik krzemu czarny': { bg: '#E4E7EC', border: '#475467', text: '#101828' },
+    'węglik krzemu czarny': { bg: '#babfca', border: '#475467', text: '#101828' },
     'węglik krzemu zielony': { bg: '#E6F4EA', border: '#A3E2B7', text: '#137333' },
     'ziarna diamentowe': { bg: '#F0F0F0', border: '#756adf', text: '#333333' },
     'borazon (CBN)': { bg: '#F0F0F0', border: '#282541', text: '#333333' },

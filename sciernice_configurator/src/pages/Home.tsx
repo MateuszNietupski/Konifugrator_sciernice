@@ -35,16 +35,16 @@ export default function Home({ abrasives }: HomeProps) {
 
         selectedTypes: state.selectedTypes,
         selectedGrits: state.selectedGrits,
-        lengthRange: state.lengthRange,
-        lengthSteps: state.lengthSteps,
         selectedMaterials: state.selectedMaterials,
         selectedBonds: state.selectedBonds,
         searchModel: state.searchModel,
 
+        dimensions: state.dimensions,
+
+        onDimensionChange: handlers.setDimensionRange,
         onSearchModelChange: handlers.setSearchModel,
         onTypesChange: handlers.setSelectedTypes,
         onGritsChange: handlers.setSelectedGrits,
-        onLengthChange: handlers.setLengthRange,
         onMaterialsChange: handlers.setSelectedMaterials,
         onClearFilters: handlers.handleClearFilters,
         onBondsChange: handlers.setSelectedBonds,
@@ -54,6 +54,11 @@ export default function Home({ abrasives }: HomeProps) {
         filtered: results.filteredWheels.length,
         total: abrasives.length
     };
+
+    console.log('Home handlers debug:', {
+        setDimensionRange: typeof handlers.setDimensionRange,
+        filterPropsOnDimensionChange: typeof filterProps.onDimensionChange,
+    });
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -90,14 +95,14 @@ export default function Home({ abrasives }: HomeProps) {
                             selectedBonds={state.selectedBonds}
                             selectedMaterials={state.selectedMaterials}
                             searchModel={state.searchModel}
-                            lengthRange={state.lengthRange}
-                            lengthSteps={state.lengthSteps}
+                            dimensions={state.dimensions}
+                            onRemoveDimensionFilter={handlers.removeDimensionFilter}
+
                             onRemoveSearchItem={handlers.removeSearchItem}
                             onRemoveType={handlers.removeSelectedType}
                             onRemoveGrit={handlers.removeSelectedGrit}
                             onRemoveMaterial={handlers.removeSelectedMaterial}
                             onRemoveBond={handlers.removeSelectedBond}
-                            removeLengthFilter={handlers.removeLengthFilter}
                             onClearAll={handlers.handleClearFilters}
                         />
                         <ProductGridDesktop

@@ -12,12 +12,14 @@ import GritsFilter from '../filters/gritsFilter';
 import ShapeTypeFilter from '../filters/shapeTypeFilter';
 import BondFilter from '../filters/bondFilter';
 import LengthFilter from '../filters/lengthFilter';
+import StepSliderFilter from '../filters/StepSliderFilter';
 import { type GridFilterModel } from '@mui/x-data-grid';
 import Divider from '@mui/material/Divider';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { type NumericDimension, type DimensionConfigItem } from '../hooks/useFilters';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -55,7 +57,6 @@ interface FilterPanelProps {
     wheelTypes: string[];
     abrasiveMaterials: string[];
     gritOptions: number[];
-    lengthSteps: number[];
     bondOptions: string[];
     facetCounts: {
         Type: Record<string, number>;
@@ -68,21 +69,20 @@ interface FilterPanelProps {
     selectedGrits: number[];
     selectedMaterials: string[];
     selectedBonds: string[];
-    lengthRange: [number, number];
     searchModel: GridFilterModel;
+    dimensions: Record<NumericDimension, DimensionConfigItem>;
 
     onSearchModelChange: (newValue: GridFilterModel) => void;
     onTypesChange: (types: string[]) => void;
     onGritsChange: (grits: number[]) => void;
-    onLengthChange: (range: [number, number]) => void;
     onMaterialsChange: (materials: string[]) => void;
-    onClearFilters: () => void;
     onBondsChange: (bonds: string[]) => void;
+    onClearFilters: () => void;
+    onDimensionChange: (field: NumericDimension, indices: [number, number], steps: number[]) => void;
 }
 
 export default function FilterPanel({
     abrasiveMaterials,
-    lengthSteps,
     facetCounts,
     selectedTypes,
     selectedGrits,
@@ -90,19 +90,43 @@ export default function FilterPanel({
     selectedMaterials,
     selectedBonds,
     bondOptions,
-    lengthRange,
     searchModel,
+    dimensions,
     onTypesChange,
     onGritsChange,
-    onLengthChange,
     onMaterialsChange,
     onClearFilters,
     onSearchModelChange,
     onBondsChange,
+    onDimensionChange,
 }: FilterPanelProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+    console.log('FilterPanel props debug:', {
+    onDimensionChange: typeof onDimensionChange,
+    onDimensionChangeValue: onDimensionChange,
+    dimensions: dimensions,
+});
+
+    if (isMobile) {
+        return (
+            <Box sx={{ borderBottom: '1px solid', borderColor: 'divider', bgcolor: 'background.paper' }}>
+                <Box sx={{ px: 2, py: 1.5, display: 'flex', gap: 1, alignItems: 'center' }}>
+                    <Box sx={{ flex: 1, minWidth: 0 }}>
+                        <Typography variant="body2" color="text.secondary">Filtry mobilne ściernic (w budowie)</Typography>
+                    </Box>
+                    <ClearButton onClick={onClearFilters} />
+                </Box>
+            </Box>
+        );
+    }
+
+    const {
+        outerDiameter = { steps: [0], rangeIndices: [0, 0], currentValues: [0, 0], isActive: false },
+        thickness = { steps: [0], rangeIndices: [0, 0], currentValues: [0, 0], isActive: false },
+        boreSize = { steps: [0], rangeIndices: [0, 0], currentValues: [0, 0], isActive: false }
+    } = dimensions || {};
     const renderSearchFilter = (size: 'small' | 'medium' = 'medium') => (
         <SearchFilter
             searchModel={searchModel}
@@ -149,12 +173,35 @@ export default function FilterPanel({
         />
     );
 
-    const renderLengthFilter = (size: 'small' | 'medium' = 'medium') => (
-        <LengthFilter
-            lengthSteps={lengthSteps}
-            lengthRange={lengthRange}
-            onChange={onLengthChange}
-        />
+    const renderDimensionSliders = () => (
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            {outerDiameter && (
+                <StepSliderFilter
+                    label="Średnica / Długość"
+                    steps={outerDiameter.steps}
+                    currentRange={outerDiameter.rangeIndices}
+                    onChange={(indices) => onDimensionChange('outerDiameter', indices, outerDiameter.steps)}
+                />
+            )}
+
+            {thickness && (
+                <StepSliderFilter
+                    label="Grubość / Szerokość"
+                    steps={thickness.steps}
+                    currentRange={thickness.rangeIndices}
+                    onChange={(indices) => onDimensionChange('thickness', indices, thickness.steps)}
+                />
+            )}
+
+            {boreSize && (
+                <StepSliderFilter
+                    label="Otwór wewnętrzny"
+                    steps={boreSize.steps}
+                    currentRange={boreSize.rangeIndices}
+                    onChange={(indices) => onDimensionChange('boreSize', indices, boreSize.steps)}
+                />
+            )}
+        </Box>
     );
 
     const BrandLogo = () => (
@@ -179,19 +226,6 @@ export default function FilterPanel({
             </Box>
         </Link>
     );
-
-    if (isMobile) {
-        return (
-            <Box sx={{ borderBottom: '1px solid', borderColor: 'divider', bgcolor: 'background.paper' }}>
-                <Box sx={{ px: 2, py: 1.5, display: 'flex', gap: 1, alignItems: 'center' }}>
-                    <Box sx={{ flex: 1, minWidth: 0 }}>
-                        <Typography variant="body2" color="text.secondary">Filtry mobilne ściernic (w budowie)</Typography>
-                    </Box>
-                    <ClearButton onClick={onClearFilters} />
-                </Box>
-            </Box>
-        );
-    }
 
     return (
         <Box sx={{
@@ -219,6 +253,7 @@ export default function FilterPanel({
                     {renderTypeFilter()}
                 </Box>
                 <Divider sx={{ my: 2 }} />
+
                 <Accordion>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -233,24 +268,38 @@ export default function FilterPanel({
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
-                        <Box sx={{ mb: 3 , mt: 2}}>
+                        <Box sx={{ mb: 3, mt: 2 }}>
                             {renderMaterialFilter()}
                         </Box>
                         <Box sx={{ mb: 3 }}>
                             {renderGritsFilter()}
                         </Box>
-                        <Box sx={{ mt: 3 }}>
+                        <Box sx={{ mb: 3 }}>
                             {renderBondFilter()}
                         </Box>
                     </AccordionDetails>
                 </Accordion>
                 <Divider sx={{ my: 2 }} />
-                <SectionTitle>
-                    FItry wymiarów
-                </SectionTitle>
-                <Box sx={{ mb: 3 }}>
-                    {renderLengthFilter()}
-                </Box>
+
+                <Accordion defaultExpanded>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        sx={{
+                            px: 0.5,
+                            minHeight: 0,
+                            '& .MuiAccordionSummary-content': { my: 1 }
+                        }}
+                    >
+                        <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ mb: 1.5, px: 0.5 }}>
+                            FILTRY WYMIARU
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails sx={{ px: 0.5, pb: 1, pt: 0 }}>
+                        <Box sx={{ mb: 2, mt: 2 }}>
+                            {renderDimensionSliders()}
+                        </Box>
+                    </AccordionDetails>
+                </Accordion>
             </Box>
         </Box >
     );
