@@ -46,26 +46,85 @@ export function useFilters(abrasives: AbrasiveRow[]) {
         boreSize: null,
     });
 
-    // ── stabilne referencje tablic kroków ──────────────────
-    const rawLengthSteps = useMemo(() => buildSteps(abrasives, 'outerDiameter'), [abrasives]);
-    const rawThicknessSteps = useMemo(() => buildSteps(abrasives, 'thickness'), [abrasives]);
-    const rawBoreSteps = useMemo(() => buildSteps(abrasives, 'boreSize'), [abrasives]);
+    const matchesSearchModel = (wheel: AbrasiveRow, model: GridFilterModel): boolean => {
+        const activeItems = model.items.filter(
+            item => item.value !== undefined && item.value !== null && String(item.value).trim() !== ''
+        );
+        if (activeItems.length === 0) return true;
+
+        return activeItems.every(({ field, operator, value }) => {
+            const numberFields = ['grit', 'outerDiameter', 'boreSize', 'thickness'];
+            if (numberFields.includes(field)) {
+                const raw = field === 'grit' ? wheel.gritSize : wheel[field as keyof AbrasiveRow];
+                const rowValue = Number(raw);
+                const searchValue = Number(value);
+                if (isNaN(rowValue) || isNaN(searchValue)) return false;
+                switch (operator) {
+                    case 'equals': return rowValue === searchValue;
+                    case 'onOrAfter': return rowValue >= searchValue;
+                    case 'onOrBefore': return rowValue <= searchValue;
+                    default: return rowValue === searchValue;
+                }
+            }
+
+            const searchStr = String(value).trim().toLowerCase();
+            const cellValue = (
+                field === 'bond'
+                    ? getBondGroupId(wheel.bond || '')
+                    : String(wheel[field as keyof AbrasiveRow] || '')
+            ).toLowerCase();
+
+            switch (operator) {
+                case 'contains': return cellValue.includes(searchStr);
+                case 'startsWith': return cellValue.startsWith(searchStr);
+                case 'endsWith': return cellValue.endsWith(searchStr);
+                case 'equals': return cellValue === searchStr;
+                default: return true;
+            }
+        });
+    };
+
+    const getFilteredForDimension = (fieldToIgnore: NumericDimension) => {
+        return abrasives.filter(w => {
+            if (!matchesSearchModel(w, searchModel)) return false;
+            if (selectedTypes.length > 0 && !selectedTypes.includes(w.type || '')) return false;
+            if (selectedMaterials.length > 0 && !selectedMaterials.includes(w.material || '')) return false;
+            if (selectedGrits.length > 0 && !selectedGrits.includes(Number(w.gritSize))) return false;
+            if (selectedBonds.length > 0 && !selectedBonds.includes(getBondGroupId(w.bond || ''))) return false;
+
+            const dims: NumericDimension[] = ['outerDiameter', 'thickness', 'boreSize'];
+            for (const dim of dims) {
+                if (dim !== fieldToIgnore && numFilters[dim] !== null) {
+                    const val = Number(w[dim]);
+                    const [lo, hi] = numFilters[dim]!;
+                    if (val < lo || val > hi) return false;
+                }
+            }
+            return true;
+        });
+    };
+
+    const rawLengthSteps = useMemo(() => buildSteps(getFilteredForDimension('outerDiameter'), 'outerDiameter'),
+        [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters.thickness, numFilters.boreSize]);
+
+    const rawThicknessSteps = useMemo(() => buildSteps(getFilteredForDimension('thickness'), 'thickness'),
+        [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters.outerDiameter, numFilters.boreSize]);
+
+    const rawBoreSteps = useMemo(() => buildSteps(getFilteredForDimension('boreSize'), 'boreSize'),
+        [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters.outerDiameter, numFilters.thickness]);
 
     const lengthSteps = useStableArray(rawLengthSteps);
     const thicknessSteps = useStableArray(rawThicknessSteps);
     const boreSteps = useStableArray(rawBoreSteps);
-    // ───────────────────────────────────────────────────────
 
     const dimensionsConfig = useMemo<Record<NumericDimension, DimensionConfigItem>>(() => {
         const getValues = (field: NumericDimension, steps: number[]): [number, number] =>
             numFilters[field] ?? [steps[0], steps[steps.length - 1]];
 
         const getIndices = (vals: [number, number], steps: number[]): [number, number] => {
-            // Dla min: pierwszy indeks >= vals[0]
             let minIdx = steps.findIndex(v => v >= vals[0]);
             if (minIdx === -1) minIdx = 0;
 
-            // Dla max: OSTATNI indeks <= vals[1], nie pierwszy >= vals[1]
             let maxIdx = -1;
             for (let i = steps.length - 1; i >= 0; i--) {
                 if (steps[i] <= vals[1]) { maxIdx = i; break; }
@@ -115,44 +174,6 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             }
         }
         return true;
-    };
-
-    const matchesSearchModel = (wheel: AbrasiveRow, model: GridFilterModel): boolean => {
-        const activeItems = model.items.filter(
-            item => item.value !== undefined && item.value !== null && String(item.value).trim() !== ''
-        );
-        if (activeItems.length === 0) return true;
-
-        return activeItems.every(({ field, operator, value }) => {
-            const numberFields = ['grit', 'outerDiameter', 'boreSize', 'thickness'];
-            if (numberFields.includes(field)) {
-                const raw = field === 'grit' ? wheel.gritSize : wheel[field as keyof AbrasiveRow];
-                const rowValue = Number(raw);
-                const searchValue = Number(value);
-                if (isNaN(rowValue) || isNaN(searchValue)) return false;
-                switch (operator) {
-                    case 'equals': return rowValue === searchValue;
-                    case 'onOrAfter': return rowValue >= searchValue;
-                    case 'onOrBefore': return rowValue <= searchValue;
-                    default: return rowValue === searchValue;
-                }
-            }
-
-            const searchStr = String(value).trim().toLowerCase();
-            const cellValue = (
-                field === 'bond'
-                    ? getBondGroupId(wheel.bond || '')
-                    : String(wheel[field as keyof AbrasiveRow] || '')
-            ).toLowerCase();
-
-            switch (operator) {
-                case 'contains': return cellValue.includes(searchStr);
-                case 'startsWith': return cellValue.startsWith(searchStr);
-                case 'endsWith': return cellValue.endsWith(searchStr);
-                case 'equals': return cellValue === searchStr;
-                default: return true;
-            }
-        });
     };
 
     const abrasiveMaterials = useMemo(() =>

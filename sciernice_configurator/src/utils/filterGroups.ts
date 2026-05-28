@@ -78,10 +78,13 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
   {
     id: 'ceramic',
     label: 'Ceramiczne',
-    //label: 'Ceramiczne (V)',
     description: 'Sztywne, precyzyjne, do szlifierek stołowych',
     values: ['V', 'C', 'TC'], // C i TC to gumowe, ale to ceramiki które skrypt tak przydzielił przez kod wewnętrzny ANDRE
-    colorConfig: { bg: '#FDF6E2', text: '#725100', border: '#E6D7B3' }
+    colorConfig: {
+      bg: '#E3F2FD',    
+      text: '#1565C0', 
+      border: '#BBDEFB' 
+    }
   },/*
   {
     id: 'shellac',
