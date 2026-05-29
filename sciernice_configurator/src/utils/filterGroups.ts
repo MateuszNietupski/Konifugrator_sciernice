@@ -78,12 +78,12 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
   {
     id: 'ceramic',
     label: 'Ceramiczne',
-    description: 'Sztywne, precyzyjne, do szlifierek stołowych',
+    description: 'Sztywne i stabilne. Idealne do szlifowania precyzyjnego, ostrzenia narzędzi i pracy na mokro. Doskonale zachowują profil i wymiar.',
     values: ['V', 'C', 'TC'], // C i TC to gumowe, ale to ceramiki które skrypt tak przydzielił przez kod wewnętrzny ANDRE
     colorConfig: {
-      bg: '#E3F2FD',    
-      text: '#1565C0', 
-      border: '#BBDEFB' 
+      bg: '#E3F2FD',
+      text: '#1565C0',
+      border: '#BBDEFB'
     }
   },/*
   {
@@ -99,7 +99,7 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     id: 'resin',
     label: 'Żywiczne',
     //label: 'Żywiczne (B, BF, TE, HE)',
-    description: 'Elastyczne, odporne na drgania i wysokie obroty',
+    description: 'Elastyczne, amortyzujące drgania, do dużych prędkości. Idealne do pracy ręcznej, szlifowania spawów i cięcia metalu.',
     values: ['B', 'BF', 'TE', 'HE'],
     colorConfig: { bg: '#F5EBE6', text: '#D85A1B', border: '#D7CCC8' }
   },

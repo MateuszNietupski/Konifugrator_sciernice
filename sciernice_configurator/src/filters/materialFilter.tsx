@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Tooltip from '@mui/material/Tooltip';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { materialColors, materialDescriptions } from '../utils/abrasivesConsts';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
@@ -17,14 +18,17 @@ const defaultColors = { bg: '#F5F5F5', border: '#9E9E9E', text: '#616161' };
 const tooltipSlotProps = {
     tooltip: {
         sx: {
-            bgcolor: 'rgba(14, 33, 53, 0.9)',
+            bgcolor: 'rgba(14, 33, 53, 0.95)',
             color: '#ffffff',
             fontSize: '0.75rem',
             fontWeight: 500,
-            maxWidth: 250,
-            textAlign: 'center',
+            maxWidth: 280,
+            textAlign: 'left',
+            whiteSpace: 'pre-line', 
+            p: 1.5,
+            boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
             '& .MuiTooltip-arrow': {
-                color: 'rgba(14, 33, 53, 0.9)'
+                color: 'rgba(14, 33, 53, 0.95)'
             }
         }
     }
@@ -53,7 +57,14 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                     const description = materialDescriptions[option] || '';
 
                     return (
-                        <Tooltip key={option} title={description} arrow placement="top" disableHoverListener={!description} slotProps={tooltipSlotProps}>
+                        <Tooltip 
+                            key={option} 
+                            title={description} 
+                            arrow 
+                            placement="top" 
+                            disableHoverListener={!description} 
+                            slotProps={tooltipSlotProps}
+                        >
                             <Chip
                                 label={option}
                                 {...getTagProps({ index })}
@@ -80,44 +91,74 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                 const { key, ...otherProps } = props;
 
                 return (
-                    <li key={key} {...otherProps} style={{
-                        ...props.style,
-                        opacity: isDisabled ? 0.4 : 1,
-                        pointerEvents: isDisabled ? 'none' : 'auto',
-                        display: 'flex',
-                        alignItems: 'center'
-                    }}>
-                        <Tooltip
-                            title={description}
-                            arrow
-                            placement="right"
-                            disableHoverListener={isDisabled || !description}
-                            slotProps={tooltipSlotProps}
-                        >
-                            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                                <Checkbox
-                                    icon={icon}
-                                    checkedIcon={checkedIcon}
-                                    style={{ marginRight: 8 }}
-                                    checked={selected}
-                                    sx={{
-                                        color: selected ? colors.text : 'inherit',
-                                        '&.Mui-checked': { color: colors.text },
-                                    }}
-                                />
-                                <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
-                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                        <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: colors.text, flexShrink: 0 }} />
-                                        <Typography variant="body2" sx={{ fontWeight: selected ? 600 : 400, color: selected ? colors.text : 'text.primary' }}>
-                                            {option}
-                                        </Typography>
-                                    </Box>
-                                    <Typography variant="caption" color="text.secondary" sx={{ ml: 1, whiteSpace: 'nowrap' }}>
-                                        ({count})
+                    <li 
+                        key={key} 
+                        {...otherProps} 
+                        style={{
+                            ...props.style,
+                            opacity: isDisabled ? 0.4 : 1,
+                            pointerEvents: isDisabled ? 'none' : 'auto',
+                            display: 'flex',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Box sx={{ 
+                            display: 'flex', 
+                            alignItems: 'center', 
+                            width: '100%',
+                            '&:hover .row-hint-icon': { opacity: 0.6 } 
+                        }}>
+                            <Checkbox
+                                icon={icon}
+                                checkedIcon={checkedIcon}
+                                style={{ marginRight: 8 }}
+                                checked={selected}
+                                sx={{
+                                    color: selected ? colors.text : 'inherit',
+                                    '&.Mui-checked': { color: colors.text },
+                                }}
+                            />
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                    <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: colors.text, flexShrink: 0 }} />
+                                    <Typography variant="body2" sx={{ fontWeight: selected ? 600 : 400, color: selected ? colors.text : 'text.primary', textTransform: 'capitalize' }}>
+                                        {option}
                                     </Typography>
                                 </Box>
+                                
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75 }}>
+                                    <Typography variant="caption" color="text.secondary" sx={{ whiteSpace: 'nowrap' }}>
+                                        ({count})
+                                    </Typography>
+                                    
+                                    {description && (
+                                        <Tooltip
+                                            title={description}
+                                            arrow
+                                            placement="right"
+                                            slotProps={tooltipSlotProps}
+                                            componentsProps={{
+                                                popper: {
+                                                    onClick: (e) => e.stopPropagation()
+                                                }
+                                            }}
+                                        >
+                                            <HelpOutlineIcon 
+                                                className="row-hint-icon"
+                                                sx={{ 
+                                                    fontSize: 15, 
+                                                    color: 'text.secondary', 
+                                                    opacity: 0, 
+                                                    cursor: 'help',
+                                                    transition: 'opacity 0.15s ease-in-out',
+                                                    '&:hover': { color: 'primary.main', opacity: '1 !important' }
+                                                }} 
+                                            />
+                                        </Tooltip>
+                                    )}
+                                </Box>
                             </Box>
-                        </Tooltip>
+                        </Box>
                     </li>
                 );
             }}
