@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import type { AbrasiveRow } from '../types/types';
 import { BOND_FILTER_OPTIONS, getBondGroupId } from '../utils/filterGroups';
 import { type GridFilterModel } from '@mui/x-data-grid';
@@ -12,41 +12,30 @@ export interface DimensionConfigItem {
     isActive: boolean;
 }
 
-// ── poza hookiem ────────────────────────────────────────────
-function useStableArray(arr: number[]): number[] {
-    const ref = useRef<number[]>(arr);
-    if (
-        arr.length !== ref.current.length ||
-        arr.some((v, i) => v !== ref.current[i])
-    ) {
-        ref.current = arr;
-    }
-    return ref.current;
-}
-
 function buildSteps(abrasives: AbrasiveRow[], field: NumericDimension): number[] {
     const unique = [...new Set(abrasives.map((w) => Number(w[field])))]
         .filter((d) => !isNaN(d) && d > 0)
         .sort((a, b) => a - b);
     return unique.length > 0 ? unique : [0];
 }
-// ───────────────────────────────────────────────────────────
 
 export function useFilters(abrasives: AbrasiveRow[]) {
     const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
     const [selectedGrits, setSelectedGrits] = useState<number[]>([]);
     const [selectedMaterials, setSelectedMaterials] = useState<string[]>([]);
     const [selectedBonds, setSelectedBonds] = useState<string[]>([]);
-    const [searchModel, setSearchModel] = useState<GridFilterModel>({
-        items: [{ id: 'search', field: 'name', operator: 'contains', value: '' }]
-    });
+
+    const [searchModel, setSearchModel] = useState<GridFilterModel>({ items: [] });
+
     const [numFilters, setNumFilters] = useState<Record<NumericDimension, [number, number] | null>>({
         outerDiameter: null,
         thickness: null,
         boreSize: null,
     });
 
-    const matchesSearchModel = (wheel: AbrasiveRow, model: GridFilterModel): boolean => {
+    const matchesSearchModel = useCallback((wheel: AbrasiveRow, model: GridFilterModel): boolean => {
+        if (!model || !model.items || model.items.length === 0) return true;
+
         const activeItems = model.items.filter(
             item => item.value !== undefined && item.value !== null && String(item.value).trim() !== ''
         );
@@ -54,12 +43,20 @@ export function useFilters(abrasives: AbrasiveRow[]) {
 
         return activeItems.every(({ field, operator, value }) => {
             const numberFields = ['grit', 'outerDiameter', 'boreSize', 'thickness'];
+
             if (numberFields.includes(field)) {
                 const raw = field === 'grit' ? wheel.gritSize : wheel[field as keyof AbrasiveRow];
+                if (raw === undefined || raw === null || String(raw).trim() === '') return false;
+
                 const rowValue = Number(raw);
                 const searchValue = Number(value);
                 if (isNaN(rowValue) || isNaN(searchValue)) return false;
-                switch (operator) {
+
+                const activeOperator = ['equals', 'onOrAfter', 'onOrBefore'].includes(operator)
+                    ? operator
+                    : 'equals';
+
+                switch (activeOperator) {
                     case 'equals': return rowValue === searchValue;
                     case 'onOrAfter': return rowValue >= searchValue;
                     case 'onOrBefore': return rowValue <= searchValue;
@@ -74,17 +71,21 @@ export function useFilters(abrasives: AbrasiveRow[]) {
                     : String(wheel[field as keyof AbrasiveRow] || '')
             ).toLowerCase();
 
-            switch (operator) {
+            const activeOperator = ['contains', 'startsWith', 'endsWith', 'equals'].includes(operator)
+                ? operator
+                : 'contains';
+
+            switch (activeOperator) {
                 case 'contains': return cellValue.includes(searchStr);
                 case 'startsWith': return cellValue.startsWith(searchStr);
                 case 'endsWith': return cellValue.endsWith(searchStr);
                 case 'equals': return cellValue === searchStr;
-                default: return true;
+                default: return cellValue.includes(searchStr);
             }
         });
-    };
+    }, []);
 
-    const getFilteredForDimension = (fieldToIgnore: NumericDimension) => {
+    const getFilteredForDimension = useCallback((fieldToIgnore: NumericDimension) => {
         return abrasives.filter(w => {
             if (!matchesSearchModel(w, searchModel)) return false;
             if (selectedTypes.length > 0 && !selectedTypes.includes(w.type || '')) return false;
@@ -102,20 +103,11 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             }
             return true;
         });
-    };
+    }, [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters, matchesSearchModel]);
 
-    const rawLengthSteps = useMemo(() => buildSteps(getFilteredForDimension('outerDiameter'), 'outerDiameter'),
-        [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters.thickness, numFilters.boreSize]);
-
-    const rawThicknessSteps = useMemo(() => buildSteps(getFilteredForDimension('thickness'), 'thickness'),
-        [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters.outerDiameter, numFilters.boreSize]);
-
-    const rawBoreSteps = useMemo(() => buildSteps(getFilteredForDimension('boreSize'), 'boreSize'),
-        [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters.outerDiameter, numFilters.thickness]);
-
-    const lengthSteps = useStableArray(rawLengthSteps);
-    const thicknessSteps = useStableArray(rawThicknessSteps);
-    const boreSteps = useStableArray(rawBoreSteps);
+    const lengthSteps = useMemo(() => buildSteps(getFilteredForDimension('outerDiameter'), 'outerDiameter'), [getFilteredForDimension]);
+    const thicknessSteps = useMemo(() => buildSteps(getFilteredForDimension('thickness'), 'thickness'), [getFilteredForDimension]);
+    const boreSteps = useMemo(() => buildSteps(getFilteredForDimension('boreSize'), 'boreSize'), [getFilteredForDimension]);
 
     const dimensionsConfig = useMemo<Record<NumericDimension, DimensionConfigItem>>(() => {
         const getValues = (field: NumericDimension, steps: number[]): [number, number] =>
@@ -160,7 +152,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
         };
     }, [numFilters, lengthSteps, thicknessSteps, boreSteps]);
 
-    const matchesNumericDimensions = (wheel: AbrasiveRow): boolean => {
+    const matchesNumericDimensions = useCallback((wheel: AbrasiveRow): boolean => {
         const cfg = dimensionsConfig;
         const checks: [NumericDimension, number][] = [
             ['outerDiameter', Number(wheel.outerDiameter)],
@@ -174,20 +166,11 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             }
         }
         return true;
-    };
+    }, [dimensionsConfig]);
 
-    const abrasiveMaterials = useMemo(() =>
-        [...new Set(abrasives.map(w => w.material || ''))].filter(Boolean).sort(),
-        [abrasives]);
-
-    const wheelTypes = useMemo(() =>
-        [...new Set(abrasives.map(w => w.type || ''))].filter(Boolean).sort(),
-        [abrasives]);
-
-    const gritOptions = useMemo(() =>
-        [...new Set(abrasives.map(w => Number(w.gritSize)).filter(g => !isNaN(g) && g > 0))].sort((a, b) => a - b),
-        [abrasives]);
-
+    const abrasiveMaterials = useMemo(() => [...new Set(abrasives.map(w => w.material || ''))].filter(Boolean).sort(), [abrasives]);
+    const wheelTypes = useMemo(() => [...new Set(abrasives.map(w => w.type || ''))].filter(Boolean).sort(), [abrasives]);
+    const gritOptions = useMemo(() => [...new Set(abrasives.map(w => Number(w.gritSize)).filter(g => !isNaN(g) && g > 0))].sort((a, b) => a - b), [abrasives]);
     const bondOptions = useMemo(() => BOND_FILTER_OPTIONS.map(g => g.id), []);
 
     const filteredWheels = useMemo(() =>
@@ -196,13 +179,12 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             if (selectedTypes.length > 0 && !selectedTypes.includes(wheel.type || '')) return false;
             if (selectedMaterials.length > 0 && !selectedMaterials.includes(wheel.material || '')) return false;
             if (selectedGrits.length > 0 && !selectedGrits.includes(Number(wheel.gritSize))) return false;
-            if (selectedBonds.length > 0) {
-                if (!selectedBonds.includes(getBondGroupId(wheel.bond || ''))) return false;
-            }
+            if (selectedBonds.length > 0 && !selectedBonds.includes(getBondGroupId(wheel.bond || ''))) return false;
             return matchesNumericDimensions(wheel);
         }),
-        [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, dimensionsConfig]);
+        [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, matchesSearchModel, matchesNumericDimensions]);
 
+    // Liczniki fasetowe (Facet Counts)
     const facetCounts = useMemo(() => {
         const Type: Record<string, number> = {};
         const Grit: Record<number, number> = {};
@@ -230,7 +212,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
         }
 
         return { Type, Grit, Material, Bond };
-    }, [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, dimensionsConfig]);
+    }, [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, matchesSearchModel, matchesNumericDimensions]);
 
     const handlers = {
         handleClearFilters: () => {
@@ -238,7 +220,6 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             setSelectedGrits([]);
             setSelectedMaterials([]);
             setSelectedBonds([]);
-            setSearchModel({ items: [{ id: 'search', field: 'name', operator: 'contains', value: '' }] });
             setNumFilters({ outerDiameter: null, thickness: null, boreSize: null });
         },
         setSelectedTypes,
@@ -258,10 +239,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
         removeSelectedBond: (bondId: string) => setSelectedBonds(prev => prev.filter(b => b !== bondId)),
         removeSearchItem: (id: string) => {
             setSearchModel(prev => {
-                let items = prev.items.filter(item => String(item.id) !== id);
-                if (items.length === 0) {
-                    items = [{ id: 'search', field: 'name', operator: 'contains', value: '' }];
-                }
+                const items = prev.items.filter(item => String(item.id) !== id);
                 return { ...prev, items };
             });
         },

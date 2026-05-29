@@ -22,6 +22,7 @@ const GritsFilter = ({ value, options, onChange, size = 'medium', facetCounts = 
             multiple
             size={size}
             options={options}
+            getOptionLabel={(option) => String(option)}
             disableCloseOnSelect
             value={value}
             onChange={(event, newValue) => {
@@ -41,8 +42,10 @@ const GritsFilter = ({ value, options, onChange, size = 'medium', facetCounts = 
                 const count = facetCounts[option] || 0;
                 const isDisabled = count === 0 && !selected;
 
+                const { key, ...otherProps } = props;
+
                 return (
-                    <li {...props} style={{
+                    <li key={key} {...otherProps} style={{
                         opacity: isDisabled ? 0.5 : 1,
                         pointerEvents: isDisabled ? 'none' : 'auto'
                     }}>

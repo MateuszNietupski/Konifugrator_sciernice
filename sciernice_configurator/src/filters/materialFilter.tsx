@@ -23,8 +23,8 @@ const tooltipSlotProps = {
             fontWeight: 500,
             maxWidth: 250,
             textAlign: 'center',
-            '& .MuiTooltip-arrow': { 
-                color: 'rgba(14, 33, 53, 0.9)' 
+            '& .MuiTooltip-arrow': {
+                color: 'rgba(14, 33, 53, 0.9)'
             }
         }
     }
@@ -77,59 +77,48 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                 const colors = materialColors[option] || defaultColors;
                 const description = materialDescriptions[option] || '';
 
+                const { key, ...otherProps } = props;
+
                 return (
-                    <Tooltip 
-                        title={description} 
-                        arrow 
-                        placement="right" 
-                        disableHoverListener={isDisabled || !description}
-                        slotProps={tooltipSlotProps}
-                    >
-                        <li 
-                            {...props} 
-                            style={{
-                                ...props.style,
-                                opacity: isDisabled ? 0.4 : 1,
-                                pointerEvents: isDisabled ? 'none' : 'auto',
-                            }}
+                    <li key={key} {...otherProps} style={{
+                        ...props.style,
+                        opacity: isDisabled ? 0.4 : 1,
+                        pointerEvents: isDisabled ? 'none' : 'auto',
+                        display: 'flex',
+                        alignItems: 'center'
+                    }}>
+                        <Tooltip
+                            title={description}
+                            arrow
+                            placement="right"
+                            disableHoverListener={isDisabled || !description}
+                            slotProps={tooltipSlotProps}
                         >
-                            <Checkbox
-                                icon={icon}
-                                checkedIcon={checkedIcon}
-                                style={{ marginRight: 8 }}
-                                checked={selected}
-                                sx={{
-                                    color: selected ? colors.text : 'inherit',
-                                    '&.Mui-checked': {
-                                        color: colors.text,
-                                    },
-                                }}
-                            />
-                            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
-                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                    <Box sx={{
-                                        width: 8,
-                                        height: 8,
-                                        borderRadius: '50%',
-                                        bgcolor: colors.text,
-                                        flexShrink: 0
-                                    }} />
-                                    <Typography 
-                                        variant="body2"
-                                        sx={{ 
-                                            fontWeight: selected ? 600 : 400,
-                                            color: selected ? colors.text : 'text.primary'
-                                        }}
-                                    >
-                                        {option}
+                            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                                <Checkbox
+                                    icon={icon}
+                                    checkedIcon={checkedIcon}
+                                    style={{ marginRight: 8 }}
+                                    checked={selected}
+                                    sx={{
+                                        color: selected ? colors.text : 'inherit',
+                                        '&.Mui-checked': { color: colors.text },
+                                    }}
+                                />
+                                <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                        <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: colors.text, flexShrink: 0 }} />
+                                        <Typography variant="body2" sx={{ fontWeight: selected ? 600 : 400, color: selected ? colors.text : 'text.primary' }}>
+                                            {option}
+                                        </Typography>
+                                    </Box>
+                                    <Typography variant="caption" color="text.secondary" sx={{ ml: 1, whiteSpace: 'nowrap' }}>
+                                        ({count})
                                     </Typography>
                                 </Box>
-                                <Typography variant="caption" color="text.secondary" sx={{ ml: 1, whiteSpace: 'nowrap' }}>
-                                    ({count})
-                                </Typography>
                             </Box>
-                        </li>
-                    </Tooltip>
+                        </Tooltip>
+                    </li>
                 );
             }}
             renderInput={(params) => (
@@ -141,26 +130,26 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
             )}
             filterOptions={(options, state) => {
                 const query = state.inputValue.toLowerCase().trim();
-                
+
                 const displayOptions = options.filter((f) =>
                     f.toLowerCase().includes(query)
                 );
-                
+
                 return displayOptions.sort((a, b) => {
                     const valA = a.toLowerCase();
                     const valB = b.toLowerCase();
-                    
+
                     if (query) {
                         const startsA = valA.startsWith(query);
                         const startsB = valB.startsWith(query);
                         if (startsA && !startsB) return -1;
                         if (!startsA && startsB) return 1;
                     }
-                    
+
                     const countA = facetCounts[a] || 0;
                     const countB = facetCounts[b] || 0;
                     if (countB !== countA) return countB - countA;
-                    
+
                     return valA.localeCompare(valB);
                 });
             }}

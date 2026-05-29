@@ -36,7 +36,7 @@ const MobileHeader = ({ filteredCount, totalCount, viewMode }: MobileHeaderProps
                 </Box>
             </Link>
             <Typography variant="subtitle1" fontWeight={700} color="primary.main" sx={{ flex: 1 }}>
-                {'Konfigurator Ściernic'}
+                {'Przewodnik doboru ściernic'}
             </Typography>
             <Typography variant="caption" color="text.secondary">
                 {filteredCount}/{totalCount}

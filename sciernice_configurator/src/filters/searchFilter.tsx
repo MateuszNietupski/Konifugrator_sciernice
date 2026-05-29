@@ -41,7 +41,6 @@ const NUMBER_OPERATORS = [
     { value: 'onOrBefore', label: 'mniejsze lub równe (<=)' },
 ];
 
-// 🌟 Wspólny styl dymków pasujący do barw firmy
 const tooltipSlotProps = {
     tooltip: {
         sx: {
@@ -52,8 +51,8 @@ const tooltipSlotProps = {
             maxWidth: 280,
             p: 1,
             boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
-            '& .MuiTooltip-arrow': { 
-                color: 'rgba(14, 33, 53, 0.9)' 
+            '& .MuiTooltip-arrow': {
+                color: 'rgba(14, 33, 53, 0.9)'
             }
         }
     }
@@ -62,7 +61,7 @@ const tooltipSlotProps = {
 const FieldChips = memo(({ currentField, onFieldChange }: { currentField: string, onFieldChange: (field: string) => void }) => {
     const [showAll, setShowAll] = useState(false);
 
-    const MAIN_FIELDS = ['name', 'type', 'grit'];
+    const MAIN_FIELDS = ['name', 'type', 'material'];
 
     const visibleFields = useMemo(() => {
         if (showAll) return FIELDS;
@@ -203,13 +202,7 @@ const SearchFilter = ({ searchModel, onSearchModelChange, size = 'small', title 
         if (newField === activeField) return;
 
         const targetField = FIELDS.find(f => f.value === newField);
-        let nextOperator = activeOperator;
-
-        if (targetField?.type === 'number') {
-            if (!NUMBER_OPERATORS.some(o => o.value === activeOperator)) nextOperator = 'equals';
-        } else {
-            if (!TEXT_OPERATORS.some(o => o.value === activeOperator)) nextOperator = 'contains';
-        }
+        const nextOperator = targetField?.type === 'number' ? 'equals' : 'contains';
 
         setActiveField(newField);
         setActiveOperator(nextOperator);
@@ -292,13 +285,13 @@ const SearchFilter = ({ searchModel, onSearchModelChange, size = 'small', title 
                         <InputAdornment position="start">
                             <SearchIcon fontSize="small" sx={{ color: 'text.secondary', mr: 0.5 }} />
                             <Tooltip title={inputHintMessage} arrow placement="top-start" slotProps={tooltipSlotProps}>
-                                <HelpOutlineIcon 
-                                    fontSize="small" 
-                                    sx={{ 
+                                <HelpOutlineIcon
+                                    fontSize="small"
+                                    sx={{
                                         color: currentFieldConfig.type === 'number' ? 'secondary.main' : 'text.disabled',
                                         cursor: 'help',
                                         transition: 'color 0.2s'
-                                    }} 
+                                    }}
                                 />
                             </Tooltip>
                         </InputAdornment>

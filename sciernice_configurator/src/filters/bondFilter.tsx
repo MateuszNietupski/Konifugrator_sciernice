@@ -50,8 +50,10 @@ const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
                 const isDisabled = count === 0 && !selected;
                 const label = getLabel(option);
 
+                const { key, ...otherProps } = props;
+
                 return (
-                    <li {...props} style={{
+                    <li key={key} {...otherProps} style={{
                         opacity: isDisabled ? 0.5 : 1,
                         pointerEvents: isDisabled ? 'none' : 'auto'
                     }}>

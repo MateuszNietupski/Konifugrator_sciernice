@@ -11,7 +11,6 @@ import MaterialFilter from '../filters/materialFilter';
 import GritsFilter from '../filters/gritsFilter';
 import ShapeTypeFilter from '../filters/shapeTypeFilter';
 import BondFilter from '../filters/bondFilter';
-import LengthFilter from '../filters/lengthFilter';
 import StepSliderFilter from '../filters/StepSliderFilter';
 import { type GridFilterModel } from '@mui/x-data-grid';
 import Divider from '@mui/material/Divider';
