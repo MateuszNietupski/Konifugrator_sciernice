@@ -102,12 +102,6 @@ export default function FilterPanel({
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-    console.log('FilterPanel props debug:', {
-    onDimensionChange: typeof onDimensionChange,
-    onDimensionChangeValue: onDimensionChange,
-    dimensions: dimensions,
-});
-
     if (isMobile) {
         return (
             <Box sx={{ borderBottom: '1px solid', borderColor: 'divider', bgcolor: 'background.paper' }}>

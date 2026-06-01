@@ -99,7 +99,7 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     id: 'resin',
     label: 'Żywiczne',
     //label: 'Żywiczne (B, BF, TE, HE)',
-    description: 'Elastyczne, amortyzujące drgania, do dużych prędkości. Idealne do pracy ręcznej, szlifowania spawów i cięcia metalu.',
+    description: 'Elastyczne, odporne na drgania, uderzenia boczne oraz wysokie obciążenia mechaniczne Idealne do pracy ręcznej, szlifowania spawów i cięcia metalu.',
     values: ['B', 'BF', 'TE', 'HE'],
     colorConfig: { bg: '#F5EBE6', text: '#D85A1B', border: '#D7CCC8' }
   },

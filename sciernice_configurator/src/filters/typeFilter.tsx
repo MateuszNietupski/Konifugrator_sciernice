@@ -28,20 +28,6 @@ const TypeFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
             onChange={(event, newValue) => {
                 onChange(newValue);
             }}
-            slotProps={{
-                listbox: {
-                    sx: {
-                        padding: '8px 0',
-                        '& li[role="option"]': {
-                            paddingTop: '14px',
-                            paddingBottom: '14px',
-                            borderBottom: '1px solid',
-                            borderColor: 'divider',
-                            '&:last-of-type': { borderBottom: 'none' },
-                        },
-                    },
-                },
-            }}
             renderTags={(tagValue, getTagProps) =>
                 tagValue.map((option, index) => (
                     <Chip

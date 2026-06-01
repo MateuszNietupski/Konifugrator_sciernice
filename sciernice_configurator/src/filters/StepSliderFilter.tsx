@@ -77,6 +77,17 @@ export default function StepSliderFilter({
         return steps[index] !== undefined ? `${steps[index]} ${unit}` : '';
     };
 
+    const hideSpinnersSx = {
+        width: '80px',
+        '& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button': {
+            '-webkit-appearance': 'none',
+            margin: 0,
+        },
+        '& input[type=number]': {
+            '-moz-appearance': 'textfield',
+        },
+    };
+
     return (
         <Box sx={{ px: 2.5, mt: 3, width: '100%', boxSizing: 'border-box' }}>
             <Typography variant="caption" fontWeight={700} sx={{ display: 'block', mb: 1, textTransform: 'uppercase' }}>
@@ -114,7 +125,7 @@ export default function StepSliderFilter({
                     onBlur={handleInputBlurOrEnter}
                     onKeyDown={(e) => e.key === 'Enter' && handleInputBlurOrEnter()}
                     slotProps={{ htmlInput: { type: 'number', style: { textAlign: 'center', padding: '6px 8px' } } }}
-                    sx={{ width: '80px' }}
+                    sx={hideSpinnersSx}
                 />
 
                 <Box sx={{ width: '12px', height: '2px', bgcolor: 'text.secondary', flexShrink: 0 }} />
@@ -128,7 +139,7 @@ export default function StepSliderFilter({
                     onBlur={handleInputBlurOrEnter}
                     onKeyDown={(e) => e.key === 'Enter' && handleInputBlurOrEnter()}
                     slotProps={{ htmlInput: { type: 'number', style: { textAlign: 'center', padding: '6px 8px' } } }}
-                    sx={{ width: '80px' }}
+                    sx={hideSpinnersSx}
                 />
             </Box>
         </Box>

@@ -38,7 +38,6 @@ export default function Home({ abrasives }: HomeProps) {
         selectedMaterials: state.selectedMaterials,
         selectedBonds: state.selectedBonds,
         searchModel: state.searchModel,
-
         dimensions: state.dimensions,
 
         onDimensionChange: handlers.setDimensionRange,
@@ -49,7 +48,6 @@ export default function Home({ abrasives }: HomeProps) {
         onClearFilters: handlers.handleClearFilters,
         onBondsChange: handlers.setSelectedBonds,
     };
-
     const counts = {
         filtered: results.filteredWheels.length,
         total: abrasives.length

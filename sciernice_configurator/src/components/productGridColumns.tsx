@@ -9,6 +9,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import { materialDescriptions, materialColors, getGritHint, getWheelTypeName, wheelTypesData } from '../utils/abrasivesConsts';
 import { BOND_FILTER_OPTIONS, getBondGroupId, getBondLabel, getBondDescription } from '../utils/filterGroups';
 import type { AbrasiveRow } from '../types/types';
+import { getValueOptions } from '@mui/x-data-grid/internals';
 
 interface GetColumnsProps {
   isMobile: boolean;

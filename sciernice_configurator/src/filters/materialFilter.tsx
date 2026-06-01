@@ -24,7 +24,7 @@ const tooltipSlotProps = {
             fontWeight: 500,
             maxWidth: 280,
             textAlign: 'left',
-            whiteSpace: 'pre-line', 
+            whiteSpace: 'pre-line',
             p: 1.5,
             boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
             '& .MuiTooltip-arrow': {
@@ -51,18 +51,30 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
             onChange={(event, newValue) => {
                 onChange(newValue);
             }}
+            slotProps={{
+                popper: {
+                    sx: {
+                        width: 'max-content !important',
+                        maxWidth: '90vw',
+                        '& .MuiPaper-root': {
+                            minWidth: 280,
+                        }
+                    },
+                    placement: 'bottom-start'
+                }
+            }}
             renderTags={(tagValue, getTagProps) =>
                 tagValue.map((option, index) => {
                     const colors = materialColors[option] || defaultColors;
                     const description = materialDescriptions[option] || '';
 
                     return (
-                        <Tooltip 
-                            key={option} 
-                            title={description} 
-                            arrow 
-                            placement="top" 
-                            disableHoverListener={!description} 
+                        <Tooltip
+                            key={option}
+                            title={description}
+                            arrow
+                            placement="top"
+                            disableHoverListener={!description}
                             slotProps={tooltipSlotProps}
                         >
                             <Chip
@@ -91,9 +103,9 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                 const { key, ...otherProps } = props;
 
                 return (
-                    <li 
-                        key={key} 
-                        {...otherProps} 
+                    <li
+                        key={key}
+                        {...otherProps}
                         style={{
                             ...props.style,
                             opacity: isDisabled ? 0.4 : 1,
@@ -102,61 +114,69 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                             alignItems: 'center',
                         }}
                     >
-                        <Box sx={{ 
-                            display: 'flex', 
-                            alignItems: 'center', 
+                        <Box sx={{
+                            display: 'grid',
+                            gridTemplateColumns: '40px 1fr 45px 25px',
+                            alignItems: 'center',
                             width: '100%',
-                            '&:hover .row-hint-icon': { opacity: 0.6 } 
+                            px: 1,
+                            py: 0.5,
+                            '&:hover .row-hint-icon': { opacity: 0.6 }
                         }}>
                             <Checkbox
                                 icon={icon}
                                 checkedIcon={checkedIcon}
-                                style={{ marginRight: 8 }}
                                 checked={selected}
                                 sx={{
+                                    p: 0,
                                     color: selected ? colors.text : 'inherit',
                                     '&.Mui-checked': { color: colors.text },
                                 }}
                             />
-                            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
-                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                    <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: colors.text, flexShrink: 0 }} />
-                                    <Typography variant="body2" sx={{ fontWeight: selected ? 600 : 400, color: selected ? colors.text : 'text.primary', textTransform: 'capitalize' }}>
-                                        {option}
-                                    </Typography>
-                                </Box>
-                                
-                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75 }}>
-                                    <Typography variant="caption" color="text.secondary" sx={{ whiteSpace: 'nowrap' }}>
-                                        ({count})
-                                    </Typography>
-                                    
-                                    {description && (
-                                        <Tooltip
-                                            title={description}
-                                            arrow
-                                            placement="right"
-                                            slotProps={tooltipSlotProps}
-                                            componentsProps={{
-                                                popper: {
-                                                    onClick: (e) => e.stopPropagation()
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, minWidth: 0, pr: 1.5 }}>
+                                <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: colors.text, flexShrink: 0 }} />
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        fontWeight: selected ? 600 : 400, 
+                                        color: selected ? colors.text : 'text.primary',
+                                        textTransform: 'capitalize'
+                                    }}
+                                >
+                                    {option}
+                                </Typography>
+                            </Box>
+                            <Typography variant="caption" color="text.secondary" sx={{ justifySelf: 'end', pr: 0.5 }}>
+                                ({count})
+                            </Typography>
+                            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                                {description && (
+                                    <Tooltip
+                                        title={description}
+                                        arrow
+                                        placement="right"
+                                        slotProps={tooltipSlotProps}
+                                        componentsProps={{
+                                            popper: {
+                                                onClick: (e) => e.stopPropagation()
+                                            }
+                                        }}
+                                    >
+                                        <HelpOutlineIcon
+                                            className="row-hint-icon"
+                                            sx={{
+                                                fontSize: 16,
+                                                color: 'text.disabled',
+                                                cursor: 'help',
+                                                transition: 'all 0.15s ease-in-out',
+                                                '&:hover': {
+                                                    color: 'primary.main',
+                                                    transform: 'scale(1.15)'
                                                 }
                                             }}
-                                        >
-                                            <HelpOutlineIcon 
-                                                className="row-hint-icon"
-                                                sx={{ 
-                                                    fontSize: 15, 
-                                                    color: 'text.secondary', 
-                                                    opacity: 0, 
-                                                    cursor: 'help',
-                                                    transition: 'opacity 0.15s ease-in-out',
-                                                    '&:hover': { color: 'primary.main', opacity: '1 !important' }
-                                                }} 
-                                            />
-                                        </Tooltip>
-                                    )}
-                                </Box>
+                                        />
+                                    </Tooltip>
+                                )}
                             </Box>
                         </Box>
                     </li>

@@ -1881,7 +1881,7 @@
         "value": "średnie"
       }
     ],
-    "material": "mieszaniny elektrokorundów",
+    "material": "elektrokorund półszla",
     "gritSize": "30",
     "typ": "27",
     "srednica_dlugosc": "125",
@@ -2097,7 +2097,7 @@
         "value": "średnie"
       }
     ],
-    "material": "elektrokorund",
+    "material": "elektrokorund zwykły",
     "gritSize": "30",
     "typ": "27",
     "srednica_dlugosc": "115",
@@ -2133,7 +2133,7 @@
         "value": "średnie"
       }
     ],
-    "material": "elektrokorund",
+    "material": "elektrokorund zwykły",
     "gritSize": "30",
     "srednica_dlugosc": "125",
     "grubosc_szerokosc": "6",
@@ -2169,7 +2169,7 @@
         "value": "grube"
       }
     ],
-    "material": "elektrokorund",
+    "material": "elektrokorund zwykły",
     "gritSize": "24",
     "srednica_dlugosc": "180",
     "grubosc_szerokosc": "6",
@@ -2205,7 +2205,7 @@
         "value": "grube"
       }
     ],
-    "material": "elektrokorund",
+    "material": "elektrokorund zwykły",
     "gritSize": "24",
     "srednica_dlugosc": "230",
     "grubosc_szerokosc": "6",
@@ -12373,7 +12373,7 @@
         "value": "biały (szlachetny)| różowy"
       }
     ],
-    "material": "elektrokorund szlachetny / elektrokorund  chromowy",
+    "material": "elektrokorund szlachetny/chromowy",
     "gritSize": "60",
     "srednica_dlugosc": "200",
     "grubosc_szerokosc": "10",
@@ -12413,7 +12413,7 @@
         "value": "biały (szlachetny)| różowy"
       }
     ],
-    "material": "elektrokorund szlachetny / elektrokorund  chromowy",
+    "material": "elektrokorund szlachetny/chromowy",
     "gritSize": "średnie",
     "srednica_dlugosc": "250",
     "grubosc_szerokosc": "10",

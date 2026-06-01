@@ -7,6 +7,9 @@ import Chip from '@mui/material/Chip';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import { BOND_FILTER_OPTIONS } from '../utils/filterGroups';
+import { getBondDescription } from '../utils/filterGroups';
+import Tooltip from '@mui/material/Tooltip';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -49,25 +52,54 @@ const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
                 const count = facetCounts[option] || 0;
                 const isDisabled = count === 0 && !selected;
                 const label = getLabel(option);
+                const description = getBondDescription(option);
 
                 const { key, ...otherProps } = props;
 
                 return (
                     <li key={key} {...otherProps} style={{
+                        ...props.style,
                         opacity: isDisabled ? 0.5 : 1,
-                        pointerEvents: isDisabled ? 'none' : 'auto'
+                        pointerEvents: isDisabled ? 'none' : 'auto',
+                        padding: 0
                     }}>
-                        <Checkbox
-                            icon={icon}
-                            checkedIcon={checkedIcon}
-                            style={{ marginRight: 8 }}
-                            checked={selected}
-                        />
-                        <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                            <Typography variant="body2">{label}</Typography>
-                            <Typography variant="caption" color="text.secondary" sx={{ ml: 1, whiteSpace: 'nowrap' }}>
+                        <Box sx={{
+                            display: 'grid',
+                            gridTemplateColumns: '40px 1fr 45px 25px',
+                            alignItems: 'center',
+                            width: '100%',
+                            px: 1,
+                            py: 0.5,
+                        }}>
+                            <Checkbox
+                                icon={icon}
+                                checkedIcon={checkedIcon}
+                                sx={{ p: 0 }}
+                                checked={selected}
+                            />
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    fontWeight: selected ? 600 : 400,
+                                    lineHeight: 1.2,
+                                    pr: 1.5,
+                                    wordBreak: 'break-word'
+                                }}
+                            >
+                                {label}
+                            </Typography>
+
+                            <Typography variant="caption" color="text.secondary" sx={{ justifySelf: 'end', pr: 0.5 }}>
                                 ({count})
                             </Typography>
+
+                            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                                {description && (
+                                    <Tooltip title={description} arrow placement="right" componentsProps={{ popper: { onClick: (e) => e.stopPropagation() } }}>
+                                        <HelpOutlineIcon sx={{ fontSize: 16, color: 'text.disabled', cursor: 'help' }} />
+                                    </Tooltip>
+                                )}
+                            </Box>
                         </Box>
                     </li>
                 );
@@ -82,7 +114,6 @@ const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
                     }}
                 />
             )}
-
         />
     );
 };
