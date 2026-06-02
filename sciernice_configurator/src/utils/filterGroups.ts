@@ -1,4 +1,4 @@
-import { wheelTypesData } from "./abrasivesConsts";
+import { wheelTypesData, getWheelTypeName } from "./abrasivesConsts";
 
 export interface Subtype {
   label: string;
@@ -27,13 +27,20 @@ export interface BondFilterGroup {
 export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
   {
     id: 'flat_wheels',
-    label: 'Ściernice płaskie i tarczowe',
+    label: 'Ściernice płaskie',
     subtypes: [
       { label: 'Płaskie (Typ 1, 1A1)', values: ['1', '1A1'] },
       { label: 'Profilowe (Typ 1C, 1YC)', values: ['1C', '1YC'] },
       { label: 'Z wybraniem walcowym (Typ 5)', values: ['5'] },
-      { label: 'Do szlifowania / obniżony środek (Typ 27)', values: ['27'] },
-      { label: 'Tarczowe z wkładkami gwintowymi (Typ 36)', values: ['36'] }
+      { label: 'Tarczowe z wkładkami gwintowymi (Typ 36)', values: ['36'] },
+    ]
+  },
+  {
+    id: 'disc_wheels',
+    label: 'Ściernice tarczowe',
+    subtypes: [
+      { label: 'Tarczowe do szlifowania / obniżony środek (Typ 27)', values: ['27'] },
+      
     ]
   },
   {
@@ -72,6 +79,21 @@ export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
     ]
   }
 ];
+
+export function buildTypeFilterGroups() {
+    return ABRASIVE_FILTER_GROUPS.map(group => ({
+        key: group.id,
+        label: group.label,
+        children: group.subtypes.map((sub, i) => ({
+            key: `${group.id}_${i}`,
+            label: sub.label,
+            children: sub.values.map(value => ({
+                value,
+                label: getWheelTypeName(value), 
+            })),
+        })),
+    }));
+}
 
 
 export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [

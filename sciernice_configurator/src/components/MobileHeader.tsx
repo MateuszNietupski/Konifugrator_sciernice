@@ -8,7 +8,7 @@ type MobileHeaderProps = {
     viewMode: string;
 };
 
-const MobileHeader = ({ filteredCount, totalCount, viewMode }: MobileHeaderProps) => {
+const MobileHeader = ({ filteredCount, totalCount }: MobileHeaderProps) => {
     return (
         <Box
             sx={{

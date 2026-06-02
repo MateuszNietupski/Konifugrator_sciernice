@@ -9,7 +9,6 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import { materialDescriptions, materialColors, getGritHint, getWheelTypeName, wheelTypesData } from '../utils/abrasivesConsts';
 import { BOND_FILTER_OPTIONS, getBondGroupId, getBondLabel, getBondDescription } from '../utils/filterGroups';
 import type { AbrasiveRow } from '../types/types';
-import { getValueOptions } from '@mui/x-data-grid/internals';
 
 interface GetColumnsProps {
   isMobile: boolean;
@@ -138,7 +137,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerAlign: 'center',
     align: 'center',
     type: 'number',
-    valueGetter: (value, row) => {
+    valueGetter: (_value, row) => {
       return row.outerDiameter ?? row.outerDiameter ?? null;
     },
     renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
@@ -153,7 +152,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerAlign: 'center',
     align: 'center',
     type: 'number',
-    valueGetter: (value, row) => {
+    valueGetter: (_value, row) => {
       return row.thickness ?? row.boreSize ?? null;
     },
     renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
@@ -168,7 +167,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerAlign: 'center',
     align: 'center',
     type: 'number',
-    valueGetter: (value, row) => {
+    valueGetter: (_value, row) => {
       return row.boreSize ?? null;
     },
     renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
@@ -235,7 +234,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerAlign: 'center',
     align: 'center',
     minWidth: 130,
-    valueGetter: (value, row) => {
+    valueGetter: (_value, row) => {
       return getBondGroupId(row.bond || '');
     },
     renderCell: (params) => {

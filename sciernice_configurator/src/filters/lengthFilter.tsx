@@ -16,11 +16,11 @@ export default function LengthFilter({ lengthSteps, lengthRange, onChange }: Len
         setLocalRange(lengthRange);
     }, [lengthRange]);
 
-    const handleLocalChange = (event: Event, newValue: number | number[]) => {
+    const handleLocalChange = (_event: Event, newValue: number | number[]) => {
         setLocalRange(newValue as [number, number]);
     };
 
-    const handleCommitChange = (event: React.SyntheticEvent | Event, newValue: number | number[]) => {
+    const handleCommitChange = (_event: React.SyntheticEvent | Event, newValue: number | number[]) => {
         onChange(newValue as [number, number]);
     };
 

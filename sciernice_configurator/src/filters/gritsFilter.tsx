@@ -27,7 +27,7 @@ const GritsFilter = ({ value, options, onChange, size = 'medium', facetCounts = 
             getOptionLabel={(option) => String(option)}
             disableCloseOnSelect
             value={value}
-            onChange={(event, newValue) => {
+            onChange={(_event, newValue) => {
                 onChange(newValue);
             }}
             renderTags={(tagValue, getTagProps) =>

@@ -57,7 +57,7 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                 }}
                 pageSizeOptions={[5, 10, 20, 50]}
                 disableRowSelectionOnClick
-                onCellClick={(params, event) => event.stopPropagation()}
+                onCellClick={(_params, event) => event.stopPropagation()}
                 localeText={plPL.components.MuiDataGrid.defaultProps.localeText}
                 slots={{
                     noRowsOverlay: () => <CustomNoRowsOverlay />,

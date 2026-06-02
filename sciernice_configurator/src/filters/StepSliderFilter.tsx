@@ -30,14 +30,14 @@ export default function StepSliderFilter({
         setInputMax(String(steps[currentRange[1]]));
     }, [currentRange[0], currentRange[1]]);
 
-    const handleSliderChange = (event: Event, newValue: number | number[]) => {
+    const handleSliderChange = (_event: Event, newValue: number | number[]) => {
         const range = newValue as [number, number];
         setLocalRange(range);
         setInputMin(String(steps[range[0]]));
         setInputMax(String(steps[range[1]]));
     };
 
-    const handleSliderCommit = (event: React.SyntheticEvent | Event, newValue: number | number[]) => {
+    const handleSliderCommit = (_event: React.SyntheticEvent | Event, newValue: number | number[]) => {
         onChange(newValue as [number, number]);
     };
 

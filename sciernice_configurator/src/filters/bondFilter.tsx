@@ -35,7 +35,7 @@ const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
             options={options}
             disableCloseOnSelect
             value={value}
-            onChange={(event, newValue) => {
+            onChange={(_event, newValue) => {
                 onChange(newValue);
             }}
             renderTags={(tagValue, getTagProps) =>

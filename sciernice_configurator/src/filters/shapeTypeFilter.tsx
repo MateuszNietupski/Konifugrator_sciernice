@@ -1,213 +1,215 @@
-import React from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import Checkbox from '@mui/material/Checkbox';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Checkbox from '@mui/material/Checkbox';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Tooltip from '@mui/material/Tooltip';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { ABRASIVE_FILTER_GROUPS } from '../utils/filterGroups';
-import type { FilterGroup, Subtype } from '../utils/filterGroups';
+import Tooltip from '@mui/material/Tooltip';
 import { wheelTypesData } from '../utils/abrasivesConsts';
 
-interface ShapeTypeFilterProps {
-  selectedTypes: string[];
-  onTypesChange: (types: string[]) => void;
-  facetCounts: Record<string, number>;
+const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+const checkedIcon = <CheckBoxIcon fontSize="small" />;
+
+interface LeafTypeNode {
+  value: string;
+  label: string;
 }
 
-export default function ShapeTypeFilter({
-  selectedTypes,
-  onTypesChange,
-  facetCounts
-}: ShapeTypeFilterProps) {
+interface SubtypeNode {
+  key: string;
+  label: string;
+  children: LeafTypeNode[];
+}
 
-  const getSubtypeCount = (subtype: Subtype): number => {
-    return subtype.values.reduce((sum: number, val: string) => sum + (facetCounts[val] || 0), 0);
+interface GroupNode {
+  key: string;
+  label: string;
+  children: SubtypeNode[];
+}
+
+interface TypeFilterProps {
+  value: string[];
+  groups: GroupNode[];
+  onChange: (newValue: string[]) => void;
+  facetCounts?: Record<string, number>;
+  title?: string;
+  defaultExpanded?: string[];
+}
+
+const ShapeTypeFilter = ({
+  value = [],
+  groups = [],
+  onChange,
+  facetCounts = {},
+  title = "Typ ściernicy",
+  defaultExpanded = []
+}: TypeFilterProps) => {
+
+  const [expandedGroups, setExpandedGroups] = useState<string[]>(defaultExpanded);
+
+  const handleAccordionToggle = (groupKey: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpandedGroups(prev =>
+      isExpanded ? [...prev, groupKey] : prev.filter(key => key !== groupKey)
+    );
   };
 
-  const getGroupCount = (group: FilterGroup): number => {
-    return group.subtypes.reduce((sum: number, sub: Subtype) => sum + getSubtypeCount(sub), 0);
-  };
+  // Logika kliknięcia w podtyp (obsługuje tablicę dzieci typu LeafTypeNode)
+  const handleSubtypeToggle = (leafNodes: LeafTypeNode[]) => {
+    const leafValues = leafNodes.map(node => node.value);
+    const allSelected = leafValues.every(v => value.includes(v));
+    let newValue: string[];
 
-  const isSubtypeChecked = (subtype: Subtype): boolean => {
-    return subtype.values.every((val: string) => selectedTypes.includes(val));
-  };
-
-  const isSubtypeIndeterminate = (subtype: Subtype): boolean => {
-    const hasSome = subtype.values.some((val: string) => selectedTypes.includes(val));
-    const hasAll = subtype.values.every((val: string) => selectedTypes.includes(val));
-    return hasSome && !hasAll;
-  };
-
-  const handleSubtypeToggle = (subtype: Subtype) => {
-    const isChecked = isSubtypeChecked(subtype);
-    let newSelected: string[];
-
-    if (isChecked) {
-      newSelected = selectedTypes.filter((val: string) => !subtype.values.includes(val));
+    if (allSelected) {
+      newValue = value.filter(v => !leafValues.includes(v));
     } else {
-      const missingValues = subtype.values.filter((val: string) => !selectedTypes.includes(val));
-      newSelected = [...selectedTypes, ...missingValues];
+      const toAdd = leafValues.filter(v => !value.includes(v));
+      newValue = [...value, ...toAdd];
     }
-    onTypesChange(newSelected);
+    onChange(newValue);
   };
 
-  const getAllGroupValues = (group: FilterGroup): string[] => {
-    return group.subtypes.reduce((acc: string[], sub: Subtype) => [...acc, ...sub.values], []);
+  const getSubtypeCount = (sub: SubtypeNode) => {
+    return sub.children.reduce((sum, leaf) => sum + (facetCounts[leaf.value] || 0), 0);
   };
 
-  const isGroupChecked = (group: FilterGroup): boolean => {
-    const allValues = getAllGroupValues(group);
-    return allValues.some((val: string) => selectedTypes.includes(val));
-  };
-
-  const isGroupIndeterminate = (group: FilterGroup): boolean => {
-    const allValues = getAllGroupValues(group);
-    const hasSome = allValues.some((val: string) => selectedTypes.includes(val));
-    const hasAll = allValues.every((val: string) => selectedTypes.includes(val));
-    return hasSome && !hasAll;
-  };
-
-  const handleGroupToggle = (e: React.MouseEvent, group: FilterGroup) => {
-    e.stopPropagation();
-
-    const allValues = getAllGroupValues(group);
-    const isAnyChecked = isGroupChecked(group);
-    let newSelected: string[];
-
-    if (isAnyChecked) {
-      newSelected = selectedTypes.filter((val: string) => !allValues.includes(val));
-    } else {
-      const missingValues = allValues.filter((val: string) => !selectedTypes.includes(val));
-      newSelected = [...selectedTypes, ...missingValues];
-    }
-    onTypesChange(newSelected);
-  };
-
-  const getSubtypeTooltipText = (subtype: Subtype): string => {
-    return subtype.values
-      .map((val: string) => {
-        const info = wheelTypesData[val];
-        return info ? `${info.name}: ${info.desc}` : `Typ ${val}`;
-      })
-      .join('\n\n');
+  const getGroupCount = (group: GroupNode) => {
+    return group.children.reduce((sum, sub) => sum + getSubtypeCount(sub), 0);
   };
 
   return (
-    <Accordion
-      defaultExpanded
-      disableGutters
-      elevation={0}
-      sx={{
-        bgcolor: 'transparent',
-        '&:before': { display: 'none' },
-        borderBottom: '1px solid',
-        borderColor: 'divider',
-        borderRadius: 0,
-        width: '100%'
-      }}
-    >
-      <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
-        sx={{
-          px: 0.5,
-          minHeight: 0,
-          '& .MuiAccordionSummary-content': { my: 1 }
-        }}
-      >
-        <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ mb: 1.5, px: 0.5 }}>
-          TYP / KSZTAŁT ŚCIERNICY
-        </Typography>
-      </AccordionSummary>
-      <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
-        {ABRASIVE_FILTER_GROUPS.map((group) => {
-          const totalGroupCount = getGroupCount(group);
-          if (totalGroupCount === 0) return null;
+    <Box sx={{ width: '100%' }}>
+      <Typography variant="caption" fontWeight={700} sx={{ display: 'block', mb: 1, textTransform: 'uppercase', px: 1 }}>
+        {title}
+      </Typography>
 
-          return (
-            <Accordion
-              key={group.id}
-              disableGutters
-              elevation={0}
+      {groups.map((group) => {
+        const groupCount = getGroupCount(group);
+        const isGroupExpanded = expandedGroups.includes(group.key);
+
+        const isGroupActive = group.children.some(sub =>
+          sub.children.some(leaf => value.includes(leaf.value))
+        );
+
+        return (
+          <Accordion
+            key={group.key}
+            expanded={isGroupExpanded}
+            onChange={handleAccordionToggle(group.key)}
+            disableGutters
+            elevation={0}
+            sx={{
+              border: 'none',
+              background: 'transparent',
+              opacity: groupCount === 0 && !isGroupActive ? 0.5 : 1,
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon sx={{ fontSize: 18 }} />}
               sx={{
-                border: 'none',
-                '&:before': { display: 'none' },
-                bgcolor: 'transparent'
+                padding: '0 8px',
+                minHeight: '40px !important',
+                '& .MuiAccordionSummary-content': {
+                  margin: '8px 0 !important',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  pr: 1
+                }
               }}
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon fontSize="small" />}
+              <Typography
+                variant="body2"
                 sx={{
-                  px: 0.5,
-                  minHeight: 40,
-                  '& .MuiAccordionSummary-content': {
-                    my: 0.5,
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center'
-                  }
+                  fontWeight: isGroupActive ? 600 : 500,
+                  color: isGroupActive ? 'primary.main' : 'text.primary'
                 }}
               >
-                <FormControlLabel
-                  control={
+                {group.label}
+              </Typography>
+
+              <Typography variant="caption" color="text.secondary" sx={{ fontVariantNumeric: 'tabular-nums' }}>
+                ({groupCount})
+              </Typography>
+            </AccordionSummary>
+
+            <AccordionDetails sx={{ padding: '0 0 8px 0' }}>
+              {group.children.map((sub) => {
+                const subCount = getSubtypeCount(sub);
+                const leafValues = sub.children.map(leaf => leaf.value);
+
+                const isSubSelected = leafValues.every(v => value.includes(v));
+                const isSubIndeterminate = !isSubSelected && leafValues.some(v => value.includes(v));
+
+                const isDisabled = subCount === 0 && !isSubSelected && !isSubIndeterminate;
+
+                // Tutaj generujemy treść tooltipa na podstawie Twojej logiki z wheelTypesData
+                const tooltipContent = sub.children
+                  .map((leaf) => {
+                    const info = wheelTypesData[leaf.value];
+                    return info ? `${info.name}: ${info.desc}` : `Typ ${leaf.value}`;
+                  })
+                  .join('\n\n');
+
+                return (
+                  <Box
+                    key={sub.key}
+                    onClick={() => !isDisabled && handleSubtypeToggle(sub.children)}
+                    sx={{
+                      display: 'grid',
+                      // Idealny podział na 4 kolumny: Checkbox | Tekst | Licznik | Pytajnik na końcu
+                      gridTemplateColumns: '40px 1fr 45px 25px',
+                      alignItems: 'center',
+                      width: '100%',
+                      py: 0.75,
+                      cursor: isDisabled ? 'not-allowed' : 'pointer',
+                      opacity: isDisabled ? 0.4 : 1,
+                      '&:hover': {
+                        backgroundColor: isDisabled ? 'transparent' : 'action.hover',
+                      },
+                    }}
+                  >
+                    {/* Kolumna 1: Checkbox (Z przywróconymi kwadratowymi ikonami icon i checkedIcon) */}
                     <Checkbox
+                      icon={icon}
+                      checkedIcon={checkedIcon}
+                      checked={isSubSelected}
+                      indeterminate={isSubIndeterminate}
                       size="small"
-                      checked={isGroupChecked(group)}
-                      indeterminate={isGroupIndeterminate(group)}
-                      onClick={(e) => handleGroupToggle(e, group)}
+                      sx={{ p: 0, justifySelf: 'center' }}
+                      onClick={(e) => e.stopPropagation()}
+                      onChange={() => handleSubtypeToggle(sub.children)}
                     />
-                  }
-                  label={
-                    <Typography variant="body2" fontWeight={500}>
-                      {group.label}
-                    </Typography>
-                  }
-                  sx={{ my: -0.5, flexGrow: 1 }}
-                />
-                <Typography variant="caption" color="text.secondary" sx={{ mr: 1, ml: 1 }}>
-                  ({totalGroupCount})
-                </Typography>
-              </AccordionSummary>
 
-              <AccordionDetails sx={{ p: 0, pl: 4, pb: 1 }}>
-                {group.subtypes.map((subtype, index) => {
-                  const count = getSubtypeCount(subtype);
-                  if (count === 0 && !isSubtypeChecked(subtype)) return null;
-
-                  const tooltipContent = getSubtypeTooltipText(subtype);
-
-                  return (
-                    <Box
-                      key={index}
+                    {/* Kolumna 2: Nazwa podtypu */}
+                    <Typography
+                      variant="body2"
                       sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        width: '100%',
-                        justifyContent: 'space-between',
-                        pr: 1
+                        fontWeight: isSubSelected || isSubIndeterminate ? 600 : 400,
+                        lineHeight: 1.2,
+                        pr: 1.5,
+                        wordBreak: 'break-word',
+                        color: isSubSelected || isSubIndeterminate ? 'primary.main' : 'text.primary'
                       }}
                     >
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            size="small"
-                            checked={isSubtypeChecked(subtype)}
-                            indeterminate={isSubtypeIndeterminate(subtype)}
-                            onChange={() => handleSubtypeToggle(subtype)}
-                          />
-                        }
-                        label={
-                          <Typography variant="body2" color="text.primary">
-                            {subtype.label} <span style={{ color: '#888', fontSize: '0.75rem' }}>({count})</span>
-                          </Typography>
-                        }
-                        sx={{ my: -0.25, flexGrow: 1 }}
-                      />
+                      {sub.label}
+                    </Typography>
 
+                    {/* Kolumna 3: Licznik produktów */}
+                    <Typography
+                      variant="caption"
+                      color="text.secondary"
+                      sx={{ justifySelf: 'end', pr: 0.5, fontVariantNumeric: 'tabular-nums' }}
+                    >
+                      ({subCount})
+                    </Typography>
+
+                    {/* Kolumna 4: Ikona znaku zapytania wyrównana do prawej krawędzi */}
+                    <Box sx={{ justifySelf: 'center', display: 'flex' }} onClick={(e) => e.stopPropagation()}>
                       <Tooltip
                         title={<div style={{ whiteSpace: 'pre-line', padding: '4px' }}>{tooltipContent}</div>}
                         arrow
@@ -223,13 +225,15 @@ export default function ShapeTypeFilter({
                         />
                       </Tooltip>
                     </Box>
-                  );
-                })}
-              </AccordionDetails>
-            </Accordion>
-          );
-        })}
-      </AccordionDetails>
-    </Accordion>
+                  </Box>
+                );
+              })}
+            </AccordionDetails>
+          </Accordion>
+        );
+      })}
+    </Box>
   );
-}
+};
+
+export default ShapeTypeFilter;

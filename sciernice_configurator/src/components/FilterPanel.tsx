@@ -19,6 +19,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { type NumericDimension, type DimensionConfigItem } from '../hooks/useFilters';
+import { buildTypeFilterGroups } from '../utils/filterGroups';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -138,13 +139,18 @@ export default function FilterPanel({
         />
     );
 
-    const renderTypeFilter = (size: 'small' | 'medium' = 'medium') => (
-        <ShapeTypeFilter
-            selectedTypes={selectedTypes}
-            onTypesChange={onTypesChange}
-            facetCounts={facetCounts.Type}
-        />
-    );
+    const renderTypeFilter = (_size: 'small' | 'medium' = 'medium') => {
+        return (
+            <ShapeTypeFilter
+                value={selectedTypes}
+                groups={buildTypeFilterGroups()}
+                onChange={onTypesChange}
+                facetCounts={facetCounts.Type || {}}
+                title="Typ ściernicy"
+                defaultExpanded={[]}
+            />
+        );
+    };
 
     const renderGritsFilter = (size: 'small' | 'medium' = 'medium') => (
         <GritsFilter
