@@ -14,8 +14,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import TuneIcon from '@mui/icons-material/Tune';
 import CheckIcon from '@mui/icons-material/Check';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline'; // 🌟 Nowa ikonka podpowiedzi
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { type GridFilterModel } from '@mui/x-data-grid';
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const FIELDS = [
     { value: 'name', label: 'Nazwa', short: 'Nazwa', type: 'text' },
@@ -143,6 +145,8 @@ const SearchFilter = ({ searchModel, onSearchModelChange, size = 'small', title 
     const [activeOperator, setActiveOperator] = useState<string>('contains');
     const [localText, setLocalText] = useState<string>('');
     const [opAnchor, setOpAnchor] = useState<HTMLElement | null>(null);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const activeFilters = useMemo(() => {
         return searchModel?.items.filter(item =>
@@ -284,7 +288,12 @@ const SearchFilter = ({ searchModel, onSearchModelChange, size = 'small', title 
                     startAdornment: (
                         <InputAdornment position="start">
                             <SearchIcon fontSize="small" sx={{ color: 'text.secondary', mr: 0.5 }} />
-                            <Tooltip title={inputHintMessage} arrow placement="top-start" slotProps={tooltipSlotProps}>
+                            <Tooltip title={inputHintMessage}
+                                arrow placement="top-start"
+                                enterTouchDelay={0}
+                                disableHoverListener={isMobile}
+                                slotProps={tooltipSlotProps}
+                            >
                                 <HelpOutlineIcon
                                     fontSize="small"
                                     sx={{
@@ -303,7 +312,11 @@ const SearchFilter = ({ searchModel, onSearchModelChange, size = 'small', title 
                                     <CloseIcon fontSize="small" />
                                 </IconButton>
                             )}
-                            <Tooltip title={`Dopasowanie: ${currentOperatorLabel}`} arrow slotProps={tooltipSlotProps}>
+                            <Tooltip
+                                title={`Dopasowanie: ${currentOperatorLabel}`}
+                                arrow slotProps={tooltipSlotProps}
+                                enterTouchDelay={0}
+                                disableHoverListener={isMobile}>
                                 <IconButton
                                     size="small"
                                     onClick={(e) => setOpAnchor(e.currentTarget)}

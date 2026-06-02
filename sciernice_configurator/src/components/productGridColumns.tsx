@@ -97,6 +97,8 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
           title={wheelTypesData[typ]?.desc ?? ''}
           arrow
           placement="top"
+          disableHoverListener={isMobile}
+          enterTouchDelay={0}
           slotProps={{
             tooltip: {
               sx: {
@@ -133,7 +135,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerName: "Śr/Dł(D/L)",
     description: "D - Średnica zewnętrzna (dla ściernic okrągłych) lub L - Długość (dla segmentów i osełek) w mm",
     flex: 0.8,
-    minWidth: 120,
+    minWidth: isMobile ? 80 : 110,
     headerAlign: 'center',
     align: 'center',
     type: 'number',
@@ -148,7 +150,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerName: "Gr./Szer.(T/B)",
     description: "T - Grubość (dla ściernic okrągłych) lub B - Szerokość (dla segmentów i osełek) w mm",
     flex: 1,
-    minWidth: 120,
+    minWidth: isMobile ? 80 : 120,
     headerAlign: 'center',
     align: 'center',
     type: 'number',
@@ -163,7 +165,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerName: "Otwór",
     description: "d – Średnica otworu wewnętrznego (dla ściernic tarczowych) lub średnica trzpienia (d dla ściernic trzpieniowych). Nie dotyczy osełek i segmentów.",
     flex: 1,
-    minWidth: 80,
+    minWidth: isMobile ? 80 : 90,
     headerAlign: 'center',
     align: 'center',
     type: 'number',
@@ -180,7 +182,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerAlign: 'center',
     align: 'center',
     headerName: "Gradacja",
-    minWidth: 100,
+    minWidth: isMobile ? 80 : 90,
     type: "number",
     renderCell: (params) => {
       const gritValue = params.value;
@@ -199,6 +201,8 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
           title={hint}
           arrow
           placement="top"
+          disableHoverListener={isMobile}
+          enterTouchDelay={0}
           slotProps={{
             tooltip: {
               sx: {
@@ -230,10 +234,10 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     disableColumnMenu: true,
     headerName: "Spoiwo",
     description: "Rodzaj spoiwa zastosowanego w ściernicy",
-    flex: 1,
+    flex: 1.1,
     headerAlign: 'center',
     align: 'center',
-    minWidth: 130,
+    minWidth: isMobile ? 80 : 120,
     valueGetter: (_value, row) => {
       return getBondGroupId(row.bond || '');
     },
@@ -253,6 +257,8 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
             title={description}
             arrow
             placement="top"
+            disableHoverListener={isMobile}
+            enterTouchDelay={0}
             slotProps={{
               tooltip: {
                 sx: {
@@ -296,10 +302,10 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     field: "material",
     disableColumnMenu: true,
     headerName: "Materiał",
-    flex: 1,
+    flex: 1.2,
     headerAlign: 'center',
     align: 'center',
-    minWidth: isMobile ? 100 : 130,
+    minWidth: isMobile ? 100 : 110,
     renderCell: (params) => {
       const materialName = params.value || '';
       const colors = materialColors[materialName] || { bg: '#F5F5F5', border: '#9E9E9E', text: '#616161' };
@@ -314,6 +320,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
             disableFocusListener={!description}
             disableTouchListener={!description}
             placement="top"
+            enterTouchDelay={0}
             slotProps={{
               tooltip: {
                 sx: {
@@ -370,8 +377,8 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     field: 'Title_URL',
     headerName: 'Link do produktu',
     renderHeader: () => null,
-    minWidth: isMobile ? 100 : 200,
-    flex: 1,
+    minWidth: isMobile ? 90 : 160,
+    flex: 1.1,
     headerAlign: 'center',
     align: 'center',
     sortable: false,

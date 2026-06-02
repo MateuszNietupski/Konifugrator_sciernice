@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
@@ -6,6 +6,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import FilterAltOffIcon from '@mui/icons-material/FilterAltOff';
+import FilterListIcon from '@mui/icons-material/FilterList';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import SearchFilter from '../filters/searchFilter';
 import MaterialFilter from '../filters/materialFilter';
 import GritsFilter from '../filters/gritsFilter';
@@ -102,25 +106,21 @@ export default function FilterPanel({
 }: FilterPanelProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
-    if (isMobile) {
-        return (
-            <Box sx={{ borderBottom: '1px solid', borderColor: 'divider', bgcolor: 'background.paper' }}>
-                <Box sx={{ px: 2, py: 1.5, display: 'flex', gap: 1, alignItems: 'center' }}>
-                    <Box sx={{ flex: 1, minWidth: 0 }}>
-                        <Typography variant="body2" color="text.secondary">Filtry mobilne ściernic (w budowie)</Typography>
-                    </Box>
-                    <ClearButton onClick={onClearFilters} />
-                </Box>
-            </Box>
-        );
-    }
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     const {
         outerDiameter = { steps: [0], rangeIndices: [0, 0], currentValues: [0, 0], isActive: false },
         thickness = { steps: [0], rangeIndices: [0, 0], currentValues: [0, 0], isActive: false },
         boreSize = { steps: [0], rangeIndices: [0, 0], currentValues: [0, 0], isActive: false }
     } = dimensions || {};
+
+    const activeFiltersCount =
+        selectedTypes.length +
+        selectedGrits.length +
+        selectedMaterials.length +
+        selectedBonds.length +
+        (searchModel.items?.[0]?.value ? 1 : 0);
+
     const renderSearchFilter = (size: 'small' | 'medium' = 'medium') => (
         <SearchFilter
             searchModel={searchModel}
@@ -139,18 +139,16 @@ export default function FilterPanel({
         />
     );
 
-    const renderTypeFilter = (_size: 'small' | 'medium' = 'medium') => {
-        return (
-            <ShapeTypeFilter
-                value={selectedTypes}
-                groups={buildTypeFilterGroups()}
-                onChange={onTypesChange}
-                facetCounts={facetCounts.Type || {}}
-                title="Typ ściernicy"
-                defaultExpanded={[]}
-            />
-        );
-    };
+    const renderTypeFilter = () => (
+        <ShapeTypeFilter
+            value={selectedTypes}
+            groups={buildTypeFilterGroups()}
+            onChange={onTypesChange}
+            facetCounts={facetCounts.Type || {}}
+            title="Typ ściernicy"
+            defaultExpanded={[]}
+        />
+    );
 
     const renderGritsFilter = (size: 'small' | 'medium' = 'medium') => (
         <GritsFilter
@@ -225,6 +223,106 @@ export default function FilterPanel({
             </Box>
         </Link>
     );
+
+    if (isMobile) {
+        return (
+            <>
+                <Box sx={{
+                    position: 'sticky',
+                    top: 0,
+                    zIndex: 1100,
+                    bgcolor: 'background.paper',
+                    borderBottom: '1px solid',
+                    borderColor: 'divider',
+                    p: 1.5,
+                    display: 'flex',
+                    gap: 1.5,
+                    alignItems: 'center'
+                }}>
+                    <Box sx={{ flex: 1 }}>
+                        {renderSearchFilter('small')}
+                    </Box>
+                    <Button
+                        variant={activeFiltersCount > 0 ? "contained" : "outlined"}
+                        startIcon={<FilterListIcon />}
+                        onClick={() => setMobileOpen(true)}
+                        size="medium"
+                        sx={{ textTransform: 'none', whiteSpace: 'nowrap' }}
+                    >
+                        Filtry {activeFiltersCount > 0 ? `(${activeFiltersCount})` : ''}
+                    </Button>
+                </Box>
+
+                <Drawer
+                    anchor="left"
+                    open={mobileOpen}
+                    onClose={() => setMobileOpen(false)}
+                    PaperProps={{
+                        sx: { width: '85vw', maxWidth: 320, display: 'flex', flexDirection: 'column' }
+                    }}
+                >
+                    <Box sx={{ p: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid', borderColor: 'divider' }}>
+                        <Typography variant="subtitle1" fontWeight={700}>Filtrowanie ściernic</Typography>
+                        <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+                            {activeFiltersCount > 0 && <ClearButton onClick={onClearFilters} />}
+                            <IconButton onClick={() => setMobileOpen(false)} size="small">
+                                <CloseIcon />
+                            </IconButton>
+                        </Box>
+                    </Box>
+
+                    <Box sx={{ p: 2.5, flex: 1, overflowY: 'auto' }}>
+                        <Box sx={{ mb: 2 }}>
+                            {renderTypeFilter()}
+                        </Box>
+                        <Divider sx={{ my: 2 }} />
+
+                        <Accordion>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                sx={{ px: 0.5, minHeight: 0, '& .MuiAccordionSummary-content': { my: 1 } }}
+                            >
+                                <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ px: 0.5 }}>
+                                    FILTRY MATERIAŁU
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
+                                <Box sx={{ mb: 3, mt: 2 }}>{renderMaterialFilter()}</Box>
+                                <Box sx={{ mb: 3 }}>{renderGritsFilter()}</Box>
+                                <Box sx={{ mb: 3 }}>{renderBondFilter()}</Box>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Divider sx={{ my: 2 }} />
+
+                        <Accordion defaultExpanded>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                sx={{ px: 0.5, minHeight: 0, '& .MuiAccordionSummary-content': { my: 1 } }}
+                            >
+                                <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ px: 0.5 }}>
+                                    FILTRY WYMIARU
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{ px: 0.5, pb: 1, pt: 0 }}>
+                                <Box sx={{ mb: 2, mt: 2 }}>{renderDimensionSliders()}</Box>
+                            </AccordionDetails>
+                        </Accordion>
+                    </Box>
+
+                    <Box sx={{ p: 2, borderTop: '1px solid', borderColor: 'divider', bgcolor: 'background.default' }}>
+                        <Button
+                            fullWidth
+                            variant="contained"
+                            onClick={() => setMobileOpen(false)}
+                            sx={{ textTransform: 'none' }}
+                        >
+                            Pokaż wyniki
+                        </Button>
+                    </Box>
+                </Drawer>
+            </>
+        );
+    }
 
     return (
         <Box sx={{

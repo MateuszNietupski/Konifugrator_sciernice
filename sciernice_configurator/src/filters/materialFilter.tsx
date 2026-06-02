@@ -8,11 +8,12 @@ import Tooltip from '@mui/material/Tooltip';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { materialColors, materialDescriptions } from '../utils/abrasivesConsts';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
-
 const defaultColors = { bg: '#F5F5F5', border: '#9E9E9E', text: '#616161' };
 
 const tooltipSlotProps = {
@@ -41,6 +42,9 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
     size?: 'small' | 'medium';
     facetCounts?: Record<string, number>;
 }) => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
     return (
         <Autocomplete
             multiple
@@ -74,7 +78,10 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                             title={description}
                             arrow
                             placement="top"
-                            disableHoverListener={!description}
+                            enterTouchDelay={0}
+                            disableHoverListener={isMobile || !description}
+                            disableTouchListener={isMobile || !description}
+                            disableFocusListener={!description}
                             slotProps={tooltipSlotProps}
                         >
                             <Chip
@@ -138,7 +145,7 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                                 <Typography
                                     variant="body2"
                                     sx={{
-                                        fontWeight: selected ? 600 : 400, 
+                                        fontWeight: selected ? 600 : 400,
                                         color: selected ? colors.text : 'text.primary',
                                         textTransform: 'capitalize'
                                     }}
@@ -155,20 +162,28 @@ const MaterialFilter = ({ value, options, onChange, size = 'medium', facetCounts
                                         title={description}
                                         arrow
                                         placement="right"
-                                        slotProps={tooltipSlotProps}
-                                        componentsProps={{
+                                        enterTouchDelay={0}
+                                        disableHoverListener={isMobile}
+                                        disableTouchListener={isMobile}
+                                        disableFocusListener={!description}
+                                        slotProps={{
+                                            ...tooltipSlotProps,
                                             popper: {
-                                                onClick: (e) => e.stopPropagation()
+                                                onClick: (e) => e.stopPropagation(),
+                                                onTouchStart: (e) => e.stopPropagation(),
+                                                onMouseDown: (e) => e.stopPropagation(),
                                             }
                                         }}
                                     >
                                         <HelpOutlineIcon
                                             className="row-hint-icon"
+                                        
                                             sx={{
                                                 fontSize: 16,
                                                 color: 'text.disabled',
                                                 cursor: 'help',
                                                 transition: 'all 0.15s ease-in-out',
+                                                pointerEvents: isMobile ? 'none' : 'auto',
                                                 '&:hover': {
                                                     color: 'primary.main',
                                                     transform: 'scale(1.15)'

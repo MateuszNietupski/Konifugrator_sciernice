@@ -10,6 +10,8 @@ import { BOND_FILTER_OPTIONS } from '../utils/filterGroups';
 import { getBondDescription } from '../utils/filterGroups';
 import Tooltip from '@mui/material/Tooltip';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -23,7 +25,8 @@ interface BondFilterProps {
 }
 
 const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {} }: BondFilterProps) => {
-
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const getLabel = (id: string) => {
         return BOND_FILTER_OPTIONS.find(g => g.id === id)?.label || id;
     };
@@ -95,7 +98,19 @@ const BondFilter = ({ value, options, onChange, size = 'medium', facetCounts = {
 
                             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                                 {description && (
-                                    <Tooltip title={description} arrow placement="right" componentsProps={{ popper: { onClick: (e) => e.stopPropagation() } }}>
+                                    <Tooltip
+                                        title={description}
+                                        enterTouchDelay={0}
+                                        disableHoverListener={isMobile || !description}
+                                        disableTouchListener={isMobile || !description}
+                                        disableFocusListener={!description}
+                                        arrow placement="right"
+                                        componentsProps={{
+                                            popper: {
+                                                onClick: (e) => e.stopPropagation()
+
+                                            }
+                                        }}>
                                         <HelpOutlineIcon sx={{ fontSize: 16, color: 'text.disabled', cursor: 'help' }} />
                                     </Tooltip>
                                 )}

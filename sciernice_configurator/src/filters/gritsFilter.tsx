@@ -9,6 +9,9 @@ import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import Tooltip from '@mui/material/Tooltip';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { getGritHint } from '../utils/abrasivesConsts';
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
@@ -19,6 +22,9 @@ const GritsFilter = ({ value, options, onChange, size = 'medium', facetCounts = 
     size?: 'small' | 'medium';
     facetCounts?: Record<string, number>;
 }) => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
     return (
         <Autocomplete
             multiple
@@ -43,6 +49,7 @@ const GritsFilter = ({ value, options, onChange, size = 'medium', facetCounts = 
             renderOption={(props, option, { selected }) => {
                 const count = facetCounts[option] || 0;
                 const isDisabled = count === 0 && !selected;
+                const description = getGritHint(option);
 
                 const { key, ...otherProps } = props;
 
@@ -78,10 +85,40 @@ const GritsFilter = ({ value, options, onChange, size = 'medium', facetCounts = 
                             <Typography variant="caption" color="text.secondary" sx={{ justifySelf: 'end', pr: 0.5 }}>
                                 ({count})
                             </Typography>
+                            
                             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                {getGritHint(option) && (
-                                    <Tooltip title={getGritHint(option)} arrow placement="right" componentsProps={{ popper: { onClick: (e) => e.stopPropagation() } }}>
-                                        <HelpOutlineIcon sx={{ fontSize: 16, color: 'text.disabled', cursor: 'help' }} />
+                                {description && (
+                                    <Tooltip 
+                                        title={description} 
+                                        arrow 
+                                        placement="right" 
+                                        enterTouchDelay={0}
+                                        disableHoverListener={isMobile}
+                                        disableTouchListener={isMobile}
+                                        slotProps={{ 
+                                            popper: { 
+                                                onClick: (e) => e.stopPropagation(),
+                                                onTouchStart: (e) => e.stopPropagation(),
+                                                onMouseDown: (e) => e.stopPropagation(),
+                                            },
+                                            tooltip: {
+                                                sx: {
+                                                    bgcolor: 'rgba(14, 33, 53, 0.9)',
+                                                    color: '#ffffff',
+                                                    fontSize: '0.75rem',
+                                                    maxWidth: 220,
+                                                }
+                                            }
+                                        }}
+                                    >
+                                        <HelpOutlineIcon 
+                                            sx={{ 
+                                                fontSize: 16, 
+                                                color: 'text.disabled', 
+                                                cursor: 'help',
+                                                pointerEvents: isMobile ? 'none' : 'auto' 
+                                            }} 
+                                        />
                                     </Tooltip>
                                 )}
                             </Box>
@@ -103,7 +140,6 @@ const GritsFilter = ({ value, options, onChange, size = 'medium', facetCounts = 
                 return [...options].sort((a, b) => {
                     const numA = Number(a);
                     const numB = Number(b);
-
                     return numA - numB;
                 });
             }}

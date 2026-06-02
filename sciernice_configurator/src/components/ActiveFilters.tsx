@@ -7,6 +7,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { type GridFilterModel } from '@mui/x-data-grid';
 import StraightenIcon from '@mui/icons-material/Straighten';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import { getBondLabel, getBondDescription, getWheelTypeLabel, getWheelTypeDescription } from '../utils/filterGroups';
 import type { NumericDimension, DimensionConfigItem } from '../hooks/useFilters';
@@ -75,6 +77,8 @@ const ActiveFilters = ({
     onRemoveDimensionFilter,
     onClearAll,
 }: ActiveFiltersProps) => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     const activeSearchItems = searchModel?.items?.filter(
         item => item.value !== undefined && item.value !== null && String(item.value).trim() !== '' && item.id !== 'search'
@@ -199,22 +203,28 @@ const ActiveFilters = ({
                     key={c.key}
                     title={c.tooltip || ''}
                     arrow
-                    enterDelay={400}
+                    enterDelay={isMobile ? 0 : 400}
+                    enterTouchDelay={0}
                     disableHoverListener={!c.tooltip}
-                    disableFocusListener={!c.tooltip}
                     disableTouchListener={!c.tooltip}
                     placement="top"
                     slotProps={{
                         tooltip: {
                             sx: {
-                                bgcolor: 'rgba(14, 33, 53, 0.9)',
+                                bgcolor: 'rgba(14, 33, 53, 0.95)',
                                 color: '#ffffff',
                                 fontSize: '0.75rem',
                                 fontWeight: 500,
                                 maxWidth: 250,
                                 textAlign: 'center',
-                                '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.9)' }
+                                p: 1,
+                                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                                '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.95)' }
                             }
+                        },
+                        popper: {
+                            onClick: (e) => e.stopPropagation(),
+                            onTouchStart: (e) => e.stopPropagation(),
                         }
                     }}
                 >
@@ -223,22 +233,28 @@ const ActiveFilters = ({
                         label={c.label}
                         size="small"
                         onDelete={c.onDelete}
-                        deleteIcon={
-                            <Tooltip title="Usuń filtr">
-                                <CancelIcon />
-                            </Tooltip>
-                        }
+                        deleteIcon={<CancelIcon />}
                         sx={{
-                            cursor: c.tooltip ? 'help' : 'default',
                             bgcolor: '#fff',
                             border: '1px solid',
                             borderColor: 'primary.main',
                             color: 'primary.main',
                             fontWeight: 600,
                             maxWidth: 320,
-                            '& .MuiChip-icon': { color: 'primary.main', fontSize: 16 },
+                            cursor: c.tooltip ? 'help' : 'default',
+                            touchAction: 'manipulation',
+                            '& .MuiChip-label': {
+                                pointerEvents: isMobile && c.tooltip ? 'none' : 'auto',
+                            },
+                            '& .MuiChip-icon': { 
+                                color: 'primary.main', 
+                                fontSize: 16,
+                                pointerEvents: isMobile && c.tooltip ? 'none' : 'auto',
+                            },
                             '& .MuiChip-deleteIcon': {
                                 color: 'primary.main',
+                                fontSize: 18,
+                                zIndex: 2,
                                 '&:hover': { color: 'secondary.main' },
                             },
                             '&:hover': {
