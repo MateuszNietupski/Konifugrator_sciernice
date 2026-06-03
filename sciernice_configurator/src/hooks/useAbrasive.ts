@@ -19,11 +19,11 @@ const abrasives = rawAbrasives.map((m) => {
         imageUrl: m.image,
         productLink: m.link,
         description: m.description,
-        outerDiameter: m.srednica_dlugosc? parseDimension(m.srednica_dlugosc) : parseDimension(getAttributeValue("Średnica zewnętrzna")),
-        boreSize: m.boreSize? parseDimension(m.boreSize) : parseDimension(getAttributeValue("Średnica otworu")),
+        outerDiameter: m.srednica_dlugosc ? parseDimension(m.srednica_dlugosc) : parseDimension(getAttributeValue("Średnica zewnętrzna")),
+        boreSize: m.boreSize ? parseDimension(m.boreSize) : parseDimension(getAttributeValue("Średnica otworu")),
         thickness: parseDimension(m.grubosc_szerokosc),
-        gritSize: m.gritSize? parseDimension(m.gritSize) : parseDimension(getAttributeValue("Ziarnistość")),
-        material: m.material? m.material : "",
+        gritSize: m.gritSize && !isNaN(Number(m.gritSize)) ? Number(m.gritSize) : 0,
+        material: m.material ? m.material : "",
         type: m.typ ? m.typ : "",
         bond: m.bond ? m.bond : ""
     };
