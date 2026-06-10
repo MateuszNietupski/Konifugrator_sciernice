@@ -15,8 +15,6 @@ interface GetColumnsProps {
   handleOpenImage: (row: AbrasiveRow) => void;
 }
 
-
-
 export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsProps): GridColDef<AbrasiveRow>[] => [
   {
     field: "Image",
@@ -26,7 +24,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     flex: 1.4,
     sortable: false,
     width: isMobile ? 58 : 116,
-    minWidth: isMobile ? 40 : 60,
+    minWidth: isMobile ? 40 : 75,
     headerAlign: 'center',
     align: 'center',
     cellClassName: 'no-focus-cell',
@@ -128,7 +126,6 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
       );
     },
   },
-
   {
     field: "outerDimension",
     disableColumnMenu: true,
@@ -165,7 +162,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerName: "Otwór",
     description: "d – Średnica otworu wewnętrznego (dla ściernic tarczowych) lub średnica trzpienia (d dla ściernic trzpieniowych). Nie dotyczy osełek i segmentów.",
     flex: 1,
-    minWidth: isMobile ? 80 : 90,
+    minWidth: isMobile ? 70 : 80,
     headerAlign: 'center',
     align: 'center',
     type: 'number',
@@ -174,7 +171,6 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     },
     renderCell: (params) => params.value !== null ? `${params.value} mm` : '—'
   },
-
   {
     field: "gritSize",
     disableColumnMenu: true,
@@ -230,148 +226,199 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     }
   },
   {
-    field: "bond",
-    disableColumnMenu: true,
-    headerName: "Spoiwo",
-    description: "Rodzaj spoiwa zastosowanego w ściernicy",
-    flex: 1.1,
-    headerAlign: 'center',
-    align: 'center',
-    minWidth: isMobile ? 80 : 120,
-    valueGetter: (_value, row) => {
-      return getBondGroupId(row.bond || '');
-    },
-    renderCell: (params) => {
-      const bondId = params.value;
-      if (!bondId) return '—';
-
-      const label = getBondLabel(bondId);
-      const description = getBondDescription(bondId);
-
-      const group = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
-      const colors = group?.colorConfig || { bg: '#F0F1F2', text: '#616161', border: '#E0E0E0' };
-
-      return (
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-          <Tooltip
-            title={description}
-            arrow
-            placement="top"
-            disableHoverListener={isMobile}
-            enterTouchDelay={0}
-            slotProps={{
-              tooltip: {
-                sx: {
-                  bgcolor: 'rgba(14, 33, 53, 0.9)',
-                  color: '#ffffff',
-                  fontSize: '0.75rem',
-                  fontWeight: 500,
-                  maxWidth: 250,
-                  textAlign: 'center',
-                  '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.9)' }
-                }
-              }
-            }}
-          >
-            <Chip
-              size="small"
-              label={label}
-              sx={{
-                cursor: 'help',
-                bgcolor: colors.bg,
-                color: colors.text,
-                border: `1px solid ${colors.border}`,
-                fontWeight: 600,
-                borderRadius: '6px',
-                fontSize: isMobile ? 11 : 12,
-                height: 'auto',
-                py: 0.4,
-                '& .MuiChip-label': {
-                  whiteSpace: 'normal',
-                  textAlign: 'center',
-                  lineHeight: isMobile ? 1.2 : 1.4,
-                }
-              }}
-            />
-          </Tooltip>
-        </Box>
-      );
-    }
-  },
-  {
     field: "material",
     disableColumnMenu: true,
-    headerName: "Materiał",
-    flex: 1.2,
+    headerName: "Materiał / Spoiwo",
+    flex: 1.5,
     headerAlign: 'center',
     align: 'center',
-    minWidth: isMobile ? 100 : 110,
+    minWidth: isMobile ? 130 : 160,
     renderCell: (params) => {
       const materialName = params.value || '';
       const colors = materialColors[materialName] || { bg: '#F5F5F5', border: '#9E9E9E', text: '#616161' };
       const description = materialDescriptions[materialName] || 'Brak dodatkowego opisu.';
 
+      // Pobieramy surowy kod spoiwa z bazy danych (np. "V", "BF", "G")
+      const rawBondCode = (params.row.bond || '').trim().toUpperCase();
+
+      const bondId = getBondGroupId(rawBondCode);
+      const bondGroup = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
+      const bondColors = bondGroup?.colorConfig || { bg: '#616161', text: '#ffffff' };
+
+      const bondLabelPl = bondGroup ? bondGroup.label : '';
+      const bondDescription = bondGroup ? bondGroup.description : '';
+
       return (
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%', px: 0.5, py: 0.5 }}>
           <Tooltip
-            title={description}
             arrow
-            disableHoverListener={!description}
-            disableFocusListener={!description}
-            disableTouchListener={!description}
             placement="top"
+            disableHoverListener={isMobile}
             enterTouchDelay={0}
+            title={
+              <Box sx={{ p: 0.5, textAlign: 'left', maxWidth: 260 }}>
+                <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#d45728', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
+                  Materiał
+                </Typography>
+                <Typography variant="caption" component="div" sx={{ mb: rawBondCode ? 0.75 : 0 }}>
+                  <b>{materialName}</b> — {description}
+                </Typography>
+                {rawBondCode && (
+                  <>
+                    <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#d45728', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
+                      Spoiwo
+                    </Typography>
+                    <Typography variant="caption" component="div">
+                      <b>{rawBondCode} — {bondLabelPl}</b>{' '}
+                    </Typography>
+                    {bondDescription && (
+                      <Typography variant="caption" component="div" sx={{ mt: 0.25, opacity: 0.9 }}>
+                        {bondDescription}
+                      </Typography>
+                    )}
+                  </>
+                )}
+              </Box>
+            }
             slotProps={{
               tooltip: {
                 sx: {
-                  bgcolor: 'rgba(14, 33, 53, 0.9)',
-                  color: '#ffffff',
+                  bgcolor: 'rgba(14,33,53,0.95)',
+                  color: '#fff',
                   fontSize: '0.75rem',
-                  fontWeight: 500,
-                  maxWidth: 250,
-                  textAlign: 'center',
-                  '& .MuiTooltip-arrow': { color: 'rgba(14, 33, 53, 0.9)' }
-                }
-              }
+                  maxWidth: 280,
+                  '& .MuiTooltip-arrow': { color: 'rgba(14,33,53,0.95)' },
+                },
+              },
             }}
           >
-            <Chip
-              size="small"
-              icon={
-                <Box sx={{
-                  width: isMobile ? 6 : 8,
-                  height: isMobile ? 6 : 8,
-                  borderRadius: '50%',
-                  bgcolor: colors.text,
-                  ml: '6px !important',
-                  mr: '-4px !important',
-                  flexShrink: 0
-                }} />
-              }
-              label={materialName}
+            <Box
               sx={{
-                cursor: description ? 'help' : 'default',
-                bgcolor: colors.bg,
-                color: colors.text,
+                display: 'inline-flex',
+                alignItems: 'stretch',
+                minHeight: isMobile ? 32 : 36,
+                maxWidth: '100%',
+                borderRadius: '8px',
+                overflow: 'hidden',
                 border: `1px solid ${colors.border}`,
-                fontWeight: 600,
-                borderRadius: '6px',
-                fontSize: isMobile ? 11 : 12,
-                height: 'auto',
-                py: 0.4,
-                '& .MuiChip-label': {
-                  whiteSpace: 'normal',
-                  textAlign: 'center',
-                  lineHeight: 1.1,
-                  pl: '8px',
-                  pr: '8px'
-                }
+                bgcolor: colors.bg,
+                cursor: 'help',
+                boxShadow: '0 1px 2px rgba(0,0,0,0.06)',
+                transition: 'transform .12s ease, box-shadow .12s ease, filter .12s ease',
+                '&:hover': {
+                  transform: 'translateY(-1px)',
+                  boxShadow: '0 2px 6px rgba(0,0,0,0.12)',
+                  filter: 'brightness(1.03)',
+                },
               }}
-            />
+            >
+              {/* Główna sekcja: Nazwa materiału (teraz po lewej stronie) */}
+              <Box
+                sx={{
+                  flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  px: 1,
+                  py: 0.5,
+                  color: colors.text,
+                  fontWeight: 600,
+                  fontSize: isMobile ? 11 : 12.5,
+                  lineHeight: 1.2,
+                  textAlign: 'center',
+                  whiteSpace: 'normal',
+                  wordBreak: 'break-word',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                }}
+              >
+                {materialName}
+              </Box>
+
+              {/* Sekcja drugorzędna: Litera spoiwa (teraz po prawej stronie jako domknięcie) */}
+              {rawBondCode && (
+                <Box
+                  aria-label={`Spoiwo ${bondLabelPl}`}
+                  sx={{
+                    flex: '0 0 auto',
+                    px: isMobile ? 0.8 : 1.2,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    bgcolor: bondColors.bg,
+                    color: bondColors.text,
+                    fontWeight: 800,
+                    fontSize: isMobile ? 11 : 12,
+                    lineHeight: 1,
+                    letterSpacing: 0,
+                    borderLeft: `1px solid ${colors.border}`, // Zmiana z borderRight na borderLeft
+                  }}
+                >
+                  {rawBondCode}
+                </Box>
+              )}
+            </Box>
           </Tooltip>
         </Box>
       );
     },
+  },
+  {
+    field: "applications",
+    disableColumnMenu: true,
+    headerName: "Zastosowanie",
+    flex: 1.5,
+    minWidth: isMobile ? 120 : 130,
+    headerAlign: 'center',
+    align: 'center',
+    sortable: false,
+    cellClassName: 'clickable-app-cell',
+    renderCell: (params) => {
+      const details = params.row.zastosowanie_detale;
+
+      if (!details?.grupa_glowna_nazwa) {
+        return <Box sx={{ color: 'text.disabled' }}>—</Box>;
+      }
+
+      return (
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            height: '100%',
+            width: '100%',
+            px: 1
+          }}
+        >
+          <Typography 
+            variant="body2" 
+            sx={{ 
+              fontWeight: 600, 
+              color: 'primary.main', 
+              fontSize: isMobile ? 11 : 13,
+              textAlign: 'center',
+              lineHeight: 1.2,
+              whiteSpace: 'normal',
+              wordBreak: 'break-word',
+              display: '-webkit-box',
+              WebkitLineClamp: 4,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              textDecoration: 'underline',
+              textDecorationStyle: 'dotted',
+              textUnderlineOffset: '3px',
+              '&:hover': {
+                color: 'primary.dark'
+              }
+            }}
+          >
+            {details.grupa_glowna_nazwa}
+          </Typography>
+        </Box>
+      );
+    }
   },
   {
     field: 'Title_URL',

@@ -14,9 +14,9 @@ export const materialColors: Record<string, { bg: string; border: string; text: 
     'elektrokorund szlachetny': { bg: '#FFF0F6', border: '#d4c7bf', text: '#8093aa' },
     'elektrokorund zwykły': { bg: '#cfbeaf', border: '#5e3d27', text: '#434343' },
     'elektorkorund cyrkonowy': {
-        bg: '#E3F2FD',      // Bardzo jasny, chłodny błękit (jak stal)
-        border: '#2196F3',  // Intensywny, "techniczny" niebieski
-        text: '#0D47A1'     // Ciemny, wyrazisty granat
+        bg: '#E3F2FD',      
+        border: '#2196F3',  
+        text: '#0D47A1'     
     },
     'węglik krzemu czarny': { bg: '#babfca', border: '#475467', text: '#101828' },
     'węglik krzemu zielony': { bg: '#E6F4EA', border: '#A3E2B7', text: '#137333' },

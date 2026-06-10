@@ -27,6 +27,7 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
 
     const [openImage, setOpenImage] = useState<AbrasiveRow | null>(null);
     const [imgLoading, setImgLoading] = useState<boolean>(true);
+    const [openApplications, setOpenApplications] = useState<AbrasiveRow | null>(null);
 
     const handleOpenImage = (row: AbrasiveRow) => {
         setImgLoading(true);
@@ -34,6 +35,7 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
     };
 
     const handleCloseImage = () => setOpenImage(null);
+    const handleCloseApplications = () => setOpenApplications(null);
 
     const displayColumns = useMemo(() => {
         return getProductGridColumns({ isMobile, handleOpenImage });
@@ -57,8 +59,13 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                 }}
                 pageSizeOptions={[5, 10, 20, 50]}
                 disableRowSelectionOnClick
-                onCellClick={(_params, event) => event.stopPropagation()}
-                localeText={plPL.components.MuiDataGrid.defaultProps.localeText}
+                onCellClick={(params, event) => {
+                    event.stopPropagation();
+
+                    if (params.field === 'applications' && params.row.zastosowanie_detale) {
+                        setOpenApplications(params.row);
+                    }
+                }} localeText={plPL.components.MuiDataGrid.defaultProps.localeText}
                 slots={{
                     noRowsOverlay: () => <CustomNoRowsOverlay />,
                 }}
@@ -98,6 +105,12 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                     },
                     '& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within': {
                         outline: 'none !important',
+                    },
+                    '& .clickable-app-cell': {
+                        cursor: 'pointer !important',
+                        '&:hover': {
+                            bgcolor: 'action.hover',
+                        }
                     },
                 }}
             />
@@ -171,6 +184,69 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                         >
                             {openImage.name}
                         </Typography>
+                    )}
+                </Box>
+            </Dialog>
+
+            {/* Dialog 2: Szczegóły Zastosowania (Pokazuje się tylko po kliknięciu w kolumnę applications) */}
+            <Dialog
+                open={Boolean(openApplications)}
+                onClose={handleCloseApplications}
+                maxWidth="sm"
+                fullWidth
+                TransitionComponent={Zoom}
+            >
+                <Box sx={{ p: 3, position: 'relative' }}>
+                    <IconButton
+                        onClick={handleCloseApplications}
+                        sx={{ position: 'absolute', top: 8, right: 8 }}
+                    >
+                        <CloseIcon />
+                    </IconButton>
+
+                    <Typography variant="h6" sx={{ fontWeight: 700, mb: 2, color: 'primary.main' }}>
+                        Szczegóły zastosowania
+                    </Typography>
+
+                    {openApplications?.zastosowanie_detale && (
+                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                            <div>
+                                <Typography variant="subtitle2" sx={{ fontWeight: 700, color: 'text.secondary' }}>
+                                    Główna grupa:
+                                </Typography>
+                                <Typography variant="body1" sx={{ fontWeight: 600, mt: 0.5 }}>
+                                    {openApplications.zastosowanie_detale.grupa_glowna_nazwa}
+                                </Typography>
+                            </div>
+
+                            {openApplications.zastosowanie_detale.tagi_zastosowania?.length > 0 && (
+                                <div>
+                                    <Typography variant="subtitle2" sx={{ fontWeight: 700, color: 'text.secondary', mb: 1 }}>
+                                        Operacje i właściwości szczegółowe:
+                                    </Typography>
+                                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.8 }}>
+                                        {openApplications.zastosowanie_detale.tagi_zastosowania.map((tag: string, idx: number) => (
+                                            <Box
+                                                key={idx}
+                                                sx={{
+                                                    bgcolor: 'action.hover',
+                                                    border: '1px solid',
+                                                    borderColor: 'divider',
+                                                    borderRadius: '6px',
+                                                    px: 1.2,
+                                                    py: 0.5,
+                                                    fontSize: 12,
+                                                    fontWeight: 500,
+                                                    color: 'text.primary'
+                                                }}
+                                            >
+                                                {tag}
+                                            </Box>
+                                        ))}
+                                    </Box>
+                                </div>
+                            )}
+                        </Box>
                     )}
                 </Box>
             </Dialog>

@@ -48,7 +48,7 @@ export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
     label: 'Ściernice garnkowe i kubkowe',
     subtypes: [
       { label: 'Garnkowe walcowe (Typ 6, 6A2)', values: ['6', '6A2'] },
-    //  { label: 'Garnkowe walcowe z gwintem (Seria 6000)', values: ['6001', '6002', '6003', '6004', '6005'] },
+      //  { label: 'Garnkowe walcowe z gwintem (Seria 6000)', values: ['6001', '6002', '6003', '6004', '6005'] },
       { label: 'Garnkowe stożkowe (Typ 11, 11A2)', values: ['11', '11A2'] },
       { label: 'Garnkowe stożkowe z gwintem (Typ 1112, 1113, 1114)', values: ['1112', '1113', '1114'] },
       { label: 'Talerzowe i skośne (Typ 12, 12A2, 4A2)', values: ['12', '12A2', '4A2'] }
@@ -104,9 +104,9 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     description: 'Sztywne i stabilne. Idealne do szlifowania precyzyjnego, ostrzenia narzędzi i pracy na mokro. Doskonale zachowują profil i wymiar.',
     values: ['V', 'C', 'TC'], // C i TC to gumowe, ale to ceramiki które skrypt tak przydzielił przez kod wewnętrzny ANDRE
     colorConfig: {
-      bg: '#E3F2FD',
-      text: '#1565C0',
-      border: '#BBDEFB'
+      bg: '#E3F2FD',  
+      text: '#0D47A1',   
+      border: '#90CAF9'
     }
   },
   {
@@ -114,7 +114,11 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     label: 'Galwaniczne',
     description: 'Ekstremalnie twarde spoiwo niklowe dla ziaren diament/CBN. Ziarno wystaje bardzo mocno, co daje niesamowitą agresywność i trwałość profilu bez obciągania.',
     values: ['G'],
-    colorConfig: { bg: '#E0F2F1', text: '#00695C', border: '#B2DFDB' }
+    colorConfig: { 
+      bg: '#37474F',   
+      text: '#FFFFFF', 
+      border: '#263238'  
+    }
   },
   {
     id: 'resin',
