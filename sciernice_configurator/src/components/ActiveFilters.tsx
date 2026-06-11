@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { type GridFilterModel } from '@mui/x-data-grid';
 import StraightenIcon from '@mui/icons-material/Straighten';
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
@@ -31,6 +32,7 @@ interface ActiveFiltersProps {
     selectedGrits: number[];
     selectedMaterials: string[];
     selectedBonds: string[];
+    selectedUsages: string[];
     searchModel: GridFilterModel;
     dimensions: Record<NumericDimension, DimensionConfigItem>;
     onRemoveDimensionFilter: (field: NumericDimension) => void;
@@ -39,6 +41,7 @@ interface ActiveFiltersProps {
     onRemoveMaterial: (material: string) => void;
     onRemoveBond: (bond: string) => void;
     onRemoveSearchItem: (id: string) => void;
+    onRemoveUsage: (usage: string) => void;
     onClearAll: () => void;
 }
 
@@ -66,12 +69,14 @@ const ActiveFilters = ({
     selectedTypes,
     selectedGrits,
     selectedMaterials,
+    selectedUsages,
     selectedBonds,
     searchModel,
     dimensions,
     onRemoveType,
     onRemoveGrit,
     onRemoveMaterial,
+    onRemoveUsage,
     onRemoveBond,
     onRemoveSearchItem,
     onRemoveDimensionFilter,
@@ -168,8 +173,18 @@ const ActiveFilters = ({
                     label: getBondLabel(b),
                     tooltip: getBondDescription(b),
                     onDelete: () => onRemoveBond(b),
-                }))
+                })),
             ]
+        },
+        {
+            title: 'Zastosowanie',
+            chips: selectedUsages.map((u) => ({
+                key: `usage-${u}`,
+                icon: <PrecisionManufacturingIcon />,
+                label: u,
+                tooltip: `Dedykowane do obróbki: ${u}`,
+                onDelete: () => onRemoveUsage(u),
+            }))
         },
         {
             title: 'Wymiary',

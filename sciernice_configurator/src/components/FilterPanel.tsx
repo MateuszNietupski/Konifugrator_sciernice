@@ -24,6 +24,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { type NumericDimension, type DimensionConfigItem } from '../hooks/useFilters';
 import { buildTypeFilterGroups } from '../utils/filterGroups';
+import UsageFilter from '../filters/usagesFilter';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -60,6 +61,7 @@ const SectionTitle = ({ children, extra }: SectionTitleProps) => (
 interface FilterPanelProps {
     wheelTypes: string[];
     abrasiveMaterials: string[];
+    usageOptions: string[];
     gritOptions: number[];
     bondOptions: string[];
     facetCounts: {
@@ -67,10 +69,12 @@ interface FilterPanelProps {
         Grit: Record<number, number>;
         Material: Record<string, number>;
         Bond: Record<string, number>;
+        Usage: Record<string, number>;
     };
 
     selectedTypes: string[];
     selectedGrits: number[];
+    selectedUsages: string[];
     selectedMaterials: string[];
     selectedBonds: string[];
     searchModel: GridFilterModel;
@@ -83,6 +87,7 @@ interface FilterPanelProps {
     onBondsChange: (bonds: string[]) => void;
     onClearFilters: () => void;
     onDimensionChange: (field: NumericDimension, indices: [number, number], steps: number[]) => void;
+    onUsagesChange: (usages: string[]) => void;
 }
 
 export default function FilterPanel({
@@ -96,6 +101,8 @@ export default function FilterPanel({
     bondOptions,
     searchModel,
     dimensions,
+    usageOptions,
+    selectedUsages,
     onTypesChange,
     onGritsChange,
     onMaterialsChange,
@@ -103,6 +110,7 @@ export default function FilterPanel({
     onSearchModelChange,
     onBondsChange,
     onDimensionChange,
+    onUsagesChange,
 }: FilterPanelProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -199,6 +207,16 @@ export default function FilterPanel({
                 />
             )}
         </Box>
+    );
+
+    const renderUsagesFilter = (size: 'small' | 'medium' = 'medium') => (
+        <UsageFilter
+            value={selectedUsages}
+            options={usageOptions}
+            onChange={onUsagesChange}
+            size={size}
+            facetCounts={facetCounts.Usage}
+        />
     );
 
     const BrandLogo = () => (
@@ -344,6 +362,10 @@ export default function FilterPanel({
                 <Divider sx={{ my: 2 }} />
                 <Box sx={{ mb: 2 }}>
                     {renderSearchFilter()}
+                </Box>
+                <Divider sx={{ my: 2 }} />
+                <Box sx={{ mb: 2 }}>
+                    {renderUsagesFilter()}
                 </Box>
                 <Divider sx={{ my: 2 }} />
                 <Box sx={{ mb: 2 }}>

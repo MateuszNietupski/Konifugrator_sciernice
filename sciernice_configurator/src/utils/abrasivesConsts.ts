@@ -1,6 +1,6 @@
 export const materialDescriptions: Record<string, string> = {
     'elektrokorund szlachetny': '99A Najczystszy elektrokorund, o jednolitej strukturze ziaren. Charakteryzuje się wysoką trwałością i kruchością. Stosowany do szlifowania precyzyjnego np: szlifowanie płaszczyzn, szlifowanie cylidnryczne, ostrzenie narzędzie skrawających.',
-    'elektrokorund zwykły': '95A Jest najbardziej wytrzymałym elektrokorundem charakteryzującym się wysoką ciągliwością. Stosowany do przecinania i zgrubnego szlifowania niskostopowych stali, stali niedzewnych, żeliwa, szczególnie przy dużych naddatkach zbieranego materiału.',
+    'elektrokorund zwykły': '95A Jest najbardziej wytrzymałym elektrokorundem charakteryzującym się wysoką ciągliwością. Stosowany do przecinania i zgrubnego szlifowania niskostopowych stali, żeliwa, szczególnie przy dużych naddatkach zbieranego materiału.',
     'elektrokorund chromowy': '98A Charakteryzuje się dużą twardością i wytrzymałością, większą od elektrokorundu szlachetnego. Stosowany do precyzyjnego szlifowania stali wysokostopowych i do ostrzenia narzędzi skrawających.',
     'elektorkorund cyrkonowy': 'ZrA Charakteryzuje się najwyższą wśród elektrokorundów ciągliwością i wytrzymałością mechaniczną. Stosowany do wysokowydajnego szlifowania żeliwa, do szlifowania półfabrykatów stalowych z dużymi naciskami.',
     'węglik krzemu czarny': '98C Stosowany podobnie jak 99C do szlifowania węglików spiekanych, materiałów ceramicznych, betomnu, kamienia, do zgrubnego szlifowania odlewów z twardego i kruchego żeliwa białego oraz do przecinania betonu, kamienia, żeliwa białego.',
@@ -88,6 +88,15 @@ export const wheelTypesData: Record<string, { name: string; desc: string }> = {
         name: 'Stożkowa lamelkowa (Typ 29)',
         desc: 'Tarcza lamelkowa ze skośnym ułożeniem płatków. Przeznaczona do agresywnego szlifowania krawędzi i ciężkich spoin.'
     },
+    '41': {
+        name: 'Płaska do przecinania (Typ 41)',
+        desc: 'Klasyczna, cienka tarcza o płaskim profilu przeznaczona wyłącznie do przecinania materiału (stali, stali nierdzewnej, żeliwa, kamienia) obwodowo. Najpopularniejszy typ tarczy tnącej do szlifierek kątowych i przecinarek.'
+    },
+    '42': {
+        name: 'Do przecinania z obniżonym środkiem (Typ 42)',
+        desc: 'Tarcza tnąca posiadająca wypukłą piastę mocującą (obniżony środek). Umożliwia głębokie cięcia szlifierką kątową i odcinanie elementów blisko powierzchni (np. wystających śrub) bez ocierania nakrętki o materiał.'
+    },
+
 
     // === ŚCIERNICE GARNKOWE I KUBKOWE ===
     '6': { name: 'Garnkowa walcowa (Typ 6)', desc: 'Ściernica garnkowa cylindryczna do szlifowania czołowego płaszczyzn.' },

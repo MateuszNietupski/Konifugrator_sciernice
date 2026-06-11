@@ -7,15 +7,17 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import { materialDescriptions, materialColors, getGritHint, getWheelTypeName, wheelTypesData } from '../utils/abrasivesConsts';
-import { BOND_FILTER_OPTIONS, getBondGroupId, getBondLabel, getBondDescription } from '../utils/filterGroups';
+import { BOND_FILTER_OPTIONS, getBondGroupId } from '../utils/filterGroups';
 import type { AbrasiveRow } from '../types/types';
+import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded';
 
 interface GetColumnsProps {
   isMobile: boolean;
   handleOpenImage: (row: AbrasiveRow) => void;
+  setSelectedApplicationRow: (row: AbrasiveRow | null) => void;
 }
 
-export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsProps): GridColDef<AbrasiveRow>[] => [
+export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedApplicationRow }: GetColumnsProps): GridColDef<AbrasiveRow>[] => [
   {
     field: "Image",
     disableColumnMenu: true,
@@ -132,7 +134,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerName: "Śr/Dł(D/L)",
     description: "D - Średnica zewnętrzna (dla ściernic okrągłych) lub L - Długość (dla segmentów i osełek) w mm",
     flex: 0.8,
-    minWidth: isMobile ? 80 : 110,
+    minWidth: isMobile ? 80 : 100,
     headerAlign: 'center',
     align: 'center',
     type: 'number',
@@ -162,7 +164,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerName: "Otwór",
     description: "d – Średnica otworu wewnętrznego (dla ściernic tarczowych) lub średnica trzpienia (d dla ściernic trzpieniowych). Nie dotyczy osełek i segmentów.",
     flex: 1,
-    minWidth: isMobile ? 70 : 80,
+    minWidth: isMobile ? 70 : 75,
     headerAlign: 'center',
     align: 'center',
     type: 'number',
@@ -178,7 +180,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     headerAlign: 'center',
     align: 'center',
     headerName: "Gradacja",
-    minWidth: isMobile ? 80 : 90,
+    minWidth: isMobile ? 80 : 85,
     type: "number",
     renderCell: (params) => {
       const gritValue = params.value;
@@ -238,7 +240,6 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
       const colors = materialColors[materialName] || { bg: '#F5F5F5', border: '#9E9E9E', text: '#616161' };
       const description = materialDescriptions[materialName] || 'Brak dodatkowego opisu.';
 
-      // Pobieramy surowy kod spoiwa z bazy danych (np. "V", "BF", "G")
       const rawBondCode = (params.row.bond || '').trim().toUpperCase();
 
       const bondId = getBondGroupId(rawBondCode);
@@ -257,7 +258,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
             enterTouchDelay={0}
             title={
               <Box sx={{ p: 0.5, textAlign: 'left', maxWidth: 260 }}>
-                <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#d45728', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
+                <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#f7571e', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
                   Materiał
                 </Typography>
                 <Typography variant="caption" component="div" sx={{ mb: rawBondCode ? 0.75 : 0 }}>
@@ -265,7 +266,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
                 </Typography>
                 {rawBondCode && (
                   <>
-                    <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#d45728', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
+                    <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#f7571e', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
                       Spoiwo
                     </Typography>
                     <Typography variant="caption" component="div">
@@ -312,7 +313,6 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
                 },
               }}
             >
-              {/* Główna sekcja: Nazwa materiału (teraz po lewej stronie) */}
               <Box
                 sx={{
                   flex: 1,
@@ -336,7 +336,6 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
                 {materialName}
               </Box>
 
-              {/* Sekcja drugorzędna: Litera spoiwa (teraz po prawej stronie jako domknięcie) */}
               {rawBondCode && (
                 <Box
                   aria-label={`Spoiwo ${bondLabelPl}`}
@@ -352,7 +351,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
                     fontSize: isMobile ? 11 : 12,
                     lineHeight: 1,
                     letterSpacing: 0,
-                    borderLeft: `1px solid ${colors.border}`, // Zmiana z borderRight na borderLeft
+                    borderLeft: `1px solid ${colors.border}`, 
                   }}
                 >
                   {rawBondCode}
@@ -369,62 +368,142 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage }: GetColumnsP
     disableColumnMenu: true,
     headerName: "Zastosowanie",
     flex: 1.5,
-    minWidth: isMobile ? 120 : 130,
+    minWidth: isMobile ? 140 : 140,
     headerAlign: 'center',
     align: 'center',
-    sortable: false,
-    cellClassName: 'clickable-app-cell',
+    sortable: true,
+    sortComparator: (v1, v2) => {
+      return (v1 || '').localeCompare(v2 || '', 'pl');
+    },
+    valueGetter: (_value, row) => {
+      return row.zastosowanie_detale?.grupa_glowna_nazwa || '';
+    }, cellClassName: 'clickable-app-cell',
     renderCell: (params) => {
       const details = params.row.zastosowanie_detale;
-
       if (!details?.grupa_glowna_nazwa) {
         return <Box sx={{ color: 'text.disabled' }}>—</Box>;
       }
 
+      const tags = details.tagi_zastosowania || [];
+      const visibleTags = tags.slice(0, 2);
+      const restCount = Math.max(0, tags.length - visibleTags.length);
+      const hasWarning = Boolean(details.popup_tekst.ostrzezenie_krytyczne);
+
       return (
-        <Box 
-          sx={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            height: '100%',
+        <Box
+          onClick={() => setSelectedApplicationRow(params.row)}
+          sx={{
             width: '100%',
-            px: 1
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            gap: 0.5,
+            px: 1,
+            py: 0.75,
+            cursor: 'pointer',
+            borderRadius: 1,
+            transition: 'background-color .12s, transform .12s',
+            '&:hover': {
+              bgcolor: 'rgba(228,5,5,0.05)',
+              '& .app-info-icon': { opacity: 1 },
+            },
           }}
         >
-          <Typography 
-            variant="body2" 
-            sx={{ 
-              fontWeight: 600, 
-              color: 'primary.main', 
-              fontSize: isMobile ? 11 : 13,
-              textAlign: 'center',
-              lineHeight: 1.2,
-              whiteSpace: 'normal',
-              wordBreak: 'break-word',
-              display: '-webkit-box',
-              WebkitLineClamp: 4,
-              WebkitBoxOrient: 'vertical',
-              overflow: 'hidden',
-              textDecoration: 'underline',
-              textDecorationStyle: 'dotted',
-              textUnderlineOffset: '3px',
-              '&:hover': {
-                color: 'primary.dark'
-              }
-            }}
-          >
-            {details.grupa_glowna_nazwa}
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, minWidth: 0 }}>
+            <Typography
+              sx={{
+                fontWeight: 700,
+                fontSize: isMobile ? 11 : 13,
+                color: 'primary.main',
+                lineHeight: 1.2,
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                display: '-webkit-box',
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: 'vertical',
+                wordBreak: 'break-word',
+                flex: 1,
+                textAlign: 'left',
+              }}
+            >
+              {details.grupa_glowna_nazwa}
+            </Typography>
+            {hasWarning && (
+              <Tooltip
+                title={
+                  <Box sx={{ p: 0.5, maxWidth: 250 }}>
+                    <Typography
+                      variant="caption"
+                      component="div"
+                      sx={{ fontWeight: 800, color: '#f7571e', mb: 0.5, textTransform: 'uppercase', fontSize: 10 }}
+                    >
+                      Uwaga! Czego unikać:
+                    </Typography>
+                    <Typography variant="caption" component="div" sx={{ lineHeight: 1.3, fontWeight: 500 }}>
+                      {hasWarning ? details.popup_tekst.ostrzezenie_krytyczne : 'Brak krytycznych ostrzeżeń.'}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      component="div"
+                      sx={{ mt: 1, pt: 0.5, borderTop: '1px solid rgba(255,255,255,0.2)', opacity: 0.7, fontStyle: 'italic' }}
+                    >
+                      Kliknij po pełne szczegóły
+                    </Typography>
+                  </Box>
+                }
+                arrow
+                placement="top"
+                disableHoverListener={isMobile} 
+                enterTouchDelay={0}
+              >
+                <WarningAmberRoundedIcon
+                  sx={{
+                    fontSize: { xs: 16, md: 19 },
+                    color: 'secondary.main',
+                    flexShrink: 0,
+                    animation: 'pulse 2s infinite ease-in-out', 
+                  }}
+                />
+              </Tooltip>
+            )}
+          </Box>
+
+          {(visibleTags.length > 0 || restCount > 0) && (
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.4, alignItems: 'center' }}>
+              {visibleTags.map((tag) => (
+                <Chip
+                  key={tag}
+                  label={tag}
+                  size="small"
+                  sx={{
+                    height: 18,
+                    fontSize: 10,
+                    fontWeight: 500,
+                    bgcolor: '#EEF2F7',
+                    color: 'primary.main',
+                    border: '1px solid #D9DFE8',
+                    '& .MuiChip-label': { px: 0.75 },
+                  }}
+                />
+              ))}
+              {restCount > 0 && (
+                <Typography sx={{ fontSize: 10, fontWeight: 600, color: 'text.secondary' }}>
+                  +{restCount}
+                </Typography>
+              )}
+            </Box>
+          )}
         </Box>
       );
-    }
+    },
   },
+
   {
     field: 'Title_URL',
     headerName: 'Link do produktu',
     renderHeader: () => null,
-    minWidth: isMobile ? 90 : 160,
+    minWidth: isMobile ? 90 : 140,
     flex: 1.1,
     headerAlign: 'center',
     align: 'center',

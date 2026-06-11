@@ -1,22 +1,21 @@
 import rawAbrasives from '../data/sciernice.json';
 import type { AbrasiveRow, ApplicationDetails } from '../types/types';
 
-// Typ pomocniczy odzwierciedlający surowy obiekt z JSONa (uproszczony na potrzeby mapowania)
 interface RawAbrasiveItem {
-  sku: string;
-  title: string;
-  image: string;
-  link: string;
-  description: string;
-  srednica_dlugosc?: string | null;
-  boreSize?: string | null;
-  grubosc_szerokosc?: string | null;
-  gritSize?: string | number | null;
-  material?: string | null;
-  typ?: string | null;
-  bond?: string | null;
-  attributes?: Array<{ name: string; value: string }>;
-  zastosowanie_detale?: any; // dowolny obiekt z JSONa, który sparsujemy bezpiecznie poniżej
+    sku: string;
+    title: string;
+    image: string;
+    link: string;
+    description: string;
+    srednica_dlugosc?: string | null;
+    boreSize?: string | null;
+    grubosc_szerokosc?: string | null;
+    gritSize?: string | number | null;
+    material?: string | null;
+    typ?: string | null;
+    bond?: string | null;
+    attributes?: Array<{ name: string; value: string }>;
+    zastosowanie_detale?: any;
 }
 
 const abrasives: AbrasiveRow[] = (rawAbrasives as RawAbrasiveItem[]).map((m) => {
@@ -38,8 +37,11 @@ const abrasives: AbrasiveRow[] = (rawAbrasives as RawAbrasiveItem[]).map((m) => 
         mappedApplications = {
             grupa_glowna_id: m.zastosowanie_detale.grupa_glowna_id || 'INNE',
             grupa_glowna_nazwa: m.zastosowanie_detale.grupa_glowna_nazwa || 'Uniwersalne / Inne',
-            tagi_zastosowania: Array.isArray(m.zastosowanie_detale.tagi_zastosowania) 
-                ? m.zastosowanie_detale.tagi_zastosowania 
+            tagi_zastosowania: Array.isArray(m.zastosowanie_detale.tagi_zastosowania)
+                ? m.zastosowanie_detale.tagi_zastosowania
+                : [],
+            filtry_materialowe: Array.isArray(m.zastosowanie_detale.filtry_materialowe)
+                ? m.zastosowanie_detale.filtry_materialowe
                 : [],
             popup_tekst: {
                 naglowek_marketingowy: m.zastosowanie_detale.popup_tekst?.naglowek_marketingowy || '',

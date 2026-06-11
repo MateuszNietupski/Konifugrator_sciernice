@@ -9,6 +9,14 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Zoom from '@mui/material/Zoom';
 import Dialog from '@mui/material/Dialog';
 import CloseIcon from '@mui/icons-material/Close';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
+import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded';
 
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -27,7 +35,10 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
 
     const [openImage, setOpenImage] = useState<AbrasiveRow | null>(null);
     const [imgLoading, setImgLoading] = useState<boolean>(true);
-    const [openApplications, setOpenApplications] = useState<AbrasiveRow | null>(null);
+    const [_openApplications, setOpenApplications] = useState<AbrasiveRow | null>(null);
+    const [selectedApplicationRow, setSelectedApplicationRow] = useState<AbrasiveRow | null>(null);
+    const appDetails = selectedApplicationRow?.zastosowanie_detale;
+
 
     const handleOpenImage = (row: AbrasiveRow) => {
         setImgLoading(true);
@@ -35,10 +46,9 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
     };
 
     const handleCloseImage = () => setOpenImage(null);
-    const handleCloseApplications = () => setOpenApplications(null);
 
     const displayColumns = useMemo(() => {
-        return getProductGridColumns({ isMobile, handleOpenImage });
+        return getProductGridColumns({ isMobile, handleOpenImage, setSelectedApplicationRow });
     }, [isMobile]);
 
     return (
@@ -190,66 +200,106 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
 
             {/* Dialog 2: Szczegóły Zastosowania (Pokazuje się tylko po kliknięciu w kolumnę applications) */}
             <Dialog
-                open={Boolean(openApplications)}
-                onClose={handleCloseApplications}
-                maxWidth="sm"
+                open={Boolean(selectedApplicationRow)}
+                onClose={() => setSelectedApplicationRow(null)}
                 fullWidth
-                TransitionComponent={Zoom}
+                maxWidth="sm"
+                fullScreen={isMobile}
             >
-                <Box sx={{ p: 3, position: 'relative' }}>
-                    <IconButton
-                        onClick={handleCloseApplications}
-                        sx={{ position: 'absolute', top: 8, right: 8 }}
-                    >
-                        <CloseIcon />
-                    </IconButton>
-
-                    <Typography variant="h6" sx={{ fontWeight: 700, mb: 2, color: 'primary.main' }}>
-                        Szczegóły zastosowania
-                    </Typography>
-
-                    {openApplications?.zastosowanie_detale && (
-                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                            <div>
-                                <Typography variant="subtitle2" sx={{ fontWeight: 700, color: 'text.secondary' }}>
-                                    Główna grupa:
+                {appDetails && (
+                    <>
+                        <DialogTitle sx={{ pb: 1 }}>
+                            <Typography variant="overline" color="text.secondary" sx={{ letterSpacing: 1 }}>
+                                Zastosowanie
+                            </Typography>
+                            <Typography variant="h6" fontWeight={700} color="primary.main" sx={{ lineHeight: 1.2 }}>
+                                {appDetails.grupa_glowna_nazwa}
+                            </Typography>
+                            {appDetails.popup_tekst?.naglowek_marketingowy && (
+                                <Typography
+                                    sx={{
+                                        mt: 1, fontSize: 15, fontStyle: 'italic',
+                                        color: 'primary.main', fontWeight: 500,
+                                    }}
+                                >
+                                    {appDetails.popup_tekst.naglowek_marketingowy}
                                 </Typography>
-                                <Typography variant="body1" sx={{ fontWeight: 600, mt: 0.5 }}>
-                                    {openApplications.zastosowanie_detale.grupa_glowna_nazwa}
-                                </Typography>
-                            </div>
+                            )}
+                        </DialogTitle>
 
-                            {openApplications.zastosowanie_detale.tagi_zastosowania?.length > 0 && (
-                                <div>
-                                    <Typography variant="subtitle2" sx={{ fontWeight: 700, color: 'text.secondary', mb: 1 }}>
-                                        Operacje i właściwości szczegółowe:
+                        <DialogContent dividers>
+                            {appDetails.popup_tekst?.ostrzezenie_krytyczne && (
+                                <Box
+                                    sx={{
+                                        mb: 2, p: 1.5, borderRadius: 1,
+                                        bgcolor: 'rgba(228,5,5,0.08)',
+                                        borderLeft: '4px solid', borderColor: 'secondary.main',
+                                        display: 'flex', gap: 1, alignItems: 'flex-start',
+                                    }}
+                                >
+                                    <WarningAmberRoundedIcon sx={{ color: 'secondary.main', mt: '2px' }} />
+                                    <Typography sx={{ fontSize: 13, color: 'secondary.dark', fontWeight: 500 }}>
+                                        UWAGA! CZEGO UNIKAĆ: {appDetails.popup_tekst.ostrzezenie_krytyczne}
                                     </Typography>
-                                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.8 }}>
-                                        {openApplications.zastosowanie_detale.tagi_zastosowania.map((tag: string, idx: number) => (
-                                            <Box
-                                                key={idx}
-                                                sx={{
-                                                    bgcolor: 'action.hover',
-                                                    border: '1px solid',
-                                                    borderColor: 'divider',
-                                                    borderRadius: '6px',
-                                                    px: 1.2,
-                                                    py: 0.5,
-                                                    fontSize: 12,
-                                                    fontWeight: 500,
-                                                    color: 'text.primary'
-                                                }}
-                                            >
-                                                {tag}
-                                            </Box>
+                                </Box>
+                            )}
+
+                            {appDetails.popup_tekst?.lista_zastosowan?.length > 0 && (
+                                <Box sx={{ mb: 2 }}>
+                                    <Typography variant="subtitle2" fontWeight={700} sx={{ mb: 0.5 }}>
+                                        Idealna do:
+                                    </Typography>
+                                    <Box component="ul" sx={{ pl: 2.5, m: 0 }}>
+                                        {appDetails.popup_tekst.lista_zastosowan.map((item) => (
+                                            <li key={item} style={{ marginBottom: 4, fontSize: 13 }}>{item}</li>
                                         ))}
                                     </Box>
-                                </div>
+                                </Box>
                             )}
-                        </Box>
-                    )}
-                </Box>
+
+                            {appDetails.tagi_zastosowania?.length > 0 && (
+                                <>
+                                    <Divider sx={{ my: 1.5 }} />
+                                    <Typography variant="subtitle2" fontWeight={700} sx={{ mb: 1 }}>
+                                        Tagi i właściwości
+                                    </Typography>
+                                    <Stack direction="row" flexWrap="wrap" gap={0.75}>
+                                        {appDetails.tagi_zastosowania.map((tag) => (
+                                            <Chip
+                                                key={tag}
+                                                label={tag}
+                                                size="small"
+                                                sx={{
+                                                    bgcolor: '#EEF2F7',
+                                                    color: 'primary.main',
+                                                    border: '1px solid #D9DFE8',
+                                                    fontWeight: 500,
+                                                }}
+                                            />
+                                        ))}
+                                    </Stack>
+                                </>
+                            )}
+                        </DialogContent>
+
+                        <DialogActions sx={{ px: 3, py: 2 }}>
+                            <Button onClick={() => setSelectedApplicationRow(null)}>Zamknij</Button>
+                            {selectedApplicationRow?.productLink && (
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    href={selectedApplicationRow.productLink}
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    Przejdź do produktu
+                                </Button>
+                            )}
+                        </DialogActions>
+                    </>
+                )}
             </Dialog>
+
         </Box>
     );
 }

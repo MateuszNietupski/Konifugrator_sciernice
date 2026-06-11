@@ -36,13 +36,13 @@ export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
     ]
   },
   {
-    id: 'disc_wheels',
-    label: 'Tarcze do szlifierek kątowych',
-    subtypes: [
-      { label: 'Tarczowe do szlifowania / obniżony środek (Typ 27)', values: ['27'] },
-
-    ]
-  },
+  id: 'disc_wheels',
+  label: 'Tarcze do szlifierek kątowych',
+  subtypes: [
+    { label: 'Do przecinania (Typ 41 i 42)', values: ['41', '42'] },
+    { label: 'Szlifierskie (Typ 27 i 29)', values: ['27', '29'] }
+  ]
+},
   {
     id: 'cup_wheels',
     label: 'Ściernice garnkowe i kubkowe',
@@ -104,8 +104,8 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     description: 'Sztywne i stabilne. Idealne do szlifowania precyzyjnego, ostrzenia narzędzi i pracy na mokro. Doskonale zachowują profil i wymiar.',
     values: ['V', 'C', 'TC'], // C i TC to gumowe, ale to ceramiki które skrypt tak przydzielił przez kod wewnętrzny ANDRE
     colorConfig: {
-      bg: '#E3F2FD',  
-      text: '#0D47A1',   
+      bg: '#E3F2FD',
+      text: '#0D47A1',
       border: '#90CAF9'
     }
   },
@@ -114,10 +114,10 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     label: 'Galwaniczne',
     description: 'Ekstremalnie twarde spoiwo niklowe dla ziaren diament/CBN. Ziarno wystaje bardzo mocno, co daje niesamowitą agresywność i trwałość profilu bez obciągania.',
     values: ['G'],
-    colorConfig: { 
-      bg: '#37474F',   
-      text: '#FFFFFF', 
-      border: '#263238'  
+    colorConfig: {
+      bg: '#37474F',
+      text: '#FFFFFF',
+      border: '#263238'
     }
   },
   {
@@ -125,16 +125,27 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     label: 'Żywiczne',
     //label: 'Żywiczne (B, BF, TE, HE)',
     description: 'Elastyczne, odporne na drgania, uderzenia boczne oraz wysokie obciążenia mechaniczne Idealne do pracy ręcznej, szlifowania spawów i cięcia metalu.',
-    values: ['B', 'BF', 'TE', 'HE'],
-    colorConfig: { bg: '#F5EBE6', text: '#D85A1B', border: '#D7CCC8' }
+    values: ['B'],
+    colorConfig: { bg: '#FFF3E0', text: '#E65100', border: '#FFCC80' }
   },
   {
-    id: 'other',
-    label: 'Inne specjalistyczne',
-    description: 'Magnezytowe, metalowe, silikatowe i rzadkie',
-    values: ['M', 'K', 'F', 'N', 'L', 'J', 'EO', 'CO'],
-    colorConfig: { bg: '#F0F1F2', text: '#616161', border: '#E0E0E0' }
-  }
+    id: 'resin_bf',
+    label: 'Żywiczne zbrojone',
+    description: 'Spoiwo żywiczne wzmocnione siatką z włókna szklanego. Umożliwia produkcję cienkich tarcz tnących i szlifierskich odpornych na rozerwanie przy pracy kątowej.',
+    values: ['BF', 'TE', 'HE'],
+    colorConfig: { bg: '#FBE9E7', text: '#BF360C', border: '#FFAB91' }
+  },
+  {
+    id: 'resin_elastic',
+    label: 'Żywiczne elastyczne',
+    description: 'Spoiwo żywiczne połączone z elastycznym podkładem (płótno/nylon). Zapewnia doskonałe tłumienie drgań, dopasowanie do kształtu detalu i chłodną obróbkę wykańczającą (satynowanie, szlifowanie bez przypaleń). Stosowane w ściernicach lamelkowych i włókninowych.',
+    values: ['R', 'RE'],
+    colorConfig: { 
+      bg: '#FFFDE7',   
+      text: '#F57F17',  
+      border: '#FFF59D' 
+    }
+  },
 ];
 
 export const getBondGroupId = (rawBond: string): string => {

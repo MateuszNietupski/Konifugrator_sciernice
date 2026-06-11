@@ -26,16 +26,19 @@ export default function Home({ abrasives }: HomeProps) {
         wheelTypes: results.wheelTypes,
         gritOptions: results.gritOptions,
         bondOptions: results.bondOptions,
+        usageOptions: results.usagesOptions,
         facetCounts: {
             Type: results.facetCounts.Type,
             Grit: results.facetCounts.Grit,
             Material: results.facetCounts.Material,
-            Bond: results.facetCounts.Bond
+            Bond: results.facetCounts.Bond,
+            Usage: results.facetCounts.Usage
         },
 
         selectedTypes: state.selectedTypes,
         selectedGrits: state.selectedGrits,
         selectedMaterials: state.selectedMaterials,
+        selectedUsages: state.selectedUsages,
         selectedBonds: state.selectedBonds,
         searchModel: state.searchModel,
         dimensions: state.dimensions,
@@ -47,16 +50,12 @@ export default function Home({ abrasives }: HomeProps) {
         onMaterialsChange: handlers.setSelectedMaterials,
         onClearFilters: handlers.handleClearFilters,
         onBondsChange: handlers.setSelectedBonds,
+        onUsagesChange: handlers.setSelectedUsages
     };
     const counts = {
         filtered: results.filteredWheels.length,
         total: abrasives.length
     };
-
-    console.log('Home handlers debug:', {
-        setDimensionRange: typeof handlers.setDimensionRange,
-        filterPropsOnDimensionChange: typeof filterProps.onDimensionChange,
-    });
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -92,6 +91,7 @@ export default function Home({ abrasives }: HomeProps) {
                             selectedGrits={state.selectedGrits}
                             selectedBonds={state.selectedBonds}
                             selectedMaterials={state.selectedMaterials}
+                            selectedUsages={state.selectedUsages}
                             searchModel={state.searchModel}
                             dimensions={state.dimensions}
                             onRemoveDimensionFilter={handlers.removeDimensionFilter}
@@ -101,6 +101,7 @@ export default function Home({ abrasives }: HomeProps) {
                             onRemoveGrit={handlers.removeSelectedGrit}
                             onRemoveMaterial={handlers.removeSelectedMaterial}
                             onRemoveBond={handlers.removeSelectedBond}
+                            onRemoveUsage={handlers.removeSelectedUsage}
                             onClearAll={handlers.handleClearFilters}
                         />
                         <ProductGridDesktop
