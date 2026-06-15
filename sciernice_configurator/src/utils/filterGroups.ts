@@ -36,13 +36,13 @@ export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
     ]
   },
   {
-  id: 'disc_wheels',
-  label: 'Tarcze do szlifierek kątowych',
-  subtypes: [
-    { label: 'Do przecinania (Typ 41 i 42)', values: ['41', '42'] },
-    { label: 'Szlifierskie (Typ 27 i 29)', values: ['27', '29'] }
-  ]
-},
+    id: 'disc_wheels',
+    label: 'Tarcze do szlifierek kątowych',
+    subtypes: [
+      { label: 'Do przecinania (Typ 41 i 42)', values: ['41', '42'] },
+      { label: 'Szlifierskie (Typ 27 i 29)', values: ['27', '29'] }
+    ]
+  },
   {
     id: 'cup_wheels',
     label: 'Ściernice garnkowe i kubkowe',
@@ -74,8 +74,8 @@ export const ABRASIVE_FILTER_GROUPS: FilterGroup[] = [
     id: 'hones',
     label: 'Osełki',
     subtypes: [
-      { label: 'Prostokątne (Standardowe i warstwowe)', values: ['9010', '9010Y'] },
-      { label: 'Trójkątne ', values: ['9011', '9020'] },
+      { label: 'Prostokątne', values: ['9010', '9010Y'] },
+      { label: 'Trójkątne', values: ['9011', '9020'] },
       { label: 'Owalne', values: ['9050'] }
     ]
   }
@@ -102,11 +102,22 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     id: 'ceramic',
     label: 'Ceramiczne',
     description: 'Sztywne i stabilne. Idealne do szlifowania precyzyjnego, ostrzenia narzędzi i pracy na mokro. Doskonale zachowują profil i wymiar.',
-    values: ['V', 'C', 'TC'], // C i TC to gumowe, ale to ceramiki które skrypt tak przydzielił przez kod wewnętrzny ANDRE
+    values: ['V'],
     colorConfig: {
       bg: '#E3F2FD',
       text: '#0D47A1',
       border: '#90CAF9'
+    }
+  },
+  {
+    id: 'ceramic_c',
+    label: 'Ceramiczne szklanokrystaliczne',
+    description: 'Spoiwa nowej generacji o strukturze mikroporowatej (m.in. CRYSTALBOND / seria HE). Zapewniają znacznie chłodniejsze szlifowanie i lepsze trzymanie profilu. Idealne do twardych stali narzędziowych.',
+    values: ['C', 'HE', 'VHE'],
+    colorConfig: {
+      bg: '#FFFFFF',   
+      text: '#1A237E',   
+      border: '#B0BEC5'  
     }
   },
   {
@@ -140,10 +151,10 @@ export const BOND_FILTER_OPTIONS: BondFilterGroup[] = [
     label: 'Żywiczne elastyczne',
     description: 'Spoiwo żywiczne połączone z elastycznym podkładem (płótno/nylon). Zapewnia doskonałe tłumienie drgań, dopasowanie do kształtu detalu i chłodną obróbkę wykańczającą (satynowanie, szlifowanie bez przypaleń). Stosowane w ściernicach lamelkowych i włókninowych.',
     values: ['R', 'RE'],
-    colorConfig: { 
-      bg: '#FFFDE7',   
-      text: '#F57F17',  
-      border: '#FFF59D' 
+    colorConfig: {
+      bg: '#FFFDE7',
+      text: '#F57F17',
+      border: '#FFF59D'
     }
   },
 ];

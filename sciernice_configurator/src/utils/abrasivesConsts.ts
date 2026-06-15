@@ -2,10 +2,11 @@ export const materialDescriptions: Record<string, string> = {
     'elektrokorund szlachetny': '99A Najczystszy elektrokorund, o jednolitej strukturze ziaren. Charakteryzuje się wysoką trwałością i kruchością. Stosowany do szlifowania precyzyjnego np: szlifowanie płaszczyzn, szlifowanie cylidnryczne, ostrzenie narzędzie skrawających.',
     'elektrokorund zwykły': '95A Jest najbardziej wytrzymałym elektrokorundem charakteryzującym się wysoką ciągliwością. Stosowany do przecinania i zgrubnego szlifowania niskostopowych stali, żeliwa, szczególnie przy dużych naddatkach zbieranego materiału.',
     'elektrokorund chromowy': '98A Charakteryzuje się dużą twardością i wytrzymałością, większą od elektrokorundu szlachetnego. Stosowany do precyzyjnego szlifowania stali wysokostopowych i do ostrzenia narzędzi skrawających.',
-    'elektorkorund cyrkonowy': 'ZrA Charakteryzuje się najwyższą wśród elektrokorundów ciągliwością i wytrzymałością mechaniczną. Stosowany do wysokowydajnego szlifowania żeliwa, do szlifowania półfabrykatów stalowych z dużymi naciskami.',
+    'elektrokorund cyrkonowy': 'ZrA Charakteryzuje się najwyższą wśród elektrokorundów ciągliwością i wytrzymałością mechaniczną. Stosowany do wysokowydajnego szlifowania żeliwa, do szlifowania półfabrykatów stalowych z dużymi naciskami.',
     'węglik krzemu czarny': '98C Stosowany podobnie jak 99C do szlifowania węglików spiekanych, materiałów ceramicznych, betomnu, kamienia, do zgrubnego szlifowania odlewów z twardego i kruchego żeliwa białego oraz do przecinania betonu, kamienia, żeliwa białego.',
     'węglik krzemu zielony': '99C Stosowany do szlifowania węglików spiekanych, ceramiki, kamini, do ostrzenia narzędzi skrawających z ostrzami z węglików spiekanych.',
-    'ziarna diamentowe': 'Najtwardszy materiał ścierniczy. Charakteryzujący się wyjątkową odpornością na zużycie oraz wytrzymałością termiczną. Stosowany do szlifowania szkła, ceramiki, kamienia, tworzyw sztucznych, grafitu, żeliwa. Ze względu na reaktywność diamentu z żelazem, nie zaleca się do obróki narzędzi wykonanych ze stali.',
+    'włóknina': 'Przestrzenna sieć włókien nylonowych z zatopionym ziarnem ściernym. W zależności od gęstości i sztywności splotu służy do agresywnego oczyszczania powierzchni z rdzy i zgorzeliny (odmiany grubootworowe CBS) lub do kontrolowanego matowienia i satynowania stali (odmiany lamelkowe).',
+    'ziarno ceramiczne': 'CR Spiekany elektrokorund mikro-krystaliczny. Charakteryzuje się kontrolowanym mikro-wykruszaniem nano-kryształów pod wpływem nacisku, co zapewnia stałą obecność ostrych krawędzi bez pękania całych ziaren. Zmniejsza tarcie i drastycznie ogranicza obciążenie termiczne obrabianego materiału.', 'ziarna diamentowe': 'Najtwardszy materiał ścierniczy. Charakteryzujący się wyjątkową odpornością na zużycie oraz wytrzymałością termiczną. Stosowany do szlifowania szkła, ceramiki, kamienia, tworzyw sztucznych, grafitu, żeliwa. Ze względu na reaktywność diamentu z żelazem, nie zaleca się do obróki narzędzi wykonanych ze stali.',
     'borazon (CBN)': 'CBN ma mniejszą w porównaniu z diamentem twardość, drugi ale znacznie lepszą odporność cieplną do 1200°C oraz nie reaguje chemicznie z żelazem. Stosuje się go szlifowania wszelkiego rodzaju stali głównie powyżej 50 HRC.'
 };
 
@@ -13,15 +14,13 @@ export const materialColors: Record<string, { bg: string; border: string; text: 
     'elektrokorund chromowy': { bg: '#FFF0F6', border: '#FFADD2', text: '#C41D7F' },
     'elektrokorund szlachetny': { bg: '#FFF0F6', border: '#d4c7bf', text: '#8093aa' },
     'elektrokorund zwykły': { bg: '#cfbeaf', border: '#5e3d27', text: '#434343' },
-    'elektorkorund cyrkonowy': {
-        bg: '#E3F2FD',      
-        border: '#2196F3',  
-        text: '#0D47A1'     
-    },
+    'elektrokorund cyrkonowy': { bg: '#E3F2FD', border: '#2196F3', text: '#0D47A1' },
     'węglik krzemu czarny': { bg: '#babfca', border: '#475467', text: '#101828' },
     'węglik krzemu zielony': { bg: '#E6F4EA', border: '#A3E2B7', text: '#137333' },
     'ziarna diamentowe': { bg: '#F0F0F0', border: '#756adf', text: '#333333' },
     'borazon (CBN)': { bg: '#F0F0F0', border: '#282541', text: '#333333' },
+    'ziarno ceramiczne': { bg: '#FFFDE7', border: '#FBC02D', text: '#1565C0' },
+    'włóknina': { bg: '#E0F2F1', border: '#4DB6AC', text: '#004D40' },
 };
 
 export const gritData: Record<string, { type: string; range: string }> = {
