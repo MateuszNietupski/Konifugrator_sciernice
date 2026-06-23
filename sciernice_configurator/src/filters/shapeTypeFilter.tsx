@@ -53,7 +53,6 @@ const ShapeTypeFilter = ({
   groups = [],
   onChange,
   facetCounts = {},
-  title = "Typ ściernicy",
   defaultExpanded = []
 }: TypeFilterProps) => {
   const theme = useTheme();
@@ -123,10 +122,6 @@ const ShapeTypeFilter = ({
   return (
     <ClickAwayListenerFromMui onClickAway={() => setActiveMobileHint(null)}>
       <Box sx={{ width: '100%' }}>
-        <Typography variant="caption" fontWeight={700} sx={{ display: 'block', mb: 1, textTransform: 'uppercase', px: 1 }}>
-          {title}
-        </Typography>
-
         {groups.map((group) => {
           const groupCount = getGroupCount(group);
           const isGroupExpanded = expandedGroups.includes(group.key);
@@ -199,7 +194,6 @@ const ShapeTypeFilter = ({
                   const isSubDisabled = subCount === 0 && !isSubSelected && !isSubIndeterminate;
                   const isSubDropdownOpen = expandedSubtypes.includes(sub.key);
                   
-                  // ✅ Sprawdzenie czy podtyp ma więcej niż jednego potomka (liścia)
                   const hasMultipleLeaves = sub.children.length > 1;
 
                   const tooltipContent = sub.children
@@ -220,7 +214,6 @@ const ShapeTypeFilter = ({
 
                   return (
                     <Box key={sub.key} sx={{ width: '100%' }}>
-                      {/* POZIOM 2: Podtyp */}
                       <Box
                         onClick={() => !isSubDisabled && handleSubtypeMasterToggle(sub.children)}
                         sx={{
@@ -261,7 +254,6 @@ const ShapeTypeFilter = ({
                           {sub.label}
                         </Typography>
 
-                        {/* ✅ ZMIANA: Strzałka rozwijania pokazuje się TYLKO, gdy są minimum 2 elementy */}
                         {hasMultipleLeaves ? (
                           <IconButton 
                             size="small" 
@@ -271,7 +263,7 @@ const ShapeTypeFilter = ({
                             {isSubDropdownOpen ? <KeyboardArrowUpIcon fontSize="small" /> : <KeyboardArrowDownIcon fontSize="small" />}
                           </IconButton>
                         ) : (
-                          <Box sx={{ width: 24, height: 24 }} /> // Pusty wypełniacz struktury siatki
+                          <Box sx={{ width: 24, height: 24 }} /> 
                         )}
 
                         <Typography
@@ -309,7 +301,6 @@ const ShapeTypeFilter = ({
                         </Box>
                       </Box>
 
-                      {/* POZIOM 3: Lista ukryta pod Collapse – renderuje się TYLKO dla wielu elementów */}
                       {hasMultipleLeaves && (
                         <Collapse in={isSubDropdownOpen} timeout="auto" unmountOnExit>
                           <Box sx={{ pl: 5, bgcolor: 'rgba(0, 0, 0, 0.02)', borderLeft: '2px solid', borderColor: 'divider', mb: 0.5 }}>

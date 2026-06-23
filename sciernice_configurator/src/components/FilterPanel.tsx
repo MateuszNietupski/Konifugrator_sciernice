@@ -363,14 +363,29 @@ export default function FilterPanel({
                 <Box sx={{ mb: 2 }}>
                     {renderSearchFilter()}
                 </Box>
-                <Divider sx={{ my: 2 }} />
                 <Box sx={{ mb: 2 }}>
                     {renderUsagesFilter()}
                 </Box>
                 <Divider sx={{ my: 2 }} />
-                <Box sx={{ mb: 2 }}>
-                    {renderTypeFilter()}
-                </Box>
+                <Accordion defaultExpanded>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        sx={{
+                            px: 0.5,
+                            minHeight: 0,
+                            '& .MuiAccordionSummary-content': { my: 1 }
+                        }}
+                    >
+                        <Typography variant="body2" fontWeight={600} color="text.primary" sx={{ mb: 1.5, px: 0.5 }}>
+                            TYPY ŚCIERNIC
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
+                        <Box sx={{ mb: 2 }}>
+                            {renderTypeFilter()}
+                        </Box>
+                    </AccordionDetails>
+                </Accordion>
                 <Divider sx={{ my: 2 }} />
 
                 <Accordion defaultExpanded>
@@ -382,7 +397,7 @@ export default function FilterPanel({
                             '& .MuiAccordionSummary-content': { my: 1 }
                         }}
                     >
-                        <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ mb: 1.5, px: 0.5 }}>
+                        <Typography variant="body2" fontWeight={600} color="text.primary" sx={{ mb: 1.5, px: 0.5 }}>
                             FILTRY MATERIAŁU
                         </Typography>
                     </AccordionSummary>
@@ -409,7 +424,7 @@ export default function FilterPanel({
                             '& .MuiAccordionSummary-content': { my: 1 }
                         }}
                     >
-                        <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ mb: 1.5, px: 0.5 }}>
+                        <Typography variant="body2" fontWeight={600} color="text.primary" sx={{ mb: 1.5, px: 0.5 }}>
                             FILTRY WYMIARU
                         </Typography>
                     </AccordionSummary>

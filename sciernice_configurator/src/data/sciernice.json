@@ -1855,26 +1855,28 @@
         "bond_name": "żywiczne (bakielitowe)",
         "bond_source": "title",
         "zastosowanie_detale": {
-            "grupa_glowna_id": "STAL_HARTOWANA",
-            "grupa_glowna_nazwa": "Stal hartowana / narzędziowa",
+            "grupa_glowna_id": "STAL_HARTOWANA_ZGRUBNA",
+            "grupa_glowna_nazwa": "Szlifowanie zgrubne i zdzieranie stali hartowanej",
             "tagi_zastosowania": [
-                "Ostrzenie narzędzi",
-                "Szlifowanie na zimno",
-                "Precyzyjne wykończenie"
+                "Segment trapezowy Typ 3109",
+                "Szlifowanie zgrubne / zdzieranie",
+                "Usuwanie dużych naddatków",
+                "Samoostrzenie ultra-miękkie J"
             ],
             "filtry_materialowe": [
-                "Stal hartowana",
+                "Stal hartowana (>60 HRC)",
                 "Stal narzędziowa",
-                "Stal szybkotnąca (HSS)",
-                "Wiertła / Noże"
+                "Ciężkie noże przemysłowe / rębaki",
+                "Wielkogabarytowe płyty i bloki matrycowe"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica o najwyższej czystości chemicznej ziarna (biała). Gwarantuje bezpieczeństwo termiczne obrabianych krawędzi.",
+                "naglowek_marketingowy": "Mocny segment trapezowy (Typ 3109) do ciężkiego szlifowania zgrubnego. Agresywne, bardzo grube ziarno 24 w połączeniu z ultra-miękkim spoiwem żywicznym J gwarantuje błyskawiczne ściąganie dużych naddatków materiału przy zachowaniu absolutnego bezpieczeństwa termicznego.",
                 "lista_zastosowan": [
-                    "Precyzyjne ostrzenie przyrządów skrawających: wierteł, noży tokarskich, dłut, strugów oraz frezów.",
-                    "Precyzyjne, wykończeniowe szlifowanie stali nierdzewnej (INOX) na zimno – czyste ziarno chroni przed przypaleniami struktury metalu."
+                    "Wstępne, zgrubne szlifowanie płaszczyznowe dużych płyt stalowych, bloków formierskich i elementów matryc po obróbce cieplnej.",
+                    "Agresywne usuwanie naddatków i naprawa uszkodzonych (wyszczerbionych) krawędzi ciężkich noży przemysłowych do rębaków i gilotyn.",
+                    "Szybkie wyrównywanie powierzchni odkuwek i elementów konstrukcyjnych ze stali stopowych i narzędziowych na szlifierkach doczołowych."
                 ],
-                "ostrzezenie_krytyczne": "Masowej, miękkiej stali konstrukcyjnej (miękki metal błyskawicznie wyłamuje i kruszy kruche ziarno szlachetne, drastycznie zwiększając zużycie). Do zgrubnego oczyszczania konstrukcji INOX wybierz elektrokorund cyrkonowy."
+                "ostrzezenie_krytyczne": "Stosowania do operacji wykończeniowych oraz ręcznego ostrzenia narzędzi warsztatowych (wierteł, frezów) – grube ziarno 24 pozostawia głębokie ślady i chropowatą strukturę. Ze względu na bardzo miękkie spoiwo (J), praca przy niedostatecznym docisku maszynowym spowoduje przedwczesne, bezużyteczne osypanie się segmentu."
             }
         }
     },
@@ -1902,26 +1904,28 @@
         "bond_name": "żywiczne (bakielitowe)",
         "bond_source": "title",
         "zastosowanie_detale": {
-            "grupa_glowna_id": "STAL_HARTOWANA",
-            "grupa_glowna_nazwa": "Stal hartowana / narzędziowa",
+            "grupa_glowna_id": "STAL_HARTOWANA_WYKONCZENIOWA",
+            "grupa_glowna_nazwa": "Szlifowanie wykończeniowe stali hartowanej i noży",
             "tagi_zastosowania": [
-                "Ostrzenie narzędzi",
-                "Szlifowanie na zimno",
-                "Precyzyjne wykończenie"
+                "Segment trapezowy Typ 3109",
+                "Szlifowanie noży gilotynowych",
+                "Obróbka wykończeniowa płaszczyzn",
+                "Spoiwo żywiczne tłumiące drgania"
             ],
             "filtry_materialowe": [
-                "Stal hartowana",
-                "Stal narzędziowa",
-                "Stal szybkotnąca (HSS)",
-                "Wiertła / Noże"
+                "Stal hartowana (>60 HRC)",
+                "Stal narzędziowa szybkotnąca (HSS)",
+                "Długie noże gilotynowe / rębaki",
+                "Prowadnice liniowe i stoły maszynowe"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica o najwyższej czystości chemicznej ziarna (biała). Gwarantuje bezpieczeństwo termiczne obrabianych krawędzi.",
+                "naglowek_marketingowy": "Precyzyjny segment trapezowy (Typ 3109) z elektrokorundu szlachetnego na spoiwie żywicznym. Zaprojektowany do dokładnego, bezprzypałowego szlifowania płaszczyzn długich elementów tnących, gdzie kluczowe jest tłumienie drgań i wysoka jakość wykończenia powierzchni.",
                 "lista_zastosowan": [
-                    "Precyzyjne ostrzenie przyrządów skrawających: wierteł, noży tokarskich, dłut, strugów oraz frezów.",
-                    "Precyzyjne, wykończeniowe szlifowanie stali nierdzewnej (INOX) na zimno – czyste ziarno chroni przed przypaleniami struktury metalu."
+                    "Maszynowe szlifowanie i ostrzenie czołowe długich noży przemysłowych (gilotynowych, introligatorskich, fornirujących) wykonanych ze stali narzędziowych i szybkotnących (HSS).",
+                    "Wykończeniowa obróbka szerokich płyt stalowych, elementów matryc oraz prowadnic na szlifierkach doczołowych z mocowaniem segmentów w układzie jodełkowym/klinowym.",
+                    "Półwykończeniowe wyrównywanie powierzchni części maszyn po obróbce termicznej bez ryzyka powstawania mikropęknięć hartowniczych."
                 ],
-                "ostrzezenie_krytyczne": "Masowej, miękkiej stali konstrukcyjnej (miękki metal błyskawicznie wyłamuje i kruszy kruche ziarno szlachetne, drastycznie zwiększając zużycie). Do zgrubnego oczyszczania konstrukcji INOX wybierz elektrokorund cyrkonowy."
+                "ostrzezenie_krytyczne": "Stosowania do ręcznego ostrzenia narzędzi warsztatowych (wierteł, dłut) – spoiwo żywiczne o twardości K wymaga kontrolowanego, maszynowego docisku płaszczyznowego. Nie nadaje się do obróbki żeliwa, stopów aluminium oraz węglików spiekanych (do tych materiałów stosuj węglik krzemu 98C lub 99C)."
             }
         }
     },
@@ -1949,29 +1953,28 @@
         "bond_name": "żywiczne (bakielitowe)",
         "bond_source": "title",
         "zastosowanie_detale": {
-            "grupa_glowna_id": "BUDOWLANKA_KOLOROWE",
-            "grupa_glowna_nazwa": "Materiały budowlane i metale nieżelazne",
+            "grupa_glowna_id": "ZELIWO_KAMIENIARSTWO",
+            "grupa_glowna_nazwa": "Ciężkie szlifowanie żeliwa i obróbka kamienia",
             "tagi_zastosowania": [
-                "Beton i kamień",
-                "Aluminium i miedź",
-                "Żeliwo szare"
+                "Segment nerkowy Typ 3110",
+                "Maszynowe szlifowanie doczołowe",
+                "Głowice nerkowe wielosegmentowe",
+                "Spoiwo żywiczne tłumiące drgania"
             ],
             "filtry_materialowe": [
-                "Aluminium",
-                "Miedź",
-                "Mosiądz",
-                "Beton",
-                "Kamień naturalny",
-                "Gres / Granit",
-                "Żeliwo szare"
+                "Żeliwo szare i sferoidalne",
+                "Odlewy twarde z mechanicznymi naddatkami",
+                "Granit i twarde kamienie naturalne",
+                "Duże powierzchnie lastriko / betonu posadzkowego"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Specjalistyczna ściernica techniczna o wysokiej ostrości. Idealnie rozbija kryształy kwarcu i nie zalepia się miękkim wiórem.",
+                "naglowek_marketingowy": "Przemysłowy segment nerkowy (Typ 3110) z czarnego węglika krzemu (98C). Połączenie wytrzymałego spoiwa żywicznego o twardości N z unikalną geometrią nerkową zapewnia bezkompromisową wydajność przy zgrubnym, maszynowym wyrównywaniu dużych płaszczyzn.",
                 "lista_zastosowan": [
-                    "Szlifowanie materiałów budowlanych: betonu, kamienia naturalnego, gresu, granitu, cegieł oraz lastriko.",
-                    "Obróbka metali nieżelaznych (aluminium, miedź, mosiądz) oraz żeliwa szarego z wolnymi płatkami grafitu."
+                    "Ciężkie maszynowe szlifowanie doczołowe dużych odlewów żeliwnych, korpusów maszyn oraz obudów przekładni w celu usunięcia naddatków odlewniczych.",
+                    "Wielkopowierzchniowe wyrównywanie, kalibracja i zdzieranie twardych płyt granitowych oraz posadzek lastrykowych na maszynach portalowych i szlifierkach wzdłużnych.",
+                    "Czyszczenie i wygładzanie trudnostopowych elementów konstrukcyjnych po procesach spawania lub zgrzewania wielkogabarytowego."
                 ],
-                "ostrzezenie_krytyczne": "Stali konstrukcyjnej i hartowanej. Wolny węgiel w tarczy reaguje ze stalą, a wysoka plastyczność stali momentalnie zalepia pory ściernicy, drastycznie obniżając jej wydajność."
+                "ostrzezenie_krytyczne": "Stosowania do obróbki stali (konstrukcyjnych, stopowych i hartowanych) – wolny węgiel w strukturze węglika wchodzi w reakcję z żelazem, co skutkuje błyskawicznym stępieniem i zużyciem narzędzia. Nie stosować w operacjach wymagających spoiwa ceramicznego (sztywnego) – żywica ma tendencję do minimalnego ugięcia pod skrajnym, punktowym naciskiem."
             }
         }
     },
@@ -1999,29 +2002,29 @@
         "bond_name": "żywiczne (bakielitowe)",
         "bond_source": "title",
         "zastosowanie_detale": {
-            "grupa_glowna_id": "BUDOWLANKA_KOLOROWE",
-            "grupa_glowna_nazwa": "Materiały budowlane i metale nieżelazne",
+            "grupa_glowna_id": "ZELIWO_KAMIENIARSTWO",
+            "grupa_glowna_nazwa": "Ciężkie szlifowanie żeliwa i obróbka kamienia",
             "tagi_zastosowania": [
-                "Beton i kamień",
-                "Aluminium i miedź",
-                "Żeliwo szare"
+                "Mocowanie na wkładki gwintowe",
+                "Czyszczenie odlewów (zgrubne)",
+                "Spoiwo żywiczne odporne na uderzenia",
+                "Szlifowanie wielkopowierzchniowe szyn"
             ],
             "filtry_materialowe": [
-                "Aluminium",
-                "Miedź",
-                "Mosiądz",
-                "Beton",
-                "Kamień naturalny",
-                "Gres / Granit",
-                "Żeliwo szare"
+                "Żeliwo szare",
+                "Żeliwo ciągliwe / sferoidalne",
+                "Granit / Twardy kamień naturalny",
+                "Lastriko",
+                "Odlewy ze stopów trudnotnących"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Specjalistyczna ściernica techniczna o wysokiej ostrości. Idealnie rozbija kryształy kwarcu i nie zalepia się miękkim wiórem.",
+                "naglowek_marketingowy": "Wytrzymały mechanicznie segment zbrojony (Typ 3121) z czarnego węglika krzemu (98C) na spoiwie żywicznym. Wyposażony w zintegrowane wkładki gwintowe do sztywnego przykręcania bezpośrednio do tarczy maszynowej. Stworzony do agresywnego zdzierania naddatków w trudnych warunkach przemysłowych.",
                 "lista_zastosowan": [
-                    "Szlifowanie materiałów budowlanych: betonu, kamienia naturalnego, gresu, granitu, cegieł oraz lastriko.",
-                    "Obróbka metali nieżelaznych (aluminium, miedź, mosiądz) oraz żeliwa szarego z wolnymi płatkami grafitu."
+                    "Zgrubne oczyszczanie i szlifowanie wielkogabarytowych odlewów żeliwnych (szarych i sferoidalnych) w odlewniach oraz zakładach hutniczych.",
+                    "Maszynowe wyrównywanie i kalibracja powierzchni płyt z twardego kamienia naturalnego (granit) oraz posadzek typu lastriko na szlifierkach portalowych.",
+                    "Przemysłowe szlifowanie i regeneracja elementów torowisk (szyn) oraz rozjazdów kolejowych na specjalistycznych maszynach torowych."
                 ],
-                "ostrzezenie_krytyczne": "Stali konstrukcyjnej i hartowanej. Wolny węgiel w tarczy reaguje ze stalą, a wysoka plastyczność stali momentalnie zalepia pory ściernicy, drastycznie obniżając jej wydajność."
+                "ostrzezenie_krytyczne": "Stosowania do obróbki miękkich metali kolorowych (aluminium, miedź, mosiądz) – skrajnie grube ziarno 20 ulegnie natychmiastowemu zakleszczeniu i zalepieniu plastycznym wiórem, co uniemożliwi dalszą pracę. Nie stosować w maszynach wymagających mocowania klinowego (segment przeznaczony wyłącznie pod montaż śrubowy)."
             }
         }
     },
@@ -22773,23 +22776,25 @@
             "grupa_glowna_id": "STAL_HARTOWANA",
             "grupa_glowna_nazwa": "Stal hartowana / narzędziowa",
             "tagi_zastosowania": [
-                "Ostrzenie narzędzi",
-                "Szlifowanie na zimno",
-                "Precyzyjne wykończenie"
+                "Segment szlifierski",
+                "Szlifowanie płaszczyzn",
+                "Głowice segmentowe",
+                "Samoostrzenie (Miękkie K)"
             ],
             "filtry_materialowe": [
-                "Stal hartowana",
+                "Stal hartowana (>55 HRC)",
                 "Stal narzędziowa",
                 "Stal szybkotnąca (HSS)",
-                "Wiertła / Noże"
+                "Noże gilotynowe / Matryce"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica o najwyższej czystości chemicznej ziarna (biała). Gwarantuje bezpieczeństwo termiczne obrabianych krawędzi.",
+                "naglowek_marketingowy": "Przemysłowy segment prostokątny (Typ 3101) z białego elektrokorundu szlachetnego (99A). Bardzo miękka charakterystyka (K) w połączeniu z grubym ziarnem 36 gwarantuje agresywne usuwanie naddatków przy zachowaniu absolutnego bezpieczeństwa termicznego.",
                 "lista_zastosowan": [
-                    "Precyzyjne ostrzenie przyrządów skrawających: wierteł, noży tokarskich, dłut, strugów oraz frezów.",
-                    "Precyzyjne, wykończeniowe szlifowanie stali nierdzewnej (INOX) na zimno – czyste ziarno chroni przed przypaleniami struktury metalu."
+                    "Maszynowe szlifowanie czołowe dużych płaszczyzn ze stali hartowanych i narzędziowych przy użyciu głowic segmentowych (szlifierki pionowe karuzelowe i wzdłużne).",
+                    "Precyzyjne, bezprzypałowe ostrzenie i regeneracja długich noży przemysłowych, gilotynowych, noży do rębaków oraz matryc i form wtryskowych.",
+                    "Wydajne wyrównywanie powierzchni płyt pancernych, prowadnic maszynowych oraz elementów tłoczników po obróbce cieplnej."
                 ],
-                "ostrzezenie_krytyczne": "Masowej, miękkiej stali konstrukcyjnej (miękki metal błyskawicznie wyłamuje i kruszy kruche ziarno szlachetne, drastycznie zwiększając zużycie). Do zgrubnego oczyszczania konstrukcji INOX wybierz elektrokorund cyrkonowy."
+                "ostrzezenie_krytyczne": "Stosowania do szlifowania masowego miękkich, ciągliwych stali konstrukcyjnych – skrajnie miękkie spoiwo K doprowadzi w takim przypadku do lawinowego, drastycznego zużycia segmentu. Produkt przeznaczony wyłącznie do ciężkich operacji maszynowych (nie nadaje się do precyzyjnego ostrzenia narzędzi warsztatowych z ręki)."
             }
         }
     },
@@ -22820,23 +22825,25 @@
             "grupa_glowna_id": "STAL_HARTOWANA",
             "grupa_glowna_nazwa": "Stal hartowana / narzędziowa",
             "tagi_zastosowania": [
-                "Ostrzenie narzędzi",
-                "Szlifowanie na zimno",
-                "Precyzyjne wykończenie"
+                "Segment szlifierski wykończeniowy",
+                "Dokładne szlifowanie płaszczyzn",
+                "Głowice segmentowe",
+                "Bezprzypałowe spoiwo J"
             ],
             "filtry_materialowe": [
-                "Stal hartowana",
+                "Stal hartowana (>60 HRC)",
                 "Stal narzędziowa",
                 "Stal szybkotnąca (HSS)",
-                "Wiertła / Noże"
+                "Cienkie noże gilotynowe"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica o najwyższej czystości chemicznej ziarna (biała). Gwarantuje bezpieczeństwo termiczne obrabianych krawędzi.",
+                "naglowek_marketingowy": "Precyzyjny segment prostokątny (Typ 3101) o drobniejszej gradacji 46 i bardzo miękkiej charakterystyce (J). Stworzony do operacji wykończeniowych, gdzie kluczowa jest niska chropowatość powierzchni i zero przypaleń.",
                 "lista_zastosowan": [
-                    "Precyzyjne ostrzenie przyrządów skrawających: wierteł, noży tokarskich, dłut, strugów oraz frezów.",
-                    "Precyzyjne, wykończeniowe szlifowanie stali nierdzewnej (INOX) na zimno – czyste ziarno chroni przed przypaleniami struktury metalu."
+                    "Maszynowe, wykończeniowe szlifowanie czołowe płaszczyzn ze stali szybkotnących (HSS) i hartowanych.",
+                    "Ostrzenie i dokładne wyrównywanie krawędzi tnących długich noży gilotynowych oraz elementów matryc i stempli.",
+                    "Końcowa obróbka płyt wzorcowych, prowadnic liniowych oraz powierzchni wymagających doskonałej struktury geometrycznej."
                 ],
-                "ostrzezenie_krytyczne": "Masowej, miękkiej stali konstrukcyjnej (miękki metal błyskawicznie wyłamuje i kruszy kruche ziarno szlachetne, drastycznie zwiększając zużycie). Do zgrubnego oczyszczania konstrukcji INOX wybierz elektrokorund cyrkonowy."
+                "ostrzezenie_krytyczne": "Stosowania do szlifowania zgrubnego miękkich stali konstrukcyjnych – skrajnie miękka struktura (J) natychmiast ulegnie lawinowemu zużyciu. Nie nadaje się do obróbki żeliwa i aluminium (do tego stosuj segmenty z węglika krzemu, np. 98C)."
             }
         }
     },
@@ -22867,23 +22874,25 @@
             "grupa_glowna_id": "STAL_HARTOWANA",
             "grupa_glowna_nazwa": "Stal hartowana / narzędziowa",
             "tagi_zastosowania": [
-                "Ostrzenie narzędzi",
-                "Szlifowanie na zimno",
-                "Precyzyjne wykończenie"
+                "Ciężki segment szlifierski",
+                "Wysoki posuw maszynowy",
+                "Samoostrzenie ultra-miękkie H",
+                "Duże głowice maszynowe"
             ],
             "filtry_materialowe": [
-                "Stal hartowana",
-                "Stal narzędziowa",
-                "Stal szybkotnąca (HSS)",
-                "Wiertła / Noże"
+                "Stal hartowana wielkogabarytowa",
+                "Stale stopowe trudnofrezowalne",
+                "Noże przemysłowe / rębaki",
+                "Bloki matrycowe"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica o najwyższej czystości chemicznej ziarna (biała). Gwarantuje bezpieczeństwo termiczne obrabianych krawędzi.",
+                "naglowek_marketingowy": "Wzmocniony gabarytowo segment prostokątny (Typ 3101) o twardości H. Ekstremalnie miękka charakterystyka zapewnia ciągłe odsłanianie świeżych, ostrych ziaren elektrokorundu szlachetnego pod dużym naciskiem.",
                 "lista_zastosowan": [
-                    "Precyzyjne ostrzenie przyrządów skrawających: wierteł, noży tokarskich, dłut, strugów oraz frezów.",
-                    "Precyzyjne, wykończeniowe szlifowanie stali nierdzewnej (INOX) na zimno – czyste ziarno chroni przed przypaleniami struktury metalu."
+                    "Maszynowe usuwanie dużych naddatków szlifierskich na wielkogabarytowych płytach stalowych po obróbce cieplnej.",
+                    "Regeneracja i ciężkie szlifowanie grubych noży do rębaków przemysłowych, gilotyn oraz wielkich bloków formierskich.",
+                    "Praca na szlifierkach pionowych z automatycznym dociskiem o dużej mocy, gdzie twardsze segmenty uległyby natychmiastowemu oszkliwieniu."
                 ],
-                "ostrzezenie_krytyczne": "Masowej, miękkiej stali konstrukcyjnej (miękki metal błyskawicznie wyłamuje i kruszy kruche ziarno szlachetne, drastycznie zwiększając zużycie). Do zgrubnego oczyszczania konstrukcji INOX wybierz elektrokorund cyrkonowy."
+                "ostrzezenie_krytyczne": "Pracy przy niskim docisku maszynowym lub ręcznym – tarcza o twardości H wymaga stałego, mocnego oporu materiału, aby prawidłowo pracować. Przy małym docisku zużyje się nierównomiernie i popęka."
             }
         }
     },
@@ -22914,23 +22923,25 @@
             "grupa_glowna_id": "STAL_HARTOWANA",
             "grupa_glowna_nazwa": "Stal hartowana / narzędziowa",
             "tagi_zastosowania": [
-                "Ostrzenie narzędzi",
-                "Szlifowanie na zimno",
-                "Precyzyjne wykończenie"
+                "Segment trapezowy Typ 3109",
+                "Szlifowanie bezśladowe",
+                "Głowice jodełkowe",
+                "Mocowanie klinowe"
             ],
             "filtry_materialowe": [
-                "Stal hartowana",
+                "Płyty stalowe szlifowane na czysto",
                 "Stal narzędziowa",
-                "Stal szybkotnąca (HSS)",
-                "Wiertła / Noże"
+                "Stal hartowana",
+                "Noże przemysłowe"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica o najwyższej czystości chemicznej ziarna (biała). Gwarantuje bezpieczeństwo termiczne obrabianych krawędzi.",
+                "naglowek_marketingowy": "Specjalistyczny segment trapezowy (Typ 3109) z elektrokorundu szlachetnego. Trapezowa geometria pozwala na bezstrefowe zachodzenie śladów szlifowania, gwarantując idealnie gładką płaszczyznę bez przeskoków.",
                 "lista_zastosowan": [
-                    "Precyzyjne ostrzenie przyrządów skrawających: wierteł, noży tokarskich, dłut, strugów oraz frezów.",
-                    "Precyzyjne, wykończeniowe szlifowanie stali nierdzewnej (INOX) na zimno – czyste ziarno chroni przed przypaleniami struktury metalu."
+                    "Maszynowe szlifowanie czołowe płaszczyzn w głowicach segmentowych z ukośnym/klinowym układem gniazd.",
+                    "Wydajne i precyzyjne wyrównywanie szerokich płyt stalowych, stołów maszynowych oraz prowadnic, gdzie niedopuszczalne są ślady łączeń przejść narzędzia.",
+                    "Ostrzenie długich noży gilotynowych w maszynach wymagających mocowania trapezowego."
                 ],
-                "ostrzezenie_krytyczne": "Masowej, miękkiej stali konstrukcyjnej (miękki metal błyskawicznie wyłamuje i kruszy kruche ziarno szlachetne, drastycznie zwiększając zużycie). Do zgrubnego oczyszczania konstrukcji INOX wybierz elektrokorund cyrkonowy."
+                "ostrzezenie_krytyczne": "Montowania w standardowych głowicach przeznaczonych do segmentów prostokątnych (Typ 3101) – inny kąt ścianek uniemożliwi bezpieczne zablokowanie segmentu w gnieździe, co grozi rozerwaniem głowicy podczas pracy!"
             }
         }
     },
@@ -22958,29 +22969,28 @@
         "bond_name": "ceramiczne (witryfikowane)",
         "bond_source": "title",
         "zastosowanie_detale": {
-            "grupa_glowna_id": "BUDOWLANKA_KOLOROWE",
-            "grupa_glowna_nazwa": "Materiały budowlane i metale nieżelazne",
+            "grupa_glowna_id": "AUTO_SZLIF",
+            "grupa_glowna_nazwa": "Regeneracja silników / Żeliwo i Aluminium",
             "tagi_zastosowania": [
-                "Beton i kamień",
-                "Aluminium i miedź",
-                "Żeliwo szare"
+                "Planowanie głowic",
+                "Szlifowanie bloków silnika",
+                "Segment pierścieniowy Typ 3113",
+                "Węglik krzemu do żeliwa"
             ],
             "filtry_materialowe": [
-                "Aluminium",
-                "Miedź",
-                "Mosiądz",
-                "Beton",
-                "Kamień naturalny",
-                "Gres / Granit",
-                "Żeliwo szare"
+                "Żeliwo szare / stopowe",
+                "Stopy aluminium (Siluminy)",
+                "Metale kolorowe",
+                "Bloki i głowice spalinowe"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Specjalistyczna ściernica techniczna o wysokiej ostrości. Idealnie rozbija kryształy kwarcu i nie zalepia się miękkim wiórem.",
+                "naglowek_marketingowy": "Profilowany segment pierścieniowy (Typ 3113) z czarnego węglika krzemu (98C). Dedykowany i niezastąpiony przyrząd w warsztatach zajmujących się obróbką i regeneracją silników spalinowych.",
                 "lista_zastosowan": [
-                    "Szlifowanie materiałów budowlanych: betonu, kamienia naturalnego, gresu, granitu, cegieł oraz lastriko.",
-                    "Obróbka metali nieżelaznych (aluminium, miedź, mosiądz) oraz żeliwa szarego z wolnymi płatkami grafitu."
+                    "Planowanie, wyrównywanie i szlifowanie płaszczyzn styku żeliwnych oraz aluminiowych głowic i bloków silników samochodów osobowych i ciężarowych.",
+                    "Obróbka wykończeniowa odlewów z żeliwa szarego, gresu oraz twardych elementów wykonanych z metali kolorowych na szlifierkach warsztatowych.",
+                    "Szlifowanie powierzchni luster zaworowych oraz innych podzespołów motoryzacyjnych wymagających ostrego ziarna węglikowego."
                 ],
-                "ostrzezenie_krytyczne": "Stali konstrukcyjnej i hartowanej. Wolny węgiel w tarczy reaguje ze stalą, a wysoka plastyczność stali momentalnie zalepia pory ściernicy, drastycznie obniżając jej wydajność."
+                "ostrzezenie_krytyczne": "Stosowania do szlifowania stali hartowanej i konstrukcyjnej – wolny węgiel w strukturze 98C wchodzi w reakcję chemiczną ze stalą w wysokiej temperaturze, powodując błyskawiczne stępienie tarczy, jej szkliwienie i brak bicia materiału."
             }
         }
     },
@@ -30070,7 +30080,7 @@
             }
         ],
         "kamien_do": "",
-        "material": "elektrokorund szlachetny",
+        "material": "węglik krzemu zielony",
         "gritSize": 46,
         "typ": "3103",
         "srednica_dlugosc": "150",
@@ -30084,26 +30094,29 @@
         "bond_name": "ceramiczne (witryfikowane)",
         "bond_source": "title",
         "zastosowanie_detale": {
-            "grupa_glowna_id": "STAL_HARTOWANA",
-            "grupa_glowna_nazwa": "Stal hartowana / narzędziowa",
+            "grupa_glowna_id": "WEGLIKI_SPIEKANE",
+            "grupa_glowna_nazwa": "Węgliki spiekane (widia), ceramika i tytan",
             "tagi_zastosowania": [
-                "Ostrzenie narzędzi",
-                "Szlifowanie na zimno",
-                "Precyzyjne wykończenie"
+                "Segment pierścieniowo-trapezowy",
+                "Szlifowanie widii (noże/narzędzia)",
+                "Zielony węglik krzemu 99C",
+                "Samoostrzenie pod twarde materiały"
             ],
             "filtry_materialowe": [
-                "Stal hartowana",
-                "Stal narzędziowa",
-                "Stal szybkotnąca (HSS)",
-                "Wiertła / Noże"
+                "Węgliki spiekane (widia)",
+                "Ceramika techniczna",
+                "Stopy tytanu",
+                "Metale skrajnie twarde i kruche",
+                "Żeliwo utwardzane / kokilowe"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica o najwyższej czystości chemicznej ziarna (biała). Gwarantuje bezpieczeństwo termiczne obrabianych krawędzi.",
+                "naglowek_marketingowy": "Specjalistyczny segment trapezowo-pierścieniowy (Typ 3103) wykonany z najwyższej czystości zielonego węglika krzemu (99C). Przeznaczony do najcięższych operacji szlifowania materiałów o ekstremalnej twardości, gdzie standardowe korundy ulegają natychmiastowemu stępieniu.",
                 "lista_zastosowan": [
-                    "Precyzyjne ostrzenie przyrządów skrawających: wierteł, noży tokarskich, dłut, strugów oraz frezów.",
-                    "Precyzyjne, wykończeniowe szlifowanie stali nierdzewnej (INOX) na zimno – czyste ziarno chroni przed przypaleniami struktury metalu."
+                    "Maszynowe szlifowanie i ostrzenie czołowe elementów wykonanych z węglików spiekanych (płytki widiowe, ostrza noży, matryce narzędziowe).",
+                    "Precyzyjna obróbka płaszczyznowa komponentów z ceramiki technicznej, szkła kwarcowego oraz twardych powłok napawanych.",
+                    "Szlifowanie stopów tytanu oraz elementów z żeliwa utwardzanego (kokilowego) w przemyśle maszynowym."
                 ],
-                "ostrzezenie_krytyczne": "Masowej, miękkiej stali konstrukcyjnej (miękki metal błyskawicznie wyłamuje i kruszy kruche ziarno szlachetne, drastycznie zwiększając zużycie). Do zgrubnego oczyszczania konstrukcji INOX wybierz elektrokorund cyrkonowy."
+                "ostrzezenie_krytyczne": "Stosowania do obróbki jakichkolwiek stali (zarówno miękkich konstrukcyjnych, jak i hartowanych narzędziowych). Wysokie powinowactwo chemiczne węgla do żelaza w wysokich temperaturach powoduje lawinowe, chemiczne niszczenie struktury ziarna zielonego węglika, całkowicie pozbawiając ściernicę właściwości skrawających."
             }
         }
     },

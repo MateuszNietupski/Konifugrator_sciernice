@@ -59,7 +59,7 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                 columns={displayColumns}
                 rowHeight={80}
                 initialState={{
-                    pagination: { paginationModel: { pageSize: 10 } },
+                    pagination: { paginationModel: { pageSize: isMobile ? 10 : 20 } },
                     sorting: { sortModel: [{ field: 'Length', sort: 'asc' }] },
                     columns: {
                         columnVisibilityModel: {
@@ -67,7 +67,7 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                         }
                     }
                 }}
-                pageSizeOptions={[5, 10, 20, 50]}
+                pageSizeOptions={[5, 10, 20, 50, 100]}
                 disableRowSelectionOnClick
                 onCellClick={(params, event) => {
                     event.stopPropagation();
