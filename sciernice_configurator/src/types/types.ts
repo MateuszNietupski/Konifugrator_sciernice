@@ -23,5 +23,6 @@ export interface AbrasiveRow {
     material: string;
     type: string;
     bond: string;
+    hardness: string;
     zastosowanie_detale?: ApplicationDetails;
 }

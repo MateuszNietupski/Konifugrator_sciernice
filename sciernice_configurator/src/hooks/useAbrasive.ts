@@ -14,6 +14,7 @@ interface RawAbrasiveItem {
     material?: string | null;
     typ?: string | null;
     bond?: string | null;
+    extracted_hardness?: string | null;
     attributes?: Array<{ name: string; value: string }>;
     zastosowanie_detale?: any;
 }
@@ -67,6 +68,7 @@ const abrasives: AbrasiveRow[] = (rawAbrasives as RawAbrasiveItem[]).map((m) => 
         material: m.material ? m.material : "",
         type: m.typ ? m.typ : "",
         bond: m.bond ? m.bond : "",
+        hardness: m.extracted_hardness ? m.extracted_hardness : "",
         zastosowanie_detale: mappedApplications
     };
 });

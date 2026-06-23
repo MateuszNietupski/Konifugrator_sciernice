@@ -158,12 +158,11 @@ export default function FilterPanel({
         />
     );
 
-    const renderGritsFilter = (size: 'small' | 'medium' = 'medium') => (
+    const renderGritsFilter = () => (
         <GritsFilter
             value={selectedGrits}
             options={gritOptions}
             onChange={onGritsChange}
-            size={size}
             facetCounts={facetCounts.Grit}
         />
     );

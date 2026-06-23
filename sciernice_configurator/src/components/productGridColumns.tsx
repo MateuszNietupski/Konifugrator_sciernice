@@ -87,7 +87,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
     field: 'type',
     disableColumnMenu: true,
     headerName: 'Typ ściernicy',
-    flex: 1,
+    flex: 1.5,
     headerAlign: 'center' as const,
     align: 'center' as const,
     minWidth: isMobile ? 110 : 120,
@@ -165,7 +165,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
     headerName: "Otwór",
     description: "d – Średnica otworu wewnętrznego (dla ściernic tarczowych) lub średnica trzpienia (d dla ściernic trzpieniowych). Nie dotyczy osełek i segmentów.",
     flex: 1,
-    minWidth: isMobile ? 70 : 75,
+    minWidth: isMobile ? 70 : 70,
     headerAlign: 'center',
     align: 'center',
     type: 'number',
@@ -189,7 +189,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
 
       if (!hint) {
         return (
-          <Box sx={{ fontSize: isMobile ? 11 : 13, fontWeight: 500 }}>
+          <Box sx={{ fontSize: isMobile ? 11 : 13, fontWeight: 650 }}>
             {gritValue}
           </Box>
         );
@@ -231,22 +231,21 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
   {
     field: "material",
     disableColumnMenu: true,
-    headerName: "Materiał / Spoiwo",
-    flex: 1.5,
+    headerName: "Charakterystyka",
+    flex: 1.8,
     headerAlign: 'center',
     align: 'center',
-    minWidth: isMobile ? 130 : 160,
+    minWidth: isMobile ? 130 : 185,
     renderCell: (params) => {
       const materialName = params.value || '';
       const colors = materialColors[materialName] || { bg: '#F5F5F5', border: '#9E9E9E', text: '#616161' };
       const description = materialDescriptions[materialName] || 'Brak dodatkowego opisu.';
-
+      const hardness = (params.row.hardness || '').trim().toUpperCase();
       const rawBondCode = (params.row.bond || '').trim().toUpperCase();
 
       const bondId = getBondGroupId(rawBondCode);
       const bondGroup = BOND_FILTER_OPTIONS.find(g => g.id === bondId);
       const bondColors = bondGroup?.colorConfig || { bg: '#616161', text: '#ffffff' };
-
       const bondLabelPl = bondGroup ? bondGroup.label : '';
       const bondDescription = bondGroup ? bondGroup.description : '';
 
@@ -259,6 +258,16 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
             enterTouchDelay={0}
             title={
               <Box sx={{ p: 0.5, textAlign: 'left', maxWidth: 260 }}>
+                {hardness && (
+                  <>
+                    <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#f7571e', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
+                      Twardość ściernicy
+                    </Typography>
+                    <Typography variant="caption" component="div" sx={{ mb: 0.75, fontWeight: 700, fontSize: 14 }}>
+                      Klasa twardości: <b>{hardness}</b>
+                    </Typography>
+                  </>
+                )}
                 <Typography variant="caption" component="div" sx={{ fontWeight: 700, color: '#f7571e', textTransform: 'uppercase', letterSpacing: 0.4, fontSize: 10 }}>
                   Materiał
                 </Typography>
@@ -271,7 +280,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                       Spoiwo
                     </Typography>
                     <Typography variant="caption" component="div">
-                      <b>{rawBondCode} — {bondLabelPl}</b>{' '}
+                      <b>{rawBondCode} — {bondLabelPl}</b>
                     </Typography>
                     {bondDescription && (
                       <Typography variant="caption" component="div" sx={{ mt: 0.25, opacity: 0.9 }}>
@@ -320,6 +329,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  gap: 0.75,
                   px: 1,
                   py: 0.5,
                   color: colors.text,
@@ -329,12 +339,39 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                   textAlign: 'center',
                   whiteSpace: 'normal',
                   wordBreak: 'break-word',
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: 'vertical',
                   overflow: 'hidden',
                 }}
               >
-                {materialName}
+                {hardness && (
+                  <Box
+                    component="span"
+                    aria-label={`Twardość ${hardness}`}
+                    sx={{
+                      flex: '0 0 auto',
+                      fontWeight: 900,
+                      fontSize: isMobile ? 14 : 16,
+                      lineHeight: 1,
+                      color: colors.text,
+                      letterSpacing: 0.5,
+                      opacity: 0.95,
+                      borderRight: `1px solid ${colors.border}`,
+                      pr: 0.75,
+                    }}
+                  >
+                    {hardness}
+                  </Box>
+                )}
+                <Box
+                  component="span"
+                  sx={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                  }}
+                >
+                  {materialName}
+                </Box>
               </Box>
 
               {rawBondCode && (
@@ -342,7 +379,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                   aria-label={`Spoiwo ${bondLabelPl}`}
                   sx={{
                     flex: '0 0 auto',
-                    px: isMobile ? 0.8 : 1.2,
+                    px: isMobile ? 0.9 : 1.25,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -351,8 +388,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                     fontWeight: 800,
                     fontSize: isMobile ? 11 : 12,
                     lineHeight: 1,
-                    letterSpacing: 0,
-                    borderLeft: `1px solid ${colors.border}`, 
+                    borderLeft: `1px solid ${colors.border}`,
                   }}
                 >
                   {rawBondCode}
@@ -455,7 +491,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                 }
                 arrow
                 placement="top"
-                disableHoverListener={isMobile} 
+                disableHoverListener={isMobile}
                 enterTouchDelay={0}
               >
                 <WarningAmberRoundedIcon
@@ -463,7 +499,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                     fontSize: { xs: 16, md: 19 },
                     color: 'secondary.main',
                     flexShrink: 0,
-                    animation: 'pulse 2s infinite ease-in-out', 
+                    animation: 'pulse 2s infinite ease-in-out',
                   }}
                 />
               </Tooltip>
