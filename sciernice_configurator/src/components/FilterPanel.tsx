@@ -373,7 +373,7 @@ export default function FilterPanel({
                 </Box>
                 <Divider sx={{ my: 2 }} />
 
-                <Accordion>
+                <Accordion defaultExpanded>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         sx={{
@@ -388,10 +388,10 @@ export default function FilterPanel({
                     </AccordionSummary>
                     <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
                         <Box sx={{ mb: 3, mt: 2 }}>
-                            {renderMaterialFilter()}
+                            {renderGritsFilter()}
                         </Box>
                         <Box sx={{ mb: 3 }}>
-                            {renderGritsFilter()}
+                            {renderMaterialFilter()}
                         </Box>
                         <Box sx={{ mb: 3 }}>
                             {renderBondFilter()}
