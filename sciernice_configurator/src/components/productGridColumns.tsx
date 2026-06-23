@@ -6,7 +6,8 @@ import Chip from '@mui/material/Chip';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import StorefrontIcon from '@mui/icons-material/Storefront';
-import { materialDescriptions, materialColors, getGritHint, getWheelTypeName, wheelTypesData } from '../utils/abrasivesConsts';
+import { materialDescriptions, materialColors, getWheelTypeName, wheelTypesData } from '../utils/abrasivesConsts';
+import { getGritHint } from '../utils/gritDataConsts';
 import { BOND_FILTER_OPTIONS, getBondGroupId } from '../utils/filterGroups';
 import type { AbrasiveRow } from '../types/types';
 import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded';
@@ -184,7 +185,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
     type: "number",
     renderCell: (params) => {
       const gritValue = params.value;
-      const hint = getGritHint(gritValue, isMobile);
+      const hint = getGritHint(gritValue);
 
       if (!hint) {
         return (

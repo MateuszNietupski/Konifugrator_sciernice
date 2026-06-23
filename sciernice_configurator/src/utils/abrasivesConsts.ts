@@ -23,26 +23,6 @@ export const materialColors: Record<string, { bg: string; border: string; text: 
     'włóknina': { bg: '#E0F2F1', border: '#4DB6AC', text: '#004D40' },
 };
 
-export const gritData: Record<string, { type: string; range: string }> = {
-    '24': { type: 'Zgrubna', range: 'Duże naddatki, szybkie zbieranie materiału' },
-    '36': { type: 'Zgrubna', range: 'Wstępne oczyszczanie i usuwanie naddatków' },
-    '46': { type: 'Średnia', range: 'Uniwersalne szlifowanie półwykańczające' },
-    '60': { type: 'Średnia', range: 'Standardowe ostrzenie i wykańczanie powierzchni' },
-    '80': { type: 'Wykańczająca', range: 'Precyzyjne wykańczanie i ostrzenie narzędzi' },
-    '100': { type: 'Wykańczająca', range: 'Bardzo dokładne wygładzanie krawędzi' },
-    '120': { type: 'Bardzo drobna', range: 'Superwykończenie i polerowanie końcowe' },
-};
-
-export const getGritHint = (gritValue: string | number, isMobile = false) => {
-    const stringGrit = String(gritValue);
-    const data = gritData[stringGrit];
-    if (!data) return '';
-
-    if (isMobile) return `${data.type}: ${data.range}`;
-
-    return `Obróbka ${data.type.toLowerCase()}. Przeznaczenie: ${data.range}`;
-};
-
 export const wheelTypesData: Record<string, { name: string; desc: string }> = {
     // --- ŚCIERNICE KONWENCJONALNE PŁASKIE I NARZĘDZIOWE (ISO 525) ---
     '1': {
@@ -99,20 +79,20 @@ export const wheelTypesData: Record<string, { name: string; desc: string }> = {
 
     // === ŚCIERNICE GARNKOWE I KUBKOWE ===
     '6': { name: 'Garnkowa walcowa (Typ 6)', desc: 'Ściernica garnkowa cylindryczna do szlifowania czołowego płaszczyzn.' },
-    '6A2': { name: 'Garnkowa obwodowo-czołowa (6A2)', desc: 'Garnek supertwardy (diament/CBN) do precyzyjnego szlifowania doczołowego i ostrzenia narzędzi.' }, // Usunięte "diamentowa"
+    '6A2': { name: 'Garnkowa obwodowo-czołowa (6A2)', desc: 'Garnek supertwardy (diament/CBN) do precyzyjnego szlifowania doczołowego i ostrzenia narzędzi.' },
     '6001': { name: 'Garnkowa walcowa z gwintem (Typ 6001)', desc: 'Ściernica garnkowa z wkładką gwintową M14 szybkiego montażu.' },
     '6002': { name: 'Garnkowa walcowa z gwintem (Typ 6002)', desc: 'Ściernica garnkowa ze zintegrowaną od tyłu wkładką mocującą.' },
     '6003': { name: 'Garnkowa walcowa z gwintem (Typ 6003)', desc: 'Ściernica garnkowa z wkładką gwintową do szlifierek czołowo-płaszczyznowych.' },
     '6004': { name: 'Garnkowa walcowa z gwintem (Typ 6004)', desc: 'Ściernica garnkowa o grubym profilu ścianki z wkładką gwintową.' },
     '6005': { name: 'Garnkowa walcowa z gwintem (Typ 6005)', desc: 'Wysoka ściernica garnkowa walcowa z mocowaniem gwintowym do głębokich założeń.' },
     '11': { name: 'Garnkowa stożkowa (Typ 11)', desc: 'Ściernica garnkowa o skośnych ściankach, stosowana w ostrzałkach narzędziowych.' },
-    '11A2': { name: 'Doniczkowa stożkowa (11A2)', desc: 'Ściernica doniczkowa supertwarda (diament/CBN), doskonała do ostrzenia narzędzi skrawających.' }, // Usunięte "diamentowa"
+    '11A2': { name: 'Doniczkowa stożkowa (11A2)', desc: 'Ściernica doniczkowa supertwarda (diament/CBN), doskonała do ostrzenia narzędzi skrawających.' }, 
     '1112': { name: 'Garnkowa stożkowa z gwintem (1112)', desc: 'Ściernica stożkowa ze zintegrowaną wkładką gwintową.' },
     '1113': { name: 'Garnkowa stożkowa z gwintem (1113)', desc: 'Ściernica stożkowa z mocowaniem gwintowym do pracy doczołowej.' },
     '1114': { name: 'Garnkowa stożkowa z gwintem (1114)', desc: 'Wzmocniona ściernica garnkowa stożkowa z wkładką gwintową.' },
     '12': { name: 'Talerzowa (Typ 12)', desc: 'Płaski talerzyk o skośnej krawędzi przeznaczony głównie do ostrzenia frezów i noży.' },
-    '12A2': { name: 'Talerzowa skośna (12A2)', desc: 'Ściernica talerzowa supertwarda (diament/CBN) do precyzyjnego ostrzenia pod kątem.' }, // Usunięte "diamentowa"
-    '4A2': { name: 'Talerzykowa płaska (4A2)', desc: 'Talerzyk supertwardy (diament/CBN) z wąską warstwą tnącą na czołowej krawędzi.' }, // Usunięte "diamentowa"
+    '12A2': { name: 'Talerzowa skośna (12A2)', desc: 'Ściernica talerzowa supertwarda (diament/CBN) do precyzyjnego ostrzenia pod kątem.' }, 
+    '4A2': { name: 'Talerzykowa płaska (4A2)', desc: 'Talerzyk supertwardy (diament/CBN) z wąską warstwą tnącą na czołowej krawędzi.' }, 
 
     // === SEGMENTY ŚCIERNE ===
     '3101': { name: 'Segment prostokątny (Typ 3101)', desc: 'Wymienny segment ścierny o przekroju prostokątnym do głowic szlifierskich.' },
@@ -132,7 +112,7 @@ export const wheelTypesData: Record<string, { name: string; desc: string }> = {
     '9010': { name: 'Osełka prostokątna (Typ 9010)', desc: 'Tradycyjny kamień szlifierski do ręcznego ostrzenia i gładzenia krawędzi.' },
     '9010Y': { name: 'Osełka prostokątna warstwowa (9010Y)', desc: 'Specjalistyczna osełka dwuwarstwowa o różnych granulacjach.' },
     '9011': { name: 'Osełka trójkątna (Typ 9011)', desc: 'Kamień o przekroju trójkątnym do czyszczenia kątów i rowków.' },
-    '9020': { name: 'Osełka wielowarstwowa (9020)', desc: 'Precyzyjna osełka o drobnej strukturze do superwykończenia i gładzenia.' }, // Usunięte "Schichtschleifstein"
+    '9020': { name: 'Osełka wielowarstwowa (9020)', desc: 'Precyzyjna osełka o drobnej strukturze do superwykończenia i gładzenia.' },
     '9050': { name: 'Osełka owalna (Typ 9050)', desc: 'Kamień szlifierski o przekroju owalnym, idealny do ostrzy krzywoliniowych.' }
 };
 
@@ -140,5 +120,4 @@ export const getWheelTypeName = (typ: string | undefined): string => {
     if (!typ) return '—';
     return wheelTypesData[typ]?.name ?? `Typ ${typ}`;
 };
-
 
