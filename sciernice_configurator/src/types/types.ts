@@ -11,7 +11,6 @@ export interface ApplicationDetails {
 }
 
 export interface AbrasiveRow {
-    sku: string;
     name: string;
     imageUrl: string;
     productLink: string;

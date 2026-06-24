@@ -25,6 +25,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { type NumericDimension, type DimensionConfigItem } from '../hooks/useFilters';
 import { buildTypeFilterGroups } from '../utils/filterGroups';
 import UsageFilter from '../filters/usagesFilter';
+import HardnessFilter from '../filters/hardnessFilter';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -64,12 +65,14 @@ interface FilterPanelProps {
     usageOptions: string[];
     gritOptions: number[];
     bondOptions: string[];
+    hardnessOptions: string[];
     facetCounts: {
         Type: Record<string, number>;
         Grit: Record<number, number>;
         Material: Record<string, number>;
         Bond: Record<string, number>;
         Usage: Record<string, number>;
+        Hardness: Record<string, number>;
     };
 
     selectedTypes: string[];
@@ -77,6 +80,7 @@ interface FilterPanelProps {
     selectedUsages: string[];
     selectedMaterials: string[];
     selectedBonds: string[];
+    selectedHardness: string[];
     searchModel: GridFilterModel;
     dimensions: Record<NumericDimension, DimensionConfigItem>;
 
@@ -88,6 +92,7 @@ interface FilterPanelProps {
     onClearFilters: () => void;
     onDimensionChange: (field: NumericDimension, indices: [number, number], steps: number[]) => void;
     onUsagesChange: (usages: string[]) => void;
+    onHardnessChange: (hardness: string[]) => void;
 }
 
 export default function FilterPanel({
@@ -103,6 +108,8 @@ export default function FilterPanel({
     dimensions,
     usageOptions,
     selectedUsages,
+    hardnessOptions,
+    selectedHardness,
     onTypesChange,
     onGritsChange,
     onMaterialsChange,
@@ -111,6 +118,7 @@ export default function FilterPanel({
     onBondsChange,
     onDimensionChange,
     onUsagesChange,
+    onHardnessChange
 }: FilterPanelProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -218,6 +226,15 @@ export default function FilterPanel({
         />
     );
 
+    const renderHardnessFilter = () => (
+        <HardnessFilter
+            value={selectedHardness}
+            onChange={onHardnessChange}
+            options={hardnessOptions}
+            facetCounts={facetCounts.Hardness}
+        />
+    );
+
     const BrandLogo = () => (
         <Link
             href="https://www.e-darmet.pl"
@@ -289,12 +306,7 @@ export default function FilterPanel({
                     </Box>
 
                     <Box sx={{ p: 2.5, flex: 1, overflowY: 'auto' }}>
-                        <Box sx={{ mb: 2 }}>
-                            {renderTypeFilter()}
-                        </Box>
-                        <Divider sx={{ my: 2 }} />
-
-                        <Accordion>
+                        <Accordion defaultExpanded>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 sx={{ px: 0.5, minHeight: 0, '& .MuiAccordionSummary-content': { my: 1 } }}
@@ -304,8 +316,26 @@ export default function FilterPanel({
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
-                                <Box sx={{ mb: 3, mt: 2 }}>{renderMaterialFilter()}</Box>
-                                <Box sx={{ mb: 3 }}>{renderGritsFilter()}</Box>
+                                <Box sx={{ mb: 2 }}>
+                                    {renderTypeFilter()}
+                                </Box>
+                            </AccordionDetails>
+                        </Accordion>
+                        <Divider sx={{ my: 2 }} />
+
+                        <Accordion defaultExpanded>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                sx={{ px: 0.5, minHeight: 0, '& .MuiAccordionSummary-content': { my: 1 } }}
+                            >
+                                <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ px: 0.5 }}>
+                                    FILTRY MATERIAŁU
+                                </Typography>
+                            </AccordionSummary>
+                            <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
+                                <Box sx={{ mb: 3, mt: 2 }}>{renderGritsFilter()}</Box>
+                                <Box sx={{ mb: 3 }}>{renderMaterialFilter()}</Box>
+                                <Box sx={{ mb: 3 }}>{renderHardnessFilter()}</Box>
                                 <Box sx={{ mb: 3 }}>{renderBondFilter()}</Box>
                             </AccordionDetails>
                         </Accordion>
@@ -403,6 +433,9 @@ export default function FilterPanel({
                     <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
                         <Box sx={{ mb: 3, mt: 2 }}>
                             {renderGritsFilter()}
+                        </Box>
+                        <Box sx={{ mb: 3 }}>
+                            {renderHardnessFilter()}
                         </Box>
                         <Box sx={{ mb: 3 }}>
                             {renderMaterialFilter()}

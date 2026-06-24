@@ -27,12 +27,14 @@ export default function Home({ abrasives }: HomeProps) {
         gritOptions: results.gritOptions,
         bondOptions: results.bondOptions,
         usageOptions: results.usagesOptions,
+        hardnessOptions: results.hardnessOptions,
         facetCounts: {
             Type: results.facetCounts.Type,
             Grit: results.facetCounts.Grit,
             Material: results.facetCounts.Material,
             Bond: results.facetCounts.Bond,
-            Usage: results.facetCounts.Usage
+            Usage: results.facetCounts.Usage,
+            Hardness: results.facetCounts.Hardness
         },
 
         selectedTypes: state.selectedTypes,
@@ -40,6 +42,7 @@ export default function Home({ abrasives }: HomeProps) {
         selectedMaterials: state.selectedMaterials,
         selectedUsages: state.selectedUsages,
         selectedBonds: state.selectedBonds,
+        selectedHardness: state.selectedHardness,
         searchModel: state.searchModel,
         dimensions: state.dimensions,
 
@@ -48,6 +51,7 @@ export default function Home({ abrasives }: HomeProps) {
         onTypesChange: handlers.setSelectedTypes,
         onGritsChange: handlers.setSelectedGrits,
         onMaterialsChange: handlers.setSelectedMaterials,
+        onHardnessChange: handlers.setSelectedHardness,
         onClearFilters: handlers.handleClearFilters,
         onBondsChange: handlers.setSelectedBonds,
         onUsagesChange: handlers.setSelectedUsages
@@ -92,10 +96,11 @@ export default function Home({ abrasives }: HomeProps) {
                             selectedBonds={state.selectedBonds}
                             selectedMaterials={state.selectedMaterials}
                             selectedUsages={state.selectedUsages}
+                            selectedHardness={state.selectedHardness}
                             searchModel={state.searchModel}
                             dimensions={state.dimensions}
                             onRemoveDimensionFilter={handlers.removeDimensionFilter}
-
+                            onRemoveHardness={handlers.removeSelectedHardness}
                             onRemoveSearchItem={handlers.removeSearchItem}
                             onRemoveType={handlers.removeSelectedType}
                             onRemoveGrit={handlers.removeSelectedGrit}

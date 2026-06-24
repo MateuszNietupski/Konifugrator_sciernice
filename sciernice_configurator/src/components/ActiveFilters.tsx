@@ -33,11 +33,13 @@ interface ActiveFiltersProps {
     selectedMaterials: string[];
     selectedBonds: string[];
     selectedUsages: string[];
+    selectedHardness: string[];
     searchModel: GridFilterModel;
     dimensions: Record<NumericDimension, DimensionConfigItem>;
     onRemoveDimensionFilter: (field: NumericDimension) => void;
     onRemoveType: (type: string) => void;
     onRemoveGrit: (grit: number) => void;
+    onRemoveHardness: (hardness: string) => void;
     onRemoveMaterial: (material: string) => void;
     onRemoveBond: (bond: string) => void;
     onRemoveSearchItem: (id: string) => void;
@@ -50,6 +52,7 @@ const columnLabels: Record<string, string> = {
     type: 'Typ',
     material: 'Materiał',
     bond: 'Spoiwo',
+    hardness: 'Twardość',
     grit: 'Gradacja',
     outerDiameter: 'Średnica/Długość',
     boreSize: 'Otwór',
@@ -71,10 +74,12 @@ const ActiveFilters = ({
     selectedMaterials,
     selectedUsages,
     selectedBonds,
+    selectedHardness,
     searchModel,
     dimensions,
     onRemoveType,
     onRemoveGrit,
+    onRemoveHardness,
     onRemoveMaterial,
     onRemoveUsage,
     onRemoveBond,
@@ -174,6 +179,13 @@ const ActiveFilters = ({
                     tooltip: getBondDescription(b),
                     onDelete: () => onRemoveBond(b),
                 })),
+                ...(selectedHardness || []).map((h) => ({
+                    key: `hardness-${h}`,
+                    icon: <TextureIcon />,
+                    label: `Twardość ${h}`,
+                    tooltip: `Twardość ${h}`,
+                    onDelete: () => onRemoveHardness(h),
+                }))
             ]
         },
         {

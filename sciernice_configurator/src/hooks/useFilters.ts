@@ -25,7 +25,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
     const [selectedMaterials, setSelectedMaterials] = useState<string[]>([]);
     const [selectedBonds, setSelectedBonds] = useState<string[]>([]);
     const [selectedUsages, setSelectedUsages] = useState<string[]>([]);
-
+    const [selectedHardness, setSelectedHardness] = useState<string[]>([]);
     const [searchModel, setSearchModel] = useState<GridFilterModel>({ items: [] });
 
     const [numFilters, setNumFilters] = useState<Record<NumericDimension, [number, number] | null>>({
@@ -100,7 +100,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             if (selectedGrits.length > 0 && !selectedGrits.includes(Number(w.gritSize))) return false;
             if (selectedBonds.length > 0 && !selectedBonds.includes(getBondGroupId(w.bond || ''))) return false;
             if (!matchesUsage(w)) return false;
-
+            if (selectedHardness.length > 0 && !selectedHardness.includes((w.hardness || '').trim().toUpperCase())) return false;
 
             const dims: NumericDimension[] = ['outerDiameter', 'thickness', 'boreSize'];
             for (const dim of dims) {
@@ -112,7 +112,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             }
             return true;
         });
-    }, [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, numFilters, matchesSearchModel, matchesUsage ]);
+    }, [abrasives, searchModel, selectedTypes, selectedMaterials, selectedGrits, selectedBonds, selectedHardness, numFilters, matchesSearchModel, matchesUsage]);
 
     const lengthSteps = useMemo(() => buildSteps(getFilteredForDimension('outerDiameter'), 'outerDiameter'), [getFilteredForDimension]);
     const thicknessSteps = useMemo(() => buildSteps(getFilteredForDimension('thickness'), 'thickness'), [getFilteredForDimension]);
@@ -187,6 +187,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
     const wheelTypes = useMemo(() => [...new Set(abrasives.map(w => w.type || ''))].filter(Boolean).sort(), [abrasives]);
     const gritOptions = useMemo(() => [...new Set(abrasives.map(w => Number(w.gritSize)).filter(g => !isNaN(g) && g > 0))].sort((a, b) => a - b), [abrasives]);
     const bondOptions = useMemo(() => BOND_FILTER_OPTIONS.map(g => g.id), []);
+    const hardnessOptions = useMemo(() => [...new Set(abrasives.map(w => (w.hardness || '').trim().toUpperCase()))].filter(Boolean).sort(), [abrasives]);
 
     const filteredWheels = useMemo(() =>
         abrasives.filter(wheel => {
@@ -196,17 +197,18 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             if (selectedGrits.length > 0 && !selectedGrits.includes(Number(wheel.gritSize))) return false;
             if (selectedBonds.length > 0 && !selectedBonds.includes(getBondGroupId(wheel.bond || ''))) return false;
             if (!matchesUsage(wheel)) return false;
+            if (selectedHardness.length > 0 && !selectedHardness.includes((wheel.hardness || '').trim().toUpperCase())) return false;
             return matchesNumericDimensions(wheel);
         }),
-        [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, matchesSearchModel, matchesNumericDimensions, matchesUsage]);
+        [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, selectedHardness, matchesSearchModel, matchesNumericDimensions, matchesUsage]);
 
-    // Liczniki fasetowe (Facet Counts)
     const facetCounts = useMemo(() => {
         const Type: Record<string, number> = {};
         const Grit: Record<number, number> = {};
         const Material: Record<string, number> = {};
         const Bond: Record<string, number> = {};
         const Usage: Record<string, number> = {};
+        const Hardness: Record<string, number> = {};
 
         for (const w of abrasives) {
             if (!matchesSearchModel(w, searchModel)) continue;
@@ -216,7 +218,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             const wMat = w.material || '';
             const wBondId = getBondGroupId(w.bond || '');
             const wMats = w.zastosowanie_detale?.filtry_materialowe ?? [];
-
+            const wHardness = (w.hardness || '').trim().toUpperCase();
 
 
             const matchesSizes = matchesNumericDimensions(w);
@@ -225,25 +227,32 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             const matchesMat = selectedMaterials.length === 0 || selectedMaterials.includes(wMat);
             const matchesBond = selectedBonds.length === 0 || selectedBonds.includes(wBondId);
             const matchesUsageF = matchesUsage(w);
+            const matchesHardness = selectedHardness.length === 0 || selectedHardness.includes(wHardness);
 
-
-            if (matchesGrit && matchesMat && matchesBond && matchesSizes && matchesUsageF && wType)
+            if (matchesGrit && matchesMat && matchesBond && matchesSizes && matchesUsageF && matchesHardness && wType)
                 Type[wType] = (Type[wType] || 0) + 1;
-            if (matchesType && matchesMat && matchesBond && matchesSizes && matchesUsageF && wGrit)
+
+            if (matchesType && matchesMat && matchesBond && matchesSizes && matchesUsageF && matchesHardness && wGrit)
                 Grit[wGrit] = (Grit[wGrit] || 0) + 1;
-            if (matchesType && matchesGrit && matchesBond && matchesSizes && matchesUsageF && wMat)
+
+            if (matchesType && matchesGrit && matchesBond && matchesSizes && matchesUsageF && matchesHardness && wMat)
                 Material[wMat] = (Material[wMat] || 0) + 1;
-            if (matchesType && matchesGrit && matchesMat && matchesSizes && matchesUsageF && wBondId)
+
+            if (matchesType && matchesGrit && matchesMat && matchesSizes && matchesUsageF && matchesHardness && wBondId)
                 Bond[wBondId] = (Bond[wBondId] || 0) + 1;
-            if (matchesType && matchesGrit && matchesMat && matchesBond && matchesSizes) {
+
+            if (matchesType && matchesGrit && matchesMat && matchesBond && matchesSizes && matchesHardness) {
                 for (const mat of wMats) {
                     if (mat) Usage[mat] = (Usage[mat] || 0) + 1;
                 }
             }
+
+            if (matchesType && matchesGrit && matchesMat && matchesBond && matchesSizes && matchesUsageF && wHardness)
+                Hardness[wHardness] = (Hardness[wHardness] || 0) + 1;
         }
 
-        return { Type, Grit, Material, Bond, Usage };
-    }, [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, matchesSearchModel, matchesNumericDimensions]);
+        return { Type, Grit, Material, Bond, Usage, Hardness };
+    }, [abrasives, searchModel, selectedTypes, selectedGrits, selectedMaterials, selectedBonds, selectedHardness, matchesSearchModel, matchesNumericDimensions]);
 
     const handlers = {
         handleClearFilters: () => {
@@ -251,6 +260,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
             setSelectedGrits([]);
             setSelectedMaterials([]);
             setSelectedBonds([]);
+            setSelectedHardness([]);
             setNumFilters({ outerDiameter: null, thickness: null, boreSize: null });
             setSelectedUsages([]);
         },
@@ -260,6 +270,7 @@ export function useFilters(abrasives: AbrasiveRow[]) {
         setSelectedMaterials,
         setSelectedBonds,
         setSelectedUsages,
+        setSelectedHardness,
         setDimensionRange: (field: NumericDimension, indices: [number, number], steps: number[]) => {
             setNumFilters(prev => ({ ...prev, [field]: [steps[indices[0]], steps[indices[1]]] }));
         },
@@ -278,11 +289,13 @@ export function useFilters(abrasives: AbrasiveRow[]) {
         },
         removeSelectedUsage: (usage: string) =>
             setSelectedUsages(prev => prev.filter(u => u !== usage)),
+        removeSelectedHardness: (hardness: string) =>
+            setSelectedHardness(prev => prev.filter(h => h !== hardness)),
     };
 
     return {
-        state: { selectedTypes, selectedGrits, selectedUsages, selectedMaterials, selectedBonds, searchModel, dimensions: dimensionsConfig },
-        results: { filteredWheels, wheelTypes, usagesOptions, abrasiveMaterials, gritOptions, facetCounts, bondOptions },
+        state: { selectedTypes, selectedGrits, selectedUsages, selectedMaterials, selectedBonds, selectedHardness, searchModel, dimensions: dimensionsConfig },
+        results: { filteredWheels, wheelTypes, usagesOptions, abrasiveMaterials, gritOptions, facetCounts, bondOptions, hardnessOptions },
         handlers,
     };
 }
