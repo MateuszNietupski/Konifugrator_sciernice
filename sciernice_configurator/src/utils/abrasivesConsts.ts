@@ -121,3 +121,11 @@ export const getWheelTypeName = (typ: string | undefined): string => {
     return wheelTypesData[typ]?.name ?? `Typ ${typ}`;
 };
 
+export const getHardnessLabel = (letter: string): string => {
+  if (['E', 'F', 'G'].includes(letter)) return 'Bardzo miękka';
+  if (['H', 'I', 'J'].includes(letter)) return 'Miękka';
+  if (['K', 'L', 'M', 'N'].includes(letter)) return 'Średnia';
+  if (['O', 'P', 'Q'].includes(letter)) return 'Twarda';
+  if (['R', 'S', 'T', 'U'].includes(letter)) return 'Bardzo twarda';
+  return 'Nieokreślona';
+};

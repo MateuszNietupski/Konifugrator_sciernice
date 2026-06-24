@@ -11,6 +11,7 @@ import { getGritHint } from '../utils/gritDataConsts';
 import { BOND_FILTER_OPTIONS, getBondGroupId } from '../utils/filterGroups';
 import type { AbrasiveRow } from '../types/types';
 import WarningAmberRoundedIcon from '@mui/icons-material/WarningAmberRounded';
+import {getHardnessLabel} from '../utils/abrasivesConsts';
 
 interface GetColumnsProps {
   isMobile: boolean;
@@ -264,7 +265,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                       Twardość ściernicy
                     </Typography>
                     <Typography variant="caption" component="div" sx={{ mb: 0.75, fontWeight: 700, fontSize: 14 }}>
-                      Klasa twardości: <b>{hardness}</b>
+                      Klasa twardości: <b>{hardness} - {getHardnessLabel(hardness)}</b>
                     </Typography>
                   </>
                 )}
@@ -365,7 +366,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
                   component="span"
                   sx={{
                     display: '-webkit-box',
-                    WebkitLineClamp: 2,
+                    WebkitLineClamp: 3,
                     WebkitBoxOrient: 'vertical',
                     overflow: 'hidden',
                   }}
