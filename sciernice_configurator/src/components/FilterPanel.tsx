@@ -324,7 +324,7 @@ export default function FilterPanel({
                                 sx={{ px: 0.5, minHeight: 0, '& .MuiAccordionSummary-content': { my: 1 } }}
                             >
                                 <Typography variant="body2" fontWeight={600} color="text.secondary" sx={{ px: 0.5 }}>
-                                    FILTRY MATERIAŁU
+                                    TYPY ŚCIERNIC
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
@@ -346,8 +346,8 @@ export default function FilterPanel({
                             </AccordionSummary>
                             <AccordionDetails sx={{ px: 0, pb: 1, pt: 0 }}>
                                 <Box sx={{ mb: 3, mt: 2 }}>{renderGritsFilter()}</Box>
-                                <Box sx={{ mb: 3 }}>{renderMaterialFilter()}</Box>
                                 <Box sx={{ mb: 3 }}>{renderHardnessFilter()}</Box>
+                                <Box sx={{ mb: 3 }}>{renderMaterialFilter()}</Box>
                                 <Box sx={{ mb: 3 }}>{renderBondFilter()}</Box>
                             </AccordionDetails>
                         </Accordion>
