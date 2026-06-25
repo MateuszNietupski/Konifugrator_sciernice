@@ -122,6 +122,8 @@ export default function ProductGridDesktop({ rows }: ProductGridDesktopProps) {
                             bgcolor: 'action.hover',
                         }
                     },
+                    '& .clean-header:focus': { outline: 'none' },
+                    '& .clean-header:focus-within': { outline: 'none' },
                 }}
             />
 

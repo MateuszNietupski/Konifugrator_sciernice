@@ -30,6 +30,7 @@ export const getProductGridColumns = ({ isMobile, handleOpenImage, setSelectedAp
     width: isMobile ? 58 : 116,
     minWidth: isMobile ? 40 : 75,
     headerAlign: 'center',
+    headerClassName: 'clean-header',
     align: 'center',
     cellClassName: 'no-focus-cell',
     renderCell: (params) => {
