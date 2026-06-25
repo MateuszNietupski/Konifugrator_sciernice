@@ -1,4 +1,5 @@
 import { useTheme } from "@mui/material/styles";
+import { useState, useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Box from "@mui/material/Box";
 import Footer from "../components/Footer";
@@ -9,7 +10,8 @@ import MobileHeader from "../components/MobileHeader";
 import DesktopHeader from "../components/DesktopHeader";
 import ProductGridDesktop from "../components/AbrasivesDataGrid";
 import ActiveFilters from "../components/ActiveFilters";
-
+import Fab from "@mui/material/Fab";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 interface HomeProps {
     abrasives: AbrasiveRow[];
@@ -18,6 +20,7 @@ interface HomeProps {
 export default function Home({ abrasives }: HomeProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const [showBackTop, setShowBackTop] = useState(false);
 
     const { state, results, handlers } = useFilters(abrasives);
 
@@ -61,17 +64,23 @@ export default function Home({ abrasives }: HomeProps) {
         total: abrasives.length
     };
 
+    useEffect(() => {
+        const onScroll = () => setShowBackTop(window.scrollY > 600);
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Box sx={{
                 display: 'flex',
                 flex: 1,
                 flexDirection: isMobile ? 'column' : 'row',
-                overflow: 'hidden'
+                
             }}>
                 {!isMobile && <FilterPanel {...filterProps} />}
 
-                <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column'}}>
                     {isMobile ? (
                         <>
                             <MobileHeader
@@ -115,6 +124,16 @@ export default function Home({ abrasives }: HomeProps) {
                     </Box>
                 </Box>
             </Box>
+            {showBackTop && (
+                <Fab
+                    size="small"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    sx={{ position: 'fixed', bottom: 24, right: 24, zIndex: 1200 }}
+                    aria-label="Wróć na górę"
+                >
+                    <KeyboardArrowUpIcon />
+                </Fab>
+            )}
             <Footer />
         </Box>
     );

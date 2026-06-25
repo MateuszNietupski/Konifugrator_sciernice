@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
@@ -26,6 +26,8 @@ import { type NumericDimension, type DimensionConfigItem } from '../hooks/useFil
 import { buildTypeFilterGroups } from '../utils/filterGroups';
 import UsageFilter from '../filters/usagesFilter';
 import HardnessFilter from '../filters/hardnessFilter';
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 interface ClearButtonProps {
     onClick: () => void;
@@ -123,6 +125,16 @@ export default function FilterPanel({
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const [mobileOpen, setMobileOpen] = useState(false);
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const fabRef = useRef<HTMLButtonElement>(null);
+
+    const handlePanelScroll = () => {
+        const scrolled = (scrollRef.current?.scrollTop ?? 0) > 300;
+        if (fabRef.current) {
+            fabRef.current.style.opacity = scrolled ? '1' : '0';
+            fabRef.current.style.pointerEvents = scrolled ? 'auto' : 'none';
+        }
+    };
 
     const {
         outerDiameter = { steps: [0], rangeIndices: [0, 0], currentValues: [0, 0], isActive: false },
@@ -379,12 +391,36 @@ export default function FilterPanel({
             bgcolor: 'background.paper',
             display: 'flex',
             flexDirection: 'column',
+            height: '100vh',
             position: 'sticky',
             top: 0,
             flexShrink: 0,
         }}>
             <BrandLogo />
-            <Box sx={{ p: 2.5, flex: 1, overflowY: 'auto' }}>
+            <Box
+                ref={scrollRef}
+                onScroll={handlePanelScroll}
+                sx={{
+                    p: 2.5,
+                    flex: 1,
+                    overflowY: 'auto',
+                    scrollbarWidth: 'thin',
+                    scrollbarColor: '#0e2135 #e0e0e0',
+
+                    '&::-webkit-scrollbar': {
+                        width: 8,
+                    },
+                    '&::-webkit-scrollbar-track': {
+                        bgcolor: '#f0f0f0',
+                        borderRadius: 4,
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        bgcolor: '#0e2135',
+                        borderRadius: 4,
+                        '&:hover': { bgcolor: '#1a3a5c' }
+                    },
+
+                }}>
                 <SectionTitle extra={<ClearButton onClick={onClearFilters} />}>
                     FILTROWANIE ŚCIERNIC
                 </SectionTitle>
@@ -467,6 +503,24 @@ export default function FilterPanel({
                     </AccordionDetails>
                 </Accordion>
             </Box>
+            <Fab
+                ref={fabRef}
+                size="small"
+                onClick={() => scrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' })}
+                sx={{
+                    position: 'absolute',
+                    bottom: 16,
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    zIndex: 10,
+                    opacity: 0,
+                    pointerEvents: 'none',
+                    transition: 'opacity 0.2s',
+                }}
+                aria-label="Na górę panelu"
+            >
+                <KeyboardArrowUpIcon />
+            </Fab>
         </Box >
     );
 }

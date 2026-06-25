@@ -14,6 +14,7 @@ const DesktopHeader = ({ filteredCount, totalCount, viewMode }: DesktopHeaderPro
             sx={{
                 px: 3, py: 2, borderBottom: '1px solid', borderColor: 'divider',
                 display: 'flex', alignItems: 'center', gap: 1.5, bgcolor: 'background.paper',
+                position: 'sticky', top: 0, zIndex: 1100
             }}
         >
             {viewMode === 'machines' ? (
