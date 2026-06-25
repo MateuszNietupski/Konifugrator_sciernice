@@ -59,7 +59,7 @@ const HardnessFilter = ({
 }) => {
   const selectedSet = useMemo(() => new Set(value), [value]);
   const optionsSet = useMemo(() => new Set(options), [options]);
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   const visibleGroups = useMemo(
     () => HARDNESS_GROUP_DEFS.filter(g => g.letters.some(l => optionsSet.has(l))),
@@ -82,6 +82,7 @@ const HardnessFilter = ({
 
   return (
     <Accordion
+      
       expanded={expanded}
       onChange={(_, isExpanded) => setExpanded(isExpanded)}
       disableGutters
