@@ -84,7 +84,7 @@
     {
         "product_id": "1212641075",
         "name": "Kamień szlifierski 100 x 25 x 20 mm | ściernica płaska | typ 1 | 95A 24P - ANDRE 110217",
-        "image": "https://www.e-darmet.pl/dane/full/c/c607b77f4bae49f2b7a051416bc844c6.jpg",
+        "image": "https://www.e-darmet.pl/dane/source/i/ila.1fd083a9937947be9643d72ffe35c25f.jpg",
         "material": "elektrokorund zwykły",
         "gritSize": 24,
         "typ": "1",
@@ -18010,7 +18010,7 @@
     {
         "product_id": "1212641921",
         "name": "Ściernica lamelkowa 125 x 22,2 mm | P40 | PRO-LINE | wersja III - ANDRE 810097",
-        "image": "https://www.e-darmet.pl/dane/full/2/2757aedcf9104c8da4d964cdcf8784c4.jpg",
+        "image": "https://www.e-darmet.pl/dane/source/1/1rf.810095_all_2.jpg",
         "material": "elektrokorund cyrkonowy",
         "gritSize": 125,
         "typ": "29",
@@ -18090,7 +18090,7 @@
     {
         "product_id": "1212641924",
         "name": "Ściernica lamelkowa 125 x 22,2 mm | P80 | PRO-LINE | wersja III - ANDRE 810099",
-        "image": "https://www.e-darmet.pl/dane/full/7/795d2875840e4facad8e847719006633.jpg",
+        "image": "https://www.e-darmet.pl/dane/source/1/1rf.810095_all_2.jpg",
         "material": "elektrokorund cyrkonowy",
         "gritSize": 125,
         "typ": "29",
@@ -18130,7 +18130,7 @@
     {
         "product_id": "1212641925",
         "name": "Ściernica lamelkowa 125 x 22,2 mm | P120 | PRO-LINE | wersja III - ANDRE 810107",
-        "image": "https://www.e-darmet.pl/dane/full/4/46c156eac6b140699f123b58d8cd687b.jpg",
+        "image": "https://www.e-darmet.pl/dane/source/1/1rf.810095_all_2.jpg",
         "material": "elektrokorund cyrkonowy",
         "gritSize": 125,
         "typ": "29",
@@ -18400,6 +18400,126 @@
                 "naglowek_marketingowy": "Profesjonalna ściernica wysokowydajna z dodatkiem cyrkonu. Stworzona do najcięższych zadań przemysłowych.",
                 "lista_zastosowan": [
                     "Wydajne szlifowanie i cięcie stali nierdzewnej (INOX), kwasoodpornej oraz stali wysokostopowych.",
+                    "Usuwanie grubych spoin spawalniczych na konstrukcjach nierdzewnych bez ryzyka ich przegrzania."
+                ],
+                "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
+            }
+        },
+        "extracted_hardness": null
+    },
+    {
+        "product_id": "79972",
+        "name": "Ściernica lamelkowa LONGLIFE | 125x22,23 mm | Granulacja 40 | PRO Line  - ANDRE 810335",
+        "image": "https://www.e-darmet.pl/dane/source/o/ova.and_810335-02.jpg",
+        "material": "elektrokorund cyrkonowy",
+        "gritSize": "40",
+        "typ": "29",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "0",
+        "boreSize": "22.2",
+        "title": "Ściernica lamelkowa LONGLIFE | 125x22,23 mm | Granulacja 40 | PRO Line  - ANDRE 810335",
+        "link": "https://www.e-darmet.pl/sciernica-lamelkowa-longlife--125x2223-mm--granulacja-40--pro-line-andre-810335-id-79972",
+        "description": "Tarcza listkowa 125 mm | Gradacja 40 | Materiał: elektrokorund cyrkonowy; Ziarno materiału ściernego: średnie",
+        "bond": "R",
+        "bond_name": "żywiczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "INOX_NIERDZEWNA",
+            "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
+            "tagi_zastosowania": [
+                "Agresywne szlifowanie",
+                "Usuwanie grubych spawów",
+                "Wysoka wydajność"
+            ],
+            "filtry_materialowe": [
+                "Stal nierdzewna (INOX)",
+                "Stal kwasoodporna",
+                "Stale wysokostopowe",
+                "Stal pancerna / hardox"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Bardzo agresywna ściernica LONGLIFE do intensywnego szlifowania, łącząca wysoką wydajność z wydłużoną żywotnością.",
+                "lista_zastosowan": [
+                    "Wydajne szlifowanie stali nierdzewnej (INOX), kwasoodpornej oraz stali wysokostopowych.",
+                    "Usuwanie grubych spoin spawalniczych na konstrukcjach nierdzewnych bez ryzyka ich przegrzania."
+                ],
+                "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
+            }
+        },
+        "extracted_hardness": null
+    },
+    {
+        "product_id": "79973",
+        "name": "Ściernica lamelkowa LONGLIFE | 125x22,23 mm | Granulacja 60 | PRO Line  - ANDRE 810336",
+        "image": "https://www.e-darmet.pl/dane/source/o/ova.and_810335-02.jpg",
+        "material": "elektrokorund cyrkonowy",
+        "gritSize": "60",
+        "typ": "29",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "0",
+        "boreSize": "22.2",
+        "title": "Ściernica lamelkowa LONGLIFE | 125x22,23 mm | Granulacja 60 | PRO Line  - ANDRE 810336",
+        "link": "https://www.e-darmet.pl/sciernica-lamelkowa-longlife--125x2223-mm--granulacja-60--pro-line-andre-810336-id-79973",
+        "description": "Tarcza listkowa 125 mm | Gradacja 60 | Materiał: elektrokorund cyrkonowy; Ziarno materiału ściernego: średnie",
+        "bond": "R",
+        "bond_name": "żywiczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "INOX_NIERDZEWNA",
+            "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
+            "tagi_zastosowania": [
+                "Agresywne szlifowanie",
+                "Usuwanie grubych spawów",
+                "Wysoka wydajność"
+            ],
+            "filtry_materialowe": [
+                "Stal nierdzewna (INOX)",
+                "Stal kwasoodporna",
+                "Stale wysokostopowe",
+                "Stal pancerna / hardox"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Bardzo agresywna ściernica LONGLIFE do intensywnego szlifowania, łącząca wysoką wydajność z wydłużoną żywotnością.",
+                "lista_zastosowan": [
+                    "Wydajne szlifowanie stali nierdzewnej (INOX), kwasoodpornej oraz stali wysokostopowych.",
+                    "Usuwanie grubych spoin spawalniczych na konstrukcjach nierdzewnych bez ryzyka ich przegrzania."
+                ],
+                "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
+            }
+        },
+        "extracted_hardness": null
+    },
+    {
+        "product_id": "79974",
+        "name": "Ściernica lamelkowa LONGLIFE | 125x22,23 mm | Granulacja 80 | PRO Line  - ANDRE 810337",
+        "image": "https://www.e-darmet.pl/dane/source/o/ova.and_810335-02.jpg",
+        "material": "elektrokorund cyrkonowy",
+        "gritSize": "80",
+        "typ": "29",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "0",
+        "boreSize": "22.2",
+        "title": "Ściernica lamelkowa LONGLIFE | 125x22,23 mm | Granulacja 80 | PRO Line  - ANDRE 810336",
+        "link": "https://www.e-darmet.pl/sciernica-lamelkowa-longlife--125x2223-mm--granulacja-80--pro-line-andre-810337-id-79974",
+        "description": "Tarcza listkowa 125 mm | Gradacja 80 | Materiał: elektrokorund cyrkonowy; Ziarno materiału ściernego: średnie",
+        "bond": "R",
+        "bond_name": "żywiczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "INOX_NIERDZEWNA",
+            "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
+            "tagi_zastosowania": [
+                "Agresywne szlifowanie",
+                "Usuwanie grubych spawów",
+                "Wysoka wydajność"
+            ],
+            "filtry_materialowe": [
+                "Stal nierdzewna (INOX)",
+                "Stal kwasoodporna",
+                "Stale wysokostopowe",
+                "Stal pancerna / hardox"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Bardzo agresywna ściernica LONGLIFE do intensywnego szlifowania, łącząca wysoką wydajność z wydłużoną żywotnością.",
+                "lista_zastosowan": [
+                    "Wydajne szlifowanie stali nierdzewnej (INOX), kwasoodpornej oraz stali wysokostopowych.",
                     "Usuwanie grubych spoin spawalniczych na konstrukcjach nierdzewnych bez ryzyka ich przegrzania."
                 ],
                 "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
@@ -18942,7 +19062,7 @@
     {
         "product_id": "1212641957",
         "name": "Ściernica lamelkowa 125 x 22,2 mm | MASTER-LINE | włóknina GRUBA - ANDRE 810124",
-        "image": "https://www.e-darmet.pl/dane/full/a/azs.andre-sciernica-master-line-wersja-wloknina.jpg",
+        "image": "https://www.e-darmet.pl/dane/source/m/mku.and_810124-01.jpg",
         "material": "włóknina",
         "gritSize": 125,
         "typ": "29",
@@ -19024,7 +19144,7 @@
     {
         "product_id": "1212641960",
         "name": "Ściernica lamelkowa 125 x 22,2 mm | MASTER-LINE | włóknina BARDZO DROBNA - ANDRE 810126",
-        "image": "https://www.e-darmet.pl/dane/full/g/gy2.andre-sciernica-master-line-wersja-wloknina.jpg",
+        "image": "https://www.e-darmet.pl/dane/source/h/hze.and_810126-02.jpg",
         "material": "włóknina",
         "gritSize": 125,
         "typ": "29",
@@ -19183,6 +19303,91 @@
                 "lista_zastosowan": [
                     "Agresywne usuwanie rdzy, zgorzeliny, starych powłok malarskich oraz czyszczenie spawów (odmiany grubootworowe CBS).",
                     "Kontrolowane matowienie, usuwanie przebarwień termicznych po spawaniu oraz satynowanie stali (odmiany lamelkowe)."
+                ],
+                "ostrzezenie_krytyczne": "Zwykłego skrawania metalu i zgrubnego zdzierania naddatków. Włóknina nie służy do zbierania grubego materiału rodzimego, a zbyt ostry docisk o nieogratowane krawędzie zniszczy strukturę nylonu."
+            }
+        },
+        "extracted_hardness": null
+    },
+    {
+        "product_id": "79967",
+        "name": "Ściernica CBS z włókniny | BALANCED | 125 x 22,33 mm | włosy murzyna - ANDRE 830010",
+        "image": "https://www.e-darmet.pl/dane/source/i/ifr.and_830010-01.jpg",
+        "material": "włóknina",
+        "gritSize": 0,
+        "typ": "27",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "",
+        "boreSize": "22.2",
+        "title": "Ściernica CBS z włókniny | BALANCED | 125 x 22,33 mm | włosy murzyna - ANDRE 830010",
+        "link": "https://www.e-darmet.pl/sciernica-cbs-z-wlokniny--balanced--125-x-2233-mm--wlosy-murzyna-andre-830010-id-79967",
+        "description": "Wymiary: 125 x 22,2 mm",
+        "bond": "R",
+        "bond_name": "żywiczne elastyczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "WYKONCZENIOWKA_CZYSZCZENIE",
+            "grupa_glowna_nazwa": "Czyszczenie i satynowanie powierzchni",
+            "tagi_zastosowania": [
+                "Włóknina szlifierska",
+                "Usuwanie rdzy",
+                "Satynowanie",
+                "Dyski CBS"
+            ],
+            "filtry_materialowe": [
+                "Stal konstrukcyjna",
+                "Stal nierdzewna (INOX)",
+                "Metale nieżelazne",
+                "Powłoki lakiernicze"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Skutecznie oczyszcza powierzchnię i nadaje jej matowe, szkliste oraz jednolite wykończenie o delikatnym efekcie satynowym.",
+                "lista_zastosowan": [
+                    "Usuwanie rdzy, farby, lakierów, nalotów i innych zabrudzeń z powierzchni metalowych.",
+                    "Czyszczenie spoin oraz usuwanie pozostałości po spawaniu bez agresywnego zbierania materiału rodzimego.",
+                    "Przygotowanie powierzchni do dalszej obróbki oraz uzyskiwanie jednolitego, matowego lub satynowego wykończenia."
+                ],
+                "ostrzezenie_krytyczne": "Zwykłego skrawania metalu i zgrubnego zdzierania naddatków. Włóknina nie służy do zbierania grubego materiału rodzimego, a zbyt ostry docisk o nieogratowane krawędzie zniszczy strukturę nylonu."
+            }
+        },
+        "extracted_hardness": null
+    },
+    {
+        "product_id": "79968",
+        "name": "Ściernica CBS z włókniny | EXTRA HARD | 125 x 22,33 mm | włosy murzyna - ANDRE 830011",
+        "image": "https://www.e-darmet.pl/dane/source/n/nwk.and_830011-01.jpg",
+        "material": "włóknina",
+        "gritSize": 0,
+        "typ": "27",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "",
+        "boreSize": "22.2",
+        "title": "Ściernica CBS z włókniny | EXTRA HARD | 125 x 22,33 mm | włosy murzyna - ANDRE 830011",
+        "link": "https://www.e-darmet.pl/sciernica-cbs-z-wlokniny--extra-hard--125-x-2233-mm--wlosy-murzyna-andre-830011-id-79968",
+        "description": "Wymiary: 125 x 22,2 mm",
+        "bond": "R",
+        "bond_name": "żywiczne elastyczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "WYKONCZENIOWKA_CZYSZCZENIE",
+            "grupa_glowna_nazwa": "Czyszczenie i satynowanie powierzchni",
+            "tagi_zastosowania": [
+                "Włóknina szlifierska",
+                "Usuwanie rdzy",
+                "Agresywne czyszczenie",
+                "Satynowanie",
+                "Dyski CBS"
+            ],
+            "filtry_materialowe": [
+                "Stal konstrukcyjna",
+                "Stal nierdzewna (INOX)",
+                "Metale nieżelazne",
+                "Powłoki lakiernicze"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Najwyższa agresywność i długa żywotność do intensywnego oczyszczania oraz satynowania powierzchni z widoczną strukturą rys.",
+                "lista_zastosowan": [
+                    "Intensywne usuwanie rdzy, farby, lakierów, nalotów, zabrudzeń oraz pozostałości po spawaniu.",
+                    "Agresywne czyszczenie i przygotowanie powierzchni metalowych, szczególnie przy wymagających pracach i intensywnej eksploatacji.",
+                    "Satynowanie powierzchni z uzyskaniem matowego wykończenia z widoczną, wyraźniejszą strukturą rys."
                 ],
                 "ostrzezenie_krytyczne": "Zwykłego skrawania metalu i zgrubnego zdzierania naddatków. Włóknina nie służy do zbierania grubego materiału rodzimego, a zbyt ostry docisk o nieogratowane krawędzie zniszczy strukturę nylonu."
             }
@@ -22689,8 +22894,11 @@
             "grupa_glowna_id": "INOX_NIERDZEWNA",
             "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
             "tagi_zastosowania": [
+                "Szlifowanie spoin pachwinowych",
+                "Usuwanie spawów",
+                "Szlifowanie naroży i zagłębień",
+                "Szlifowanie konturowe",
                 "Agresywne szlifowanie",
-                "Usuwanie grubych spawów",
                 "Wysoka wydajność"
             ],
             "filtry_materialowe": [
@@ -22700,10 +22908,11 @@
                 "Stal pancerna / hardox"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica wysokowydajna z dodatkiem cyrkonu. Stworzona do najcięższych zadań przemysłowych.",
+                "naglowek_marketingowy": "Specjalnie profilowana ściernica lamelkowa do wydajnego szlifowania pachwin, naroży i trudno dostępnych miejsc.",
                 "lista_zastosowan": [
-                    "Wydajne szlifowanie i cięcie stali nierdzewnej (INOX), kwasoodpornej oraz stali wysokostopowych.",
-                    "Usuwanie grubych spoin spawalniczych na konstrukcjach nierdzewnych bez ryzyka ich przegrzania."
+                    "Usuwanie spawów z pachwin oraz obróbka zagłębień, naroży i innych trudno dostępnych miejsc.",
+                    "Wydajne szlifowanie stali nierdzewnej, kwasoodpornej i innych metali z wykorzystaniem ziarna cyrkonowego.",
+                    "Fazowanie, szlifowanie konturowe oraz obróbka powierzchni płaskich."
                 ],
                 "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
             }
@@ -22729,8 +22938,11 @@
             "grupa_glowna_id": "INOX_NIERDZEWNA",
             "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
             "tagi_zastosowania": [
+                "Szlifowanie spoin pachwinowych",
+                "Usuwanie spawów",
+                "Szlifowanie naroży i zagłębień",
+                "Szlifowanie konturowe",
                 "Agresywne szlifowanie",
-                "Usuwanie grubych spawów",
                 "Wysoka wydajność"
             ],
             "filtry_materialowe": [
@@ -22740,10 +22952,143 @@
                 "Stal pancerna / hardox"
             ],
             "popup_tekst": {
-                "naglowek_marketingowy": "Profesjonalna ściernica wysokowydajna z dodatkiem cyrkonu. Stworzona do najcięższych zadań przemysłowych.",
+                "naglowek_marketingowy": "Specjalnie profilowana ściernica lamelkowa do wydajnego szlifowania pachwin, naroży i trudno dostępnych miejsc.",
                 "lista_zastosowan": [
-                    "Wydajne szlifowanie i cięcie stali nierdzewnej (INOX), kwasoodpornej oraz stali wysokostopowych.",
-                    "Usuwanie grubych spoin spawalniczych na konstrukcjach nierdzewnych bez ryzyka ich przegrzania."
+                    "Usuwanie spawów z pachwin oraz obróbka zagłębień, naroży i innych trudno dostępnych miejsc.",
+                    "Wydajne szlifowanie stali nierdzewnej, kwasoodpornej i innych metali z wykorzystaniem ziarna cyrkonowego.",
+                    "Fazowanie, szlifowanie konturowe oraz obróbka powierzchni płaskich."
+                ],
+                "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
+            }
+        },
+        "extracted_hardness": null
+    },
+    {
+        "product_id": "79969",
+        "name": "Ściernica lamelkowa do pachwin 125x22,23 mm | Granulacja 40 | PRO Line  - ANDRE 810329",
+        "image": "https://www.e-darmet.pl/dane/source/1/1_4bc5149e-979f-41a8-84b6-1740c6a3edb4.jpg",
+        "material": "elektrokorund cyrkonowy",
+        "gritSize": 80,
+        "typ": "29",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "22.2",
+        "boreSize": "22.2",
+        "title": "Ściernica lamelkowa do pachwin 125x22,23 mm | Granulacja 40 | PRO Line  - ANDRE 810329",
+        "link": "https://www.e-darmet.pl/sciernica-lamelkowa-do-pachwin-125x2223-mm--granulacja-40--pro-line-andre-810329-id-79969",
+        "description": "Tarcza lamelkowa do spoin pachwinowych | Granulacja: 40",
+        "bond": "R",
+        "bond_name": "żywiczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "INOX_NIERDZEWNA",
+            "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
+            "tagi_zastosowania": [
+                "Szlifowanie spoin pachwinowych",
+                "Usuwanie spawów",
+                "Szlifowanie naroży i zagłębień",
+                "Szlifowanie konturowe",
+                "Agresywne szlifowanie",
+                "Wysoka wydajność"
+            ],
+            "filtry_materialowe": [
+                "Stal nierdzewna (INOX)",
+                "Stal kwasoodporna",
+                "Stale wysokostopowe",
+                "Stal pancerna / hardox"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Specjalnie profilowana ściernica lamelkowa do wydajnego szlifowania pachwin, naroży i trudno dostępnych miejsc.",
+                "lista_zastosowan": [
+                    "Usuwanie spawów z pachwin oraz obróbka zagłębień, naroży i innych trudno dostępnych miejsc.",
+                    "Wydajne szlifowanie stali nierdzewnej, kwasoodpornej i innych metali z wykorzystaniem ziarna cyrkonowego.",
+                    "Fazowanie, szlifowanie konturowe oraz obróbka powierzchni płaskich."
+                ],
+                "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
+            }
+        },
+        "extracted_hardness": null
+    },
+     {
+        "product_id": "79970",
+        "name": "Ściernica lamelkowa do pachwin 125x22,23 mm | Granulacja 60 | PRO Line  - ANDRE 810330",
+        "image": "https://www.e-darmet.pl/dane/source/1/1_4bc5149e-979f-41a8-84b6-1740c6a3edb4.jpg",
+        "material": "elektrokorund cyrkonowy",
+        "gritSize": 80,
+        "typ": "29",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "22.2",
+        "boreSize": "22.2",
+        "title": "Ściernica lamelkowa do pachwin 125x22,23 mm | Granulacja 60 | PRO Line  - ANDRE 810330",
+        "link": "https://www.e-darmet.pl/sciernica-lamelkowa-do-pachwin-125x2223-mm--granulacja-60--pro-line-andre-810330-id-79970",
+        "description": "Tarcza lamelkowa do spoin pachwinowych | Granulacja: 60",
+        "bond": "R",
+        "bond_name": "żywiczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "INOX_NIERDZEWNA",
+            "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
+            "tagi_zastosowania": [
+                "Szlifowanie spoin pachwinowych",
+                "Usuwanie spawów",
+                "Szlifowanie naroży i zagłębień",
+                "Szlifowanie konturowe",
+                "Agresywne szlifowanie",
+                "Wysoka wydajność"
+            ],
+            "filtry_materialowe": [
+                "Stal nierdzewna (INOX)",
+                "Stal kwasoodporna",
+                "Stale wysokostopowe",
+                "Stal pancerna / hardox"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Specjalnie profilowana ściernica lamelkowa do wydajnego szlifowania pachwin, naroży i trudno dostępnych miejsc.",
+                "lista_zastosowan": [
+                    "Usuwanie spawów z pachwin oraz obróbka zagłębień, naroży i innych trudno dostępnych miejsc.",
+                    "Wydajne szlifowanie stali nierdzewnej, kwasoodpornej i innych metali z wykorzystaniem ziarna cyrkonowego.",
+                    "Fazowanie, szlifowanie konturowe oraz obróbka powierzchni płaskich."
+                ],
+                "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
+            }
+        },
+        "extracted_hardness": null
+    },
+     {
+        "product_id": "79971",
+        "name": "Ściernica lamelkowa do pachwin 125x22,23 mm | Granulacja 80 | PRO Line  - ANDRE 810331",
+        "image": "https://www.e-darmet.pl/dane/source/1/1_4bc5149e-979f-41a8-84b6-1740c6a3edb4.jpg",
+        "material": "elektrokorund cyrkonowy",
+        "gritSize": 80,
+        "typ": "29",
+        "srednica_dlugosc": "125",
+        "grubosc_szerokosc": "22.2",
+        "boreSize": "22.2",
+        "title": "Ściernica lamelkowa do pachwin 125x22,23 mm | Granulacja 80 | PRO Line  - ANDRE 810331",
+        "link": "https://www.e-darmet.pl/sciernica-lamelkowa-do-pachwin-125x2223-mm--granulacja-80--pro-line-andre-810331-id-79971",
+        "description": "Tarcza lamelkowa do spoin pachwinowych | Granulacja: 80",
+        "bond": "R",
+        "bond_name": "żywiczne",
+        "zastosowanie_detale": {
+            "grupa_glowna_id": "INOX_NIERDZEWNA",
+            "grupa_glowna_nazwa": "Stal nierdzewna / INOX / Kwasoodporna (Premium)",
+            "tagi_zastosowania": [
+                "Szlifowanie spoin pachwinowych",
+                "Usuwanie spawów",
+                "Szlifowanie naroży i zagłębień",
+                "Szlifowanie konturowe",
+                "Agresywne szlifowanie",
+                "Wysoka wydajność"
+            ],
+            "filtry_materialowe": [
+                "Stal nierdzewna (INOX)",
+                "Stal kwasoodporna",
+                "Stale wysokostopowe",
+                "Stal pancerna / hardox"
+            ],
+            "popup_tekst": {
+                "naglowek_marketingowy": "Specjalnie profilowana ściernica lamelkowa do wydajnego szlifowania pachwin, naroży i trudno dostępnych miejsc.",
+                "lista_zastosowan": [
+                    "Usuwanie spawów z pachwin oraz obróbka zagłębień, naroży i innych trudno dostępnych miejsc.",
+                    "Wydajne szlifowanie stali nierdzewnej, kwasoodpornej i innych metali z wykorzystaniem ziarna cyrkonowego.",
+                    "Fazowanie, szlifowanie konturowe oraz obróbka powierzchni płaskich."
                 ],
                 "ostrzezenie_krytyczne": "Materiałów budowlanych (beton, kamień) – cyrkon wymaga wysokiego nacisku i oporu materiału do samozaostrzania. Na kruchych materiałach nie skrawa, tylko ślizga się i generuje ciepło."
             }
